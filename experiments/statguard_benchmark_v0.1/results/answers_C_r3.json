@@ -1,0 +1,1392 @@
+{
+ "S01": {
+  "id": "S01",
+  "condition": "C",
+  "answer": "2023년 시애틀 관측소의 월별 강수량을 모두 더한 연간 합계는 888.9mm입니다.\n최종값: 888.9 mm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "관측소",
+       "value": "USW00024233"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "888.9",
+     "unit": "mm",
+     "expression": "sum(강수량) = 888.9",
+     "used_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "S02": {
+  "id": "S02",
+  "condition": "C",
+  "answer": "2023년 12개월 강수량의 월평균은 74.075 mm입니다.\n최종값: 74.075 mm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "강수량",
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "74.075",
+     "unit": "mm",
+     "expression": "888.9 / 12",
+     "used_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "S03": {
+  "id": "S03",
+  "condition": "C",
+  "answer": "2023년 12월 강수량은 215.4mm입니다.\n최종값: 215.4 mm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-12"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "215.4",
+     "unit": "mm",
+     "expression": "sum(강수량) = 215.4",
+     "used_rows": [
+      12
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "S04": {
+  "id": "S04",
+  "condition": "C",
+  "answer": "2023년 12월 강수량은 1월보다 약 174.39% 증가했습니다.\n최종값: 174.39 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-12"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연월",
+       "value": "2023-01"
+      }
+     ]
+    },
+    "output": {
+     "value": "174.3949044585987261146496815286624",
+     "unit": "%",
+     "expression": "(215.4 - 78.5) / 78.5 * 100",
+     "used_rows": [
+      12
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "S05": {
+  "id": "S05",
+  "condition": "C",
+  "answer": "2023년 11월 강수량 147.0mm는 연간 강수량 888.9mm의 약 16.54%입니다.\n최종값: 16.54 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "ratio_percent",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-11"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연월",
+       "value": "2023"
+      }
+     ]
+    },
+    "output": {
+     "error": "EMPTY_SELECTION"
+    }
+   },
+   {
+    "arguments": {
+     "operation": "ratio_percent",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-11"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "16.53729328383395207559905501181235",
+     "unit": "%",
+     "expression": "147 / 888.9 * 100",
+     "used_rows": [
+      11
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "S06": {
+  "id": "S06",
+  "condition": "C",
+  "answer": "2023년 1~6월의 월별 강수량을 합산하면 상반기 총강수량은 356.8mm입니다.\n최종값: 356.8 mm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-01"
+      },
+      {
+       "column": "연월",
+       "value": "2023-02"
+      },
+      {
+       "column": "연월",
+       "value": "2023-03"
+      },
+      {
+       "column": "연월",
+       "value": "2023-04"
+      },
+      {
+       "column": "연월",
+       "value": "2023-05"
+      },
+      {
+       "column": "연월",
+       "value": "2023-06"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "31",
+     "unit": "mm",
+     "expression": "sum(강수량) = 31",
+     "used_rows": [
+      6
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-01"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "78.5",
+     "unit": "mm",
+     "expression": "sum(강수량) = 78.5",
+     "used_rows": [
+      1
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-02"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "60.1",
+     "unit": "mm",
+     "expression": "sum(강수량) = 60.1",
+     "used_rows": [
+      2
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-03"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "65.3",
+     "unit": "mm",
+     "expression": "sum(강수량) = 65.3",
+     "used_rows": [
+      3
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-04"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "98.1",
+     "unit": "mm",
+     "expression": "sum(강수량) = 98.1",
+     "used_rows": [
+      4
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-05"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "23.8",
+     "unit": "mm",
+     "expression": "sum(강수량) = 23.8",
+     "used_rows": [
+      5
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-06"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "31",
+     "unit": "mm",
+     "expression": "sum(강수량) = 31",
+     "used_rows": [
+      6
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "S07": {
+  "id": "S07",
+  "condition": "C",
+  "answer": "제공된 자료에는 2023년 월별 강수량만 있어 2024년 1월 값은 확인할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2024-01"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "error": "EMPTY_SELECTION"
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "S08": {
+  "id": "S08",
+  "condition": "C",
+  "answer": "자료에는 2023년 월별 강수량만 있어 11~12월에 비가 많이 온 원인은 확인할 수 없습니다. 원인을 판단하려면 당시 기압계, 폭풍 경로 등 추가 기상 자료가 필요합니다.\n최종값: 판단불가",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": [
+      {
+       "column": "연월",
+       "value": "2023-11"
+      },
+      {
+       "column": "연월",
+       "value": "2023-12"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "215.4",
+     "unit": "mm",
+     "expression": "sum(강수량) = 215.4",
+     "used_rows": [
+      12
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "C01": {
+  "id": "C01",
+  "condition": "C",
+  "answer": "2024년 월별 이산화탄소농도 12개 값의 산술평균은 약 424.60 ppm입니다.\n최종값: 424.60 ppm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "이산화탄소농도",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "424.6041666666666666666666666666667",
+     "unit": "ppm",
+     "expression": "5095.25 / 12",
+     "used_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "C02": {
+  "id": "C02",
+  "condition": "C",
+  "answer": "2024년 5월 이산화탄소농도는 426.9 ppm입니다.\n최종값: 426.9 ppm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "이산화탄소농도",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      },
+      {
+       "column": "월",
+       "value": "5"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "426.9",
+     "unit": "ppm",
+     "expression": "sum(이산화탄소농도) = 426.9",
+     "used_rows": [
+      5
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "C03": {
+  "id": "C03",
+  "condition": "C",
+  "answer": "2024년 1월 대비 12월 이산화탄소농도는 약 0.615% 증가했습니다.\n최종값: 0.615 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "이산화탄소농도",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      },
+      {
+       "column": "월",
+       "value": "12"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      },
+      {
+       "column": "월",
+       "value": "1"
+      }
+     ]
+    },
+    "output": {
+     "value": "0.6149479659413434247871333964049196",
+     "unit": "%",
+     "expression": "(425.4 - 422.8) / 422.8 * 100",
+     "used_rows": [
+      12
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "C04": {
+  "id": "C04",
+  "condition": "C",
+  "answer": "2024년 6월 대비 9월 이산화탄소 농도는 약 1.14% 감소했습니다.\n최종값: -1.14 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "이산화탄소농도",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      },
+      {
+       "column": "월",
+       "value": "9"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      },
+      {
+       "column": "월",
+       "value": "6"
+      }
+     ]
+    },
+    "output": {
+     "value": "-1.143098076878030498231477360567801",
+     "unit": "%",
+     "expression": "(422.03 - 426.91) / 426.91 * 100",
+     "used_rows": [
+      9
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "C05": {
+  "id": "C05",
+  "condition": "C",
+  "answer": "제공된 자료에는 2024년 월별 값만 있어 2025년 1월 농도는 확인할 수 없습니다.  \n최종값: 판단불가",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "이산화탄소농도",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2025"
+      },
+      {
+       "column": "월",
+       "value": "1"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "error": "EMPTY_SELECTION"
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "C06": {
+  "id": "C06",
+  "condition": "C",
+  "answer": "제공된 월별 값만으로는 증가 추세의 통계적 유의성을 검정할 수 없습니다. 이를 판단하려면 적절한 추세 검정과 변동성에 대한 통계적 분석이 필요합니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "P01": {
+  "id": "P01",
+  "condition": "C",
+  "answer": "2022년 대비 2023년 대한민국 총인구는 약 0.0775% 증가했습니다.\n최종값: 0.0775 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "총인구",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2023"
+      },
+      {
+       "column": "국가코드",
+       "value": "KOR"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연도",
+       "value": "2022"
+      },
+      {
+       "column": "국가코드",
+       "value": "KOR"
+      }
+     ]
+    },
+    "output": {
+     "value": "0.07750727470120558550127438022289931",
+     "unit": "%",
+     "expression": "(51712619 - 51672569) / 51672569 * 100",
+     "used_rows": [
+      2
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "P02": {
+  "id": "P02",
+  "condition": "C",
+  "answer": "2022년 대한민국 총인구는 51,672,569명입니다.\n최종값: 51672569 명",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "총인구",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2022"
+      },
+      {
+       "column": "국가코드",
+       "value": "KOR"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "51672569",
+     "unit": "명",
+     "expression": "sum(총인구) = 51672569",
+     "used_rows": [
+      1
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "P03": {
+  "id": "P03",
+  "condition": "C",
+  "answer": "제공된 자료에는 2022년과 2023년 총인구만 있어 2024년 총인구를 알 수 없습니다.  \n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "K01": {
+  "id": "K01",
+  "condition": "C",
+  "answer": "2014년 대비 2023년 대한민국 총인구는 약 1.90% 증가했습니다.\n최종값: 1.90 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "총인구",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2023"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연도",
+       "value": "2014"
+      }
+     ]
+    },
+    "output": {
+     "value": "1.90349476997096498510374840637292",
+     "unit": "%",
+     "expression": "(51712619 - 50746659) / 50746659 * 100",
+     "used_rows": [
+      10
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "K02": {
+  "id": "K02",
+  "condition": "C",
+  "answer": "2022년 총인구는 2021년보다 감소했습니다. 증감률은 약 -0.1873%입니다.\n최종값: -0.1873 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "총인구",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2022"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연도",
+       "value": "2021"
+      }
+     ]
+    },
+    "output": {
+     "value": "-0.1873109204236877597074990372234143",
+     "unit": "%",
+     "expression": "(51672569 - 51769539) / 51769539 * 100",
+     "used_rows": [
+      9
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "K03": {
+  "id": "K03",
+  "condition": "C",
+  "answer": "2014~2023년 대한민국 실업률의 단순 평균은 3.4603%입니다.\n최종값: 3.4603 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "실업률",
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "3.4603",
+     "unit": "%",
+     "expression": "34.603 / 10",
+     "used_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "K04": {
+  "id": "K04",
+  "condition": "C",
+  "answer": "2020년 대한민국 실업률은 3.931%입니다.\n최종값: 3.931 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "실업률",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2020"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "3.931",
+     "unit": "%",
+     "expression": "3.931 / 1",
+     "used_rows": [
+      7
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "K05": {
+  "id": "K05",
+  "condition": "C",
+  "answer": "2022년 실업률은 2021년 대비 약 21.49% 감소했습니다.  \n최종값: -21.49 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "실업률",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2022"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연도",
+       "value": "2021"
+      }
+     ]
+    },
+    "output": {
+     "value": "-21.48942017037647705413575158010442",
+     "unit": "%",
+     "expression": "(2.857 - 3.639) / 3.639 * 100",
+     "used_rows": [
+      9
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "K06": {
+  "id": "K06",
+  "condition": "C",
+  "answer": "2014~2023년 대한민국 총인구의 10년 평균은 약 51,468,216.6명입니다.\n최종값: 51468216.6 명",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "총인구",
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "51468216.6",
+     "unit": "명",
+     "expression": "514682166 / 10",
+     "used_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "K07": {
+  "id": "K07",
+  "condition": "C",
+  "answer": "2017년 대한민국 총인구는 51,361,911명입니다.\n최종값: 51361911 명",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "총인구",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2017"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "51361911",
+     "unit": "명",
+     "expression": "sum(총인구) = 51361911",
+     "used_rows": [
+      4
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "K08": {
+  "id": "K08",
+  "condition": "C",
+  "answer": "2019년 실업률은 3.746%, 2023년은 2.675%입니다. 따라서 2019년과 2023년 사이 실업률은 1.071%p 하락했습니다.\n최종값: 1.071 %p",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "실업률",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2019"
+      },
+      {
+       "column": "연도",
+       "value": "2023"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "2.675",
+     "unit": "%",
+     "expression": "sum(실업률) = 2.675",
+     "used_rows": [
+      10
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "실업률",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2019"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "3.746",
+     "unit": "%",
+     "expression": "sum(실업률) = 3.746",
+     "used_rows": [
+      6
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "실업률",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2023"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "2.675",
+     "unit": "%",
+     "expression": "sum(실업률) = 2.675",
+     "used_rows": [
+      10
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "K09": {
+  "id": "K09",
+  "condition": "C",
+  "answer": "제공된 자료는 2014년부터 시작하므로 2013년 총인구를 확인할 수 없습니다.  \n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "K10": {
+  "id": "K10",
+  "condition": "C",
+  "answer": "이 자료에는 연도별 실업률만 있어 2022년 하락의 원인은 확인할 수 없습니다. 원인을 판단하려면 당시 고용·경제 상황 등 추가 자료가 필요합니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "V01": {
+  "id": "V01",
+  "condition": "C",
+  "answer": "A지역 방문자수는 2023년 1,000명에서 2024년 1,178명으로 증가했습니다. 증가율은 17.8%입니다.\n최종값: 17.8 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "방문자수",
+     "filters": [
+      {
+       "column": "지역",
+       "value": "A"
+      },
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "지역",
+       "value": "A"
+      },
+      {
+       "column": "연도",
+       "value": "2023"
+      }
+     ]
+    },
+    "output": {
+     "value": "17.8",
+     "unit": "%",
+     "expression": "(1178 - 1000) / 1000 * 100",
+     "used_rows": [
+      2
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "V02": {
+  "id": "V02",
+  "condition": "C",
+  "answer": "전체 지역·연도의 방문자수 합계는 4,938명입니다.  \n최종값: 4938 명",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "4938",
+     "unit": "명",
+     "expression": "sum(방문자수) = 4938",
+     "used_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "V03": {
+  "id": "V03",
+  "condition": "C",
+  "answer": "2024년 A지역 방문자는 1,178명이며, 전체 2,638명 중 44.66%입니다.  \n최종값: 44.66 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "ratio_percent",
+     "column": "방문자수",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      },
+      {
+       "column": "지역",
+       "value": "A"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ]
+    },
+    "output": {
+     "value": "44.65504169825625473843821076573161",
+     "unit": "%",
+     "expression": "1178 / 2638 * 100",
+     "used_rows": [
+      2
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "V04": {
+  "id": "V04",
+  "condition": "C",
+  "answer": "2024년 세 지역의 체류시간 평균은 9분입니다.\n최종값: 9 분",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "체류시간",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "9",
+     "unit": "분",
+     "expression": "27 / 3",
+     "used_rows": [
+      2,
+      4,
+      6
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "V05": {
+  "id": "V05",
+  "condition": "C",
+  "answer": "B지역의 2023년과 2024년 방문자수 합계는 1,760명입니다.\n최종값: 1760 명",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": [
+      {
+       "column": "지역",
+       "value": "B"
+      },
+      {
+       "column": "연도",
+       "value": "2023"
+      },
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "960",
+     "unit": "명",
+     "expression": "sum(방문자수) = 960",
+     "used_rows": [
+      4
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": [
+      {
+       "column": "지역",
+       "value": "B"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "1760",
+     "unit": "명",
+     "expression": "sum(방문자수) = 1760",
+     "used_rows": [
+      3,
+      4
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "V06": {
+  "id": "V06",
+  "condition": "C",
+  "answer": "2023년 전체 방문자수는 2,300명, 2024년은 2,638명으로 14.7% 증가했습니다.\n최종값: 14.7 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "방문자수",
+     "filters": [
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "연도",
+       "value": "2023"
+      }
+     ]
+    },
+    "output": {
+     "value": "14.69565217391304347826086956521739",
+     "unit": "%",
+     "expression": "(2638 - 2300) / 2300 * 100",
+     "used_rows": [
+      2,
+      4,
+      6
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "V07": {
+  "id": "V07",
+  "condition": "C",
+  "answer": "C지역 방문자수는 2023년 500명에서 2024년 500명으로 변하지 않았습니다. 따라서 증감률은 0%입니다.\n최종값: 0 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "방문자수",
+     "filters": [
+      {
+       "column": "지역",
+       "value": "C"
+      },
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "지역",
+       "value": "C"
+      },
+      {
+       "column": "연도",
+       "value": "2023"
+      }
+     ]
+    },
+    "output": {
+     "value": "0",
+     "unit": "%",
+     "expression": "(500 - 500) / 500 * 100",
+     "used_rows": [
+      6
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "V08": {
+  "id": "V08",
+  "condition": "C",
+  "answer": "자료에 D지역 데이터가 없어 2024년 방문자수를 확인할 수 없습니다.  \n최종값: 판단불가",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": [
+      {
+       "column": "지역",
+       "value": "D"
+      },
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "error": "EMPTY_SELECTION"
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "V09": {
+  "id": "V09",
+  "condition": "C",
+  "answer": "A지역에서 방문자수와 평균 체류시간은 모두 증가했지만, 이 자료만으로 체류시간 증가가 방문자 증가의 원인이라고 판단할 수는 없습니다. 방문자수는 17.8%, 체류시간은 20% 늘었습니다.  \n최종값: 판단불가",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "방문자수",
+     "filters": [
+      {
+       "column": "지역",
+       "value": "A"
+      },
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "지역",
+       "value": "A"
+      },
+      {
+       "column": "연도",
+       "value": "2023"
+      }
+     ]
+    },
+    "output": {
+     "value": "17.8",
+     "unit": "%",
+     "expression": "(1178 - 1000) / 1000 * 100",
+     "used_rows": [
+      2
+     ]
+    }
+   },
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "체류시간",
+     "filters": [
+      {
+       "column": "지역",
+       "value": "A"
+      },
+      {
+       "column": "연도",
+       "value": "2024"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "지역",
+       "value": "A"
+      },
+      {
+       "column": "연도",
+       "value": "2023"
+      }
+     ]
+    },
+    "output": {
+     "value": "20",
+     "unit": "%",
+     "expression": "(12 - 10) / 10 * 100",
+     "used_rows": [
+      2
+     ]
+    }
+   }
+  ],
+  "status": "completed"
+ }
+}

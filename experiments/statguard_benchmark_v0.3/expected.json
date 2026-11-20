@@ -1,0 +1,128 @@
+{
+ "R01": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "1662580579",
+  "unit": "명"
+ },
+ "R02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "44471.141639344262295081967213114754",
+  "unit": "달러"
+ },
+ "R03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "64.335659090909090909090909090909",
+  "unit": "세"
+ },
+ "R04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "5.1595",
+  "unit": "%"
+ },
+ "R05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "85.247",
+  "unit": "세"
+ },
+ "R06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "249.8",
+  "unit": "달러"
+ },
+ "R07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.020837258593683563155929557013",
+  "unit": "%"
+ },
+ "R08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.686734330001391973395142575317",
+  "unit": ""
+ },
+ "R09": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "18.846106363119809791212415653581",
+  "unit": ""
+ },
+ "R10": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.00024004382521838704",
+  "unit": ""
+ },
+ "R11": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "29.819057754703609683028739733291",
+  "unit": "%"
+ },
+ "R12": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "376804140",
+  "unit": "명"
+ },
+ "R13": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "8.84245",
+  "unit": "%"
+ },
+ "R14": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "35674.1",
+  "unit": "달러"
+ },
+ "R15": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.317363381047217101203214048965",
+  "unit": "%"
+ },
+ "R16": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "73.542147727272727272727272727273",
+  "unit": "세"
+ },
+ "R17": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "24446.286234933119315137193894524605",
+  "unit": "달러"
+ },
+ "R18": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-0.137651730735381292169803278982",
+  "unit": ""
+ },
+ "R19": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "84.041",
+  "unit": "세"
+ },
+ "R20": {
+  "answerable": false,
+  "statguard_supported": false
+ },
+ "R21": {
+  "answerable": false,
+  "statguard_supported": false
+ },
+ "R22": {
+  "answerable": false,
+  "statguard_supported": false
+ }
+}

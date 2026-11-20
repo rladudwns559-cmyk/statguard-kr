@@ -1,0 +1,8 @@
+{
+  "seattle_daily": {"file": "06_시애틀_2023_일별기상.csv", "units": {"강수량": "mm", "최고기온": "℃", "최저기온": "℃"}, "domain": "기상(일별 365행)",
+    "description": "NOAA NCEI GHCN-Daily, 시애틀-타코마 공항(USW00024233) 2023년 일별 강수량(mm)·최고기온(℃)·최저기온(℃). 원자료의 0.1 단위를 10으로 나눔. 월은 1~12.",
+    "source": "NOAA NCEI GHCN-Daily access CSV, 다운로드 2026-11-20"},
+  "cities_daily": {"file": "07_미국4개도시_2023_일별기상.csv", "units": {"강수량": "mm", "최고기온": "℃"}, "domain": "기상(4개 도시 1,460행)",
+    "description": "NOAA NCEI GHCN-Daily, 2023년 일별 강수량(mm)·최고기온(℃). 도시: 시애틀(USW00024233)·로스앤젤레스(USW00023174)·뉴욕 JFK(USW00094789)·시카고 오헤어(USW00094846). 월은 1~12.",
+    "source": "NOAA NCEI GHCN-Daily access CSV, 다운로드 2026-11-20"}
+}

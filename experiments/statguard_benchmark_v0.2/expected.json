@@ -1,0 +1,174 @@
+{
+ "W01": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "888.9",
+  "unit": "mm"
+ },
+ "W02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "26.706451612903225806451612903226",
+  "unit": "℃"
+ },
+ "W03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.667741935483870967741935483871",
+  "unit": "℃"
+ },
+ "W04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "35",
+  "unit": "℃"
+ },
+ "W05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-5.5",
+  "unit": "℃"
+ },
+ "W06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "147",
+  "unit": "mm"
+ },
+ "W07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "193.269571377966702089975203684024",
+  "unit": "%"
+ },
+ "W08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.63333821638714206825907544628",
+  "unit": "℃"
+ },
+ "W09": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "15",
+  "unit": "℃"
+ },
+ "W10": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.895482362104714867396361337152",
+  "unit": ""
+ },
+ "W11": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.0007075859208037707",
+  "unit": ""
+ },
+ "W12": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "24.232197097536280796490043874452",
+  "unit": "%"
+ },
+ "W13": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.829362175929523017926524295143",
+  "unit": "℃"
+ },
+ "W14": {
+  "answerable": true,
+  "statguard_supported": false,
+  "value": "149",
+  "unit": "일"
+ },
+ "W15": {
+  "answerable": false,
+  "statguard_supported": false
+ },
+ "W16": {
+  "answerable": false,
+  "statguard_supported": false
+ },
+ "F01": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "857.4",
+  "unit": "mm"
+ },
+ "F02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "20.714520547945205479452054794521",
+  "unit": "℃"
+ },
+ "F03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "23.851561661479016850917677363958",
+  "unit": "%"
+ },
+ "F04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "37.8",
+  "unit": "℃"
+ },
+ "F05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "29.335483870967741935483870967742",
+  "unit": "℃"
+ },
+ "F06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-9.498740198897541072214780877135",
+  "unit": ""
+ },
+ "F07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "8.340967778944318941047923423912",
+  "unit": "℃"
+ },
+ "F08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "66",
+  "unit": "mm"
+ },
+ "F09": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "20.6",
+  "unit": "℃"
+ },
+ "F10": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-0.223769093567039723896287762436",
+  "unit": ""
+ },
+ "F11": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "193.030303030303030303030303030303",
+  "unit": "%"
+ },
+ "F12": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "17.92773972602739726027397260274",
+  "unit": "℃"
+ },
+ "F13": {
+  "answerable": false,
+  "statguard_supported": false
+ },
+ "F14": {
+  "answerable": false,
+  "statguard_supported": false
+ }
+}

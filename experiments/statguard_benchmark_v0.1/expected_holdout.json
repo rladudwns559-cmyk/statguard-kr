@@ -1,0 +1,106 @@
+{
+ "H01": {
+  "answerable": true,
+  "statguard_supported": false,
+  "value": "88.683333333333",
+  "unit": "mm"
+ },
+ "H02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "33.690658499234",
+  "unit": "%"
+ },
+ "H03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "24.232197097536",
+  "unit": "%"
+ },
+ "H04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.3",
+  "unit": "mm"
+ },
+ "H05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-0.367447885997",
+  "unit": "%"
+ },
+ "H06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "422.38",
+  "unit": "ppm"
+ },
+ "H07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.365695411112",
+  "unit": "%"
+ },
+ "H08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.006364596337",
+  "unit": "%"
+ },
+ "H09": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-0.100846478328",
+  "unit": "%"
+ },
+ "H10": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.546",
+  "unit": "%"
+ },
+ "H11": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-13.205710577547",
+  "unit": "%"
+ },
+ "H12": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-0.128674458809",
+  "unit": "%"
+ },
+ "H13": {
+  "answerable": false,
+  "statguard_supported": false
+ },
+ "H14": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "20",
+  "unit": "%"
+ },
+ "H15": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "34.782608695652",
+  "unit": "%"
+ },
+ "H16": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.666666666667",
+  "unit": "분"
+ },
+ "H17": {
+  "answerable": false,
+  "statguard_supported": false
+ },
+ "H18": {
+  "answerable": true,
+  "statguard_supported": false,
+  "value": "40050",
+  "unit": "명"
+ }
+}

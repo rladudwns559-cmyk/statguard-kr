@@ -1,0 +1,42 @@
+[
+  {"id": "S01", "dataset": "seattle", "category": "sum", "question": "2023년 시애틀 관측소의 월별 강수량을 모두 더한 연간 강수량 합계는 몇 mm인가요?", "calc": {"op": "sum", "column": "강수량", "filters": {}}},
+  {"id": "S02", "dataset": "seattle", "category": "mean", "question": "2023년 12개월 강수량의 월평균은 몇 mm인가요?", "calc": {"op": "mean", "column": "강수량", "filters": {}}},
+  {"id": "S03", "dataset": "seattle", "category": "lookup", "question": "2023년 12월 강수량은 몇 mm인가요?", "calc": {"op": "sum", "column": "강수량", "filters": {"연월": "2023-12"}}},
+  {"id": "S04", "dataset": "seattle", "category": "percent_change", "question": "2023년 1월 대비 2023년 12월 강수량은 몇 % 증가했나요?", "calc": {"op": "percent_change", "column": "강수량", "filters": {"연월": "2023-12"}, "reference": {"연월": "2023-01"}}},
+  {"id": "S05", "dataset": "seattle", "category": "ratio", "question": "2023년 11월 강수량은 2023년 연간 강수량 합계의 몇 %를 차지하나요?", "calc": {"op": "ratio", "column": "강수량", "filters": {"연월": "2023-11"}, "reference": {}}},
+  {"id": "S06", "dataset": "seattle", "category": "range_sum", "question": "2023년 상반기(1~6월) 강수량 합계는 몇 mm인가요?", "calc": {"op": "sum_in", "column": "강수량", "in": {"연월": ["2023-01", "2023-02", "2023-03", "2023-04", "2023-05", "2023-06"]}}, "statguard_supported": false},
+  {"id": "S07", "dataset": "seattle", "category": "not_covered", "question": "2024년 1월 시애틀 강수량은 몇 mm인가요?", "answerable": false},
+  {"id": "S08", "dataset": "seattle", "category": "interpretive", "question": "2023년 11~12월에 강수량이 많았던 원인은 무엇인가요?", "answerable": false},
+
+  {"id": "C01", "dataset": "co2", "category": "mean", "question": "2024년 월별 이산화탄소농도 12개 값의 산술평균은 몇 ppm인가요?", "calc": {"op": "mean", "column": "이산화탄소농도", "filters": {}}},
+  {"id": "C02", "dataset": "co2", "category": "lookup", "question": "2024년 5월 이산화탄소농도는 몇 ppm인가요?", "calc": {"op": "sum", "column": "이산화탄소농도", "filters": {"월": "5"}}},
+  {"id": "C03", "dataset": "co2", "category": "percent_change", "question": "2024년 1월 대비 2024년 12월 이산화탄소농도는 몇 % 변했나요?", "calc": {"op": "percent_change", "column": "이산화탄소농도", "filters": {"월": "12"}, "reference": {"월": "1"}}},
+  {"id": "C04", "dataset": "co2", "category": "percent_change", "question": "2024년 6월 대비 9월 이산화탄소농도의 변화율은 몇 %인가요?", "calc": {"op": "percent_change", "column": "이산화탄소농도", "filters": {"월": "9"}, "reference": {"월": "6"}}},
+  {"id": "C05", "dataset": "co2", "category": "not_covered", "question": "2025년 1월 마우나로아의 이산화탄소농도는 몇 ppm인가요?", "answerable": false},
+  {"id": "C06", "dataset": "co2", "category": "interpretive", "question": "2024년 이산화탄소농도의 월별 변화는 통계적으로 유의한 증가 추세인가요?", "answerable": false},
+
+  {"id": "P01", "dataset": "pop2", "category": "percent_change", "question": "2022년 대비 2023년 대한민국 총인구 증감률은 몇 %인가요?", "calc": {"op": "percent_change", "column": "총인구", "filters": {"연도": "2023"}, "reference": {"연도": "2022"}}},
+  {"id": "P02", "dataset": "pop2", "category": "lookup", "question": "2022년 대한민국 총인구는 몇 명인가요?", "calc": {"op": "sum", "column": "총인구", "filters": {"연도": "2022"}}},
+  {"id": "P03", "dataset": "pop2", "category": "not_covered", "question": "2024년 대한민국 총인구는 몇 명인가요?", "answerable": false},
+
+  {"id": "K01", "dataset": "korea10", "category": "percent_change", "question": "2014년 대비 2023년 대한민국 총인구는 몇 % 증가했나요?", "calc": {"op": "percent_change", "column": "총인구", "filters": {"연도": "2023"}, "reference": {"연도": "2014"}}},
+  {"id": "K02", "dataset": "korea10", "category": "percent_change", "question": "2021년 대비 2022년 대한민국 총인구 증감률은 몇 %인가요?", "calc": {"op": "percent_change", "column": "총인구", "filters": {"연도": "2022"}, "reference": {"연도": "2021"}}},
+  {"id": "K03", "dataset": "korea10", "category": "mean", "question": "2014~2023년 10년간 대한민국 실업률의 단순 평균은 몇 %인가요?", "calc": {"op": "mean", "column": "실업률", "filters": {}}},
+  {"id": "K04", "dataset": "korea10", "category": "lookup", "question": "2020년 대한민국 실업률은 몇 %인가요?", "calc": {"op": "sum", "column": "실업률", "filters": {"연도": "2020"}}},
+  {"id": "K05", "dataset": "korea10", "category": "percent_change", "question": "2021년 대비 2022년 실업률 자체의 변화율(상대 변화, %)은 얼마인가요?", "calc": {"op": "percent_change", "column": "실업률", "filters": {"연도": "2022"}, "reference": {"연도": "2021"}}},
+  {"id": "K06", "dataset": "korea10", "category": "mean", "question": "2014~2023년 대한민국 총인구의 10년 평균은 몇 명인가요?", "calc": {"op": "mean", "column": "총인구", "filters": {}}},
+  {"id": "K07", "dataset": "korea10", "category": "lookup", "question": "2017년 대한민국 총인구는 몇 명인가요?", "calc": {"op": "sum", "column": "총인구", "filters": {"연도": "2017"}}},
+  {"id": "K08", "dataset": "korea10", "category": "pp_diff", "question": "2019년과 2023년 사이 실업률은 몇 %p 하락했나요?", "calc": {"op": "pp_diff", "column": "실업률", "filters": {"연도": "2023"}, "reference": {"연도": "2019"}}, "statguard_supported": false},
+  {"id": "K09", "dataset": "korea10", "category": "not_covered", "question": "2013년 대한민국 총인구는 몇 명인가요?", "answerable": false},
+  {"id": "K10", "dataset": "korea10", "category": "interpretive", "question": "2022년에 실업률이 크게 하락한 원인은 무엇인가요?", "answerable": false},
+
+  {"id": "V01", "dataset": "visitors", "category": "percent_change", "question": "A지역 방문자수는 2023년 대비 2024년에 몇 % 증가했나요?", "calc": {"op": "percent_change", "column": "방문자수", "filters": {"지역": "A", "연도": "2024"}, "reference": {"지역": "A", "연도": "2023"}}},
+  {"id": "V02", "dataset": "visitors", "category": "sum", "question": "전체 지역·연도의 방문자수 합계는 몇 명인가요?", "calc": {"op": "sum", "column": "방문자수", "filters": {}}},
+  {"id": "V03", "dataset": "visitors", "category": "ratio", "question": "2024년 전체 방문자 중 A지역 방문자의 비율은 몇 %인가요?", "calc": {"op": "ratio", "column": "방문자수", "filters": {"지역": "A", "연도": "2024"}, "reference": {"연도": "2024"}}},
+  {"id": "V04", "dataset": "visitors", "category": "mean", "question": "2024년 세 지역의 체류시간 평균은 몇 분인가요?", "calc": {"op": "mean", "column": "체류시간", "filters": {"연도": "2024"}}},
+  {"id": "V05", "dataset": "visitors", "category": "sum", "question": "B지역의 2023년과 2024년 방문자수 합계는 몇 명인가요?", "calc": {"op": "sum", "column": "방문자수", "filters": {"지역": "B"}}},
+  {"id": "V06", "dataset": "visitors", "category": "percent_change", "question": "2023년 대비 2024년 전체 방문자수는 몇 % 증가했나요?", "calc": {"op": "percent_change", "column": "방문자수", "filters": {"연도": "2024"}, "reference": {"연도": "2023"}}},
+  {"id": "V07", "dataset": "visitors", "category": "percent_change", "question": "C지역 방문자수는 2023년 대비 2024년에 몇 % 변했나요?", "calc": {"op": "percent_change", "column": "방문자수", "filters": {"지역": "C", "연도": "2024"}, "reference": {"지역": "C", "연도": "2023"}}},
+  {"id": "V08", "dataset": "visitors", "category": "not_covered", "question": "D지역의 2024년 방문자수는 몇 명인가요?", "answerable": false},
+  {"id": "V09", "dataset": "visitors", "category": "interpretive", "question": "A지역 방문자가 늘어난 것은 체류시간이 늘었기 때문인가요?", "answerable": false}
+]

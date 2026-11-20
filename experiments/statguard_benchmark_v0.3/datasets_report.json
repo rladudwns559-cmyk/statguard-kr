@@ -1,0 +1,16 @@
+{
+ "rows": 176,
+ "dropped": {
+  "aggregate_or_unclassified": 79,
+  "missing_value": 41
+ },
+ "raw_sha256": {
+  "countries.json": "c9acf3932785191a649cbc04c3056af4cf64a236e5c3b49d49be25ddb0440bce",
+  "NY.GDP.PCAP.CD_2023.json": "85d581d9b5b07bc7b560927dbeb6a975c3e693b9246066bddf3b4859c2830eb0",
+  "SL.UEM.TOTL.ZS_2023.json": "1a8bba4c847c10e73181224618284328176aef0602990ff78a1a77b0136f5d01",
+  "SP.DYN.LE00.IN_2023.json": "fa854368d71ce10b4339cf161e1cde6d14eebbb16f833f52df73251e363b8145",
+  "SP.POP.TOTL_2023.json": "5bed48131b088831a07cdd3daea761cf18ee4300426ad4e497f1f86f17bb5cda"
+ },
+ "rounding": "1인당GDP 2자리, 실업률·기대수명 3자리(ROUND_HALF_EVEN), 총인구 정수",
+ "wdi_lastupdated": "2026-11-11"
+}

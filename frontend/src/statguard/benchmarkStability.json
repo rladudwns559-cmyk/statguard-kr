@@ -1,0 +1,325 @@
+{
+ "v0.1 작은 표/A": {
+  "benchmark": "v0.1 작은 표",
+  "condition": "A 일반 LLM",
+  "runs": 3,
+  "per_run": [
+   {
+    "n": 36,
+    "accuracy": 0.9166666666666666,
+    "coverage": 0.4166666666666667,
+    "passed": 15,
+    "wrong_among_passed": 0,
+    "flagged": 0,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 15,
+     "HOLD": 21
+    }
+   },
+   {
+    "n": 36,
+    "accuracy": 0.9166666666666666,
+    "coverage": 0.5,
+    "passed": 17,
+    "wrong_among_passed": 0,
+    "flagged": 1,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 17,
+     "HOLD": 18,
+     "FLAG": 1
+    }
+   },
+   {
+    "n": 36,
+    "accuracy": 0.9444444444444444,
+    "coverage": 0.5833333333333334,
+    "passed": 20,
+    "wrong_among_passed": 0,
+    "flagged": 1,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 20,
+     "HOLD": 15,
+     "FLAG": 1
+    }
+   }
+  ],
+  "accuracy_min": 0.9166666666666666,
+  "accuracy_max": 0.9444444444444444,
+  "questions_same_correctness_all_runs": 0.9722222222222222,
+  "questions_wrong_in_some_run": 3,
+  "total_passed": 52,
+  "total_wrong_among_passed": 0
+ },
+ "v0.1 작은 표/C": {
+  "benchmark": "v0.1 작은 표",
+  "condition": "C LLM+계산 도구",
+  "runs": 3,
+  "per_run": [
+   {
+    "n": 36,
+    "accuracy": 1.0,
+    "coverage": 0.6111111111111112,
+    "passed": 22,
+    "wrong_among_passed": 0,
+    "flagged": 0,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 22,
+     "HOLD": 14
+    }
+   },
+   {
+    "n": 36,
+    "accuracy": 1.0,
+    "coverage": 0.6388888888888888,
+    "passed": 23,
+    "wrong_among_passed": 0,
+    "flagged": 0,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 23,
+     "HOLD": 13
+    }
+   },
+   {
+    "n": 36,
+    "accuracy": 1.0,
+    "coverage": 0.5277777777777778,
+    "passed": 19,
+    "wrong_among_passed": 0,
+    "flagged": 0,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 19,
+     "HOLD": 17
+    }
+   }
+  ],
+  "accuracy_min": 1.0,
+  "accuracy_max": 1.0,
+  "questions_same_correctness_all_runs": 1.0,
+  "questions_wrong_in_some_run": 0,
+  "total_passed": 64,
+  "total_wrong_among_passed": 0
+ },
+ "v0.2 큰 표/A": {
+  "benchmark": "v0.2 큰 표",
+  "condition": "A 일반 LLM",
+  "runs": 3,
+  "per_run": [
+   {
+    "n": 30,
+    "accuracy": 0.6666666666666666,
+    "coverage": 0.5666666666666667,
+    "passed": 12,
+    "wrong_among_passed": 0,
+    "flagged": 5,
+    "wrong_among_flagged": 5,
+    "decisions": {
+     "FLAG": 5,
+     "HOLD": 13,
+     "PASS": 12
+    }
+   },
+   {
+    "n": 30,
+    "accuracy": 0.5333333333333333,
+    "coverage": 0.5666666666666667,
+    "passed": 9,
+    "wrong_among_passed": 0,
+    "flagged": 8,
+    "wrong_among_flagged": 7,
+    "decisions": {
+     "FLAG": 8,
+     "PASS": 9,
+     "HOLD": 13
+    }
+   },
+   {
+    "n": 30,
+    "accuracy": 0.6333333333333333,
+    "coverage": 0.4666666666666667,
+    "passed": 10,
+    "wrong_among_passed": 0,
+    "flagged": 4,
+    "wrong_among_flagged": 2,
+    "decisions": {
+     "PASS": 10,
+     "HOLD": 16,
+     "FLAG": 4
+    }
+   }
+  ],
+  "accuracy_min": 0.5333333333333333,
+  "accuracy_max": 0.6666666666666666,
+  "questions_same_correctness_all_runs": 0.8,
+  "questions_wrong_in_some_run": 14,
+  "total_passed": 31,
+  "total_wrong_among_passed": 0
+ },
+ "v0.2 큰 표/C": {
+  "benchmark": "v0.2 큰 표",
+  "condition": "C LLM+계산 도구",
+  "runs": 3,
+  "per_run": [
+   {
+    "n": 30,
+    "accuracy": 0.9666666666666667,
+    "coverage": 0.6666666666666666,
+    "passed": 20,
+    "wrong_among_passed": 0,
+    "flagged": 0,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 20,
+     "HOLD": 10
+    }
+   },
+   {
+    "n": 30,
+    "accuracy": 1.0,
+    "coverage": 0.7,
+    "passed": 20,
+    "wrong_among_passed": 0,
+    "flagged": 1,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 20,
+     "HOLD": 9,
+     "FLAG": 1
+    }
+   },
+   {
+    "n": 30,
+    "accuracy": 1.0,
+    "coverage": 0.7333333333333333,
+    "passed": 21,
+    "wrong_among_passed": 0,
+    "flagged": 1,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 21,
+     "HOLD": 8,
+     "FLAG": 1
+    }
+   }
+  ],
+  "accuracy_min": 0.9666666666666667,
+  "accuracy_max": 1.0,
+  "questions_same_correctness_all_runs": 0.9666666666666667,
+  "questions_wrong_in_some_run": 1,
+  "total_passed": 61,
+  "total_wrong_among_passed": 0
+ },
+ "v0.3 국가별/A": {
+  "benchmark": "v0.3 국가별",
+  "condition": "A 일반 LLM",
+  "runs": 3,
+  "per_run": [
+   {
+    "n": 22,
+    "accuracy": 0.5454545454545454,
+    "coverage": 0.45454545454545453,
+    "passed": 8,
+    "wrong_among_passed": 0,
+    "flagged": 2,
+    "wrong_among_flagged": 2,
+    "decisions": {
+     "PASS": 8,
+     "FLAG": 2,
+     "HOLD": 12
+    }
+   },
+   {
+    "n": 22,
+    "accuracy": 0.5909090909090909,
+    "coverage": 0.5,
+    "passed": 8,
+    "wrong_among_passed": 0,
+    "flagged": 3,
+    "wrong_among_flagged": 3,
+    "decisions": {
+     "PASS": 8,
+     "FLAG": 3,
+     "HOLD": 11
+    }
+   },
+   {
+    "n": 22,
+    "accuracy": 0.5,
+    "coverage": 0.5454545454545454,
+    "passed": 8,
+    "wrong_among_passed": 0,
+    "flagged": 4,
+    "wrong_among_flagged": 3,
+    "decisions": {
+     "FLAG": 4,
+     "PASS": 8,
+     "HOLD": 10
+    }
+   }
+  ],
+  "accuracy_min": 0.5,
+  "accuracy_max": 0.5909090909090909,
+  "questions_same_correctness_all_runs": 0.8181818181818182,
+  "questions_wrong_in_some_run": 12,
+  "total_passed": 24,
+  "total_wrong_among_passed": 0
+ },
+ "v0.3 국가별/C": {
+  "benchmark": "v0.3 국가별",
+  "condition": "C LLM+계산 도구",
+  "runs": 3,
+  "per_run": [
+   {
+    "n": 22,
+    "accuracy": 0.9545454545454546,
+    "coverage": 0.7727272727272727,
+    "passed": 16,
+    "wrong_among_passed": 0,
+    "flagged": 1,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 16,
+     "HOLD": 5,
+     "FLAG": 1
+    }
+   },
+   {
+    "n": 22,
+    "accuracy": 0.9545454545454546,
+    "coverage": 0.7272727272727273,
+    "passed": 16,
+    "wrong_among_passed": 0,
+    "flagged": 0,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 16,
+     "HOLD": 6
+    }
+   },
+   {
+    "n": 22,
+    "accuracy": 0.9545454545454546,
+    "coverage": 0.6818181818181818,
+    "passed": 15,
+    "wrong_among_passed": 0,
+    "flagged": 0,
+    "wrong_among_flagged": 0,
+    "decisions": {
+     "PASS": 15,
+     "HOLD": 7
+    }
+   }
+  ],
+  "accuracy_min": 0.9545454545454546,
+  "accuracy_max": 0.9545454545454546,
+  "questions_same_correctness_all_runs": 1.0,
+  "questions_wrong_in_some_run": 1,
+  "total_passed": 47,
+  "total_wrong_among_passed": 0
+ }
+}

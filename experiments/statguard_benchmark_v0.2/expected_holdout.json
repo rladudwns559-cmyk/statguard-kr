@@ -1,0 +1,84 @@
+{
+ "LH01": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "12.966666666666666666666666666667",
+  "unit": "℃"
+ },
+ "LH02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "65.3",
+  "unit": "mm"
+ },
+ "LH03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "15",
+  "unit": "℃"
+ },
+ "LH04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.225769892265947472846068369087",
+  "unit": "℃"
+ },
+ "LH05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-0.076632769942112562456185432485",
+  "unit": ""
+ },
+ "LH06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-88.685524126455906821963394342762",
+  "unit": "%"
+ },
+ "LH07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "12.2",
+  "unit": "℃"
+ },
+ "LH08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "9.106451612903225806451612903226",
+  "unit": "℃"
+ },
+ "LH09": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "1336.1",
+  "unit": "mm"
+ },
+ "LH10": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "35.851132338735644520768487710636",
+  "unit": "%"
+ },
+ "LH11": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "17.2",
+  "unit": "℃"
+ },
+ "LH12": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.35418095052476956",
+  "unit": ""
+ },
+ "LH13": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "5.649699516027909184560266860794",
+  "unit": "mm"
+ },
+ "LH14": {
+  "answerable": false,
+  "statguard_supported": false
+ }
+}

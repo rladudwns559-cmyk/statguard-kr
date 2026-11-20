@@ -1,0 +1,1317 @@
+{
+ "meta": {
+  "questions": 30,
+  "answerable": 26,
+  "unanswerable": 4,
+  "datasets": 2,
+  "generated": "2026-11-20"
+ },
+ "conditions": {
+  "A": {
+   "accuracy": {
+    "all": {
+     "correct": 20,
+     "n": 30,
+     "rate": 0.6666666666666666
+    },
+    "answerable": {
+     "correct": 16,
+     "n": 26,
+     "rate": 0.6153846153846154
+    },
+    "category:correlation": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:count": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:interpretive": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:max": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 3,
+     "n": 5,
+     "rate": 0.6
+    },
+    "category:median": {
+     "correct": 1,
+     "n": 2,
+     "rate": 0.5
+    },
+    "category:min": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:stdev": {
+     "correct": 2,
+     "n": 3,
+     "rate": 0.6666666666666666
+    },
+    "category:sum": {
+     "correct": 3,
+     "n": 4,
+     "rate": 0.75
+    },
+    "category:t_test_p": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:t_test_t": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "domain:기상(4개 도시 1,460행)": {
+     "correct": 8,
+     "n": 14,
+     "rate": 0.5714285714285714
+    },
+    "domain:기상(일별 365행)": {
+     "correct": 12,
+     "n": 16,
+     "rate": 0.75
+    },
+    "unanswerable": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 7,
+    "형식 오류": 3
+   }
+  },
+  "B": {
+   "accuracy": {
+    "all": {
+     "correct": 18,
+     "n": 30,
+     "rate": 0.6
+    },
+    "answerable": {
+     "correct": 14,
+     "n": 26,
+     "rate": 0.5384615384615384
+    },
+    "category:correlation": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:count": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:interpretive": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:max": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 3,
+     "n": 5,
+     "rate": 0.6
+    },
+    "category:median": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:min": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:stdev": {
+     "correct": 2,
+     "n": 3,
+     "rate": 0.6666666666666666
+    },
+    "category:sum": {
+     "correct": 2,
+     "n": 4,
+     "rate": 0.5
+    },
+    "category:t_test_p": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:t_test_t": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "domain:기상(4개 도시 1,460행)": {
+     "correct": 7,
+     "n": 14,
+     "rate": 0.5
+    },
+    "domain:기상(일별 365행)": {
+     "correct": 11,
+     "n": 16,
+     "rate": 0.6875
+    },
+    "unanswerable": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 9,
+    "형식 오류": 3
+   }
+  },
+  "C": {
+   "accuracy": {
+    "all": {
+     "correct": 29,
+     "n": 30,
+     "rate": 0.9666666666666667
+    },
+    "answerable": {
+     "correct": 25,
+     "n": 26,
+     "rate": 0.9615384615384616
+    },
+    "category:correlation": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:count": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "category:interpretive": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:max": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:median": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:min": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:stdev": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "category:sum": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    },
+    "category:t_test_p": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:t_test_t": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "domain:기상(4개 도시 1,460행)": {
+     "correct": 14,
+     "n": 14,
+     "rate": 1.0
+    },
+    "domain:기상(일별 365행)": {
+     "correct": 15,
+     "n": 16,
+     "rate": 0.9375
+    },
+    "unanswerable": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {
+    "과잉 보류": 1
+   }
+  }
+ },
+ "statguard": {
+  "A/rule_v0.4": {
+   "n": 30,
+   "decided": 18,
+   "coverage": 0.6,
+   "tp": 4,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.6666666666666666,
+   "recall": 1.0,
+   "f1": 0.8,
+   "errors_total": 10,
+   "missed_errors_on_hold": 6,
+   "raw_error_rate": 0.3333333333333333,
+   "passed": 12,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "FLAG": 6,
+    "HOLD": 12,
+    "PASS": 12
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.5": {
+   "n": 30,
+   "decided": 17,
+   "coverage": 0.5666666666666667,
+   "tp": 5,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 10,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.3333333333333333,
+   "passed": 12,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "FLAG": 5,
+    "HOLD": 13,
+    "PASS": 12
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/llm": {
+   "n": 30,
+   "decided": 16,
+   "coverage": 0.5333333333333333,
+   "tp": 5,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 10,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.3333333333333333,
+   "passed": 11,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "FLAG": 5,
+    "HOLD": 14,
+    "PASS": 11
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.4": {
+   "n": 30,
+   "decided": 16,
+   "coverage": 0.5333333333333333,
+   "tp": 6,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.8571428571428571,
+   "recall": 1.0,
+   "f1": 0.923076923076923,
+   "errors_total": 12,
+   "missed_errors_on_hold": 6,
+   "raw_error_rate": 0.4,
+   "passed": 9,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "FLAG": 7,
+    "PASS": 9,
+    "HOLD": 14
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.5": {
+   "n": 30,
+   "decided": 16,
+   "coverage": 0.5333333333333333,
+   "tp": 6,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 12,
+   "missed_errors_on_hold": 6,
+   "raw_error_rate": 0.4,
+   "passed": 10,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "FLAG": 6,
+    "PASS": 10,
+    "HOLD": 14
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.4": {
+   "n": 30,
+   "decided": 21,
+   "coverage": 0.7,
+   "tp": 0,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 1,
+   "missed_errors_on_hold": 1,
+   "raw_error_rate": 0.03333333333333333,
+   "passed": 19,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 19,
+    "HOLD": 9,
+    "FLAG": 2
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.5": {
+   "n": 30,
+   "decided": 20,
+   "coverage": 0.6666666666666666,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 1,
+   "missed_errors_on_hold": 1,
+   "raw_error_rate": 0.03333333333333333,
+   "passed": 20,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 20,
+    "HOLD": 10
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  }
+ },
+ "per_question": {
+  "W08": {
+   "A": {
+    "final": "7.9 ℃",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "7.7 ℃",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG"
+   },
+   "C": {
+    "final": "7.633338216387142 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F06": {
+   "A": {
+    "final": "-8.3 무차원",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "-9.6 t-통계량",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "-9.4987401989 t 통계량",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "W01": {
+   "A": {
+    "final": "888.4 mm",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "FLAG",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "888.6 mm",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG"
+   },
+   "C": {
+    "final": "888.9 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W02": {
+   "A": {
+    "final": "26.7 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "26.7 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "26.71 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W03": {
+   "A": {
+    "final": "3.7 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "3.67 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "3.67 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W04": {
+   "A": {
+    "final": "35.0 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "35.0 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "35 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W05": {
+   "A": {
+    "final": "-5.5 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "-5.5 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "-5.5 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W06": {
+   "A": {
+    "final": "147.0 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "147.0 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "147 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W07": {
+   "A": {
+    "final": "193.3 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "193.27 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "193.27 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "W09": {
+   "A": {
+    "final": "15.0 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "15 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W10": {
+   "A": {
+    "final": "0.86 무단위",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "0.80 계수",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG"
+   },
+   "C": {
+    "final": "0.8955 상관계수",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W11": {
+   "A": {
+    "final": "0.0007 p값",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "0.0007 p값",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "0.0007075859 p값",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W12": {
+   "A": {
+    "final": "24.25 %",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "24.3 %",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG"
+   },
+   "C": {
+    "final": "24.23 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "W13": {
+   "A": {
+    "final": "2.83 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "2.83 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "2.8293621759 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "W14": {
+   "A": {
+    "final": "149 일",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "149 일",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": false,
+    "error_kind": "과잉 보류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "W15": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "W16": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "F01": {
+   "A": {
+    "final": "857.4 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "855.1 mm",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG"
+   },
+   "C": {
+    "final": "857.4 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F02": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "20.714520547945205 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F03": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "23.85156166147901685 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "F04": {
+   "A": {
+    "final": "37.8 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "37.8 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "37.8 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F05": {
+   "A": {
+    "final": "29.3 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "29.3 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "29.34 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F07": {
+   "A": {
+    "final": "8.3 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "8.3 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "8.340967778944319 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F08": {
+   "A": {
+    "final": "66.0 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "66.0 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   },
+   "C": {
+    "final": "66 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F09": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "24.4 ℃",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "20.6 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F10": {
+   "A": {
+    "final": "-0.4 상관계수",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "-0.24 무단위",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "-0.224 무단위",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F11": {
+   "A": {
+    "final": "193.0 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "193.0 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "193.03 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "F12": {
+   "A": {
+    "final": "17.8 ℃",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "17.7 ℃",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG"
+   },
+   "C": {
+    "final": "17.927739726 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS"
+   }
+  },
+  "F13": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  },
+  "F14": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD"
+   }
+  }
+ },
+ "perturbation": {
+  "rule_v0.4": {
+   "n": 52,
+   "decided": 43,
+   "coverage": 0.8269230769230769,
+   "tp": 22,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 27,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5192307692307693,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "FLAG": 22,
+    "HOLD": 9
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 21,
+     "HOLD": 4
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 4
+    },
+    "swapped_base": {
+     "FLAG": 1,
+     "HOLD": 1
+    }
+   }
+  },
+  "rule_v0.5": {
+   "n": 52,
+   "decided": 45,
+   "coverage": 0.8653846153846154,
+   "tp": 23,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 27,
+   "missed_errors_on_hold": 4,
+   "raw_error_rate": 0.5192307692307693,
+   "passed": 22,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 22,
+    "FLAG": 23,
+    "HOLD": 7
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 22,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 22,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 1,
+     "HOLD": 1
+    }
+   }
+  },
+  "llm": {
+   "n": 52,
+   "decided": 37,
+   "coverage": 0.7115384615384616,
+   "tp": 20,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 27,
+   "missed_errors_on_hold": 7,
+   "raw_error_rate": 0.5192307692307693,
+   "passed": 17,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "HOLD": 15,
+    "PASS": 17,
+    "FLAG": 20
+   },
+   "by_kind": {
+    "correct": {
+     "HOLD": 8,
+     "PASS": 17
+    },
+    "scaled_10pct": {
+     "HOLD": 7,
+     "FLAG": 18
+    },
+    "swapped_base": {
+     "FLAG": 2
+    }
+   }
+  }
+ },
+ "usage": {
+  "calls": 446,
+  "input_tokens": 6263634,
+  "output_tokens": 188227,
+  "estimated_usd": 0.7205,
+  "price_basis": "입력 $0.10/1M, 출력 $0.50/1M (이전 기록의 사전 고정 단가, 실제 청구액 아님)",
+  "model": "gpt-6-luna"
+ }
+}

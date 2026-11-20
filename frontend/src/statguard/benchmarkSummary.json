@@ -1,0 +1,979 @@
+{
+ "meta": {
+  "questions": 36,
+  "answerable": 27,
+  "unanswerable": 9,
+  "datasets": 5,
+  "generated": "2026-11-20"
+ },
+ "conditions": {
+  "A": {
+   "accuracy": {
+    "all": {
+     "correct": 33,
+     "n": 36,
+     "rate": 0.9166666666666666
+    },
+    "answerable": {
+     "correct": 25,
+     "n": 27,
+     "rate": 0.9259259259259259
+    },
+    "category:interpretive": {
+     "correct": 3,
+     "n": 4,
+     "rate": 0.75
+    },
+    "category:lookup": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 8,
+     "n": 10,
+     "rate": 0.8
+    },
+    "category:pp_diff": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:range_sum": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:sum": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:기상": {
+     "correct": 7,
+     "n": 8,
+     "rate": 0.875
+    },
+    "domain:인구": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:인구·고용": {
+     "correct": 9,
+     "n": 10,
+     "rate": 0.9
+    },
+    "domain:합성(관광)": {
+     "correct": 9,
+     "n": 9,
+     "rate": 1.0
+    },
+    "domain:환경": {
+     "correct": 5,
+     "n": 6,
+     "rate": 0.8333333333333334
+    },
+    "unanswerable": {
+     "correct": 8,
+     "n": 9,
+     "rate": 0.8888888888888888
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 1,
+    "근거 없는 단정": 1,
+    "단위 오류": 1
+   }
+  },
+  "B": {
+   "accuracy": {
+    "all": {
+     "correct": 33,
+     "n": 36,
+     "rate": 0.9166666666666666
+    },
+    "answerable": {
+     "correct": 25,
+     "n": 27,
+     "rate": 0.9259259259259259
+    },
+    "category:interpretive": {
+     "correct": 3,
+     "n": 4,
+     "rate": 0.75
+    },
+    "category:lookup": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 8,
+     "n": 10,
+     "rate": 0.8
+    },
+    "category:pp_diff": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:range_sum": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:sum": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:기상": {
+     "correct": 7,
+     "n": 8,
+     "rate": 0.875
+    },
+    "domain:인구": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:인구·고용": {
+     "correct": 10,
+     "n": 10,
+     "rate": 1.0
+    },
+    "domain:합성(관광)": {
+     "correct": 8,
+     "n": 9,
+     "rate": 0.8888888888888888
+    },
+    "domain:환경": {
+     "correct": 5,
+     "n": 6,
+     "rate": 0.8333333333333334
+    },
+    "unanswerable": {
+     "correct": 8,
+     "n": 9,
+     "rate": 0.8888888888888888
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 1,
+    "형식 오류": 1,
+    "단위 오류": 1
+   }
+  },
+  "C": {
+   "accuracy": {
+    "all": {
+     "correct": 36,
+     "n": 36,
+     "rate": 1.0
+    },
+    "answerable": {
+     "correct": 27,
+     "n": 27,
+     "rate": 1.0
+    },
+    "category:interpretive": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    },
+    "category:lookup": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 10,
+     "n": 10,
+     "rate": 1.0
+    },
+    "category:pp_diff": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:range_sum": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:sum": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:기상": {
+     "correct": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "domain:인구": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:인구·고용": {
+     "correct": 10,
+     "n": 10,
+     "rate": 1.0
+    },
+    "domain:합성(관광)": {
+     "correct": 9,
+     "n": 9,
+     "rate": 1.0
+    },
+    "domain:환경": {
+     "correct": 6,
+     "n": 6,
+     "rate": 1.0
+    },
+    "unanswerable": {
+     "correct": 9,
+     "n": 9,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {}
+  }
+ },
+ "statguard": {
+  "A/rule_v0.1": {
+   "n": 36,
+   "decided": 16,
+   "coverage": 0.4444444444444444,
+   "tp": 0,
+   "fp": 4,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 12,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 12,
+    "HOLD": 20,
+    "FLAG": 4
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.2": {
+   "n": 36,
+   "decided": 15,
+   "coverage": 0.4166666666666667,
+   "tp": 0,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 14,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 14,
+    "HOLD": 21,
+    "FLAG": 1
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.3": {
+   "n": 36,
+   "decided": 15,
+   "coverage": 0.4166666666666667,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 15,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 15,
+    "HOLD": 21
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.7": {
+   "n": 36,
+   "decided": 15,
+   "coverage": 0.4166666666666667,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 15,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 15,
+    "HOLD": 21
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/llm": {
+   "n": 36,
+   "decided": 28,
+   "coverage": 0.7777777777777778,
+   "tp": 1,
+   "fp": 0,
+   "fn": 1,
+   "precision": 1.0,
+   "recall": 0.5,
+   "f1": 0.6666666666666666,
+   "errors_total": 3,
+   "missed_errors_on_hold": 1,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 27,
+   "error_rate_among_passed": 0.037037037037037035,
+   "decisions": {
+    "PASS": 27,
+    "FLAG": 1,
+    "HOLD": 8
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.1": {
+   "n": 36,
+   "decided": 18,
+   "coverage": 0.5,
+   "tp": 0,
+   "fp": 6,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 12,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 12,
+    "HOLD": 18,
+    "FLAG": 6
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.2": {
+   "n": 36,
+   "decided": 17,
+   "coverage": 0.4722222222222222,
+   "tp": 0,
+   "fp": 4,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 13,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 13,
+    "HOLD": 19,
+    "FLAG": 4
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.3": {
+   "n": 36,
+   "decided": 16,
+   "coverage": 0.4444444444444444,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 16,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 16,
+    "HOLD": 20
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.7": {
+   "n": 36,
+   "decided": 16,
+   "coverage": 0.4444444444444444,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 16,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 16,
+    "HOLD": 20
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.1": {
+   "n": 36,
+   "decided": 22,
+   "coverage": 0.6111111111111112,
+   "tp": 0,
+   "fp": 3,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 19,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 19,
+    "HOLD": 14,
+    "FLAG": 3
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.2": {
+   "n": 36,
+   "decided": 21,
+   "coverage": 0.5833333333333334,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "HOLD": 15
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.3": {
+   "n": 36,
+   "decided": 21,
+   "coverage": 0.5833333333333334,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "HOLD": 15
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.7": {
+   "n": 36,
+   "decided": 22,
+   "coverage": 0.6111111111111112,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 22,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 22,
+    "HOLD": 14
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  }
+ },
+ "perturbation": {
+  "rule_v0.1": {
+   "n": 58,
+   "decided": 50,
+   "coverage": 0.8620689655172413,
+   "tp": 29,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.9354838709677419,
+   "recall": 1.0,
+   "f1": 0.9666666666666666,
+   "errors_total": 34,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 19,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 19,
+    "FLAG": 31,
+    "HOLD": 8
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 19,
+     "HOLD": 3,
+     "FLAG": 2
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 2
+    }
+   }
+  },
+  "rule_v0.2": {
+   "n": 58,
+   "decided": 50,
+   "coverage": 0.8620689655172413,
+   "tp": 29,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 34,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "FLAG": 29,
+    "HOLD": 8
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 21,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 2
+    }
+   }
+  },
+  "rule_v0.3": {
+   "n": 58,
+   "decided": 50,
+   "coverage": 0.8620689655172413,
+   "tp": 29,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 34,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "FLAG": 29,
+    "HOLD": 8
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 21,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 2
+    }
+   }
+  },
+  "rule_v0.7": {
+   "n": 58,
+   "decided": 50,
+   "coverage": 0.8620689655172413,
+   "tp": 29,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 34,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "FLAG": 29,
+    "HOLD": 8
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 21,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 2
+    }
+   }
+  },
+  "llm": {
+   "n": 58,
+   "decided": 57,
+   "coverage": 0.9827586206896551,
+   "tp": 32,
+   "fp": 0,
+   "fn": 1,
+   "precision": 1.0,
+   "recall": 0.9696969696969697,
+   "f1": 0.9846153846153847,
+   "errors_total": 34,
+   "missed_errors_on_hold": 1,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 25,
+   "error_rate_among_passed": 0.04,
+   "decisions": {
+    "PASS": 25,
+    "FLAG": 32,
+    "HOLD": 1
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 24
+    },
+    "scaled_10pct": {
+     "FLAG": 24
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 1,
+     "PASS": 1
+    }
+   }
+  }
+ },
+ "usage": {
+  "calls": 490,
+  "input_tokens": 224806,
+  "output_tokens": 65087,
+  "estimated_usd": 0.055,
+  "price_basis": "입력 $0.10/1M, 출력 $0.50/1M (이전 기록의 사전 고정 단가, 실제 청구액 아님)",
+  "model": "gpt-6-luna"
+ },
+ "wrong_answers": [
+  {
+   "id": "S04",
+   "condition": "A",
+   "question": "2023년 1월 대비 2023년 12월 강수량은 몇 % 증가했나요?",
+   "final": "174.5 %",
+   "kind": "수치 오류",
+   "decisions": {
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "FLAG"
+   }
+  },
+  {
+   "id": "S04",
+   "condition": "B",
+   "question": "2023년 1월 대비 2023년 12월 강수량은 몇 % 증가했나요?",
+   "final": "174.5 %",
+   "kind": "수치 오류",
+   "decisions": {
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  {
+   "id": "C06",
+   "condition": "A",
+   "question": "2024년 이산화탄소농도의 월별 변화는 통계적으로 유의한 증가 추세인가요?",
+   "final": "0.45 p값",
+   "kind": "근거 없는 단정",
+   "decisions": {
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   }
+  },
+  {
+   "id": "C06",
+   "condition": "B",
+   "question": "2024년 이산화탄소농도의 월별 변화는 통계적으로 유의한 증가 추세인가요?",
+   "final": "FORMAT_ERROR",
+   "kind": "형식 오류",
+   "decisions": {
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  {
+   "id": "K02",
+   "condition": "A",
+   "question": "2021년 대비 2022년 대한민국 총인구 증감률은 몇 %인가요?",
+   "final": "-0.187 % %",
+   "kind": "단위 오류",
+   "decisions": {
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   }
+  },
+  {
+   "id": "V07",
+   "condition": "B",
+   "question": "C지역 방문자수는 2023년 대비 2024년에 몇 % 변했나요?",
+   "final": "0 %_percent",
+   "kind": "단위 오류",
+   "decisions": {
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  }
+ ],
+ "holdout": {
+  "meta": {
+   "questions": 18,
+   "answerable": 16,
+   "unanswerable": 2,
+   "datasets": 5,
+   "generated": "2026-11-20"
+  },
+  "accuracy": {
+   "correct": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "statguard": {
+   "A/rule_v0.1": {
+    "n": 18,
+    "decided": 11,
+    "coverage": 0.6111111111111112,
+    "tp": 0,
+    "fp": 1,
+    "fn": 0,
+    "precision": 0.0,
+    "recall": null,
+    "f1": 0.0,
+    "errors_total": 0,
+    "missed_errors_on_hold": 0,
+    "raw_error_rate": 0.0,
+    "passed": 10,
+    "error_rate_among_passed": 0.0,
+    "decisions": {
+     "FLAG": 1,
+     "HOLD": 7,
+     "PASS": 10
+    },
+    "unanswerable_asserted": 0,
+    "unanswerable_asserted_passed": 0
+   },
+   "A/rule_v0.2": {
+    "n": 18,
+    "decided": 10,
+    "coverage": 0.5555555555555556,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "errors_total": 0,
+    "missed_errors_on_hold": 0,
+    "raw_error_rate": 0.0,
+    "passed": 10,
+    "error_rate_among_passed": 0.0,
+    "decisions": {
+     "HOLD": 8,
+     "PASS": 10
+    },
+    "unanswerable_asserted": 0,
+    "unanswerable_asserted_passed": 0
+   },
+   "A/rule_v0.3": {
+    "n": 18,
+    "decided": 10,
+    "coverage": 0.5555555555555556,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "errors_total": 0,
+    "missed_errors_on_hold": 0,
+    "raw_error_rate": 0.0,
+    "passed": 10,
+    "error_rate_among_passed": 0.0,
+    "decisions": {
+     "HOLD": 8,
+     "PASS": 10
+    },
+    "unanswerable_asserted": 0,
+    "unanswerable_asserted_passed": 0
+   },
+   "A/rule_v0.7": {
+    "n": 18,
+    "decided": 10,
+    "coverage": 0.5555555555555556,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "errors_total": 0,
+    "missed_errors_on_hold": 0,
+    "raw_error_rate": 0.0,
+    "passed": 10,
+    "error_rate_among_passed": 0.0,
+    "decisions": {
+     "HOLD": 8,
+     "PASS": 10
+    },
+    "unanswerable_asserted": 0,
+    "unanswerable_asserted_passed": 0
+   },
+   "A/llm": {
+    "n": 18,
+    "decided": 15,
+    "coverage": 0.8333333333333334,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "errors_total": 0,
+    "missed_errors_on_hold": 0,
+    "raw_error_rate": 0.0,
+    "passed": 15,
+    "error_rate_among_passed": 0.0,
+    "decisions": {
+     "HOLD": 3,
+     "PASS": 15
+    },
+    "unanswerable_asserted": 0,
+    "unanswerable_asserted_passed": 0
+   }
+  },
+  "usage_note": "별도 검증 세트 호출은 전체 사용량에 포함"
+ }
+}

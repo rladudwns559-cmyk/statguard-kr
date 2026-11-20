@@ -1,0 +1,435 @@
+{
+ "meta": {
+  "questions": 18,
+  "answerable": 16,
+  "unanswerable": 2,
+  "datasets": 5,
+  "generated": "2026-11-20"
+ },
+ "conditions": {
+  "A": {
+   "accuracy": {
+    "all": {
+     "correct": 18,
+     "n": 18,
+     "rate": 1.0
+    },
+    "answerable": {
+     "correct": 16,
+     "n": 16,
+     "rate": 1.0
+    },
+    "category:diff": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:interpretive": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:lookup": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "category:range_mean": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "domain:기상": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    },
+    "domain:인구": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "domain:인구·고용": {
+     "correct": 6,
+     "n": 6,
+     "rate": 1.0
+    },
+    "domain:합성(관광)": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    },
+    "domain:환경": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "unanswerable": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {}
+  }
+ },
+ "statguard": {
+  "A/rule_v0.1": {
+   "n": 18,
+   "decided": 11,
+   "coverage": 0.6111111111111112,
+   "tp": 0,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 10,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "FLAG": 1,
+    "HOLD": 7,
+    "PASS": 10
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.2": {
+   "n": 18,
+   "decided": 10,
+   "coverage": 0.5555555555555556,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 10,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "HOLD": 8,
+    "PASS": 10
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.3": {
+   "n": 18,
+   "decided": 10,
+   "coverage": 0.5555555555555556,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 10,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "HOLD": 8,
+    "PASS": 10
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.7": {
+   "n": 18,
+   "decided": 10,
+   "coverage": 0.5555555555555556,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 10,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "HOLD": 8,
+    "PASS": 10
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/llm": {
+   "n": 18,
+   "decided": 15,
+   "coverage": 0.8333333333333334,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 15,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "HOLD": 3,
+    "PASS": 15
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  }
+ },
+ "per_question": {
+  "H01": {
+   "A": {
+    "final": "88.68 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   }
+  },
+  "H02": {
+   "A": {
+    "final": "33.7 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   }
+  },
+  "H03": {
+   "A": {
+    "final": "24.2 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   }
+  },
+  "H04": {
+   "A": {
+    "final": "2.3 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H05": {
+   "A": {
+    "final": "-0.37 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   }
+  },
+  "H06": {
+   "A": {
+    "final": "422.38 ppm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H07": {
+   "A": {
+    "final": "0.366 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H08": {
+   "A": {
+    "final": "2.01 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H09": {
+   "A": {
+    "final": "-0.101 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H10": {
+   "A": {
+    "final": "3.546 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H11": {
+   "A": {
+    "final": "-13.21 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H12": {
+   "A": {
+    "final": "-0.129 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   }
+  },
+  "H13": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   }
+  },
+  "H14": {
+   "A": {
+    "final": "20 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H15": {
+   "A": {
+    "final": "34.8 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H16": {
+   "A": {
+    "final": "7.67 분",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "H17": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   }
+  },
+  "H18": {
+   "A": {
+    "final": "40050 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   }
+  }
+ },
+ "usage": {
+  "calls": 490,
+  "input_tokens": 224806,
+  "output_tokens": 65087,
+  "estimated_usd": 0.055,
+  "price_basis": "입력 $0.10/1M, 출력 $0.50/1M (이전 기록의 사전 고정 단가, 실제 청구액 아님)",
+  "model": "gpt-6-luna"
+ }
+}

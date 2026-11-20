@@ -1,0 +1,128 @@
+{
+ "H01": {
+  "id": "H01",
+  "condition": "A",
+  "answer": "2023년 하반기(7~12월) 강수량 합계는 532.1mm이며, 6개월 평균은 약 88.68mm입니다.\n최종값: 88.68 mm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H02": {
+  "id": "H02",
+  "condition": "A",
+  "answer": "2023년 3월 대비 9월 강수량은 약 33.7% 증가했습니다.  \n최종값: 33.7 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H03": {
+  "id": "H03",
+  "condition": "A",
+  "answer": "2023년 연간 강수량 합계는 888.9이며, 12월 강수량 215.4는 연간 합계의 약 24.2%입니다.\n최종값: 24.2%",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H04": {
+  "id": "H04",
+  "condition": "A",
+  "answer": "2023년 7월 강수량은 2.3mm입니다.\n최종값: 2.3 mm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H05": {
+  "id": "H05",
+  "condition": "A",
+  "answer": "2024년 2월의 424.55에서 8월의 422.99로 감소했습니다. 2월 대비 약 0.37% 감소한 것입니다.\n최종값: -0.37 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H06": {
+  "id": "H06",
+  "condition": "A",
+  "answer": "2024년 10월 이산화탄소농도는 422.38 ppm입니다.\n최종값: 422.38 ppm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H07": {
+  "id": "H07",
+  "condition": "A",
+  "answer": "2024년 11월 대비 12월 이산화탄소농도 변화율은 약 0.366%입니다. 이는 농도가 증가했음을 의미합니다.\n최종값: 0.366 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H08": {
+  "id": "H08",
+  "condition": "A",
+  "answer": "2014년 대비 2019년 총인구는 약 2.01% 증가했습니다.  \n최종값: 2.01 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H09": {
+  "id": "H09",
+  "condition": "A",
+  "answer": "2019년 총인구 51,764,822명에서 2023년 51,712,619명으로 감소했습니다. 증감률은 약 -0.101%입니다.\n최종값: -0.101 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H10": {
+  "id": "H10",
+  "condition": "A",
+  "answer": "자료에 따르면 2015년 대한민국 실업률은 3.546%입니다.\n\n최종값: 3.546 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H11": {
+  "id": "H11",
+  "condition": "A",
+  "answer": "2014년 대비 2023년 실업률의 상대 변화율은 약 13.21% 감소입니다.\n최종값: -13.21 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H12": {
+  "id": "H12",
+  "condition": "A",
+  "answer": "2020년 대비 2021년 총인구는 66,700명 감소했습니다. 증감률은 약 -0.129%입니다.\n최종값: -0.129 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H13": {
+  "id": "H13",
+  "condition": "A",
+  "answer": "제공된 자료는 2014년부터 2023년까지의 실업률만 포함하고 있어 2024년 실업률은 확인할 수 없습니다.  \n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H14": {
+  "id": "H14",
+  "condition": "A",
+  "answer": "B지역 방문자수는 2023년 800명에서 2024년 960명으로 늘었습니다. 따라서 2023년 대비 **20% 증가**했습니다.\n최종값: 20%",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H15": {
+  "id": "H15",
+  "condition": "A",
+  "answer": "2023년 전체 방문자는 2,300명이고, 이 중 B지역 방문자는 800명입니다. 따라서 비율은 약 34.8%입니다.\n최종값: 34.8 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H16": {
+  "id": "H16",
+  "condition": "A",
+  "answer": "2023년 세 지역 체류시간 평균은 약 7.67분입니다.\n최종값: 7.67 분",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H17": {
+  "id": "H17",
+  "condition": "A",
+  "answer": "B지역 방문자는 2023년 800명에서 2024년 960명으로 늘었고, 체류시간도 8에서 9로 증가했습니다. 두 값이 함께 변했지만 이 자료만으로 체류시간 변화가 방문자 증가의 원인인지는 판단할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "H18": {
+  "id": "H18",
+  "condition": "A",
+  "answer": "2023년 대한민국 총인구는 2022년보다 40,050명 늘었습니다.\n최종값: 40050 명",
+  "tool_calls": [],
+  "status": "completed"
+ }
+}

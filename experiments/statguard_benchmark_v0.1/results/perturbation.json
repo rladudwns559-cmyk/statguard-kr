@@ -1,0 +1,1742 @@
+[
+ {
+  "id": "S01",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 시애틀 관측소의 월별 강수량을 모두 더한 연간 강수량 합계는 888.90mm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "S01",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 시애틀 관측소의 월별 강수량을 모두 더한 연간 강수량 합계는 977.79mm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "S02",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 12개월 강수량의 월평균은 74.08mm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "S02",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 12개월 강수량의 월평균은 81.48mm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "S03",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 12월 강수량은 215.40mm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "S03",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 12월 강수량은 236.94mm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "S04",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 1월 대비 2023년 12월 강수량은 174.39% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "S04",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 1월 대비 2023년 12월 강수량은 191.83% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "S04",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2023년 1월 대비 2023년 12월 강수량은 -63.56% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "C01",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2024년 월별 이산화탄소농도 12개 값의 산술평균은 424.60ppm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "C01",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2024년 월별 이산화탄소농도 12개 값의 산술평균은 467.06ppm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "C02",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2024년 5월 이산화탄소농도는 426.90ppm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "C02",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2024년 5월 이산화탄소농도는 469.59ppm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "C03",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2024년 1월 대비 2024년 12월 이산화탄소농도는 0.61% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "C03",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2024년 1월 대비 2024년 12월 이산화탄소농도는 0.68% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "C03",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2024년 1월 대비 2024년 12월 이산화탄소농도는 -0.61% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "C04",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2024년 6월 대비 9월 이산화탄소농도의 변화율은 -1.14%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "C04",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2024년 6월 대비 9월 이산화탄소농도의 변화율은 -1.26%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "C04",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2024년 6월 대비 9월 이산화탄소농도의 변화율은 1.16%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "P01",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2022년 대비 2023년 대한민국 총인구 증감률은 0.08%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "P01",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2022년 대비 2023년 대한민국 총인구 증감률은 0.09%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "P01",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2022년 대비 2023년 대한민국 총인구 증감률은 -0.08%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "P02",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2022년 대한민국 총인구는 51672569명입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "P02",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2022년 대한민국 총인구는 56839826명입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K01",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2014년 대비 2023년 대한민국 총인구는 1.90% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "K01",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2014년 대비 2023년 대한민국 총인구는 2.09% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K01",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2014년 대비 2023년 대한민국 총인구는 -1.87% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K02",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2021년 대비 2022년 대한민국 총인구 증감률은 -0.19%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "K02",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2021년 대비 2022년 대한민국 총인구 증감률은 -0.21%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K02",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2021년 대비 2022년 대한민국 총인구 증감률은 0.19%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "K03",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2014~2023년 10년간 대한민국 실업률의 단순 평균은 3.46%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "K03",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2014~2023년 10년간 대한민국 실업률의 단순 평균은 3.81%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K04",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2020년 대한민국 실업률은 3.93%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "K04",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2020년 대한민국 실업률은 4.32%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K05",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2021년 대비 2022년 실업률 자체의 변화율(상대 변화, %)은 -21.49%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "K05",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2021년 대비 2022년 실업률 자체의 변화율(상대 변화, %)은 -23.64%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K05",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2021년 대비 2022년 실업률 자체의 변화율(상대 변화, %)은 27.37%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K06",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2014~2023년 대한민국 총인구의 10년 평균은 51468217명입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "K06",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2014~2023년 대한민국 총인구의 10년 평균은 56615038명입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "K07",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2017년 대한민국 총인구는 51361911명입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "K07",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2017년 대한민국 총인구는 56498102명입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V01",
+  "kind": "correct",
+  "label": "correct",
+  "text": "A지역 방문자수는 2023년 대비 2024년에 17.80% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "V01",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "A지역 방문자수는 2023년 대비 2024년에 19.58% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V01",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "A지역 방문자수는 2023년 대비 2024년에 -15.11% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V02",
+  "kind": "correct",
+  "label": "correct",
+  "text": "전체 지역·연도의 방문자수 합계는 4938명입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "V02",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "전체 지역·연도의 방문자수 합계는 5432명입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V03",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2024년 전체 방문자 중 A지역 방문자의 비율은 44.66%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "V03",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2024년 전체 방문자 중 A지역 방문자의 비율은 49.12%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V04",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2024년 세 지역의 체류시간 평균은 9.00분입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "V04",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2024년 세 지역의 체류시간 평균은 9.90분입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V05",
+  "kind": "correct",
+  "label": "correct",
+  "text": "B지역의 2023년과 2024년 방문자수 합계는 1760명입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "V05",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "B지역의 2023년과 2024년 방문자수 합계는 1936명입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V06",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 대비 2024년 전체 방문자수는 14.70% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "V06",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 대비 2024년 전체 방문자수는 16.17% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V06",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2023년 대비 2024년 전체 방문자수는 -12.81% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V07",
+  "kind": "correct",
+  "label": "correct",
+  "text": "C지역 방문자수는 2023년 대비 2024년에 0.00% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "V07",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "C지역 방문자수는 2023년 대비 2024년에 0.50% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "V07",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "C지역 방문자수는 2023년 대비 2024년에 0.00% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ }
+]

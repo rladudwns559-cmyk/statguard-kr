@@ -1,0 +1,1142 @@
+[
+ {
+  "id": "R01",
+  "kind": "correct",
+  "label": "correct",
+  "text": "남아시아 국가들의 2023년 총인구 합계는 1662580579명입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R01",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "남아시아 국가들의 2023년 총인구 합계는 1828838637명입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R02",
+  "kind": "correct",
+  "label": "correct",
+  "text": "고소득 국가들의 2023년 1인당GDP 단순 평균은 44471달러입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R02",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "고소득 국가들의 2023년 1인당GDP 단순 평균은 48918달러입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R03",
+  "kind": "correct",
+  "label": "correct",
+  "text": "사하라이남아프리카 국가들의 2023년 기대수명 단순 평균은 64.34세입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R03",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "사하라이남아프리카 국가들의 2023년 기대수명 단순 평균은 70.77세입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R04",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가의 2023년 실업률 중앙값은 5.16%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R04",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가의 2023년 실업률 중앙값은 5.68%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R05",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가 중 2023년 기대수명의 최댓값은 85.25세입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R05",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가 중 2023년 기대수명의 최댓값은 93.77세입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R06",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가 중 2023년 1인당GDP의 최솟값은 249.80달러입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R06",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가 중 2023년 1인당GDP의 최솟값은 274.78달러입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R07",
+  "kind": "correct",
+  "label": "correct",
+  "text": "유럽·중앙아시아 국가들의 2023년 실업률 표본표준편차(n−1로 나눔)는 3.02%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R07",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "유럽·중앙아시아 국가들의 2023년 실업률 표본표준편차(n−1로 나눔)는 3.32%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "UNSUPPORTED_OPERATION"
+   ]
+  ]
+ },
+ {
+  "id": "R08",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가의 2023년 1인당GDP와 기대수명의 피어슨 상관계수는 0.69입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "R08",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가의 2023년 1인당GDP와 기대수명의 피어슨 상관계수는 0.76입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "R09",
+  "kind": "correct",
+  "label": "correct",
+  "text": "고소득 국가와 저소득 국가의 2023년 기대수명에 대한 Welch t-검정 t 통계량(고소득 평균 − 저소득 평균 기준)은 18.85입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "R09",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "고소득 국가와 저소득 국가의 2023년 기대수명에 대한 Welch t-검정 t 통계량(고소득 평균 − 저소득 평균 기준)은 20.73입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "R10",
+  "kind": "correct",
+  "label": "correct",
+  "text": "동아시아·태평양 국가와 중남미·카리브 국가의 2023년 실업률 평균 차이에 대한 Welch t-검정(양측) p값은 0.0002입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R10",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "동아시아·태평양 국가와 중남미·카리브 국가의 2023년 실업률 평균 차이에 대한 Welch t-검정(양측) p값은 0.0003입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R11",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가의 2023년 총인구 합계 중 동아시아·태평양 국가들의 총인구 비율은 29.82%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "RATIO_SCOPE_NOT_STATED"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "R11",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가의 2023년 총인구 합계 중 동아시아·태평양 국가들의 총인구 비율은 32.80%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "RATIO_SCOPE_NOT_STATED"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "R12",
+  "kind": "correct",
+  "label": "correct",
+  "text": "북미 국가들의 2023년 총인구 합계는 376804140명입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R12",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "북미 국가들의 2023년 총인구 합계는 414484554명입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R13",
+  "kind": "correct",
+  "label": "correct",
+  "text": "중동·북아프리카 국가들의 2023년 실업률 단순 평균은 8.84%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R13",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "중동·북아프리카 국가들의 2023년 실업률 단순 평균은 9.73%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R14",
+  "kind": "correct",
+  "label": "correct",
+  "text": "국가코드 KOR 국가의 2023년 1인당GDP는 35674달러입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R14",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "국가코드 KOR 국가의 2023년 1인당GDP는 39242달러입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R15",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가의 2023년 총인구 합계 중 저소득 국가들의 총인구 비율은 7.32%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "RATIO_SCOPE_NOT_STATED"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "R15",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가의 2023년 총인구 합계 중 저소득 국가들의 총인구 비율은 8.05%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "RATIO_SCOPE_NOT_STATED"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R16",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가의 2023년 기대수명 단순 평균은 73.54세입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R16",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가의 2023년 기대수명 단순 평균은 80.90세입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R17",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가의 2023년 1인당GDP 표본표준편차(n−1로 나눔)는 24446달러입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R17",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가의 2023년 1인당GDP 표본표준편차(n−1로 나눔)는 26891달러입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R18",
+  "kind": "correct",
+  "label": "correct",
+  "text": "176개 국가의 2023년 실업률과 기대수명의 피어슨 상관계수는 -0.14입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "R18",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "176개 국가의 2023년 실업률과 기대수명의 피어슨 상관계수는 -0.15입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "R19",
+  "kind": "correct",
+  "label": "correct",
+  "text": "국가코드 JPN 국가의 2023년 기대수명은 84.04세입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ },
+ {
+  "id": "R19",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "국가코드 JPN 국가의 2023년 기대수명은 92.45세입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "UNCERTAIN",
+    "COLUMN_NOT_IDENTIFIED"
+   ]
+  ]
+ }
+]

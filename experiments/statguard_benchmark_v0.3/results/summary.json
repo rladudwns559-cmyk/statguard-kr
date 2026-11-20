@@ -1,0 +1,1084 @@
+{
+ "meta": {
+  "questions": 22,
+  "answerable": 19,
+  "unanswerable": 3,
+  "datasets": 1,
+  "generated": "2026-11-20"
+ },
+ "conditions": {
+  "A": {
+   "accuracy": {
+    "all": {
+     "correct": 12,
+     "n": 22,
+     "rate": 0.5454545454545454
+    },
+    "answerable": {
+     "correct": 9,
+     "n": 19,
+     "rate": 0.47368421052631576
+    },
+    "category:correlation": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:interpretive": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:lookup": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:max": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 2,
+     "n": 4,
+     "rate": 0.5
+    },
+    "category:median": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "category:min": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 1,
+     "n": 2,
+     "rate": 0.5
+    },
+    "category:stdev": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:sum": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:t_test_p": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "category:t_test_t": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "domain:인구·경제·보건(176개국)": {
+     "correct": 12,
+     "n": 22,
+     "rate": 0.5454545454545454
+    },
+    "unanswerable": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 4,
+    "형식 오류": 6
+   }
+  },
+  "B": {
+   "accuracy": {
+    "all": {
+     "correct": 13,
+     "n": 22,
+     "rate": 0.5909090909090909
+    },
+    "answerable": {
+     "correct": 10,
+     "n": 19,
+     "rate": 0.5263157894736842
+    },
+    "category:correlation": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:interpretive": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:lookup": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:max": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 3,
+     "n": 4,
+     "rate": 0.75
+    },
+    "category:median": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "category:min": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 0,
+     "n": 2,
+     "rate": 0.0
+    },
+    "category:stdev": {
+     "correct": 1,
+     "n": 2,
+     "rate": 0.5
+    },
+    "category:sum": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:t_test_p": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "category:t_test_t": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "domain:인구·경제·보건(176개국)": {
+     "correct": 13,
+     "n": 22,
+     "rate": 0.5909090909090909
+    },
+    "unanswerable": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 3,
+    "형식 오류": 6
+   }
+  },
+  "C": {
+   "accuracy": {
+    "all": {
+     "correct": 21,
+     "n": 22,
+     "rate": 0.9545454545454546
+    },
+    "answerable": {
+     "correct": 18,
+     "n": 19,
+     "rate": 0.9473684210526315
+    },
+    "category:correlation": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:interpretive": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:lookup": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:max": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    },
+    "category:median": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:min": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 1,
+     "n": 2,
+     "rate": 0.5
+    },
+    "category:stdev": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:sum": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:t_test_p": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:t_test_t": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "domain:인구·경제·보건(176개국)": {
+     "correct": 21,
+     "n": 22,
+     "rate": 0.9545454545454546
+    },
+    "unanswerable": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 1
+   }
+  }
+ },
+ "statguard": {
+  "A/rule_v0.6": {
+   "n": 22,
+   "decided": 10,
+   "coverage": 0.45454545454545453,
+   "tp": 2,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 10,
+   "missed_errors_on_hold": 8,
+   "raw_error_rate": 0.45454545454545453,
+   "passed": 8,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 8,
+    "FLAG": 2,
+    "HOLD": 12
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.7": {
+   "n": 22,
+   "decided": 10,
+   "coverage": 0.45454545454545453,
+   "tp": 2,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 10,
+   "missed_errors_on_hold": 8,
+   "raw_error_rate": 0.45454545454545453,
+   "passed": 8,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 8,
+    "FLAG": 2,
+    "HOLD": 12
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/llm": {
+   "n": 22,
+   "decided": 8,
+   "coverage": 0.36363636363636365,
+   "tp": 3,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.75,
+   "recall": 1.0,
+   "f1": 0.8571428571428571,
+   "errors_total": 10,
+   "missed_errors_on_hold": 7,
+   "raw_error_rate": 0.45454545454545453,
+   "passed": 4,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 4,
+    "HOLD": 14,
+    "FLAG": 4
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.6": {
+   "n": 22,
+   "decided": 12,
+   "coverage": 0.5454545454545454,
+   "tp": 2,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.6666666666666666,
+   "recall": 1.0,
+   "f1": 0.8,
+   "errors_total": 9,
+   "missed_errors_on_hold": 7,
+   "raw_error_rate": 0.4090909090909091,
+   "passed": 9,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 9,
+    "HOLD": 10,
+    "FLAG": 3
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.7": {
+   "n": 22,
+   "decided": 11,
+   "coverage": 0.5,
+   "tp": 2,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 9,
+   "missed_errors_on_hold": 7,
+   "raw_error_rate": 0.4090909090909091,
+   "passed": 9,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 9,
+    "HOLD": 11,
+    "FLAG": 2
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.6": {
+   "n": 22,
+   "decided": 17,
+   "coverage": 0.7727272727272727,
+   "tp": 0,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 1,
+   "missed_errors_on_hold": 1,
+   "raw_error_rate": 0.045454545454545456,
+   "passed": 16,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 16,
+    "HOLD": 5,
+    "FLAG": 1
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.7": {
+   "n": 22,
+   "decided": 16,
+   "coverage": 0.7272727272727273,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 1,
+   "missed_errors_on_hold": 1,
+   "raw_error_rate": 0.045454545454545456,
+   "passed": 16,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 16,
+    "HOLD": 6
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  }
+ },
+ "per_question": {
+  "R01": {
+   "A": {
+    "final": "1662580579 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "1662580579 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "1662580579 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R02": {
+   "A": {
+    "final": "44871.10 달러",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.6": "FLAG",
+    "rule_v0.7": "FLAG",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "44471.14 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "44471.14 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R03": {
+   "A": {
+    "final": "64.336 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "64.336 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "64.336 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R04": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "5.408 %",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "5.1595 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R05": {
+   "A": {
+    "final": "85.247 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "85.247 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "85.247 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R06": {
+   "A": {
+    "final": "249.80 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "249.80 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "249.8 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R07": {
+   "A": {
+    "final": "2.938 %",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.6": "FLAG",
+    "rule_v0.7": "FLAG",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "3.021 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "FLAG",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "3.0208 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R08": {
+   "A": {
+    "final": "0.68 무단위",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "0.68 무단위",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.6": "FLAG",
+    "rule_v0.7": "FLAG"
+   },
+   "C": {
+    "final": "0.6867 상관계수",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R09": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "18.8461 무단위",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "R10": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "0.0002400438 p값",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "R11": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "29.82 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "R12": {
+   "A": {
+    "final": "376804140 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "376804140 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "376804140 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "FLAG",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "R13": {
+   "A": {
+    "final": "8.84 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "8.84 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "8.84245 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R14": {
+   "A": {
+    "final": "35674.10 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "35674.10 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "35674.10 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R15": {
+   "A": {
+    "final": "7.3 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "5.73 %",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "R16": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "73.5421477273 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R17": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "24446.29 달러",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R18": {
+   "A": {
+    "final": "-0.25 상관계수",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "0.02 무단위",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.6": "FLAG",
+    "rule_v0.7": "FLAG"
+   },
+   "C": {
+    "final": "-0.1376517307353813 상관계수",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R19": {
+   "A": {
+    "final": "84.041 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "84.041 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "84.041 세",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R20": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "R21": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "R22": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.6": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  }
+ },
+ "perturbation": {
+  "rule_v0.6": {
+   "n": 38,
+   "decided": 32,
+   "coverage": 0.8421052631578947,
+   "tp": 16,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 19,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.5,
+   "passed": 16,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 16,
+    "FLAG": 16,
+    "HOLD": 6
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 16,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 16,
+     "HOLD": 3
+    }
+   }
+  },
+  "rule_v0.7": {
+   "n": 38,
+   "decided": 32,
+   "coverage": 0.8421052631578947,
+   "tp": 16,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 19,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.5,
+   "passed": 16,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 16,
+    "FLAG": 16,
+    "HOLD": 6
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 16,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 16,
+     "HOLD": 3
+    }
+   }
+  },
+  "llm": {
+   "n": 38,
+   "decided": 9,
+   "coverage": 0.23684210526315788,
+   "tp": 4,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 19,
+   "missed_errors_on_hold": 15,
+   "raw_error_rate": 0.5,
+   "passed": 5,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "HOLD": 29,
+    "PASS": 5,
+    "FLAG": 4
+   },
+   "by_kind": {
+    "correct": {
+     "HOLD": 14,
+     "PASS": 5
+    },
+    "scaled_10pct": {
+     "HOLD": 15,
+     "FLAG": 4
+    }
+   }
+  }
+ },
+ "usage": {
+  "calls": 275,
+  "input_tokens": 1561101,
+  "output_tokens": 127705,
+  "estimated_usd": 0.22,
+  "price_basis": "입력 $0.10/1M, 출력 $0.50/1M (이전 기록의 사전 고정 단가, 실제 청구액 아님)",
+  "model": "gpt-6-luna"
+ }
+}

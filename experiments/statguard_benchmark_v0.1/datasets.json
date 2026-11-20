@@ -1,0 +1,17 @@
+{
+  "seattle": {"file": "01_시애틀_2023_월별강수량.csv", "units": {"강수량": "mm"}, "domain": "기상",
+    "description": "NOAA NCEI GSOM, 시애틀-타코마 공항 관측소(USW00024233)의 2023년 월별 총 강수량(mm). 연월은 YYYY-MM.",
+    "source": "NOAA NCEI Global Summary of the Month, 다운로드 2026-10-23"},
+  "co2": {"file": "02_마우나로아_2024_월별CO2.csv", "units": {"이산화탄소농도": "ppm"}, "domain": "환경",
+    "description": "NOAA GML 마우나로아 관측소 2024년 월평균 대기 CO2 농도(ppm). 월은 1~12.",
+    "source": "NOAA GML Mauna Loa monthly mean CO2, 다운로드 2026-10-23"},
+  "pop2": {"file": "03_대한민국_2022_2023_총인구.csv", "units": {"총인구": "명"}, "domain": "인구",
+    "description": "World Bank WDI SP.POP.TOTL, 대한민국 2022·2023년 총인구 추정치(명).",
+    "source": "World Bank WDI (CC BY 4.0), 다운로드 2026-10-23"},
+  "korea10": {"file": "04_대한민국_2014_2023_인구_실업률.csv", "units": {"총인구": "명", "실업률": "%"}, "domain": "인구·고용",
+    "description": "World Bank WDI, 대한민국 2014~2023년 총인구(SP.POP.TOTL, 명)와 실업률(SL.UEM.TOTL.ZS, ILO 모형 추정, 경제활동인구 대비 %).",
+    "source": "World Bank WDI API (CC BY 4.0), 갱신일 2026-11-11, 다운로드 2026-11-20"},
+  "visitors": {"file": "05_방문자_합성예제.csv", "units": {"방문자수": "명", "체류시간": "분"}, "domain": "합성(관광)",
+    "description": "합성 예제. 지역(A·B·C)·연도(2023·2024)별 방문자수(명)와 평균 체류시간(분). 실측 자료 아님.",
+    "source": "StatGuard 합성 예제"}
+}

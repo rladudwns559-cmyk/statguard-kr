@@ -1,0 +1,79 @@
+{
+ "source": "NOAA NCEI GHCN-Daily access CSV",
+ "raw_sha256": {
+  "USW00024233": "7f5ba310b16afce3c19e6473aa4b89cb4bbfe1ddde5726308cb840029981d8fe",
+  "USW00023174": "ef569de586e723ff79bc3d56c06529aa292a22df163b84b64db143d3012516b4",
+  "USW00094789": "31bced0e9858bfa6e9854db46e3731343867a7c7035f0dec185c925e369410af",
+  "USW00094846": "0fe5ee8061fedf6d0cd26130f24c16802e75e41059f6582418e0dce9f2e2ef59"
+ },
+ "missing": {
+  "시애틀": {
+   "PRCP": 0,
+   "TMAX": 0
+  },
+  "로스앤젤레스": {
+   "PRCP": 0,
+   "TMAX": 0
+  },
+  "뉴욕": {
+   "PRCP": 0,
+   "TMAX": 0
+  },
+  "시카고": {
+   "PRCP": 0,
+   "TMAX": 0
+  }
+ },
+ "rows": {
+  "seattle_daily": 365,
+  "시애틀": 365,
+  "로스앤젤레스": 365,
+  "뉴욕": 365,
+  "시카고": 365,
+  "four_cities": 1460
+ },
+ "seattle_monthly_check": {
+  "daily_sum": [
+   "78.5",
+   "60.1",
+   "65.3",
+   "98.1",
+   "23.8",
+   "31.0",
+   "2.3",
+   "6.8",
+   "87.3",
+   "73.3",
+   "147.0",
+   "215.4"
+  ],
+  "gsom": [
+   "78.5",
+   "60.1",
+   "65.3",
+   "98.1",
+   "23.8",
+   "31.0",
+   "2.3",
+   "6.8",
+   "87.3",
+   "73.3",
+   "147.0",
+   "215.4"
+  ],
+  "match": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ }
+}

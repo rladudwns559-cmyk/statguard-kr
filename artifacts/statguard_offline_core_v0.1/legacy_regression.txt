@@ -1,0 +1,7 @@
+test_multi_tool_turn_keeps_each_call_and_result_separate (test_trajectory.TrajectoryTests.test_multi_tool_turn_keeps_each_call_and_result_separate) ... ok
+test_usage_counts_messages_once_and_marks_missing_reports (test_trajectory.TrajectoryTests.test_usage_counts_messages_once_and_marks_missing_reports) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK

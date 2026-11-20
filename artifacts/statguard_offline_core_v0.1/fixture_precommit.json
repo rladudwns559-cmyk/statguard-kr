@@ -1,0 +1,20 @@
+{
+  "milestone": "STATGUARD_OFFLINE_CORE_V0.1",
+  "frozen_before_core_implementation": true,
+  "case_count": 24,
+  "kind": "SYNTHETIC_DEVELOPMENT_FIXTURES_NOT_INDEPENDENT_RESEARCH_EVALUATION",
+  "fixture_sha256": {
+    "data/statguard_demo_v0.1/cases_24.json": "da9f945b0401e52ba63d568528fd41fc5ce9bd5abd8e36e1ddfe25342376fe81",
+    "data/statguard_demo_v0.1/invalid.csv": "90f9a548abb355ab63b786c3ae7d4a7fedfa93a2d1c33becd3379d89520a9ce1",
+    "data/statguard_demo_v0.1/missing.csv": "e8dc145ce37e07c5793bb95d8516908322830a8d5bccb3b0fa13d4fd3d31fc01",
+    "data/statguard_demo_v0.1/missing_group.csv": "f4f0551de6cd8f8751c53378116ca29dc2bb007a901551064308cdd75b5d3edc",
+    "data/statguard_demo_v0.1/negative.csv": "76234967ad54ae069a28186d77ca60b0b8bcea35e7cd8b49392f73c268e66c1b",
+    "data/statguard_demo_v0.1/ties.csv": "d9f829da0131edd43e840953428987db663cea96ee686d02d247a41b9aec0f32",
+    "data/statguard_demo_v0.1/visitors.csv": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+    "data/statguard_demo_v0.1/zero.csv": "8e1bbb7fa9c421daed60a492695d51ca12d40ea06cb27d199b04faeaed543abc",
+    "docs/statguard_offline_contract_v0.1.md": "664a2273425a3dfd4394e7a6bf23e9744f9e4610a26bea8398bb64961af2ac34"
+  },
+  "existing_protected_files_verified": 946,
+  "paid_calls": 0,
+  "external_search_fetch": 0
+}

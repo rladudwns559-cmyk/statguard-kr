@@ -1,0 +1,410 @@
+{
+  "mode": "REAL_PUBLIC_CSV_FUNCTIONAL_CHECK_NOT_NEW_USER_STUDY",
+  "prepared_encoding": "utf-8-sig",
+  "preparation": "Public values unchanged; selected periods/columns; Korean headers; World Bank wide-to-long reshape. No imputation, numeric rounding, aggregation or unit conversion in prepared inputs.",
+  "cases": [
+    {
+      "id": "R01",
+      "file": "01_시애틀_2023_월별강수량.csv",
+      "operation": "sum",
+      "column": "강수량",
+      "unit": "mm",
+      "filters": {},
+      "reference": {},
+      "claim": "1000",
+      "tolerance": "0",
+      "used": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "base_used": [],
+      "sha256": "3ef535226c51a29e0c059447f4ca5e337abbdc7527162ed47697b3968f737615",
+      "expected_rational": {
+        "numerator": "8889",
+        "denominator": "10"
+      },
+      "expected_decimal_50": "888.9",
+      "expected_engine_decimal_34": "888.9",
+      "expected_comparison": "MISMATCH",
+      "comparison_unit": "mm",
+      "absolute_difference_50": "111.1"
+    },
+    {
+      "id": "R02",
+      "file": "02_마우나로아_2024_월별CO2.csv",
+      "operation": "mean",
+      "column": "이산화탄소농도",
+      "unit": "ppm",
+      "filters": {},
+      "reference": {},
+      "tolerance": "0.000001",
+      "used": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "base_used": [],
+      "claim": "424.604167",
+      "sha256": "763e55ff8ee2060d4d2e08b2089ceb928bd305ac1e9995a3be635eaedaef84f2",
+      "expected_rational": {
+        "numerator": "20381",
+        "denominator": "48"
+      },
+      "expected_decimal_50": "424.60416666666666666666666666666666666666666666667",
+      "expected_engine_decimal_34": "424.6041666666666666666666666666667",
+      "expected_comparison": "WITHIN_TOLERANCE",
+      "comparison_unit": "ppm",
+      "absolute_difference_50": "0.00000033333333333333333333333333333333333333333333333333"
+    },
+    {
+      "id": "R03",
+      "file": "03_대한민국_2022_2023_총인구.csv",
+      "operation": "percent_change",
+      "column": "총인구",
+      "unit": "명",
+      "filters": {
+        "연도": "2023"
+      },
+      "reference": {
+        "연도": "2022"
+      },
+      "tolerance": "0.000001",
+      "used": [
+        2
+      ],
+      "base_used": [
+        1
+      ],
+      "claim": "0.077507",
+      "sha256": "77d5218950dca7f55385c06958c55a57f22b4a2f89d6f774f3eed1709263fee4",
+      "expected_rational": {
+        "numerator": "4005000",
+        "denominator": "51672569"
+      },
+      "expected_decimal_50": "0.077507274701205585501274380222899310463933000892601",
+      "expected_engine_decimal_34": "0.07750727470120558550127438022289931",
+      "expected_comparison": "WITHIN_TOLERANCE",
+      "comparison_unit": "%p",
+      "absolute_difference_50": "0.00000027470120558550127438022289931046393300089260125619"
+    }
+  ],
+  "lineage": [
+    {
+      "case_id": "R01",
+      "prepared_data_row": 1,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 1,
+      "source_column": "PRCP",
+      "exact_value": "78.5"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 2,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 2,
+      "source_column": "PRCP",
+      "exact_value": "60.1"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 3,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 3,
+      "source_column": "PRCP",
+      "exact_value": "65.3"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 4,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 4,
+      "source_column": "PRCP",
+      "exact_value": "98.1"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 5,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 5,
+      "source_column": "PRCP",
+      "exact_value": "23.8"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 6,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 6,
+      "source_column": "PRCP",
+      "exact_value": "31.0"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 7,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 7,
+      "source_column": "PRCP",
+      "exact_value": "2.3"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 8,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 8,
+      "source_column": "PRCP",
+      "exact_value": "6.8"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 9,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 9,
+      "source_column": "PRCP",
+      "exact_value": "87.3"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 10,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 10,
+      "source_column": "PRCP",
+      "exact_value": "73.3"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 11,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 11,
+      "source_column": "PRCP",
+      "exact_value": "147.0"
+    },
+    {
+      "case_id": "R01",
+      "prepared_data_row": 12,
+      "prepared_column": "강수량",
+      "source_file": "raw/noaa_seattle_precip_2023.csv",
+      "source_data_row": 12,
+      "source_column": "PRCP",
+      "exact_value": "215.4"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 1,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 791,
+      "source_column": "average",
+      "exact_value": "422.80"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 2,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 792,
+      "source_column": "average",
+      "exact_value": "424.55"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 3,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 793,
+      "source_column": "average",
+      "exact_value": "425.38"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 4,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 794,
+      "source_column": "average",
+      "exact_value": "426.51"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 5,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 795,
+      "source_column": "average",
+      "exact_value": "426.90"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 6,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 796,
+      "source_column": "average",
+      "exact_value": "426.91"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 7,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 797,
+      "source_column": "average",
+      "exact_value": "425.55"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 8,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 798,
+      "source_column": "average",
+      "exact_value": "422.99"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 9,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 799,
+      "source_column": "average",
+      "exact_value": "422.03"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 10,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 800,
+      "source_column": "average",
+      "exact_value": "422.38"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 11,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 801,
+      "source_column": "average",
+      "exact_value": "423.85"
+    },
+    {
+      "case_id": "R02",
+      "prepared_data_row": 12,
+      "prepared_column": "이산화탄소농도",
+      "source_file": "raw/noaa_co2_monthly.csv",
+      "source_data_row": 802,
+      "source_column": "average",
+      "exact_value": "425.40"
+    },
+    {
+      "case_id": "R03",
+      "prepared_data_row": 1,
+      "prepared_column": "총인구",
+      "source_file": "raw/worldbank_korea_population_extracted.csv",
+      "source_data_row": 1,
+      "source_column": "2022",
+      "source_identity": {
+        "country": "KOR",
+        "indicator": "SP.POP.TOTL"
+      },
+      "exact_value": "51672569"
+    },
+    {
+      "case_id": "R03",
+      "prepared_data_row": 2,
+      "prepared_column": "총인구",
+      "source_file": "raw/worldbank_korea_population_extracted.csv",
+      "source_data_row": 1,
+      "source_column": "2023",
+      "source_identity": {
+        "country": "KOR",
+        "indicator": "SP.POP.TOTL"
+      },
+      "exact_value": "51712619"
+    }
+  ],
+  "sources": [
+    {
+      "success": true,
+      "case_id": "R01",
+      "request_url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=global-summary-of-the-month&stations=USW00024233&startDate=2023-01-01&endDate=2023-12-31&dataTypes=PRCP&units=metric&format=csv&includeStationName=true",
+      "resolved_url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=global-summary-of-the-month&stations=USW00024233&startDate=2023-01-01&endDate=2023-12-31&dataTypes=PRCP&units=metric&format=csv&includeStationName=true",
+      "accessed_utc": "2026-10-23T12:40:57.310074+00:00",
+      "http_status": 200,
+      "content_type": "text/csv;charset=utf-8",
+      "last_modified": null,
+      "etag": null,
+      "raw_file": "raw/noaa_seattle_precip_2023.csv",
+      "size_bytes": 787,
+      "sha256": "4d8f8a1d192e91547b374e11c521bf9345d0087a4e01c1bd2976088809ce80da"
+    },
+    {
+      "success": true,
+      "case_id": "R02",
+      "request_url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",
+      "resolved_url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",
+      "accessed_utc": "2026-10-23T12:40:57.466108+00:00",
+      "http_status": 200,
+      "content_type": "text/csv",
+      "last_modified": "Fri, 09 Oct 2026 19:23:07 GMT",
+      "etag": "\"9778-65d6d4735dc61\"",
+      "raw_file": "raw/noaa_co2_monthly.csv",
+      "size_bytes": 38776,
+      "sha256": "d895fb5b4a59fb5e4cd98e69b7667fe5bef595c6581f630852b12cb41c07f675"
+    },
+    {
+      "success": true,
+      "case_id": "R03",
+      "request_url": "https://api.worldbank.org/v2/country/KOR/indicator/SP.POP.TOTL?source=2&downloadformat=csv",
+      "resolved_url": "https://api.worldbank.org/v2/country/KOR/indicator/SP.POP.TOTL?source=2&downloadformat=csv",
+      "accessed_utc": "2026-10-23T12:40:59.866588+00:00",
+      "http_status": 200,
+      "content_type": "application/zip",
+      "last_modified": "Fri, 23 Oct 2026 12:40:59 GMT",
+      "etag": null,
+      "raw_file": "raw/worldbank_korea_population.zip",
+      "size_bytes": 1860,
+      "sha256": "a917a0eff4fab67de0d8f4fa3c3a5762855a603f42f35949e65d33a27767a587"
+    }
+  ],
+  "worldbank_extracted_member": "API_KOR_SP.POP.TOTL_en_csv_v2_80875.csv",
+  "worldbank_updated_date": "2026-10-08",
+  "raw_sha256": {
+    "Metadata_Country_API_KOR_SP.POP.TOTL_en_csv_v2_80875.csv": "4b55431fe52087b0a700aef739fc34fad497d1ed7f2237724b607dc2e1525348",
+    "Metadata_Indicator_API_KOR_SP.POP.TOTL_en_csv_v2_80875.csv": "f68a7b682fb54623c41e4f73185028285d3e53698f4eb7f595b8214d9cd13147",
+    "noaa_co2_monthly.csv": "d895fb5b4a59fb5e4cd98e69b7667fe5bef595c6581f630852b12cb41c07f675",
+    "noaa_seattle_precip_2023.csv": "4d8f8a1d192e91547b374e11c521bf9345d0087a4e01c1bd2976088809ce80da",
+    "worldbank_korea_population.zip": "a917a0eff4fab67de0d8f4fa3c3a5762855a603f42f35949e65d33a27767a587",
+    "worldbank_korea_population_extracted.csv": "1e82bb4f017615e2f62bf123816f2df98dca7601bf5b0dbd869c9450a38e6522"
+  },
+  "reference_method": "stdlib Fraction on original source cells, independent of StatGuard; Decimal only for reference display. No product imports.",
+  "mean_caveat": "Arithmetic mean of twelve published 2024 monthly average values, not the independently published official annual or day-weighted mean."
+}

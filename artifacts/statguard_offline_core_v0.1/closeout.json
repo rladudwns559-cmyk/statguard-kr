@@ -1,0 +1,162 @@
+{
+  "milestone": "STATGUARD_OFFLINE_CORE_V0.1",
+  "completed_scope": "OFFLINE_CALCULATION_FOUNDATION_ONLY",
+  "not_full_product_integration": true,
+  "files_excluding_closeout_itself": {
+    "artifacts/statguard_offline_core_v0.1/development_run_01/demo_readable_ko.md": {
+      "sha256": "3884d0d36b7572420dd6f60f78a0612f43764d07a514a17706ffd17f5108215c",
+      "bytes": 2452
+    },
+    "artifacts/statguard_offline_core_v0.1/development_run_01/demo_results.json": {
+      "sha256": "745b6fcaef62271a33109d884a1d65042449ac90448f1598601893bca63f2f84",
+      "bytes": 27614
+    },
+    "artifacts/statguard_offline_core_v0.1/fixture_precommit.json": {
+      "sha256": "b5a0563341cb808c7a3568e8cc181ad6309f6899ea8a49bfd4cce55e952ac9b1",
+      "bytes": 1346
+    },
+    "artifacts/statguard_offline_core_v0.1/integration_checks.json": {
+      "sha256": "5ab7bf2e6ae5007ec4d59db4c1cfbb444c6980da8cebef78c51025f793be313e",
+      "bytes": 592
+    },
+    "artifacts/statguard_offline_core_v0.1/legacy_regression.json": {
+      "sha256": "d4ea672f2c722b2b562fc98f5674e846f8b10341711ba16b181ea08419a1a046",
+      "bytes": 223
+    },
+    "artifacts/statguard_offline_core_v0.1/legacy_regression.txt": {
+      "sha256": "3309b7eb0a8aa6a0cac10ef257b4c34b4468f376d0e7d254cce68c256745015f",
+      "bytes": 417
+    },
+    "artifacts/statguard_offline_core_v0.1/unit_tests_initial.json": {
+      "sha256": "fc07713478d7e2d8b0484d9464c97301711a3b17cefcd889e0958bf7f0460759",
+      "bytes": 97
+    },
+    "artifacts/statguard_offline_core_v0.1/unit_tests_initial.txt": {
+      "sha256": "04a2306976ee4100d38aa8dfbd27748d9dbb2284f392009b25e6e50f94b497d9",
+      "bytes": 9443
+    },
+    "artifacts/statguard_offline_core_v0.1/unit_tests_installed_final.json": {
+      "sha256": "6db9107b4e6d2f2b55b14617e17b1e011fc3198a0788248f3c98b6c5b7fa332f",
+      "bytes": 198
+    },
+    "artifacts/statguard_offline_core_v0.1/unit_tests_installed_final.txt": {
+      "sha256": "26537002e356d32e4c8d0ffb8939db8a0ab0456ca0527dbb246726d26f34f31e",
+      "bytes": 9443
+    },
+    "artifacts/statguard_offline_core_v0.1/unit_tests_staged_final.json": {
+      "sha256": "3444482300311b2a7bee0e2aecb4a77eda63cd9696ed07943e18d3912049f067",
+      "bytes": 149
+    },
+    "artifacts/statguard_offline_core_v0.1/unit_tests_staged_final.txt": {
+      "sha256": "92deac3b533620f9cfa724f4ba7b9d449b5151f9d71ebdb4f482ecf945c90824",
+      "bytes": 9443
+    },
+    "data/statguard_demo_v0.1/cases_24.json": {
+      "sha256": "da9f945b0401e52ba63d568528fd41fc5ce9bd5abd8e36e1ddfe25342376fe81",
+      "bytes": 9387
+    },
+    "data/statguard_demo_v0.1/invalid.csv": {
+      "sha256": "90f9a548abb355ab63b786c3ae7d4a7fedfa93a2d1c33becd3379d89520a9ce1",
+      "bytes": 26
+    },
+    "data/statguard_demo_v0.1/missing.csv": {
+      "sha256": "e8dc145ce37e07c5793bb95d8516908322830a8d5bccb3b0fa13d4fd3d31fc01",
+      "bytes": 28
+    },
+    "data/statguard_demo_v0.1/missing_group.csv": {
+      "sha256": "f4f0551de6cd8f8751c53378116ca29dc2bb007a901551064308cdd75b5d3edc",
+      "bytes": 24
+    },
+    "data/statguard_demo_v0.1/negative.csv": {
+      "sha256": "76234967ad54ae069a28186d77ca60b0b8bcea35e7cd8b49392f73c268e66c1b",
+      "bytes": 30
+    },
+    "data/statguard_demo_v0.1/ties.csv": {
+      "sha256": "d9f829da0131edd43e840953428987db663cea96ee686d02d247a41b9aec0f32",
+      "bytes": 34
+    },
+    "data/statguard_demo_v0.1/visitors.csv": {
+      "sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+      "bytes": 122
+    },
+    "data/statguard_demo_v0.1/zero.csv": {
+      "sha256": "8e1bbb7fa9c421daed60a492695d51ca12d40ea06cb27d199b04faeaed543abc",
+      "bytes": 28
+    },
+    "docs/statguard_offline_contract_v0.1.md": {
+      "sha256": "664a2273425a3dfd4394e7a6bf23e9744f9e4610a26bea8398bb64961af2ac34",
+      "bytes": 2142
+    },
+    "docs/statguard_offline_core_report_v0.1.md": {
+      "sha256": "7dc0aa30846ef4ebe7e1aecbc55ad9a618b5dbb6fd59d0ab6952b1d6b0ce309d",
+      "bytes": 5008
+    },
+    "docs/statguard_start_here_v0.1.md": {
+      "sha256": "cfcdb6797aad2d2e324c0fa058a64133687578aa5db66c44e2dcf23736750186",
+      "bytes": 4074
+    },
+    "src/when2warn/statguard/__init__.py": {
+      "sha256": "69e390e071cff216715814c6499821ff006ac2ae96a43ace13ddc1660f792a20",
+      "bytes": 495
+    },
+    "src/when2warn/statguard/__main__.py": {
+      "sha256": "193a382afa3d847243b086a7e8f81a52f767968ef93b7fb7fb86829de89d7663",
+      "bytes": 1588
+    },
+    "src/when2warn/statguard/core.py": {
+      "sha256": "e4ee55a471da965c883e58ed3ffdc94a2871902d4813469eee81ceae0ecee053",
+      "bytes": 18826
+    },
+    "src/when2warn/statguard/demo.py": {
+      "sha256": "7d9242c5c53a0a2942b97511408b8fa93ced698bd21e74e6ece57fe0003d5a84",
+      "bytes": 5740
+    },
+    "tests/test_statguard_offline_v0_1.py": {
+      "sha256": "eb0112c3dc1367a7ea58891f8307a4dc561f0b42a1319d05b6a13a509910e386",
+      "bytes": 14614
+    }
+  },
+  "new_tests": {
+    "tests_run": 83,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "successful": true,
+    "network_and_subprocess_creation_blocked": true,
+    "tested_original_project_installation": true
+  },
+  "legacy_tests": {
+    "suite": "existing_test_trajectory",
+    "tests_run": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "successful": true,
+    "network_and_subprocess_creation_blocked": true,
+    "full_legacy_suite_run": false
+  },
+  "integration": {
+    "original_protected_files": 946,
+    "original_hash_mismatches": [],
+    "installed_payload_files": 22,
+    "installed_hash_mismatches": [],
+    "staged_vs_installed_demo_identical": {
+      "demo_results.json": true,
+      "demo_readable_ko.md": true
+    },
+    "overwrite_refusal": {
+      "refusal": "EXISTING_DEMO_OUTPUT_REFUSED",
+      "expected_exit_code": 2,
+      "prior_result_files_unchanged": true
+    },
+    "paid_api_calls": 0,
+    "external_search_fetch": 0,
+    "api_db_deployment_changes": 0,
+    "model_training_runs": 0,
+    "past_live_set_reruns": 0,
+    "real_user_data_used": false
+  },
+  "fixture_cases_passed": 24,
+  "original_existing_files_overwritten": 0,
+  "existing_research_verdicts_unchanged": true
+}

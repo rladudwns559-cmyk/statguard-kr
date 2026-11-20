@@ -1,0 +1,1850 @@
+{
+ "meta": {
+  "questions": 36,
+  "answerable": 27,
+  "unanswerable": 9,
+  "datasets": 5,
+  "generated": "2026-11-20"
+ },
+ "conditions": {
+  "A": {
+   "accuracy": {
+    "all": {
+     "correct": 33,
+     "n": 36,
+     "rate": 0.9166666666666666
+    },
+    "answerable": {
+     "correct": 25,
+     "n": 27,
+     "rate": 0.9259259259259259
+    },
+    "category:interpretive": {
+     "correct": 3,
+     "n": 4,
+     "rate": 0.75
+    },
+    "category:lookup": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 8,
+     "n": 10,
+     "rate": 0.8
+    },
+    "category:pp_diff": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:range_sum": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:sum": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:기상": {
+     "correct": 7,
+     "n": 8,
+     "rate": 0.875
+    },
+    "domain:인구": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:인구·고용": {
+     "correct": 9,
+     "n": 10,
+     "rate": 0.9
+    },
+    "domain:합성(관광)": {
+     "correct": 9,
+     "n": 9,
+     "rate": 1.0
+    },
+    "domain:환경": {
+     "correct": 5,
+     "n": 6,
+     "rate": 0.8333333333333334
+    },
+    "unanswerable": {
+     "correct": 8,
+     "n": 9,
+     "rate": 0.8888888888888888
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 1,
+    "근거 없는 단정": 1,
+    "단위 오류": 1
+   }
+  },
+  "B": {
+   "accuracy": {
+    "all": {
+     "correct": 33,
+     "n": 36,
+     "rate": 0.9166666666666666
+    },
+    "answerable": {
+     "correct": 25,
+     "n": 27,
+     "rate": 0.9259259259259259
+    },
+    "category:interpretive": {
+     "correct": 3,
+     "n": 4,
+     "rate": 0.75
+    },
+    "category:lookup": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 8,
+     "n": 10,
+     "rate": 0.8
+    },
+    "category:pp_diff": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:range_sum": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:sum": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:기상": {
+     "correct": 7,
+     "n": 8,
+     "rate": 0.875
+    },
+    "domain:인구": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:인구·고용": {
+     "correct": 10,
+     "n": 10,
+     "rate": 1.0
+    },
+    "domain:합성(관광)": {
+     "correct": 8,
+     "n": 9,
+     "rate": 0.8888888888888888
+    },
+    "domain:환경": {
+     "correct": 5,
+     "n": 6,
+     "rate": 0.8333333333333334
+    },
+    "unanswerable": {
+     "correct": 8,
+     "n": 9,
+     "rate": 0.8888888888888888
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 1,
+    "형식 오류": 1,
+    "단위 오류": 1
+   }
+  },
+  "C": {
+   "accuracy": {
+    "all": {
+     "correct": 36,
+     "n": 36,
+     "rate": 1.0
+    },
+    "answerable": {
+     "correct": 27,
+     "n": 27,
+     "rate": 1.0
+    },
+    "category:interpretive": {
+     "correct": 4,
+     "n": 4,
+     "rate": 1.0
+    },
+    "category:lookup": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 5,
+     "n": 5,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 10,
+     "n": 10,
+     "rate": 1.0
+    },
+    "category:pp_diff": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:range_sum": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:sum": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:기상": {
+     "correct": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "domain:인구": {
+     "correct": 3,
+     "n": 3,
+     "rate": 1.0
+    },
+    "domain:인구·고용": {
+     "correct": 10,
+     "n": 10,
+     "rate": 1.0
+    },
+    "domain:합성(관광)": {
+     "correct": 9,
+     "n": 9,
+     "rate": 1.0
+    },
+    "domain:환경": {
+     "correct": 6,
+     "n": 6,
+     "rate": 1.0
+    },
+    "unanswerable": {
+     "correct": 9,
+     "n": 9,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {}
+  }
+ },
+ "statguard": {
+  "A/rule_v0.1": {
+   "n": 36,
+   "decided": 16,
+   "coverage": 0.4444444444444444,
+   "tp": 0,
+   "fp": 4,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 12,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 12,
+    "HOLD": 20,
+    "FLAG": 4
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.2": {
+   "n": 36,
+   "decided": 15,
+   "coverage": 0.4166666666666667,
+   "tp": 0,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 14,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 14,
+    "HOLD": 21,
+    "FLAG": 1
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.3": {
+   "n": 36,
+   "decided": 15,
+   "coverage": 0.4166666666666667,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 15,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 15,
+    "HOLD": 21
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.7": {
+   "n": 36,
+   "decided": 15,
+   "coverage": 0.4166666666666667,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 15,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 15,
+    "HOLD": 21
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/llm": {
+   "n": 36,
+   "decided": 28,
+   "coverage": 0.7777777777777778,
+   "tp": 1,
+   "fp": 0,
+   "fn": 1,
+   "precision": 1.0,
+   "recall": 0.5,
+   "f1": 0.6666666666666666,
+   "errors_total": 3,
+   "missed_errors_on_hold": 1,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 27,
+   "error_rate_among_passed": 0.037037037037037035,
+   "decisions": {
+    "PASS": 27,
+    "FLAG": 1,
+    "HOLD": 8
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.1": {
+   "n": 36,
+   "decided": 18,
+   "coverage": 0.5,
+   "tp": 0,
+   "fp": 6,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 12,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 12,
+    "HOLD": 18,
+    "FLAG": 6
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.2": {
+   "n": 36,
+   "decided": 17,
+   "coverage": 0.4722222222222222,
+   "tp": 0,
+   "fp": 4,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 13,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 13,
+    "HOLD": 19,
+    "FLAG": 4
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.3": {
+   "n": 36,
+   "decided": 16,
+   "coverage": 0.4444444444444444,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 16,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 16,
+    "HOLD": 20
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "B/rule_v0.7": {
+   "n": 36,
+   "decided": 16,
+   "coverage": 0.4444444444444444,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 3,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.08333333333333333,
+   "passed": 16,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 16,
+    "HOLD": 20
+   },
+   "unanswerable_asserted": 1,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.1": {
+   "n": 36,
+   "decided": 22,
+   "coverage": 0.6111111111111112,
+   "tp": 0,
+   "fp": 3,
+   "fn": 0,
+   "precision": 0.0,
+   "recall": null,
+   "f1": 0.0,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 19,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 19,
+    "HOLD": 14,
+    "FLAG": 3
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.2": {
+   "n": 36,
+   "decided": 21,
+   "coverage": 0.5833333333333334,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "HOLD": 15
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.3": {
+   "n": 36,
+   "decided": 21,
+   "coverage": 0.5833333333333334,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "HOLD": 15
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "C/rule_v0.7": {
+   "n": 36,
+   "decided": 22,
+   "coverage": 0.6111111111111112,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "errors_total": 0,
+   "missed_errors_on_hold": 0,
+   "raw_error_rate": 0.0,
+   "passed": 22,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 22,
+    "HOLD": 14
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  }
+ },
+ "per_question": {
+  "S01": {
+   "A": {
+    "final": "888.9 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "888.9 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "888.9 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "S08": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "P01": {
+   "A": {
+    "final": "0.0775 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "0.078 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "0.0775 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "S02": {
+   "A": {
+    "final": "74.075 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "74.075 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "74.075 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "S03": {
+   "A": {
+    "final": "215.4 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "215.4 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "215.4 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "S04": {
+   "A": {
+    "final": "174.5 %",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "FLAG"
+   },
+   "B": {
+    "final": "174.5 %",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "174.39 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "S05": {
+   "A": {
+    "final": "16.54 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "16.54 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "16.54 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "S06": {
+   "A": {
+    "final": "356.8 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "356.8 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "356.8 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "S07": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "C01": {
+   "A": {
+    "final": "424.60 ppm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "424.60 ppm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "424.60 ppm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "C02": {
+   "A": {
+    "final": "426.90 ppm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "426.90 ppm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "426.9 ppm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "C03": {
+   "A": {
+    "final": "0.61 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "0.615 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "0.615 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "C04": {
+   "A": {
+    "final": "-1.14 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "-1.14 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "-1.14 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "C05": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "C06": {
+   "A": {
+    "final": "0.45 p값",
+    "correct": false,
+    "error_kind": "근거 없는 단정",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "P02": {
+   "A": {
+    "final": "51672569 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "51672569 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "51672569 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "P03": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "K01": {
+   "A": {
+    "final": "1.90 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "1.90 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "1.90 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "K02": {
+   "A": {
+    "final": "-0.187 % %",
+    "correct": false,
+    "error_kind": "단위 오류",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "-0.1873 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "-0.1873 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "K03": {
+   "A": {
+    "final": "3.4603 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "3.4603 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "3.4603 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "K04": {
+   "A": {
+    "final": "3.931 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "3.931 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "3.931 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "K05": {
+   "A": {
+    "final": "-21.49 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "-21.49 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "-21.49 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "K06": {
+   "A": {
+    "final": "51468216.6 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "51468216.6 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "FLAG",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "51468216.6 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "K07": {
+   "A": {
+    "final": "51361911 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "51361911 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "51361911 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "K08": {
+   "A": {
+    "final": "1.071 %p",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "1.071 %p",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "1.071 %p",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "K09": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "K10": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "FLAG",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "FLAG",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "V01": {
+   "A": {
+    "final": "17.8 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "17.8 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "17.8 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "V02": {
+   "A": {
+    "final": "4938 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "4938 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "4938 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "V03": {
+   "A": {
+    "final": "44.7 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "44.7 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "FLAG",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   },
+   "C": {
+    "final": "44.66 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "V04": {
+   "A": {
+    "final": "9 분",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "9 분",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "FLAG",
+    "rule_v0.2": "FLAG",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "9 분",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "V05": {
+   "A": {
+    "final": "1760 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "1760 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "1760 명",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "V06": {
+   "A": {
+    "final": "14.7 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "14.7 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "14.70 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "PASS",
+    "rule_v0.2": "PASS",
+    "rule_v0.3": "PASS",
+    "rule_v0.7": "PASS"
+   }
+  },
+  "V07": {
+   "A": {
+    "final": "0 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "PASS"
+   },
+   "B": {
+    "final": "0 %_percent",
+    "correct": false,
+    "error_kind": "단위 오류",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "0 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "V08": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  },
+  "V09": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD",
+    "llm": "HOLD"
+   },
+   "B": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   },
+   "C": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.1": "HOLD",
+    "rule_v0.2": "HOLD",
+    "rule_v0.3": "HOLD",
+    "rule_v0.7": "HOLD"
+   }
+  }
+ },
+ "perturbation": {
+  "rule_v0.1": {
+   "n": 58,
+   "decided": 50,
+   "coverage": 0.8620689655172413,
+   "tp": 29,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.9354838709677419,
+   "recall": 1.0,
+   "f1": 0.9666666666666666,
+   "errors_total": 34,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 19,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 19,
+    "FLAG": 31,
+    "HOLD": 8
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 19,
+     "HOLD": 3,
+     "FLAG": 2
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 2
+    }
+   }
+  },
+  "rule_v0.2": {
+   "n": 58,
+   "decided": 50,
+   "coverage": 0.8620689655172413,
+   "tp": 29,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 34,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "FLAG": 29,
+    "HOLD": 8
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 21,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 2
+    }
+   }
+  },
+  "rule_v0.3": {
+   "n": 58,
+   "decided": 50,
+   "coverage": 0.8620689655172413,
+   "tp": 29,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 34,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "FLAG": 29,
+    "HOLD": 8
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 21,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 2
+    }
+   }
+  },
+  "rule_v0.7": {
+   "n": 58,
+   "decided": 50,
+   "coverage": 0.8620689655172413,
+   "tp": 29,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 34,
+   "missed_errors_on_hold": 5,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 21,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 21,
+    "FLAG": 29,
+    "HOLD": 8
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 21,
+     "HOLD": 3
+    },
+    "scaled_10pct": {
+     "FLAG": 21,
+     "HOLD": 3
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 2
+    }
+   }
+  },
+  "llm": {
+   "n": 58,
+   "decided": 57,
+   "coverage": 0.9827586206896551,
+   "tp": 32,
+   "fp": 0,
+   "fn": 1,
+   "precision": 1.0,
+   "recall": 0.9696969696969697,
+   "f1": 0.9846153846153847,
+   "errors_total": 34,
+   "missed_errors_on_hold": 1,
+   "raw_error_rate": 0.5862068965517241,
+   "passed": 25,
+   "error_rate_among_passed": 0.04,
+   "decisions": {
+    "PASS": 25,
+    "FLAG": 32,
+    "HOLD": 1
+   },
+   "by_kind": {
+    "correct": {
+     "PASS": 24
+    },
+    "scaled_10pct": {
+     "FLAG": 24
+    },
+    "swapped_base": {
+     "FLAG": 8,
+     "HOLD": 1,
+     "PASS": 1
+    }
+   }
+  }
+ },
+ "usage": {
+  "calls": 490,
+  "input_tokens": 224806,
+  "output_tokens": 65087,
+  "estimated_usd": 0.055,
+  "price_basis": "입력 $0.10/1M, 출력 $0.50/1M (이전 기록의 사전 고정 단가, 실제 청구액 아님)",
+  "model": "gpt-6-luna"
+ }
+}

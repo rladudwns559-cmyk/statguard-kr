@@ -1,0 +1,444 @@
+{
+  "kind": "SYNTHETIC_DEVELOPMENT_FIXTURES_NOT_INDEPENDENT_RESEARCH_EVALUATION",
+  "contract_version": "statguard-calculation-v0.1",
+  "datasets": {
+    "visitors": {
+      "file": "visitors.csv",
+      "units": {
+        "방문자수": "명",
+        "체류시간": "분"
+      }
+    },
+    "ties": {
+      "file": "ties.csv",
+      "units": {
+        "방문자수": "명"
+      }
+    },
+    "zero": {
+      "file": "zero.csv",
+      "units": {
+        "방문자수": "명"
+      }
+    },
+    "missing": {
+      "file": "missing.csv",
+      "units": {
+        "방문자수": "명"
+      }
+    },
+    "invalid": {
+      "file": "invalid.csv",
+      "units": {
+        "방문자수": "명"
+      }
+    },
+    "missing_group": {
+      "file": "missing_group.csv",
+      "units": {
+        "방문자수": "명"
+      }
+    },
+    "negative": {
+      "file": "negative.csv",
+      "units": {
+        "방문자수": "명"
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "SG-DEV-001",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "sum",
+        "column": "방문자수"
+      },
+      "expected": {
+        "value": "4938"
+      }
+    },
+    {
+      "case_id": "SG-DEV-002",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "sum",
+        "column": "방문자수",
+        "filters": {
+          "연도": "2024"
+        }
+      },
+      "expected": {
+        "value": "2638"
+      }
+    },
+    {
+      "case_id": "SG-DEV-003",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "mean",
+        "column": "방문자수"
+      },
+      "expected": {
+        "value": "823"
+      }
+    },
+    {
+      "case_id": "SG-DEV-004",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "mean",
+        "column": "방문자수",
+        "filters": {
+          "지역": "A"
+        }
+      },
+      "expected": {
+        "value": "1089"
+      }
+    },
+    {
+      "case_id": "SG-DEV-005",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "ratio_percent",
+        "column": "방문자수",
+        "filters": {
+          "지역": "A",
+          "연도": "2023"
+        },
+        "reference_filters": {
+          "지역": "B",
+          "연도": "2023"
+        }
+      },
+      "expected": {
+        "value": "125"
+      }
+    },
+    {
+      "case_id": "SG-DEV-006",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "ratio_percent",
+        "column": "방문자수",
+        "filters": {
+          "지역": "B",
+          "연도": "2023"
+        },
+        "reference_filters": {
+          "지역": "A",
+          "연도": "2023"
+        }
+      },
+      "expected": {
+        "value": "80"
+      }
+    },
+    {
+      "case_id": "SG-DEV-007",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "percent_change",
+        "column": "방문자수",
+        "filters": {
+          "지역": "A",
+          "연도": "2024"
+        },
+        "reference_filters": {
+          "지역": "A",
+          "연도": "2023"
+        }
+      },
+      "expected": {
+        "value": "17.8"
+      }
+    },
+    {
+      "case_id": "SG-DEV-008",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "percent_change",
+        "column": "방문자수",
+        "filters": {
+          "지역": "B",
+          "연도": "2024"
+        },
+        "reference_filters": {
+          "지역": "B",
+          "연도": "2023"
+        }
+      },
+      "expected": {
+        "value": "20"
+      }
+    },
+    {
+      "case_id": "SG-DEV-009",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "percent_change",
+        "column": "방문자수",
+        "filters": {
+          "지역": "C",
+          "연도": "2024"
+        },
+        "reference_filters": {
+          "지역": "C",
+          "연도": "2023"
+        }
+      },
+      "expected": {
+        "value": "0"
+      }
+    },
+    {
+      "case_id": "SG-DEV-010",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "grouped_aggregate",
+        "column": "방문자수",
+        "filters": {
+          "연도": "2024"
+        },
+        "group_by": "지역",
+        "aggregation": "sum"
+      },
+      "expected": {
+        "groups": [
+          [
+            "A",
+            "1178"
+          ],
+          [
+            "B",
+            "960"
+          ],
+          [
+            "C",
+            "500"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "SG-DEV-011",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "grouped_aggregate",
+        "column": "방문자수",
+        "group_by": "지역",
+        "aggregation": "mean"
+      },
+      "expected": {
+        "groups": [
+          [
+            "A",
+            "1089"
+          ],
+          [
+            "B",
+            "880"
+          ],
+          [
+            "C",
+            "500"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "SG-DEV-012",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "rank",
+        "column": "방문자수",
+        "filters": {
+          "연도": "2024"
+        },
+        "group_by": "지역"
+      },
+      "expected": {
+        "ranks": [
+          [
+            "A",
+            "1178",
+            1
+          ],
+          [
+            "B",
+            "960",
+            2
+          ],
+          [
+            "C",
+            "500",
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "SG-DEV-013",
+      "dataset": "ties",
+      "spec": {
+        "operation": "rank",
+        "column": "방문자수",
+        "group_by": "지역"
+      },
+      "expected": {
+        "ranks": [
+          [
+            "A",
+            "10",
+            1
+          ],
+          [
+            "B",
+            "10",
+            1
+          ],
+          [
+            "C",
+            "5",
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "SG-DEV-014",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "sum",
+        "column": "방문자수",
+        "filters": {
+          "지역": "Z"
+        }
+      },
+      "expected_error": "EMPTY_SELECTION"
+    },
+    {
+      "case_id": "SG-DEV-015",
+      "dataset": "zero",
+      "spec": {
+        "operation": "percent_change",
+        "column": "방문자수",
+        "filters": {
+          "지역": "B"
+        },
+        "reference_filters": {
+          "지역": "A"
+        }
+      },
+      "expected_error": "NON_POSITIVE_BASELINE"
+    },
+    {
+      "case_id": "SG-DEV-016",
+      "dataset": "zero",
+      "spec": {
+        "operation": "ratio_percent",
+        "column": "방문자수",
+        "filters": {
+          "지역": "B"
+        },
+        "reference_filters": {
+          "지역": "A"
+        }
+      },
+      "expected_error": "ZERO_DENOMINATOR"
+    },
+    {
+      "case_id": "SG-DEV-017",
+      "dataset": "missing",
+      "spec": {
+        "operation": "sum",
+        "column": "방문자수"
+      },
+      "expected_error": "MISSING_NUMERIC_VALUE"
+    },
+    {
+      "case_id": "SG-DEV-018",
+      "dataset": "missing",
+      "spec": {
+        "operation": "sum",
+        "column": "방문자수",
+        "missing_policy": "omit"
+      },
+      "expected": {
+        "value": "10",
+        "omitted_rows": 1,
+        "used_rows": 1
+      }
+    },
+    {
+      "case_id": "SG-DEV-019",
+      "dataset": "invalid",
+      "spec": {
+        "operation": "sum",
+        "column": "방문자수"
+      },
+      "expected_error": "INVALID_NUMERIC_VALUE"
+    },
+    {
+      "case_id": "SG-DEV-020",
+      "dataset": "missing_group",
+      "spec": {
+        "operation": "grouped_aggregate",
+        "column": "방문자수",
+        "group_by": "地域",
+        "aggregation": "sum"
+      },
+      "expected_error": "MISSING_GROUP_KEY"
+    },
+    {
+      "case_id": "SG-DEV-021",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "sum",
+        "column": "존재하지않는열"
+      },
+      "expected_error": "UNKNOWN_COLUMN"
+    },
+    {
+      "case_id": "SG-DEV-022",
+      "dataset": "negative",
+      "spec": {
+        "operation": "percent_change",
+        "column": "방문자수",
+        "filters": {
+          "지역": "B"
+        },
+        "reference_filters": {
+          "지역": "A"
+        }
+      },
+      "expected_error": "NON_POSITIVE_BASELINE"
+    },
+    {
+      "case_id": "SG-DEV-023",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "percent_change",
+        "column": "방문자수",
+        "filters": {
+          "지역": "A"
+        },
+        "reference_filters": {
+          "지역": "A",
+          "연도": "2023"
+        }
+      },
+      "expected_error": "OVERLAPPING_COMPARISON"
+    },
+    {
+      "case_id": "SG-DEV-024",
+      "dataset": "visitors",
+      "spec": {
+        "operation": "eval",
+        "column": "방문자수"
+      },
+      "expected_error": "UNSUPPORTED_OPERATION"
+    }
+  ]
+}

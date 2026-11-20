@@ -1,0 +1,3593 @@
+{
+ "S01": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2023년 월별 강수량을 모두 더한 연간 강수량은 888.9mm입니다.",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "888.9mm",
+     "value": "888.9",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "888.9",
+     "unit": "mm",
+     "expression": "sum(강수량) = 888.9",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "47157ae6b242ca6e54f0c068d5747fa7e8b3f888c91161a8107151dfbde19e7d",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "S08": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "11월은 147.0이었다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-11"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "147.0",
+     "value": "147",
+     "unit": "mm",
+     "unit_stated": false,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "147",
+     "unit": "mm",
+     "expression": "sum(강수량) = 147",
+     "usage": {
+      "selected_rows": [
+       11
+      ],
+      "used_rows": [
+       11
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "4897923a68d42efd103113ac0fbc94f5f0f32d62552ccb41b4d3720545f72167",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "12월은 215.4였다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-12"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "215.4",
+     "value": "215.4",
+     "unit": "mm",
+     "unit_stated": false,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "215.4",
+     "unit": "mm",
+     "expression": "sum(강수량) = 215.4",
+     "usage": {
+      "selected_rows": [
+       12
+      ],
+      "used_rows": [
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "e21bea43b5c296ebfd9108ac01cb61b14d4c02e6a589ffbf45bbe32802cadded",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 2,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "P01": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2023년 총인구는 2022년보다 40,050명 증가했습니다.",
+    "operation": "other",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "reason_code": "UNSUPPORTED_OPERATION",
+    "computed": null
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "증감률은 약 0.0775%입니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "총인구",
+     "filters": {
+      "국가코드": "KOR",
+      "연도": "2023"
+     },
+     "reference_filters": {
+      "국가코드": "KOR",
+      "연도": "2022"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "0.0775%",
+     "value": "0.0775",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.00005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "0.07750727470120558550127438022289931",
+     "unit": "%",
+     "expression": "(51712619 - 51672569) / 51672569 * 100",
+     "usage": {
+      "selected_rows": [
+       2
+      ],
+      "used_rows": [
+       2
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 1
+     },
+     "calculation_id": "d319aaf6dff949ac82dc40199bb32ce22d8a4bd85f073c66aaa11747e1bf0a80",
+     "reference_usage": {
+      "selected_rows": [
+       1
+      ],
+      "used_rows": [
+       1
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 1
+     }
+    },
+    "difference": {
+     "signed": "-0.00000727470120558550127438022289931",
+     "absolute": "0.000007274701205585501274380222899",
+     "unit": "%p",
+     "relative_percent": "0.01"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "S02": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2023년 월별 강수량 합계는 888.9mm입니다.",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "888.9mm",
+     "value": "888.9",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "888.9",
+     "unit": "mm",
+     "expression": "sum(강수량) = 888.9",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "47157ae6b242ca6e54f0c068d5747fa7e8b3f888c91161a8107151dfbde19e7d",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "월평균 강수량은 74.075mm입니다.",
+    "operation": "mean",
+    "spec": {
+     "operation": "mean",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "74.075mm",
+     "value": "74.075",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.0005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "74.075",
+     "unit": "mm",
+     "expression": "888.9 / 12",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "bceef3f2d6616c2b03672c77aca4e336c5b184f87a00e7ef569b3d51591c3125",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 2,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "S03": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2023년 12월 강수량은 215.4 mm입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-12"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "215.4mm",
+     "value": "215.4",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "215.4",
+     "unit": "mm",
+     "expression": "sum(강수량) = 215.4",
+     "usage": {
+      "selected_rows": [
+       12
+      ],
+      "used_rows": [
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "e21bea43b5c296ebfd9108ac01cb61b14d4c02e6a589ffbf45bbe32802cadded",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "S04": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2023년 1월 강수량은 78.5 mm입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-01"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "78.5mm",
+     "value": "78.5",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "78.5",
+     "unit": "mm",
+     "expression": "sum(강수량) = 78.5",
+     "usage": {
+      "selected_rows": [
+       1
+      ],
+      "used_rows": [
+       1
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "84a06ffe1719ecf44fd91e598d3366ec946da5c213f43301db4bfe11bdf1ddea",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "2023년 12월 강수량은 215.4 mm입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-12"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "215.4mm",
+     "value": "215.4",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "215.4",
+     "unit": "mm",
+     "expression": "sum(강수량) = 215.4",
+     "usage": {
+      "selected_rows": [
+       12
+      ],
+      "used_rows": [
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "e21bea43b5c296ebfd9108ac01cb61b14d4c02e6a589ffbf45bbe32802cadded",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "2023년 1월 대비 12월 강수량 증가율은 약 174.5%입니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-12"
+     },
+     "reference_filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-01"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "174.5%",
+     "value": "174.5",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "CONTRADICTED",
+    "reason_code": "NUMERIC_VALUE_CONFLICT",
+    "computed": {
+     "value": "174.3949044585987261146496815286624",
+     "unit": "%",
+     "expression": "(215.4 - 78.5) / 78.5 * 100",
+     "usage": {
+      "selected_rows": [
+       12
+      ],
+      "used_rows": [
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "9f46c42aa6a6667352acabd8ebbb53c3d6a773950dc3dbe45fd41b58ff173038",
+     "reference_usage": {
+      "selected_rows": [
+       1
+      ],
+      "used_rows": [
+       1
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     }
+    },
+    "difference": {
+     "signed": "0.1050955414012738853503184713376",
+     "absolute": "0.1050955414012738853503184713",
+     "unit": "%p",
+     "relative_percent": "0.06"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 2,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "S05": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2023년 연간 강수량 합계는 888.9이며",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "888.9mm",
+     "value": "888.9",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "888.9",
+     "unit": "mm",
+     "expression": "sum(강수량) = 888.9",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "47157ae6b242ca6e54f0c068d5747fa7e8b3f888c91161a8107151dfbde19e7d",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "11월 강수량 147.0",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-11"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "147.0mm",
+     "value": "147",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "147",
+     "unit": "mm",
+     "expression": "sum(강수량) = 147",
+     "usage": {
+      "selected_rows": [
+       11
+      ],
+      "used_rows": [
+       11
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "4897923a68d42efd103113ac0fbc94f5f0f32d62552ccb41b4d3720545f72167",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "mm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "11월 강수량 147.0은 연간 합계의 약 16.54%입니다.",
+    "operation": "ratio_percent",
+    "spec": {
+     "operation": "ratio_percent",
+     "column": "강수량",
+     "filters": {
+      "관측소": "USW00024233",
+      "연월": "2023-11"
+     },
+     "reference_filters": {
+      "관측소": "USW00024233"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "16.54%",
+     "value": "16.54",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "16.53729328383395207559905501181235",
+     "unit": "%",
+     "expression": "147 / 888.9 * 100",
+     "usage": {
+      "selected_rows": [
+       11
+      ],
+      "used_rows": [
+       11
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "d7011311b94af20cf72e7ca080320f1850fc05f13b1f91ebf905f2697b120219",
+     "reference_usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     }
+    },
+    "difference": {
+     "signed": "0.00270671616604792440094498818765",
+     "absolute": "0.002706716166047924400944988188",
+     "unit": "%p",
+     "relative_percent": "0.02"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 3,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "S06": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2023년 상반기(1~6월) 강수량 합계는 356.8mm입니다.",
+    "operation": "sum",
+    "spec": null,
+    "claimed": {
+     "text": "356.8mm",
+     "value": "356.8",
+     "unit": "mm",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "강수량",
+    "status": "UNCERTAIN",
+    "reason_code": "RANGE_FILTER_UNSUPPORTED",
+    "computed": null
+   }
+  ],
+  "summary": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "S07": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [],
+  "summary": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "C01": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "12개 월별 값의 합은 5095.25 ppm이며",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "이산화탄소농도",
+     "filters": {
+      "연도": "2024"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "5095.25ppm",
+     "value": "5095.25",
+     "unit": "ppm",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "5095.25",
+     "unit": "ppm",
+     "expression": "sum(이산화탄소농도) = 5095.25",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "6c221e936a7e71aef62efec14d9db938732701dc633401188ec4cfa9c19efa4f",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "ppm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "이를 12로 나눈 산술평균은 약 424.60 ppm입니다.",
+    "operation": "mean",
+    "spec": {
+     "operation": "mean",
+     "column": "이산화탄소농도",
+     "filters": {
+      "연도": "2024"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "424.60ppm",
+     "value": "424.6",
+     "unit": "ppm",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "424.6041666666666666666666666666667",
+     "unit": "ppm",
+     "expression": "5095.25 / 12",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "c5a9b611931b0eb926ba1eca842fbd63aeac716a6676d404370f44b8564ac3f6",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "-0.0041666666666666666666666666667",
+     "absolute": "0.004166666666666666666666666667",
+     "unit": "ppm",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 2,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "C02": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2024년 5월 이산화탄소농도는 426.90 ppm입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "이산화탄소농도",
+     "filters": {
+      "연도": "2024",
+      "월": "5"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "426.90ppm",
+     "value": "426.9",
+     "unit": "ppm",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "426.9",
+     "unit": "ppm",
+     "expression": "sum(이산화탄소농도) = 426.9",
+     "usage": {
+      "selected_rows": [
+       5
+      ],
+      "used_rows": [
+       5
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "e62347cbabf4ca0f78d82f3973266c6d372323cf003fd3250eb0418d85388f32",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "ppm",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "C03": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2024년 1월 대비 12월 이산화탄소농도는 약 0.61% 증가했습니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "이산화탄소농도",
+     "filters": {
+      "연도": "2024",
+      "월": "12"
+     },
+     "reference_filters": {
+      "연도": "2024",
+      "월": "1"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "0.61%",
+     "value": "0.61",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "0.6149479659413434247871333964049196",
+     "unit": "%",
+     "expression": "(425.4 - 422.8) / 422.8 * 100",
+     "usage": {
+      "selected_rows": [
+       12
+      ],
+      "used_rows": [
+       12
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "ca2f94e6701a6d0ee1e1d8ce16d8d66b3278449abc3e70b20b32cc0db9ec012f",
+     "reference_usage": {
+      "selected_rows": [
+       1
+      ],
+      "used_rows": [
+       1
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     }
+    },
+    "difference": {
+     "signed": "-0.0049479659413434247871333964049196",
+     "absolute": "0.004947965941343424787133396405",
+     "unit": "%p",
+     "relative_percent": "0.8"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "C04": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2024년 6월 이산화탄소농도는 426.91입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "이산화탄소농도",
+     "filters": {
+      "연도": "2024",
+      "월": "6"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "426.91ppm",
+     "value": "426.91",
+     "unit": "ppm",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "426.91",
+     "unit": "ppm",
+     "expression": "sum(이산화탄소농도) = 426.91",
+     "usage": {
+      "selected_rows": [
+       6
+      ],
+      "used_rows": [
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "35c15cad1eff81deb4bb291908eff11cf93edb8009121287ee0cdada9bb87e34",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "ppm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "2024년 9월 이산화탄소농도는 422.03입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "이산화탄소농도",
+     "filters": {
+      "연도": "2024",
+      "월": "9"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "422.03ppm",
+     "value": "422.03",
+     "unit": "ppm",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "422.03",
+     "unit": "ppm",
+     "expression": "sum(이산화탄소농도) = 422.03",
+     "usage": {
+      "selected_rows": [
+       9
+      ],
+      "used_rows": [
+       9
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "a504416d906066b2da48a7ebeb115064d2e02df7231dcc7967c6a05b81cd2f18",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "ppm",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "2024년 6월에서 9월까지 이산화탄소농도 변화율은 약 -1.14%입니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "이산화탄소농도",
+     "filters": {
+      "연도": "2024",
+      "월": "9"
+     },
+     "reference_filters": {
+      "연도": "2024",
+      "월": "6"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "-1.14%",
+     "value": "-1.14",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "-1.143098076878030498231477360567801",
+     "unit": "%",
+     "expression": "(422.03 - 426.91) / 426.91 * 100",
+     "usage": {
+      "selected_rows": [
+       9
+      ],
+      "used_rows": [
+       9
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     },
+     "calculation_id": "f4f5aed8f7480649821e561a6f46ac8a50a323484f0a621d93f2a382977b1480",
+     "reference_usage": {
+      "selected_rows": [
+       6
+      ],
+      "used_rows": [
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 11
+     }
+    },
+    "difference": {
+     "signed": "0.003098076878030498231477360567801",
+     "absolute": "0.003098076878030498231477360568",
+     "unit": "%p",
+     "relative_percent": "0.27"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 3,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "C05": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [],
+  "summary": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "C06": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "월을 시간 변수로 한 선형회귀에서는 기울기가 약 −0.12 ppm/월입니다.",
+    "operation": "unsupported_statistic",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "reason_code": "UNSUPPORTED_OPERATION",
+    "computed": null
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "양측 검정 p값은 약 0.45입니다.",
+    "operation": "unsupported_statistic",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "reason_code": "UNSUPPORTED_OPERATION",
+    "computed": null
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "따라서 이 자료에서는 통계적으로 유의한 증가 추세가 나타나지 않습니다.",
+    "operation": "interpretive",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": true,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "이산화탄소농도",
+    "status": "UNCERTAIN",
+    "reason_code": "INTERPRETIVE_STATEMENT",
+    "computed": null
+   }
+  ],
+  "summary": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 2
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "P02": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2022년 대한민국 총인구는 51,672,569명입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "총인구",
+     "filters": {
+      "국가코드": "KOR",
+      "연도": "2022"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "51672569명",
+     "value": "51672569",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "51672569",
+     "unit": "명",
+     "expression": "sum(총인구) = 51672569",
+     "usage": {
+      "selected_rows": [
+       1
+      ],
+      "used_rows": [
+       1
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 1
+     },
+     "calculation_id": "38086e26b8deee72802e522bec49af246df715870a85c50c50a376836455a9e3",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "P03": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [],
+  "summary": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K01": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2014년 총인구 대비 2023년 총인구는 약 1.90% 증가했습니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "총인구",
+     "filters": {
+      "연도": "2023"
+     },
+     "reference_filters": {
+      "연도": "2014"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "1.90%",
+     "value": "1.9",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "1.90349476997096498510374840637292",
+     "unit": "%",
+     "expression": "(51712619 - 50746659) / 50746659 * 100",
+     "usage": {
+      "selected_rows": [
+       10
+      ],
+      "used_rows": [
+       10
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "e8257fcdb087ebf8e38296fd3f0ef0760894844e386371e1de39bd58c5de8d2e",
+     "reference_usage": {
+      "selected_rows": [
+       1
+      ],
+      "used_rows": [
+       1
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     }
+    },
+    "difference": {
+     "signed": "-0.00349476997096498510374840637292",
+     "absolute": "0.003494769970964985103748406373",
+     "unit": "%p",
+     "relative_percent": "0.18"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K02": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2021년 대비 2022년 총인구는 96,970명 감소했습니다.",
+    "operation": "other",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "reason_code": "UNSUPPORTED_OPERATION",
+    "computed": null
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "증감률은 약 -0.187%입니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "총인구",
+     "filters": {
+      "연도": "2022"
+     },
+     "reference_filters": {
+      "연도": "2021"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "-0.187%",
+     "value": "-0.187",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.0005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "-0.1873109204236877597074990372234143",
+     "unit": "%",
+     "expression": "(51672569 - 51769539) / 51769539 * 100",
+     "usage": {
+      "selected_rows": [
+       9
+      ],
+      "used_rows": [
+       9
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "f2edde0b13235890bce21a4f7dba556ea21984c337f195957837c4ffa5b839ea",
+     "reference_usage": {
+      "selected_rows": [
+       8
+      ],
+      "used_rows": [
+       8
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     }
+    },
+    "difference": {
+     "signed": "0.0003109204236877597074990372234143",
+     "absolute": "0.0003109204236877597074990372234",
+     "unit": "%p",
+     "relative_percent": "0.17"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K03": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2014~2023년 실업률의 단순 평균은 3.4603%입니다.",
+    "operation": "mean",
+    "spec": {
+     "operation": "mean",
+     "column": "실업률",
+     "filters": {},
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "3.4603%",
+     "value": "3.4603",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.00005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "실업률",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "3.4603",
+     "unit": "%",
+     "expression": "34.603 / 10",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "f5d07f36f586dd45dc2a2406fe3596996302ff2ba23ae954049318f8a9ae84a1",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "%p",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K04": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2020년 대한민국 실업률은 3.931%입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "실업률",
+     "filters": {
+      "연도": "2020"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "3.931%",
+     "value": "3.931",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.0005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "실업률",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "3.931",
+     "unit": "%",
+     "expression": "sum(실업률) = 3.931",
+     "usage": {
+      "selected_rows": [
+       7
+      ],
+      "used_rows": [
+       7
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "d1ec03cb9c7b3e6c0419b506f08a724b5c5a1d65406a671859c80983a4d35da3",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "%p",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K05": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "따라서 실업률은 약 21.49% 감소했습니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "실업률",
+     "filters": {
+      "연도": "2022"
+     },
+     "reference_filters": {
+      "연도": "2021"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "-21.49%",
+     "value": "-21.49",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "실업률",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "-21.48942017037647705413575158010442",
+     "unit": "%",
+     "expression": "(2.857 - 3.639) / 3.639 * 100",
+     "usage": {
+      "selected_rows": [
+       9
+      ],
+      "used_rows": [
+       9
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "4d197d792863f230badc130302fc9fbe1b0723f6db663390e5e961ee5dfadf6e",
+     "reference_usage": {
+      "selected_rows": [
+       8
+      ],
+      "used_rows": [
+       8
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     }
+    },
+    "difference": {
+     "signed": "-0.00057982962352294586424841989558",
+     "absolute": "0.0005798296235229458642484198956",
+     "unit": "%p",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K06": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2014~2023년 총인구의 합은 514,682,166명이며",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "총인구",
+     "filters": {},
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "514682166명",
+     "value": "514682166",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "514682166",
+     "unit": "명",
+     "expression": "sum(총인구) = 514682166",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "98da14c52d0ded2d375fa8d2e5f070e28e4ceb172e91ae2dd70c687ab3d293c2",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "10년으로 나눈 평균은 51,468,216.6명입니다.",
+    "operation": "mean",
+    "spec": {
+     "operation": "mean",
+     "column": "총인구",
+     "filters": {},
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "51468216.6명",
+     "value": "51468216.6",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "51468216.6",
+     "unit": "명",
+     "expression": "514682166 / 10",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "bb720d265ebfe3c6143eb9ac8b322d2e684a94201a4c5e8ab180af21e66069a5",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 2,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K07": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2017년 대한민국 총인구는 51,361,911명입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "총인구",
+     "filters": {
+      "연도": "2017"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "51361911명",
+     "value": "51361911",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "51361911",
+     "unit": "명",
+     "expression": "sum(총인구) = 51361911",
+     "usage": {
+      "selected_rows": [
+       4
+      ],
+      "used_rows": [
+       4
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "820cb76ada0ee6b35d6e889325629608064ddb00b1da0e718fd3b98f56178166",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K08": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2019년 실업률 3.746%에서 2023년 2.675%로 낮아졌습니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "실업률",
+     "filters": {
+      "연도": "2019"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "3.746%",
+     "value": "3.746",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.0005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "실업률",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "3.746",
+     "unit": "%",
+     "expression": "sum(실업률) = 3.746",
+     "usage": {
+      "selected_rows": [
+       6
+      ],
+      "used_rows": [
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "1912eac38f0bf6ca0a1b5f7ba81043c94c2d7b13873d6d577b796db5829e2c40",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "%p",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "2019년 실업률 3.746%에서 2023년 2.675%로 낮아졌습니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "실업률",
+     "filters": {
+      "연도": "2023"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "2.675%",
+     "value": "2.675",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.0005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "실업률",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "2.675",
+     "unit": "%",
+     "expression": "sum(실업률) = 2.675",
+     "usage": {
+      "selected_rows": [
+       10
+      ],
+      "used_rows": [
+       10
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "f9063e33f16dc074dffd7cb65c46e1116b7df9abff434c3bbcebd1a2a406e53e",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "%p",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "따라서 1.071%p 하락했습니다.",
+    "operation": "unsupported_statistic",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "실업률",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "reason_code": "UNSUPPORTED_OPERATION",
+    "computed": null
+   }
+  ],
+  "summary": {
+   "VERIFIED": 2,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K09": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "제공된 자료는 2014년부터 2023년까지의 총인구만 포함합니다.",
+    "operation": "unsupported_statistic",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "reason_code": "UNSUPPORTED_OPERATION",
+    "computed": null
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "2013년 인구는 확인할 수 없습니다.",
+    "operation": "lookup",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "총인구",
+    "status": "UNCERTAIN",
+    "reason_code": "CLAIM_VALUE_NOT_IDENTIFIED",
+    "computed": null
+   }
+  ],
+  "summary": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "K10": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2021년 실업률은 3.639%입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "실업률",
+     "filters": {
+      "연도": "2021"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "3.639%",
+     "value": "3.639",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.0005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "실업률",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "3.639",
+     "unit": "%",
+     "expression": "sum(실업률) = 3.639",
+     "usage": {
+      "selected_rows": [
+       8
+      ],
+      "used_rows": [
+       8
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "da57c7f274b7d853ecd32b3f34f65ffb92087dd6cc3b3cce1cdbd135b1e6cf88",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "%p",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "2022년 실업률은 2.857%입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "실업률",
+     "filters": {
+      "연도": "2022"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "2.857%",
+     "value": "2.857",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.0005",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "실업률",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "2.857",
+     "unit": "%",
+     "expression": "sum(실업률) = 2.857",
+     "usage": {
+      "selected_rows": [
+       9
+      ],
+      "used_rows": [
+       9
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 9
+     },
+     "calculation_id": "5f018aa5e91a148716d5a860250c87cf4bb57a8e2df36a2f57054ac78384bcff",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "%p",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 2,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V01": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "A지역 방문자수는 2023년 1,000명에서 2024년 1,178명으로 178명 증가했습니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2023",
+      "지역": "A"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "1000명",
+     "value": "1000",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "1000",
+     "unit": "명",
+     "expression": "sum(방문자수) = 1000",
+     "usage": {
+      "selected_rows": [
+       1
+      ],
+      "used_rows": [
+       1
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     },
+     "calculation_id": "5dbb48d30b51da3b54af49ead2f73936ee1149c303949129972bc406a27707dd",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "A지역 방문자수는 2023년 1,000명에서 2024년 1,178명으로 178명 증가했습니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024",
+      "지역": "A"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "1178명",
+     "value": "1178",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "1178",
+     "unit": "명",
+     "expression": "sum(방문자수) = 1178",
+     "usage": {
+      "selected_rows": [
+       2
+      ],
+      "used_rows": [
+       2
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     },
+     "calculation_id": "f44b6746bc81c6aa5fdd9a44df209523ad5b42891db21ec071fc452c484fb1b0",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "A지역 방문자수는 2023년 1,000명에서 2024년 1,178명으로 178명 증가했습니다.",
+    "operation": "other",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "reason_code": "UNSUPPORTED_OPERATION",
+    "computed": null
+   },
+   {
+    "claim_id": "c4",
+    "sentence": "증가율은 17.8%입니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024",
+      "지역": "A"
+     },
+     "reference_filters": {
+      "연도": "2023",
+      "지역": "A"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "17.8%",
+     "value": "17.8",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "17.8",
+     "unit": "%",
+     "expression": "(1178 - 1000) / 1000 * 100",
+     "usage": {
+      "selected_rows": [
+       2
+      ],
+      "used_rows": [
+       2
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     },
+     "calculation_id": "77b28135152a924e71dd4104ed134df6404705efcd6a7a1adf56212c2d2e5301",
+     "reference_usage": {
+      "selected_rows": [
+       1
+      ],
+      "used_rows": [
+       1
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     }
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "%p",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 3,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V02": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "전체 지역·연도의 방문자수 합계는 4,938명입니다.",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {},
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "4938명",
+     "value": "4938",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "4938",
+     "unit": "명",
+     "expression": "sum(방문자수) = 4938",
+     "usage": {
+      "selected_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6
+      ],
+      "used_rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 0
+     },
+     "calculation_id": "436e19e2e9f9cb90d5ceffbde44e11444fb37425e3a118241f61b32a4b56c808",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V03": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2024년 전체 방문자 수는 2,638명이다.",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "2638명",
+     "value": "2638",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "2638",
+     "unit": "명",
+     "expression": "sum(방문자수) = 2638",
+     "usage": {
+      "selected_rows": [
+       2,
+       4,
+       6
+      ],
+      "used_rows": [
+       2,
+       4,
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 3
+     },
+     "calculation_id": "85925d84db9712be3f824198175bf857f24f2515e8ff0f5e24056a4efa87aaaf",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "2024년 A지역 방문자는 1,178명이다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024",
+      "지역": "A"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "1178명",
+     "value": "1178",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "1178",
+     "unit": "명",
+     "expression": "sum(방문자수) = 1178",
+     "usage": {
+      "selected_rows": [
+       2
+      ],
+      "used_rows": [
+       2
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     },
+     "calculation_id": "f44b6746bc81c6aa5fdd9a44df209523ad5b42891db21ec071fc452c484fb1b0",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "2024년 전체 방문자 중 A지역 방문자의 비율은 약 44.7%이다.",
+    "operation": "ratio_percent",
+    "spec": {
+     "operation": "ratio_percent",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024",
+      "지역": "A"
+     },
+     "reference_filters": {
+      "연도": "2024"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "44.7%",
+     "value": "44.7",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "44.65504169825625473843821076573161",
+     "unit": "%",
+     "expression": "1178 / 2638 * 100",
+     "usage": {
+      "selected_rows": [
+       2
+      ],
+      "used_rows": [
+       2
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     },
+     "calculation_id": "117f8a6b56ac333197d12c4ac30817dea566bc8b6d512d5325b0bc4b9f8dc6f6",
+     "reference_usage": {
+      "selected_rows": [
+       2,
+       4,
+       6
+      ],
+      "used_rows": [
+       2,
+       4,
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 3
+     }
+    },
+    "difference": {
+     "signed": "0.04495830174374526156178923426839",
+     "absolute": "0.04495830174374526156178923427",
+     "unit": "%p",
+     "relative_percent": "0.1"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 3,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V04": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2024년 세 지역의 체류시간 평균은 9분입니다.",
+    "operation": "mean",
+    "spec": {
+     "operation": "mean",
+     "column": "체류시간",
+     "filters": {
+      "연도": "2024"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "9분",
+     "value": "9",
+     "unit": "분",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "체류시간",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "9",
+     "unit": "분",
+     "expression": "27 / 3",
+     "usage": {
+      "selected_rows": [
+       2,
+       4,
+       6
+      ],
+      "used_rows": [
+       2,
+       4,
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 3
+     },
+     "calculation_id": "188be72eeb7be8d0d0eb7158d636efa135be6bac51eed987cd145dd0c1893e39",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "분",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V05": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "B지역의 2023년과 2024년 방문자수 합계는 1,760명입니다.",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "지역": "B"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "1760명",
+     "value": "1760",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "1760",
+     "unit": "명",
+     "expression": "sum(방문자수) = 1760",
+     "usage": {
+      "selected_rows": [
+       3,
+       4
+      ],
+      "used_rows": [
+       3,
+       4
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 4
+     },
+     "calculation_id": "4c52ff7c2809552c8355d71b751ae2090694da0960cd085bf3f307a3e83343e5",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V06": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "2023년 전체 방문자수는 2,300명이다.",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2023"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "2300명",
+     "value": "2300",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "2300",
+     "unit": "명",
+     "expression": "sum(방문자수) = 2300",
+     "usage": {
+      "selected_rows": [
+       1,
+       3,
+       5
+      ],
+      "used_rows": [
+       1,
+       3,
+       5
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 3
+     },
+     "calculation_id": "b1089d0ac409cb56d979aadc9723c3d3abfb6a5e5c586f3c98cbca1b539344d2",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "2024년 전체 방문자수는 2,638명이다.",
+    "operation": "sum",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "2638명",
+     "value": "2638",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "2638",
+     "unit": "명",
+     "expression": "sum(방문자수) = 2638",
+     "usage": {
+      "selected_rows": [
+       2,
+       4,
+       6
+      ],
+      "used_rows": [
+       2,
+       4,
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 3
+     },
+     "calculation_id": "85925d84db9712be3f824198175bf857f24f2515e8ff0f5e24056a4efa87aaaf",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "방문자수가 338명 증가했다.",
+    "operation": "other",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "reason_code": "UNSUPPORTED_OPERATION",
+    "computed": null
+   },
+   {
+    "claim_id": "c4",
+    "sentence": "증가율은 약 14.7%이다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024"
+     },
+     "reference_filters": {
+      "연도": "2023"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "14.7%",
+     "value": "14.7",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.05",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "14.69565217391304347826086956521739",
+     "unit": "%",
+     "expression": "(2638 - 2300) / 2300 * 100",
+     "usage": {
+      "selected_rows": [
+       2,
+       4,
+       6
+      ],
+      "used_rows": [
+       2,
+       4,
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 3
+     },
+     "calculation_id": "2e44f6a486346719ecdc80a00f368b6209addd8e3f46a694bca1c90d54d15d73",
+     "reference_usage": {
+      "selected_rows": [
+       1,
+       3,
+       5
+      ],
+      "used_rows": [
+       1,
+       3,
+       5
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 3
+     }
+    },
+    "difference": {
+     "signed": "0.00434782608695652173913043478261",
+     "absolute": "0.004347826086956521739130434783",
+     "unit": "%p",
+     "relative_percent": "0.03"
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 3,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V07": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "C지역 방문자수는 2023년에 500명입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2023",
+      "지역": "C"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "500명",
+     "value": "500",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "500",
+     "unit": "명",
+     "expression": "sum(방문자수) = 500",
+     "usage": {
+      "selected_rows": [
+       5
+      ],
+      "used_rows": [
+       5
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     },
+     "calculation_id": "49e7941cbbb793351033b8798bf91b675e9c3238dcc1bd8c7f8bd7536d358112",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "C지역 방문자수는 2024년에 500명입니다.",
+    "operation": "lookup",
+    "spec": {
+     "operation": "sum",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024",
+      "지역": "C"
+     },
+     "reference_filters": null,
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "500명",
+     "value": "500",
+     "unit": "명",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "500",
+     "unit": "명",
+     "expression": "sum(방문자수) = 500",
+     "usage": {
+      "selected_rows": [
+       6
+      ],
+      "used_rows": [
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     },
+     "calculation_id": "38b94f76fbd795275ccb2ddfa344cf0906f2a98f8832cbd4bd4b63afdc5de94f",
+     "reference_usage": null
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "명",
+     "relative_percent": "0"
+    }
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "2023년 대비 2024년 변화율은 0%입니다.",
+    "operation": "percent_change",
+    "spec": {
+     "operation": "percent_change",
+     "column": "방문자수",
+     "filters": {
+      "연도": "2024",
+      "지역": "C"
+     },
+     "reference_filters": {
+      "연도": "2023",
+      "지역": "C"
+     },
+     "group_by": null,
+     "aggregation": null,
+     "missing_policy": "reject"
+    },
+    "claimed": {
+     "text": "0%",
+     "value": "0",
+     "unit": "%",
+     "unit_stated": true,
+     "tolerance": "0.5",
+     "approximate": false
+    },
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "VERIFIED",
+    "reason_code": "WITHIN_ROUNDING_OF_STATED_PRECISION",
+    "computed": {
+     "value": "0",
+     "unit": "%",
+     "expression": "(500 - 500) / 500 * 100",
+     "usage": {
+      "selected_rows": [
+       6
+      ],
+      "used_rows": [
+       6
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     },
+     "calculation_id": "ac4dadaf6a2021af894ed92aaf0cebf5a3d398f8214446a89316b8e47f1eabf7",
+     "reference_usage": {
+      "selected_rows": [
+       5
+      ],
+      "used_rows": [
+       5
+      ],
+      "omitted_rows": [],
+      "filtered_out_count": 5
+     }
+    },
+    "difference": {
+     "signed": "0",
+     "absolute": "0",
+     "unit": "%p",
+     "relative_percent": null
+    }
+   }
+  ],
+  "summary": {
+   "VERIFIED": 3,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V08": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "제공된 표에는 A, B, C 지역만 있으며 D지역의 자료는 없습니다. 따라서 D지역의 2024년 방문자수는 확인할 수 없습니다.",
+    "operation": "lookup",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "UNCERTAIN",
+    "reason_code": "CLAIM_VALUE_NOT_IDENTIFIED",
+    "computed": null
+   }
+  ],
+  "summary": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ },
+ "V09": {
+  "extractor": "statguard-llm-extractor-v0.1",
+  "claims": [
+   {
+    "claim_id": "c1",
+    "sentence": "A지역 방문자수는 1,000명에서 1,178명으로 늘었다.",
+    "operation": "percent_change",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "방문자수",
+    "status": "UNCERTAIN",
+    "reason_code": "CLAIM_VALUE_NOT_IDENTIFIED",
+    "computed": null
+   },
+   {
+    "claim_id": "c2",
+    "sentence": "A지역 체류시간은 10분에서 12분으로 증가했다.",
+    "operation": "percent_change",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": false,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": "체류시간",
+    "status": "UNCERTAIN",
+    "reason_code": "CLAIM_VALUE_NOT_IDENTIFIED",
+    "computed": null
+   },
+   {
+    "claim_id": "c3",
+    "sentence": "두 지표가 함께 늘어난 사실만으로 체류시간 증가가 방문자 증가의 원인이라고 판단할 수는 없다.",
+    "operation": "interpretive",
+    "spec": null,
+    "claimed": null,
+    "notes": [],
+    "interpretive": true,
+    "extractor": "statguard-llm-extractor-v0.1",
+    "column": null,
+    "status": "UNCERTAIN",
+    "reason_code": "INTERPRETIVE_STATEMENT",
+    "computed": null
+   }
+  ],
+  "summary": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 3,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "scope": "LINKED_CALCULATIONS_ONLY_NOT_WHOLE_ANSWER_TRUTH"
+ }
+}

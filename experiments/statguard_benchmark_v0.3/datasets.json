@@ -1,0 +1,5 @@
+{
+  "countries": {"file": "08_세계_국가별_2023_지표.csv", "units": {"총인구": "명", "실업률": "%", "1인당GDP": "달러", "기대수명": "세"}, "domain": "인구·경제·보건(176개국)",
+    "description": "World Bank WDI 2023, 176개 국가(지역 묶음 제외, 네 지표가 모두 있는 국가). 총인구(SP.POP.TOTL, 명), 실업률(SL.UEM.TOTL.ZS, ILO 추정, %), 1인당GDP(NY.GDP.PCAP.CD, 현재 미국 달러, 소수 2자리 반올림), 기대수명(SP.DYN.LE00.IN, 세, 소수 3자리 반올림). 지역 7개·소득그룹 4개는 World Bank 분류.",
+    "source": "World Bank WDI API (CC BY 4.0), 갱신일 2026-11-11, 다운로드 2026-11-20"}
+}

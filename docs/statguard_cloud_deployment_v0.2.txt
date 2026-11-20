@@ -1,0 +1,14 @@
+StatGuard-KR 공개 재배포 기록 v0.2
+
+공개 주소: https://when2warn-public-beta.vercel.app/
+배포 ID: dpl_7j69FZW53t4LFbva9hA61PKqDYCU (Vercel Production, 프로젝트 when2warn-public-beta, Root Directory when2warn/frontend, Node 22.x)
+배포 방식: Vercel CLI 66.2.0, 사용자가 기기 승인으로 로그인한 뒤 `vercel deploy --prod`. 지난 v0.1과 같은 폴더 구조(when2warn/frontend)로 별도 배포 폴더를 만들어 올림.
+제외한 파일: .env, .env.local, OpenAI 키 파일, node_modules, dist, 연구 데이터. 공개 사이트의 ‘AI에게 직접 질문’ 기능은 꺼진 상태(로컬 시연 PC 전용).
+
+배포 전 검사: Python 177/177, 계산 플러그인 16/16, frontend 249/249, 타입 검사·빌드 통과.
+배포 엔진 복사본(frontend/_statguard_runtime)의 core.py·claims.py·local_bridge.py SHA-256이 원본과 일치.
+
+배포 후 확인: /, /statguard, /statguard/results, /when2warn 모두 HTTP 200. 첫 화면 제목 ‘StatGuard-KR · LLM 데이터 분석 수치 검증’.
+브라우저에서 소개 → 검증하기 이동이 새로고침 없이 동작. 예제 CSV + 예시 답변으로 ‘답변 검증’ 실행 시 계산 서버 응답 정상, 일치·불일치·해석 불확실·근거 부족 판정이 모두 표시됨.
+
+되돌리기: Vercel 대시보드 → when2warn-public-beta → Deployments에서 이전 Production 배포를 선택해 Rollback. 자동 rollback은 실행하지 않음.

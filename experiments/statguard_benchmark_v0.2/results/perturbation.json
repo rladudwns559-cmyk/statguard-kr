@@ -1,0 +1,1562 @@
+[
+ {
+  "id": "W01",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 시애틀의 일별 강수량을 모두 더한 연간 강수량 합계는 888.90mm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "W01",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 시애틀의 일별 강수량을 모두 더한 연간 강수량 합계는 977.79mm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "W02",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 7월 일 최고기온의 평균은 26.71℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W02",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 7월 일 최고기온의 평균은 29.38℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W03",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 1월 일 최저기온의 평균은 3.67℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W03",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 1월 일 최저기온의 평균은 4.03℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W04",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 일 최고기온의 최댓값은 35.00℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W04",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 일 최고기온의 최댓값은 38.50℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "W05",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 일 최저기온의 최솟값은 -5.50℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W05",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 일 최저기온의 최솟값은 -6.05℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W06",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 11월 일별 강수량의 합계는 147.00mm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W06",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 11월 일별 강수량의 합계는 161.70mm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W07",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 1월 일 최고기온 합계 대비 7월 일 최고기온 합계는 193.27% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W07",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 1월 일 최고기온 합계 대비 7월 일 최고기온 합계는 212.60% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W07",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "2023년 1월 일 최고기온 합계 대비 7월 일 최고기온 합계는 -65.90% 증가했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W08",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 일 최고기온의 표본표준편차(n−1로 나눔)는 7.63℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "W08",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 일 최고기온의 표본표준편차(n−1로 나눔)는 8.40℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "W09",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 일 최고기온의 중앙값은 15.00℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "W09",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 일 최고기온의 중앙값은 16.50℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W10",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 일 최고기온과 일 최저기온의 피어슨 상관계수는 0.90입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W10",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 일 최고기온과 일 최저기온의 피어슨 상관계수는 0.99입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W11",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 1월과 7월의 일 강수량 평균 차이에 대한 Welch t-검정(양측) p값은 0.0007입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W11",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 1월과 7월의 일 강수량 평균 차이에 대한 Welch t-검정(양측) p값은 0.0008입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "W12",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 12월 강수량은 2023년 연간 강수량 합계의 24.23%입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W12",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 12월 강수량은 2023년 연간 강수량 합계의 26.66%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "W13",
+  "kind": "correct",
+  "label": "correct",
+  "text": "2023년 7월 일 최고기온의 표본표준편차(n−1로 나눔)는 2.83℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "W13",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "2023년 7월 일 최고기온의 표본표준편차(n−1로 나눔)는 3.11℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F01",
+  "kind": "correct",
+  "label": "correct",
+  "text": "시카고의 2023년 연간 강수량 합계는 857.40mm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "F01",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "시카고의 2023년 연간 강수량 합계는 943.14mm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F02",
+  "kind": "correct",
+  "label": "correct",
+  "text": "로스앤젤레스의 2023년 일 최고기온 평균은 20.71℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "F02",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "로스앤젤레스의 2023년 일 최고기온 평균은 22.79℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F03",
+  "kind": "correct",
+  "label": "correct",
+  "text": "4개 도시의 2023년 강수량 총합 중 시애틀 강수량의 비율은 23.85%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "RATIO_SCOPE_NOT_STATED"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "F03",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "4개 도시의 2023년 강수량 총합 중 시애틀 강수량의 비율은 26.24%입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "RATIO_SCOPE_NOT_STATED"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "F04",
+  "kind": "correct",
+  "label": "correct",
+  "text": "4개 도시 전체에서 2023년 일 최고기온의 최댓값은 37.80℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "F04",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "4개 도시 전체에서 2023년 일 최고기온의 최댓값은 41.58℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F05",
+  "kind": "correct",
+  "label": "correct",
+  "text": "뉴욕의 2023년 7월 일 최고기온 평균은 29.34℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "F05",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "뉴욕의 2023년 7월 일 최고기온 평균은 32.27℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F06",
+  "kind": "correct",
+  "label": "correct",
+  "text": "시애틀과 로스앤젤레스의 2023년 일 최고기온에 대한 Welch t-검정 t 통계량(시애틀 평균 − 로스앤젤레스 평균 기준)은 -9.50입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "F06",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "시애틀과 로스앤젤레스의 2023년 일 최고기온에 대한 Welch t-검정 t 통계량(시애틀 평균 − 로스앤젤레스 평균 기준)은 -10.45입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F07",
+  "kind": "correct",
+  "label": "correct",
+  "text": "뉴욕의 2023년 일 최고기온 표본표준편차(n−1로 나눔)는 8.34℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "F07",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "뉴욕의 2023년 일 최고기온 표본표준편차(n−1로 나눔)는 9.18℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F08",
+  "kind": "correct",
+  "label": "correct",
+  "text": "시카고의 2023년 1월 강수량 합계는 66.00mm입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "F08",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "시카고의 2023년 1월 강수량 합계는 72.60mm입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F09",
+  "kind": "correct",
+  "label": "correct",
+  "text": "로스앤젤레스의 2023년 일 최고기온 중앙값은 20.60℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "F09",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "로스앤젤레스의 2023년 일 최고기온 중앙값은 22.66℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ },
+ {
+  "id": "F10",
+  "kind": "correct",
+  "label": "correct",
+  "text": "시애틀의 2023년 일 강수량과 일 최고기온의 피어슨 상관계수는 -0.22입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "F10",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "시애틀의 2023년 일 강수량과 일 최고기온의 피어슨 상관계수는 -0.25입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F11",
+  "kind": "correct",
+  "label": "correct",
+  "text": "시카고의 2023년 1월 대비 7월 강수량 합계는 193.03% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "F11",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "시카고의 2023년 1월 대비 7월 강수량 합계는 212.33% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F11",
+  "kind": "swapped_base",
+  "label": "error",
+  "text": "시카고의 2023년 1월 대비 7월 강수량 합계는 -65.87% 변했습니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 1,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "UNCERTAIN",
+    "MULTIPLE_VALUES_FOR_ONE_COLUMN"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ]
+ },
+ {
+  "id": "F12",
+  "kind": "correct",
+  "label": "correct",
+  "text": "4개 도시 전체의 2023년 일 최고기온 평균은 17.93℃입니다.",
+  "rule": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 1,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "llm_claims": [
+   [
+    "VERIFIED",
+    "WITHIN_ROUNDING_OF_STATED_PRECISION"
+   ]
+  ]
+ },
+ {
+  "id": "F12",
+  "kind": "scaled_10pct",
+  "label": "error",
+  "text": "4개 도시 전체의 2023년 일 최고기온 평균은 19.72℃입니다.",
+  "rule": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 1,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 0
+  },
+  "rule_claims": [
+   [
+    "CONTRADICTED",
+    "NUMERIC_VALUE_CONFLICT"
+   ]
+  ],
+  "llm": {
+   "VERIFIED": 0,
+   "CONTRADICTED": 0,
+   "UNCERTAIN": 0,
+   "INSUFFICIENT_EVIDENCE": 1
+  },
+  "llm_claims": [
+   [
+    "INSUFFICIENT_EVIDENCE",
+    "DATA_NOT_COVERED"
+   ]
+  ]
+ }
+]

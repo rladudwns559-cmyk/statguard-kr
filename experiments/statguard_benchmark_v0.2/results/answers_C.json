@@ -1,0 +1,888 @@
+{
+ "W10": {
+  "id": "W10",
+  "condition": "C",
+  "answer": "2023년 일 최고기온과 일 최저기온은 강한 양의 상관관계를 보이며, 피어슨 상관계수는 약 0.8955입니다.  \n최종값: 0.8955 상관계수",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "correlation",
+     "column": "최고기온",
+     "column2": "최저기온",
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "0.8954823621047148673963613371519228",
+     "unit": "",
+     "expression": "pearson_r(최고기온, 최저기온), n = 365",
+     "used_row_count": 365,
+     "extra": {
+      "n": 365,
+      "column2": "최저기온"
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W01": {
+  "id": "W01",
+  "condition": "C",
+  "answer": "2023년 시애틀의 일별 강수량을 합산한 연간 강수량은 888.9 mm입니다.\n최종값: 888.9 mm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "column2": null,
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "888.9",
+     "unit": "mm",
+     "expression": "sum(강수량) = 888.9",
+     "used_row_count": 365,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W02": {
+  "id": "W02",
+  "condition": "C",
+  "answer": "2023년 7월 일 최고기온의 평균은 약 26.71℃입니다.\n최종값: 26.71 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "월",
+       "value": "7"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "26.70645161290322580645161290322581",
+     "unit": "℃",
+     "expression": "827.9 / 31",
+     "used_row_count": 31,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W03": {
+  "id": "W03",
+  "condition": "C",
+  "answer": "2023년 1월의 일 최저기온 평균은 약 3.67℃입니다.\n최종값: 3.67 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "최저기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "월",
+       "value": "1"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "3.667741935483870967741935483870968",
+     "unit": "℃",
+     "expression": "113.7 / 31",
+     "used_row_count": 31,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W04": {
+  "id": "W04",
+  "condition": "C",
+  "answer": "2023년 일 최고기온의 최댓값은 35℃입니다.\n최종값: 35 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "max",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "35",
+     "unit": "℃",
+     "expression": "max(최고기온), n = 365",
+     "used_row_count": 365,
+     "extra": {
+      "rows": [
+       227,
+       228
+      ]
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W05": {
+  "id": "W05",
+  "condition": "C",
+  "answer": "2023년 일 최저기온의 최솟값은 -5.5℃입니다.\n최종값: -5.5 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "min",
+     "column": "최저기온",
+     "column2": null,
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "-5.5",
+     "unit": "℃",
+     "expression": "min(최저기온), n = 365",
+     "used_row_count": 365,
+     "extra": {
+      "rows": [
+       55
+      ]
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W06": {
+  "id": "W06",
+  "condition": "C",
+  "answer": "2023년 11월 일별 강수량의 합계는 147 mm입니다.\n최종값: 147 mm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "월",
+       "value": "11"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "147",
+     "unit": "mm",
+     "expression": "sum(강수량) = 147",
+     "used_row_count": 30,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W07": {
+  "id": "W07",
+  "condition": "C",
+  "answer": "2023년 1월 일 최고기온 합계는 282.3℃, 7월 합계는 827.9℃입니다. 따라서 7월 합계는 1월 대비 약 193.27% 증가했습니다.\n최종값: 193.27 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "월",
+       "value": "7"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "월",
+       "value": "1"
+      }
+     ]
+    },
+    "output": {
+     "value": "193.2695713779667020899752036840241",
+     "unit": "%",
+     "expression": "(827.9 - 282.3) / 282.3 * 100",
+     "used_row_count": 31,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W08": {
+  "id": "W08",
+  "condition": "C",
+  "answer": "2023년 일 최고기온의 표본표준편차는 약 7.6333 ℃입니다. 계산에는 365일 자료를 사용하고 분모는 n−1로 적용했습니다.\n최종값: 7.633338216387142 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "stdev",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "7.633338216387142068259075446280247",
+     "unit": "℃",
+     "expression": "sqrt(sum((x - mean)^2) / (n - 1)), n = 365",
+     "used_row_count": 365,
+     "extra": {
+      "sample": "7.633338216387142068259075446280247",
+      "population": "7.622874416791806262225323699178876",
+      "n": 365,
+      "default_definition": "SAMPLE_N_MINUS_1"
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W09": {
+  "id": "W09",
+  "condition": "C",
+  "answer": "2023년 일 최고기온의 중앙값은 15℃입니다.  \n최종값: 15 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "median",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "15",
+     "unit": "℃",
+     "expression": "median(최고기온), n = 365",
+     "used_row_count": 365,
+     "extra": {}
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W11": {
+  "id": "W11",
+  "condition": "C",
+  "answer": "1월과 7월의 일 강수량 평균 차이에 대한 Welch 양측 t-검정의 p값은 약 0.000708입니다.  \n최종값: 0.0007075859 p값",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "t_test",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "월",
+       "value": "1"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "월",
+       "value": "7"
+      }
+     ]
+    },
+    "output": {
+     "value": "3.763283418765597106387684464039028",
+     "unit": "",
+     "expression": "welch_t = (mean_sel - mean_ref) / sqrt(var_sel/n_sel + var_ref/n_ref), df = 30.7841",
+     "used_row_count": 31,
+     "extra": {
+      "p_value": "0.000707585920804",
+      "df": "30.7841",
+      "mean_selection": "2.532258064516129032258064516129032",
+      "mean_reference": "0.07419354838709677419354838709677419",
+      "n_selection": 31,
+      "n_reference": 31,
+      "method": "WELCH_TWO_SIDED",
+      "p_value_precision": "FLOAT64_APPROXIMATION"
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W12": {
+  "id": "W12",
+  "condition": "C",
+  "answer": "2023년 12월 강수량은 215.4mm이며, 연간 강수량 합계 888.9mm의 약 24.23%입니다.\n최종값: 24.23 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "ratio_percent",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "월",
+       "value": "12"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "24.23219709753628079649004387445157",
+     "unit": "%",
+     "expression": "215.4 / 888.9 * 100",
+     "used_row_count": 31,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W13": {
+  "id": "W13",
+  "condition": "C",
+  "answer": "2023년 7월 일 최고기온의 표본표준편차는 약 2.83 ℃입니다(31일 기준, n−1로 나눔).\n최종값: 2.8293621759 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "stdev",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "월",
+       "value": "7"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "2.829362175929523017926524295142586",
+     "unit": "℃",
+     "expression": "sqrt(sum((x - mean)^2) / (n - 1)), n = 31",
+     "used_row_count": 31,
+     "extra": {
+      "sample": "2.829362175929523017926524295142586",
+      "population": "2.783353220646724765489785483884578",
+      "n": 31,
+      "default_definition": "SAMPLE_N_MINUS_1"
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W14": {
+  "id": "W14",
+  "condition": "C",
+  "answer": "제공된 자료에는 일별 강수량이 있지만, 계산 도구가 0mm 초과 행의 개수를 직접 계산할 수 없어 정확한 일수를 산출할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "column2": null,
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "888.9",
+     "unit": "mm",
+     "expression": "sum(강수량) = 888.9",
+     "used_row_count": 365,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "W15": {
+  "id": "W15",
+  "condition": "C",
+  "answer": "제공된 자료는 2023년 일별 기상 데이터만 포함하므로, 2024년 1월의 일 최고기온 평균은 계산할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W16": {
+  "id": "W16",
+  "condition": "C",
+  "answer": "이 자료는 일별 강수량과 기온만 보여 주며, 7~8월 강수량이 적었던 기상학적 원인(예: 기압계나 대기 순환)은 담고 있지 않습니다. 따라서 원인은 이 자료만으로 판단할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F01": {
+  "id": "F01",
+  "condition": "C",
+  "answer": "시카고의 2023년 일별 강수량을 모두 합산한 연간 강수량은 857.4mm입니다.\n최종값: 857.4 mm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "시카고"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "857.4",
+     "unit": "mm",
+     "expression": "sum(강수량) = 857.4",
+     "used_row_count": 365,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F02": {
+  "id": "F02",
+  "condition": "C",
+  "answer": "로스앤젤레스의 2023년 일 최고기온 평균은 약 20.71℃입니다.\n최종값: 20.714520547945205 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "로스앤젤레스"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "20.71452054794520547945205479452055",
+     "unit": "℃",
+     "expression": "7560.8 / 365",
+     "used_row_count": 365,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F03": {
+  "id": "F03",
+  "condition": "C",
+  "answer": "시애틀의 2023년 강수량 총합은 888.9mm이며, 4개 도시 총합 대비 비율은 약 23.85%입니다.\n최종값: 23.85156166147901685 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "ratio_percent",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "시애틀"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "23.85156166147901685091767736395836",
+     "unit": "%",
+     "expression": "888.9 / 3726.8 * 100",
+     "used_row_count": 365,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F04": {
+  "id": "F04",
+  "condition": "C",
+  "answer": "4개 도시 전체의 2023년 일 최고기온 최댓값은 37.8℃입니다.\n최종값: 37.8 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "max",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "37.8",
+     "unit": "℃",
+     "expression": "max(최고기온), n = 1460",
+     "used_row_count": 1460,
+     "extra": {
+      "rows": [
+       1331
+      ]
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F05": {
+  "id": "F05",
+  "condition": "C",
+  "answer": "뉴욕의 2023년 7월 일 최고기온 평균은 약 29.34℃입니다.\n최종값: 29.34 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "뉴욕"
+      },
+      {
+       "column": "월",
+       "value": "7"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "29.33548387096774193548387096774194",
+     "unit": "℃",
+     "expression": "909.4 / 31",
+     "used_row_count": 31,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F06": {
+  "id": "F06",
+  "condition": "C",
+  "answer": "Welch t-검정의 t 통계량은 시애틀 평균에서 로스앤젤레스 평균을 뺀 기준으로 계산했습니다.  \n최종값: -9.4987401989 t 통계량",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "t_test",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "시애틀"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "도시",
+       "value": "로스앤젤레스"
+      }
+     ]
+    },
+    "output": {
+     "value": "-9.498740198897541072214780877134542",
+     "unit": "",
+     "expression": "welch_t = (mean_sel - mean_ref) / sqrt(var_sel/n_sel + var_ref/n_ref), df = 538.5516",
+     "used_row_count": 365,
+     "extra": {
+      "p_value": "6.9009904317e-20",
+      "df": "538.5516",
+      "mean_selection": "16.46219178082191780821917808219178",
+      "mean_reference": "20.71452054794520547945205479452055",
+      "n_selection": 365,
+      "n_reference": 365,
+      "method": "WELCH_TWO_SIDED",
+      "p_value_precision": "FLOAT64_APPROXIMATION"
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F07": {
+  "id": "F07",
+  "condition": "C",
+  "answer": "뉴욕의 2023년 일 최고기온 표본표준편차는 약 8.341℃입니다(표본 수 365일, 분모 n−1).  \n최종값: 8.340967778944319 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "stdev",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "뉴욕"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "8.340967778944318941047923423911921",
+     "unit": "℃",
+     "expression": "sqrt(sum((x - mean)^2) / (n - 1)), n = 365",
+     "used_row_count": 365,
+     "extra": {
+      "sample": "8.340967778944318941047923423911921",
+      "population": "8.329533958930598216814502053729609",
+      "n": 365,
+      "default_definition": "SAMPLE_N_MINUS_1"
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F08": {
+  "id": "F08",
+  "condition": "C",
+  "answer": "시카고의 2023년 1월 강수량 합계는 66mm입니다.\n최종값: 66 mm",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "시카고"
+      },
+      {
+       "column": "월",
+       "value": "1"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "66",
+     "unit": "mm",
+     "expression": "sum(강수량) = 66",
+     "used_row_count": 31,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F09": {
+  "id": "F09",
+  "condition": "C",
+  "answer": "로스앤젤레스의 2023년 일 최고기온 중앙값은 20.6℃입니다.\n최종값: 20.6 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "median",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "로스앤젤레스"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "20.6",
+     "unit": "℃",
+     "expression": "median(최고기온), n = 365",
+     "used_row_count": 365,
+     "extra": {}
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F10": {
+  "id": "F10",
+  "condition": "C",
+  "answer": "시애틀의 2023년 일 강수량과 일 최고기온 간 피어슨 상관계수는 약 -0.224입니다. 이는 약한 음의 상관을 나타냅니다.\n최종값: -0.224 무단위",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "correlation",
+     "column": "강수량",
+     "column2": "최고기온",
+     "filters": [
+      {
+       "column": "도시",
+       "value": "시애틀"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "-0.2237690935670397238962877624363261",
+     "unit": "",
+     "expression": "pearson_r(강수량, 최고기온), n = 365",
+     "used_row_count": 365,
+     "extra": {
+      "n": 365,
+      "column2": "최고기온"
+     }
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F11": {
+  "id": "F11",
+  "condition": "C",
+  "answer": "시카고의 1월 강수량 합계는 66mm, 7월은 193.4mm입니다. 따라서 1월 대비 7월 강수량 합계는 약 193.03% 증가했습니다.\n최종값: 193.03 %",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "percent_change",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "시카고"
+      },
+      {
+       "column": "월",
+       "value": "7"
+      }
+     ],
+     "reference_filters": [
+      {
+       "column": "도시",
+       "value": "시카고"
+      },
+      {
+       "column": "월",
+       "value": "1"
+      }
+     ]
+    },
+    "output": {
+     "value": "193.030303030303030303030303030303",
+     "unit": "%",
+     "expression": "(193.4 - 66) / 66 * 100",
+     "used_row_count": 31,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F12": {
+  "id": "F12",
+  "condition": "C",
+  "answer": "4개 도시의 2023년 일별 최고기온 전체 평균은 약 17.93℃입니다.  \n최종값: 17.927739726 ℃",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "mean",
+     "column": "최고기온",
+     "column2": null,
+     "filters": [],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "17.92773972602739726027397260273973",
+     "unit": "℃",
+     "expression": "26174.5 / 1460",
+     "used_row_count": 1460,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F13": {
+  "id": "F13",
+  "condition": "C",
+  "answer": "제공된 자료에는 보스턴의 관측값이 없으므로 연간 강수량 합계를 계산할 수 없습니다.  \n최종값: 판단불가",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "보스턴"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "error": "EMPTY_SELECTION"
+    }
+   }
+  ],
+  "status": "completed"
+ },
+ "F14": {
+  "id": "F14",
+  "condition": "C",
+  "answer": "2023년 강수량 합계는 시애틀 888.9mm, 로스앤젤레스 644.4mm로 시애틀이 더 많았습니다. 다만 이 일별 자료만으로 강수량 차이의 원인을 판단할 수는 없습니다.\n최종값: 판단불가",
+  "tool_calls": [
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "시애틀"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "888.9",
+     "unit": "mm",
+     "expression": "sum(강수량) = 888.9",
+     "used_row_count": 365,
+     "extra": null
+    }
+   },
+   {
+    "arguments": {
+     "operation": "sum",
+     "column": "강수량",
+     "column2": null,
+     "filters": [
+      {
+       "column": "도시",
+       "value": "로스앤젤레스"
+      }
+     ],
+     "reference_filters": []
+    },
+    "output": {
+     "value": "644.4",
+     "unit": "mm",
+     "expression": "sum(강수량) = 644.4",
+     "used_row_count": 365,
+     "extra": null
+    }
+   }
+  ],
+  "status": "completed"
+ }
+}

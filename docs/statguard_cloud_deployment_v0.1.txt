@@ -1,0 +1,34 @@
+﻿StatGuard 팀 공유용 공개 배포 기록 v0.1
+
+공개 주소: https://when2warn-public-beta.vercel.app/statguard
+진행률: 이번 배포 단계 100%. 프로젝트 전체 연구 완료를 뜻하지 않음.
+배포 ID: dpl_86MA34EPvUH2Lq4CPr5ZjfeN4Ptw
+기존 운영 기준: fd66bb71990bedb93a675931cae8743d79b9e121
+기존 운영의 첫 화면·데모·계정·프로젝트 코드를 유지하며 CSV 경로만 연결.
+기존 Render/Supabase 환경, API, DB, 인증, 유료 AI provider 설정 변경 없음.
+
+배포 흐름: Vercel 기존 계정 CLI 승인 → Hobby 확인 → 운영 소스 기반 독립 checkout → 최소 Python stdlib transport → 일반 Preview → 공개 Production.
+최초 검증 목적의 prod 대상 명령은 자동 승인 검토에서 거절돼 실행하지 않았음. 일반 Preview 검증 후 사용자 요청의 실제 운영 배포를 명확히 구분해 수행함.
+Preview 보호는 해제하지 않았음. Preview 브라우저 계산은 오류; 공식 인증 CLI의 3개 CSV 계산·비교 정상. 정확한 Preview 브라우저 오류 원인 미확정.
+Production 공개 alias는 비인증·쿠키 없는 요청 6회와 실제 브라우저 전체 흐름 정상.
+
+테스트: 배포 frontend 219/219, 기존 계산 Python125/125, cloud transport16/16, 타입 검사·빌드 통과.
+원본 프로젝트 최소 동기화 후 frontend 231/231, Python141/141, 타입 검사 통과.
+최초 실패와 재검사 기록은 각각 보존. sandbox 권한 실패는 통과에 합산하지 않음.
+HTTP: 기존 10개 화면+계산 endpoint 200; 외부 Origin403, malformed JSON400 및 no-store 확인.
+UI: 실제 강수량 CSV 업로드→조건→888.9mm→직접입력1000→불일치111.1mm, 계산식·사용행 표시 확인.
+3개 CSV의 API 결과와 비교는 production_csv_results.json 참조. 평균 CO2는 월평균12개의 단순평균이며 공식 연평균으로 주장하지 않음.
+
+소스 보존: 실제 배포 124파일 hash 목록+ZIP. 비공개 .env, CLI auth, node_modules, 연구 데이터 제외.
+원본 기준1106파일 중 의도된 배포 연결6파일 변경, 1100파일 불변; 연결8파일 추가. 기존 App.tsx의 /ask 및 연구 기능을 덮어쓰지 않음.
+canonical core.py와 local_bridge.py 변경 없음. 배포 runtime 복제본과 원본 SHA 일치; 향후 변경 시 hash 검사와 재동기화 필요.
+rollback: 기존 배포 dpl_4Ry9EsnJSahzwgRwDqGdu8sdfDbA를 Vercel Production Rollback으로 선택. 자동 rollback 실행하지 않음.
+
+비용: 실제 Hobby 계정 확인, 새 유료 리소스0, 추가 월 인프라$0, 유료 AI호출0. 기존 서비스의 기존 비용까지 0으로 주장하지 않음.
+Hobby 무료 한도·비상업 조건 적용. 초과 시 사용 제한 가능; 업그레이드·유료 add-on은 선택하지 않음.
+공식 정책: https://vercel.com/docs/plans/hobby
+
+데이터: HTTPS same-origin 계산 endpoint; 기존 엔진으로 메모리 계산, CSV 파일·DB 저장/LLM전송/본문 로그 없음. 제공자 인프라 로그와 OS 메모리 즉시삭제까지 보장하지 않음.
+제한: 요청1.5MB, CSV1MiB/10000행/64열, 응답750KB, 함수10초, instance동시2. 전역 사용자별 rate limit은 없음.
+재로딩 시 데이터 사라짐. 휴대전화 실기기·신규 사용자 연구·실제 새 가입→삭제 흐름은 이번에 수행하지 않음.
+기존 v0.7 RED/03원인미확정, 연구 판정은 변경하지 않음.

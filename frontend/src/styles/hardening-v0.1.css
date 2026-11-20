@@ -1,0 +1,4 @@
+/* Release hardening: native modal keeps browser focus/inert semantics. */
+.deletion-dialog { max-width: 540px; width: calc(100% - 32px); padding: 28px; border: 1px solid #c8d5d9; border-radius: 16px; color: #142b34; background: #fff; }
+.deletion-dialog::backdrop { background: rgb(8 24 34 / 60%); }
+.deletion-dialog input { width: 100%; margin-block: 12px; }

@@ -1,0 +1,44 @@
+[
+  {
+    "success": true,
+    "case_id": "R01",
+    "request_url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=global-summary-of-the-month&stations=USW00024233&startDate=2023-01-01&endDate=2023-12-31&dataTypes=PRCP&units=metric&format=csv&includeStationName=true",
+    "resolved_url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=global-summary-of-the-month&stations=USW00024233&startDate=2023-01-01&endDate=2023-12-31&dataTypes=PRCP&units=metric&format=csv&includeStationName=true",
+    "accessed_utc": "2026-10-23T12:40:57.310074+00:00",
+    "http_status": 200,
+    "content_type": "text/csv;charset=utf-8",
+    "last_modified": null,
+    "etag": null,
+    "raw_file": "raw/noaa_seattle_precip_2023.csv",
+    "size_bytes": 787,
+    "sha256": "4d8f8a1d192e91547b374e11c521bf9345d0087a4e01c1bd2976088809ce80da"
+  },
+  {
+    "success": true,
+    "case_id": "R02",
+    "request_url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",
+    "resolved_url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",
+    "accessed_utc": "2026-10-23T12:40:57.466108+00:00",
+    "http_status": 200,
+    "content_type": "text/csv",
+    "last_modified": "Fri, 09 Oct 2026 19:23:07 GMT",
+    "etag": "\"9778-65d6d4735dc61\"",
+    "raw_file": "raw/noaa_co2_monthly.csv",
+    "size_bytes": 38776,
+    "sha256": "d895fb5b4a59fb5e4cd98e69b7667fe5bef595c6581f630852b12cb41c07f675"
+  },
+  {
+    "success": true,
+    "case_id": "R03",
+    "request_url": "https://api.worldbank.org/v2/country/KOR/indicator/SP.POP.TOTL?source=2&downloadformat=csv",
+    "resolved_url": "https://api.worldbank.org/v2/country/KOR/indicator/SP.POP.TOTL?source=2&downloadformat=csv",
+    "accessed_utc": "2026-10-23T12:40:59.866588+00:00",
+    "http_status": 200,
+    "content_type": "application/zip",
+    "last_modified": "Fri, 23 Oct 2026 12:40:59 GMT",
+    "etag": null,
+    "raw_file": "raw/worldbank_korea_population.zip",
+    "size_bytes": 1860,
+    "sha256": "a917a0eff4fab67de0d8f4fa3c3a5762855a603f42f35949e65d33a27767a587"
+  }
+]

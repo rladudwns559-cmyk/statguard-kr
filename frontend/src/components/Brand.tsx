@@ -1,0 +1,2 @@
+/** Original vector mark: a continuous W path with an observable signal node. */
+export function BrandMark(){return <svg className="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M5 12 12 29 20 12 27 29 35 12" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round"/><circle cx="20" cy="12" r="4" fill="currentColor"/><path d="M27 29 35 25" stroke="currentColor" strokeWidth="1.5" opacity=".45"/></svg>;}

@@ -1,0 +1,10 @@
+{
+  "suite": "existing_test_trajectory",
+  "tests_run": 2,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "network_and_subprocess_creation_blocked": true,
+  "full_legacy_suite_run": false
+}

@@ -1,0 +1,986 @@
+{
+  "milestone": "STATGUARD_OFFLINE_CORE_V0.1",
+  "kind": "SYNTHETIC_DEVELOPMENT_FIXTURES_NOT_INDEPENDENT_RESEARCH_EVALUATION",
+  "fixture_integrity_verified": true,
+  "case_count": 24,
+  "passed_cases": 24,
+  "cases": [
+    {
+      "case_id": "SG-DEV-001",
+      "expected": {
+        "value": "4938"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "9c3646b17820ca6f50057139d33535df9305855acdcb1bf3f2c0690ef6457a8b",
+        "spec": {
+          "operation": "sum",
+          "column": "방문자수",
+          "filters": {},
+          "reference_filters": null,
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "4938",
+        "unit": "명",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "used_rows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 0
+        },
+        "reference_usage": null,
+        "expression": "sum(방문자수) = 4938",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-002",
+      "expected": {
+        "value": "2638"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "10a486c1dabceeda398827389ba3fc964b44702eef86087440e0b698460050f5",
+        "spec": {
+          "operation": "sum",
+          "column": "방문자수",
+          "filters": {
+            "연도": "2024"
+          },
+          "reference_filters": null,
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "2638",
+        "unit": "명",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            2,
+            4,
+            6
+          ],
+          "used_rows": [
+            2,
+            4,
+            6
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 3
+        },
+        "reference_usage": null,
+        "expression": "sum(방문자수) = 2638",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-003",
+      "expected": {
+        "value": "823"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "252681a4f14dfc7c422342be96fad38a33b80aa6648e660b3fb69f8ac0057128",
+        "spec": {
+          "operation": "mean",
+          "column": "방문자수",
+          "filters": {},
+          "reference_filters": null,
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "823",
+        "unit": "명",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "used_rows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 0
+        },
+        "reference_usage": null,
+        "expression": "4938 / 6",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-004",
+      "expected": {
+        "value": "1089"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "71075e373d8d46cda9ae6935fe577d4d31a6c19c650fd09723bc22eae130f7da",
+        "spec": {
+          "operation": "mean",
+          "column": "방문자수",
+          "filters": {
+            "지역": "A"
+          },
+          "reference_filters": null,
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "1089",
+        "unit": "명",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            1,
+            2
+          ],
+          "used_rows": [
+            1,
+            2
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 4
+        },
+        "reference_usage": null,
+        "expression": "2178 / 2",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-005",
+      "expected": {
+        "value": "125"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "02170f050a0b0f2d00b55d7b9e92b9745652ffd1b3b774ea736de9d7b591c5c6",
+        "spec": {
+          "operation": "ratio_percent",
+          "column": "방문자수",
+          "filters": {
+            "연도": "2023",
+            "지역": "A"
+          },
+          "reference_filters": {
+            "연도": "2023",
+            "지역": "B"
+          },
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "125",
+        "unit": "%",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            1
+          ],
+          "used_rows": [
+            1
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "reference_usage": {
+          "selected_rows": [
+            3
+          ],
+          "used_rows": [
+            3
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "expression": "1000 / 800 * 100",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-006",
+      "expected": {
+        "value": "80"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "8c40b00fbfc8c49eaf2e251f281854bb66877e67cbbc60e5b1fe8770b17b654f",
+        "spec": {
+          "operation": "ratio_percent",
+          "column": "방문자수",
+          "filters": {
+            "연도": "2023",
+            "지역": "B"
+          },
+          "reference_filters": {
+            "연도": "2023",
+            "지역": "A"
+          },
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "80",
+        "unit": "%",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            3
+          ],
+          "used_rows": [
+            3
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "reference_usage": {
+          "selected_rows": [
+            1
+          ],
+          "used_rows": [
+            1
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "expression": "800 / 1000 * 100",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-007",
+      "expected": {
+        "value": "17.8"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "278425085ca9497d03ed06fd2672d996604778b6a6fc7629cbbd23ae298a8d39",
+        "spec": {
+          "operation": "percent_change",
+          "column": "방문자수",
+          "filters": {
+            "연도": "2024",
+            "지역": "A"
+          },
+          "reference_filters": {
+            "연도": "2023",
+            "지역": "A"
+          },
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "17.8",
+        "unit": "%",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            2
+          ],
+          "used_rows": [
+            2
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "reference_usage": {
+          "selected_rows": [
+            1
+          ],
+          "used_rows": [
+            1
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "expression": "(1178 - 1000) / 1000 * 100",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-008",
+      "expected": {
+        "value": "20"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "0672acce962a77b8c41cf112eacbf58d55474af1bb5f71e7afe8614cb35d25ad",
+        "spec": {
+          "operation": "percent_change",
+          "column": "방문자수",
+          "filters": {
+            "연도": "2024",
+            "지역": "B"
+          },
+          "reference_filters": {
+            "연도": "2023",
+            "지역": "B"
+          },
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "20",
+        "unit": "%",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            4
+          ],
+          "used_rows": [
+            4
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "reference_usage": {
+          "selected_rows": [
+            3
+          ],
+          "used_rows": [
+            3
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "expression": "(960 - 800) / 800 * 100",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-009",
+      "expected": {
+        "value": "0"
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "dfea5e2cb598257e8cc957f251c6d907ba0a384a1ebebce6063dc8f97dbb2e94",
+        "spec": {
+          "operation": "percent_change",
+          "column": "방문자수",
+          "filters": {
+            "연도": "2024",
+            "지역": "C"
+          },
+          "reference_filters": {
+            "연도": "2023",
+            "지역": "C"
+          },
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": "0",
+        "unit": "%",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            6
+          ],
+          "used_rows": [
+            6
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "reference_usage": {
+          "selected_rows": [
+            5
+          ],
+          "used_rows": [
+            5
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 5
+        },
+        "expression": "(500 - 500) / 500 * 100",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-010",
+      "expected": {
+        "groups": [
+          [
+            "A",
+            "1178"
+          ],
+          [
+            "B",
+            "960"
+          ],
+          [
+            "C",
+            "500"
+          ]
+        ]
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "f210fa97b379f89e990c9be051d9fa92e50e07971efa4f27cfcb836cc6c19693",
+        "spec": {
+          "operation": "grouped_aggregate",
+          "column": "방문자수",
+          "filters": {
+            "연도": "2024"
+          },
+          "reference_filters": null,
+          "group_by": "지역",
+          "aggregation": "sum",
+          "missing_policy": "reject"
+        },
+        "value": null,
+        "unit": "명",
+        "groups": [
+          {
+            "group": "A",
+            "value": "1178",
+            "used_rows": 1,
+            "rank": null
+          },
+          {
+            "group": "B",
+            "value": "960",
+            "used_rows": 1,
+            "rank": null
+          },
+          {
+            "group": "C",
+            "value": "500",
+            "used_rows": 1,
+            "rank": null
+          }
+        ],
+        "usage": {
+          "selected_rows": [
+            2,
+            4,
+            6
+          ],
+          "used_rows": [
+            2,
+            4,
+            6
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 3
+        },
+        "reference_usage": null,
+        "expression": "sum(방문자수), group_by=지역",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-011",
+      "expected": {
+        "groups": [
+          [
+            "A",
+            "1089"
+          ],
+          [
+            "B",
+            "880"
+          ],
+          [
+            "C",
+            "500"
+          ]
+        ]
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "599b5d8f50f4ab4c6416865e114f14a8e60ef29c9117ad780aae2b0512d92852",
+        "spec": {
+          "operation": "grouped_aggregate",
+          "column": "방문자수",
+          "filters": {},
+          "reference_filters": null,
+          "group_by": "지역",
+          "aggregation": "mean",
+          "missing_policy": "reject"
+        },
+        "value": null,
+        "unit": "명",
+        "groups": [
+          {
+            "group": "A",
+            "value": "1089",
+            "used_rows": 2,
+            "rank": null
+          },
+          {
+            "group": "B",
+            "value": "880",
+            "used_rows": 2,
+            "rank": null
+          },
+          {
+            "group": "C",
+            "value": "500",
+            "used_rows": 2,
+            "rank": null
+          }
+        ],
+        "usage": {
+          "selected_rows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "used_rows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 0
+        },
+        "reference_usage": null,
+        "expression": "mean(방문자수), group_by=지역",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-012",
+      "expected": {
+        "ranks": [
+          [
+            "A",
+            "1178",
+            1
+          ],
+          [
+            "B",
+            "960",
+            2
+          ],
+          [
+            "C",
+            "500",
+            3
+          ]
+        ]
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "visitors",
+        "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+        "source_sha256": "ea46c13e7867b380e85c285bb63d498d7951340dcbb1d7c7796a9bf5f984ca1b",
+        "calculation_id": "eb9d549c3d1bc9e958933ced81f7dc0bc920457f630ec1c153d997e7f0992cd6",
+        "spec": {
+          "operation": "rank",
+          "column": "방문자수",
+          "filters": {
+            "연도": "2024"
+          },
+          "reference_filters": null,
+          "group_by": "지역",
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": null,
+        "unit": "명",
+        "groups": [
+          {
+            "group": "A",
+            "value": "1178",
+            "used_rows": 1,
+            "rank": 1
+          },
+          {
+            "group": "B",
+            "value": "960",
+            "used_rows": 1,
+            "rank": 2
+          },
+          {
+            "group": "C",
+            "value": "500",
+            "used_rows": 1,
+            "rank": 3
+          }
+        ],
+        "usage": {
+          "selected_rows": [
+            2,
+            4,
+            6
+          ],
+          "used_rows": [
+            2,
+            4,
+            6
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 3
+        },
+        "reference_usage": null,
+        "expression": "dense_rank_desc(sum(방문자수), group_by=지역)",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-013",
+      "expected": {
+        "ranks": [
+          [
+            "A",
+            "10",
+            1
+          ],
+          [
+            "B",
+            "10",
+            1
+          ],
+          [
+            "C",
+            "5",
+            2
+          ]
+        ]
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "ties",
+        "dataset_version": "0583ee528396d5f4f83f43bfc3437a3307f1b37d5f507872e85c0681016180b7",
+        "source_sha256": "d9f829da0131edd43e840953428987db663cea96ee686d02d247a41b9aec0f32",
+        "calculation_id": "feb7eb3a974dc614199a2e82e88aac3ce101110b168dc209e46fddd8e177bb7e",
+        "spec": {
+          "operation": "rank",
+          "column": "방문자수",
+          "filters": {},
+          "reference_filters": null,
+          "group_by": "지역",
+          "aggregation": null,
+          "missing_policy": "reject"
+        },
+        "value": null,
+        "unit": "명",
+        "groups": [
+          {
+            "group": "A",
+            "value": "10",
+            "used_rows": 1,
+            "rank": 1
+          },
+          {
+            "group": "B",
+            "value": "10",
+            "used_rows": 1,
+            "rank": 1
+          },
+          {
+            "group": "C",
+            "value": "5",
+            "used_rows": 1,
+            "rank": 2
+          }
+        ],
+        "usage": {
+          "selected_rows": [
+            1,
+            2,
+            3
+          ],
+          "used_rows": [
+            1,
+            2,
+            3
+          ],
+          "omitted_rows": [],
+          "filtered_out_count": 0
+        },
+        "reference_usage": null,
+        "expression": "dense_rank_desc(sum(방문자수), group_by=지역)",
+        "warnings": [],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-014",
+      "expected": null,
+      "expected_error": "EMPTY_SELECTION",
+      "observed_error": "EMPTY_SELECTION",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-015",
+      "expected": null,
+      "expected_error": "NON_POSITIVE_BASELINE",
+      "observed_error": "NON_POSITIVE_BASELINE",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-016",
+      "expected": null,
+      "expected_error": "ZERO_DENOMINATOR",
+      "observed_error": "ZERO_DENOMINATOR",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-017",
+      "expected": null,
+      "expected_error": "MISSING_NUMERIC_VALUE",
+      "observed_error": "MISSING_NUMERIC_VALUE",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-018",
+      "expected": {
+        "value": "10",
+        "omitted_rows": 1,
+        "used_rows": 1
+      },
+      "expected_error": null,
+      "result": {
+        "contract_version": "statguard-calculation-v0.1",
+        "dataset_id": "missing",
+        "dataset_version": "703c9882b4c91a03047a35b658e16c94c0d07e3259daaac6b44f045176d68228",
+        "source_sha256": "e8dc145ce37e07c5793bb95d8516908322830a8d5bccb3b0fa13d4fd3d31fc01",
+        "calculation_id": "c867809c431d266a908501f6e2f912917fe9997bd422cc73ca84ae7962f0c75c",
+        "spec": {
+          "operation": "sum",
+          "column": "방문자수",
+          "filters": {},
+          "reference_filters": null,
+          "group_by": null,
+          "aggregation": null,
+          "missing_policy": "omit"
+        },
+        "value": "10",
+        "unit": "명",
+        "groups": [],
+        "usage": {
+          "selected_rows": [
+            1,
+            2
+          ],
+          "used_rows": [
+            1
+          ],
+          "omitted_rows": [
+            2
+          ],
+          "filtered_out_count": 0
+        },
+        "reference_usage": null,
+        "expression": "sum(방문자수) = 10",
+        "warnings": [
+          "NUMERIC_ROWS_OMITTED"
+        ],
+        "precision": 34,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-019",
+      "expected": null,
+      "expected_error": "INVALID_NUMERIC_VALUE",
+      "observed_error": "INVALID_NUMERIC_VALUE",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-020",
+      "expected": null,
+      "expected_error": "MISSING_GROUP_KEY",
+      "observed_error": "MISSING_GROUP_KEY",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-021",
+      "expected": null,
+      "expected_error": "UNKNOWN_COLUMN",
+      "observed_error": "UNKNOWN_COLUMN",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-022",
+      "expected": null,
+      "expected_error": "NON_POSITIVE_BASELINE",
+      "observed_error": "NON_POSITIVE_BASELINE",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-023",
+      "expected": null,
+      "expected_error": "OVERLAPPING_COMPARISON",
+      "observed_error": "OVERLAPPING_COMPARISON",
+      "passed": true
+    },
+    {
+      "case_id": "SG-DEV-024",
+      "expected": null,
+      "expected_error": "UNSUPPORTED_OPERATION",
+      "observed_error": "UNSUPPORTED_OPERATION",
+      "passed": true
+    }
+  ],
+  "manual_linked_synthetic_claims": [
+    {
+      "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+      "calculation_id": "278425085ca9497d03ed06fd2672d996604778b6a6fc7629cbbd23ae298a8d39",
+      "status": "CONTRADICTED",
+      "reason_code": "NUMERIC_VALUE_CONFLICT",
+      "absolute_tolerance": "0.05",
+      "relative_tolerance": "0",
+      "warnings": [],
+      "scope": "EXPLICIT_CALCULATION_ONLY_NOT_WHOLE_ANSWER_TRUTH",
+      "computed_value": "17.8",
+      "claimed_value": "23",
+      "unit": "%"
+    },
+    {
+      "dataset_version": "7f10f265a243513c82b5ffa379d7a73787174c9128683d4e2f9b7732ed5df386",
+      "calculation_id": "278425085ca9497d03ed06fd2672d996604778b6a6fc7629cbbd23ae298a8d39",
+      "status": "VERIFIED_WITHIN_SCOPE",
+      "reason_code": "WITHIN_EXPLICIT_TOLERANCE",
+      "absolute_tolerance": "0.05",
+      "relative_tolerance": "0",
+      "warnings": [],
+      "scope": "EXPLICIT_CALCULATION_ONLY_NOT_WHOLE_ANSWER_TRUTH",
+      "computed_value": "17.8",
+      "claimed_value": "17.8",
+      "unit": "%"
+    }
+  ],
+  "paid_calls": 0,
+  "external_search_fetch": 0,
+  "api_db_ui_connected": false,
+  "gpt_claim_extraction_implemented": false,
+  "real_data_or_research_accuracy_evaluated": false
+}

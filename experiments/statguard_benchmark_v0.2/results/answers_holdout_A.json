@@ -1,0 +1,100 @@
+{
+ "LH01": {
+  "id": "LH01",
+  "condition": "A",
+  "answer": "2023년 4월 일 최고기온의 평균은 약 13.0℃입니다.  \n최종값: 13.0 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH02": {
+  "id": "LH02",
+  "condition": "A",
+  "answer": "2023년 3월 일별 강수량의 합계는 65.3 mm입니다.\n최종값: 65.3 mm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH03": {
+  "id": "LH03",
+  "condition": "A",
+  "answer": "2023년 1월 일 최고기온의 최댓값은 15.0℃입니다.  \n최종값: 15.0 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH04": {
+  "id": "LH04",
+  "condition": "A",
+  "answer": "2023년 1월 최저기온 31개의 표본표준편차는 약 3.23℃입니다.\n최종값: 3.23 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH05": {
+  "id": "LH05",
+  "condition": "A",
+  "answer": "강수량이 많은 날은 상대적으로 최저기온이 낮은 계절에 더 많이 나타나, 두 변수 사이에 약한 음의 상관이 있습니다. 자료로 계산한 피어슨 상관계수는 약 -0.17입니다.\n최종값: -0.17 상관계수",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH06": {
+  "id": "LH06",
+  "condition": "A",
+  "answer": "2월 강수량 합계는 60.1mm, 8월은 6.8mm입니다. 따라서 8월은 2월보다 약 88.7% 감소했습니다.\n최종값: -88.7 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH07": {
+  "id": "LH07",
+  "condition": "A",
+  "answer": "2023년 7월 일 최저기온의 최솟값은 12.2℃입니다.\n최종값: 12.2 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH08": {
+  "id": "LH08",
+  "condition": "A",
+  "answer": "시애틀의 2023년 1월 일 최고기온 평균은 약 9.1℃입니다.\n최종값: 9.1 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH09": {
+  "id": "LH09",
+  "condition": "A",
+  "answer": "뉴욕의 2023년 일별 강수량을 모두 합산한 연간 강수량은 1,336.1mm입니다.\n최종값: 1336.1 mm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH10": {
+  "id": "LH10",
+  "condition": "A",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "LH11": {
+  "id": "LH11",
+  "condition": "A",
+  "answer": "시카고의 2023년 일 최고기온 365개를 정렬했을 때 중앙값은 **17.2℃**입니다.\n최종값: 17.2 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH12": {
+  "id": "LH12",
+  "condition": "A",
+  "answer": "뉴욕과 시카고의 일 최고기온 평균 차이에 대한 Welch 양측 t-검정 p값은 약 0.16입니다. 이는 통상적인 유의수준 0.05보다 큰 값입니다.  \n최종값: 0.16 무차원",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "LH13": {
+  "id": "LH13",
+  "condition": "A",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "LH14": {
+  "id": "LH14",
+  "condition": "A",
+  "answer": "제공된 자료에는 시카고의 2023년 일별 강수량만 있어 2022년 연간 합계를 계산할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ }
+}

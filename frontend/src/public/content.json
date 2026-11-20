@@ -1,0 +1,112 @@
+{
+  "demo": {
+    "title": "입력할 수 없는 버튼을 채우려 한 Agent",
+    "mode": "Replay of a verified local BrowserGym run",
+    "environment": "BrowserGym / MiniWoB++ · login-user",
+    "goal": "입력이 준비된 로그인 화면에서 제출 버튼을 누르기",
+    "events": [
+      {
+        "event_id": "event-1",
+        "event_type": "action_requested",
+        "actor": "agent",
+        "action_name": "fill",
+        "arguments": {
+          "selector": "#subbtn",
+          "value": "blocked"
+        },
+        "parent_event_id": null,
+        "error": null
+      },
+      {
+        "event_id": "event-2",
+        "event_type": "action_result",
+        "actor": "environment",
+        "action_name": "fill",
+        "arguments": null,
+        "parent_event_id": "event-1",
+        "error": "Error: Locator.fill: Error: Element is not an <input>, <textarea> or [contenteditable] element"
+      },
+      {
+        "event_id": "event-3",
+        "event_type": "action_requested",
+        "actor": "agent",
+        "action_name": "click",
+        "arguments": {
+          "selector": "#subbtn"
+        },
+        "parent_event_id": null,
+        "error": null
+      },
+      {
+        "event_id": "event-4",
+        "event_type": "action_result",
+        "actor": "environment",
+        "action_name": "click",
+        "arguments": null,
+        "parent_event_id": "event-3",
+        "error": null
+      }
+    ],
+    "evidence": {
+      "level": "STRONG",
+      "type": "TOOL_ERROR",
+      "reason": "EXPLICIT_TOOL_ERROR"
+    },
+    "decision": "INTERVENE",
+    "recommendation": {
+      "action": "click",
+      "args": {
+        "selector": "#subbtn"
+      }
+    },
+    "execution": {
+      "executed": true,
+      "status": "EXECUTED"
+    },
+    "verification": {
+      "status": "VERIFIED_RECOVERY",
+      "criterion": "MINIWOB_TERMINAL_POSITIVE_REWARD_V1",
+      "terminated": true,
+      "reward": 1.0
+    },
+    "provider_warnings": [
+      "CLIENT_ASSERTED_UNVERIFIED_SCORE",
+      "NO_RELIABLE_RUN_LEVEL_SIGNAL",
+      "SCOPE_TYPE_CONFOUNDING"
+    ],
+    "scope": "기록된 controlled local demo입니다. 공개 API는 추천을 반환하며 외부 Agent가 실행합니다.",
+    "advisory_note": "이 데모의 모델 점수는 사전 고정된 client advisory입니다. 학습 모델의 예측 성능을 보여주는 결과가 아닙니다."
+  },
+  "evaluation": {
+    "paired_conditions": 12,
+    "browser_tasks": 3,
+    "runs": 48,
+    "policies": [
+      {
+        "name": "NO_MONITORING",
+        "numerator": 6,
+        "denominator": 12,
+        "rate": 0.5
+      },
+      {
+        "name": "ERROR_TRIGGER_ONLY",
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      {
+        "name": "WHEN2WARN_V0.1",
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      {
+        "name": "ALWAYS_INTERVENE_IF_CANDIDATE",
+        "numerator": 6,
+        "denominator": 12,
+        "rate": 0.5
+      }
+    ]
+  },
+  "python_demo": "def run_demo(client):\n    run = client.create_run(source_host=\"explicit-synthetic-quickstart\", agent_id=\"quickstart\",\n                            metadata={\"synthetic\": True})\n    rid = run[\"run_id\"]\n    client.send_event(rid, {\"event_id\":\"call-1\",\"event_index\":0,\"actor\":\"agent\",\n        \"event_type\":\"action_requested\",\"decision_group\":1,\"action_name\":\"read_demo\",\n        \"arguments\":{\"item\":\"public-demo\"}})\n    client.send_event(rid, {\"event_id\":\"result-1\",\"event_index\":1,\"actor\":\"tool\",\n        \"event_type\":\"action_result\",\"decision_group\":1,\"action_name\":\"read_demo\",\n        \"parent_event_id\":\"call-1\",\"observation\":'{\"status\":\"success\",\"message\":\"demo item read\"}',\n        \"group_complete\":True})\n    return rid, client.request_decision(rid)"
+}

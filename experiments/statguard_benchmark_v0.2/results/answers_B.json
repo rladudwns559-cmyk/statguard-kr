@@ -1,0 +1,212 @@
+{
+ "W01": {
+  "id": "W01",
+  "condition": "B",
+  "answer": "2023년 일별 강수량을 모두 합산한 연간 강수량은 888.6 mm입니다.\n최종값: 888.6 mm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W02": {
+  "id": "W02",
+  "condition": "B",
+  "answer": "2023년 7월 일 최고기온 31개의 평균은 약 26.7℃입니다.\n최종값: 26.7 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W03": {
+  "id": "W03",
+  "condition": "B",
+  "answer": "2023년 1월 일 최저기온 31개의 평균은 약 3.67℃입니다.\n최종값: 3.67 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W04": {
+  "id": "W04",
+  "condition": "B",
+  "answer": "2023년 일 최고기온의 최댓값은 35.0℃이며, 8월 15일과 16일에 기록되었습니다.\n최종값: 35.0 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W05": {
+  "id": "W05",
+  "condition": "B",
+  "answer": "2023년 일 최저기온의 최솟값은 2월 24일에 기록된 -5.5℃입니다.\n최종값: -5.5 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W06": {
+  "id": "W06",
+  "condition": "B",
+  "answer": "2023년 11월 일별 강수량을 모두 합하면 147.0 mm입니다.\n최종값: 147.0 mm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W07": {
+  "id": "W07",
+  "condition": "B",
+  "answer": "1월 일 최고기온 합계는 282.3℃, 7월은 827.9℃입니다. 7월 합계는 1월보다 약 193.27% 증가했습니다.\n최종값: 193.27 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W08": {
+  "id": "W08",
+  "condition": "B",
+  "answer": "2023년 일별 최고기온의 표본표준편차는 약 7.7℃입니다.  \n최종값: 7.7 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W09": {
+  "id": "W09",
+  "condition": "B",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "W10": {
+  "id": "W10",
+  "condition": "B",
+  "answer": "2023년 365일의 최고기온과 최저기온을 짝지어 계산한 피어슨 상관계수는 약 0.80입니다. 두 기온 사이에 양의 상관관계가 있음을 나타냅니다.  \n최종값: 0.80 계수",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W11": {
+  "id": "W11",
+  "condition": "B",
+  "answer": "1월과 7월의 일 강수량 평균은 각각 약 2.532mm와 0.074mm입니다. Welch 양측 t-검정의 p값은 약 0.0007입니다.  \n최종값: 0.0007 p값",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W12": {
+  "id": "W12",
+  "condition": "B",
+  "answer": "2023년 12월 강수량 합계는 215.4mm, 연간 합계는 888.1mm입니다. 따라서 12월 강수량은 연간 강수량의 약 24.3%입니다.\n최종값: 24.3 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W13": {
+  "id": "W13",
+  "condition": "B",
+  "answer": "2023년 7월 최고기온 31개 값을 사용해 표본표준편차를 계산하면 약 2.83℃입니다.  \n최종값: 2.83 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W14": {
+  "id": "W14",
+  "condition": "B",
+  "answer": "강수량이 0mm보다 큰 날은 2023년 전체에서 149일입니다.  \n최종값: 149일",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W15": {
+  "id": "W15",
+  "condition": "B",
+  "answer": "제공된 자료는 2023년 일별 기상 데이터이며, 2024년 1월의 최고기온은 포함되어 있지 않습니다. 따라서 해당 월의 일 최고기온 평균을 계산할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "W16": {
+  "id": "W16",
+  "condition": "B",
+  "answer": "자료상 7~8월에는 대부분 날짜의 강수량이 0mm였고, 일부 날에만 소량의 비가 기록됐습니다. 하지만 일별 기상 자료만으로 강수량이 적었던 원인(예: 기압계나 대기 순환)은 판단할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F01": {
+  "id": "F01",
+  "condition": "B",
+  "answer": "시카고의 2023년 일별 강수량을 모두 합산하면 855.1 mm입니다.\n최종값: 855.1 mm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F02": {
+  "id": "F02",
+  "condition": "B",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "F03": {
+  "id": "F03",
+  "condition": "B",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "F04": {
+  "id": "F04",
+  "condition": "B",
+  "answer": "4개 도시 전체에서 일 최고기온의 최댓값은 시카고의 2023년 8월 24일에 기록한 37.8℃입니다.\n최종값: 37.8 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F05": {
+  "id": "F05",
+  "condition": "B",
+  "answer": "뉴욕의 2023년 7월 일 최고기온 평균은 약 29.3℃입니다.  \n최종값: 29.3 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F06": {
+  "id": "F06",
+  "condition": "B",
+  "answer": "시애틀과 로스앤젤레스의 일별 최고기온을 각각 독립 표본으로 두고 Welch t-검정을 적용하면, 시애틀 평균에서 로스앤젤레스 평균을 뺀 기준의 t 통계량은 약 −9.6입니다.  \n최종값: -9.6 t-통계량",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F07": {
+  "id": "F07",
+  "condition": "B",
+  "answer": "뉴욕의 2023년 일 최고기온 표본표준편차는 약 8.3℃입니다(분모는 364일입니다).  \n최종값: 8.3 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F08": {
+  "id": "F08",
+  "condition": "B",
+  "answer": "시카고의 2023년 1월 일별 강수량을 합산하면 66.0 mm입니다.\n최종값: 66.0 mm",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F09": {
+  "id": "F09",
+  "condition": "B",
+  "answer": "로스앤젤레스의 2023년 일 최고기온 365개를 정렬했을 때 가운데 값은 24.4℃입니다.\n최종값: 24.4 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F10": {
+  "id": "F10",
+  "condition": "B",
+  "answer": "시애틀의 2023년 일 강수량과 일 최고기온의 피어슨 상관계수는 약 **-0.24**입니다. 약한 음의 상관을 나타냅니다.  \n최종값: -0.24 무단위",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F11": {
+  "id": "F11",
+  "condition": "B",
+  "answer": "시카고의 1월 강수량 합계는 66.0mm, 7월은 193.4mm입니다. 따라서 1월 대비 7월 강수량 합계는 약 193.0% 증가했습니다.\n최종값: 193.0 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F12": {
+  "id": "F12",
+  "condition": "B",
+  "answer": "4개 도시의 2023년 일별 최고기온을 모두 합산해 평균하면 약 17.7℃입니다.  \n최종값: 17.7 ℃",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F13": {
+  "id": "F13",
+  "condition": "B",
+  "answer": "제공된 자료에는 시애틀, 로스앤젤레스, 뉴욕, 시카고의 기상 기록만 있어 보스턴의 연간 강수량을 계산할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "F14": {
+  "id": "F14",
+  "condition": "B",
+  "answer": "이 자료에는 두 도시의 일별 강수량만 있어 강수량 차이의 원인을 직접 판단할 수 없습니다. 해안 지형, 기압계, 계절풍 등 원인을 밝히려면 추가 기후 자료와 분석이 필요합니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ }
+}

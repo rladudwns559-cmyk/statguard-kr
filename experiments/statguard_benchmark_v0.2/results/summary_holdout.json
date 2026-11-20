@@ -1,0 +1,320 @@
+{
+ "meta": {
+  "questions": 14,
+  "answerable": 13,
+  "unanswerable": 1,
+  "datasets": 2,
+  "generated": "2026-11-20"
+ },
+ "conditions": {
+  "A": {
+   "accuracy": {
+    "all": {
+     "correct": 10,
+     "n": 14,
+     "rate": 0.7142857142857143
+    },
+    "answerable": {
+     "correct": 9,
+     "n": 13,
+     "rate": 0.6923076923076923
+    },
+    "category:correlation": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "category:max": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:mean": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:median": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:min": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:not_covered": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:percent_change": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    },
+    "category:ratio": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "category:stdev": {
+     "correct": 1,
+     "n": 2,
+     "rate": 0.5
+    },
+    "category:sum": {
+     "correct": 2,
+     "n": 2,
+     "rate": 1.0
+    },
+    "category:t_test_p": {
+     "correct": 0,
+     "n": 1,
+     "rate": 0.0
+    },
+    "domain:기상(4개 도시 1,460행)": {
+     "correct": 4,
+     "n": 7,
+     "rate": 0.5714285714285714
+    },
+    "domain:기상(일별 365행)": {
+     "correct": 6,
+     "n": 7,
+     "rate": 0.8571428571428571
+    },
+    "unanswerable": {
+     "correct": 1,
+     "n": 1,
+     "rate": 1.0
+    }
+   },
+   "error_kinds": {
+    "수치 오류": 2,
+    "형식 오류": 2
+   }
+  }
+ },
+ "statguard": {
+  "A/rule_v0.4": {
+   "n": 14,
+   "decided": 9,
+   "coverage": 0.6428571428571429,
+   "tp": 1,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.3333333333333333,
+   "recall": 1.0,
+   "f1": 0.5,
+   "errors_total": 4,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.2857142857142857,
+   "passed": 6,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 6,
+    "FLAG": 3,
+    "HOLD": 5
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/rule_v0.5": {
+   "n": 14,
+   "decided": 9,
+   "coverage": 0.6428571428571429,
+   "tp": 1,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "errors_total": 4,
+   "missed_errors_on_hold": 3,
+   "raw_error_rate": 0.2857142857142857,
+   "passed": 8,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 8,
+    "HOLD": 5,
+    "FLAG": 1
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  },
+  "A/llm": {
+   "n": 14,
+   "decided": 9,
+   "coverage": 0.6428571428571429,
+   "tp": 2,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.5,
+   "recall": 1.0,
+   "f1": 0.6666666666666666,
+   "errors_total": 4,
+   "missed_errors_on_hold": 2,
+   "raw_error_rate": 0.2857142857142857,
+   "passed": 5,
+   "error_rate_among_passed": 0.0,
+   "decisions": {
+    "PASS": 5,
+    "FLAG": 4,
+    "HOLD": 5
+   },
+   "unanswerable_asserted": 0,
+   "unanswerable_asserted_passed": 0
+  }
+ },
+ "per_question": {
+  "LH01": {
+   "A": {
+    "final": "13.0 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "LH02": {
+   "A": {
+    "final": "65.3 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "LH03": {
+   "A": {
+    "final": "15.0 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "PASS",
+    "llm": "FLAG"
+   }
+  },
+  "LH04": {
+   "A": {
+    "final": "3.23 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "LH05": {
+   "A": {
+    "final": "-0.17 상관계수",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "FLAG"
+   }
+  },
+  "LH06": {
+   "A": {
+    "final": "-88.7 %",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "PASS"
+   }
+  },
+  "LH07": {
+   "A": {
+    "final": "12.2 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "PASS",
+    "llm": "FLAG"
+   }
+  },
+  "LH08": {
+   "A": {
+    "final": "9.1 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "PASS"
+   }
+  },
+  "LH09": {
+   "A": {
+    "final": "1336.1 mm",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "HOLD"
+   }
+  },
+  "LH10": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   }
+  },
+  "LH11": {
+   "A": {
+    "final": "17.2 ℃",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "PASS",
+    "rule_v0.5": "PASS",
+    "llm": "HOLD"
+   }
+  },
+  "LH12": {
+   "A": {
+    "final": "0.16 무차원",
+    "correct": false,
+    "error_kind": "수치 오류",
+    "rule_v0.4": "FLAG",
+    "rule_v0.5": "FLAG",
+    "llm": "FLAG"
+   }
+  },
+  "LH13": {
+   "A": {
+    "final": "FORMAT_ERROR",
+    "correct": false,
+    "error_kind": "형식 오류",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   }
+  },
+  "LH14": {
+   "A": {
+    "final": "ABSTAIN",
+    "correct": true,
+    "error_kind": "",
+    "rule_v0.4": "HOLD",
+    "rule_v0.5": "HOLD",
+    "llm": "HOLD"
+   }
+  }
+ },
+ "usage": {
+  "calls": 446,
+  "input_tokens": 6263634,
+  "output_tokens": 188227,
+  "estimated_usd": 0.7205,
+  "price_basis": "입력 $0.10/1M, 출력 $0.50/1M (이전 기록의 사전 고정 단가, 실제 청구액 아님)",
+  "model": "gpt-6-luna"
+ }
+}

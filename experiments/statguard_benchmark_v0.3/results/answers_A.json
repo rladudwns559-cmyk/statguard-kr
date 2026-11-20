@@ -1,0 +1,156 @@
+{
+ "R01": {
+  "id": "R01",
+  "condition": "A",
+  "answer": "자료에서 지역이 ‘남아시아’로 분류된 국가들의 총인구를 합산하면 1,662,580,579명입니다.  \n최종값: 1,662,580,579 명",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R02": {
+  "id": "R02",
+  "condition": "A",
+  "answer": "고소득 국가 60개의 2023년 1인당 GDP를 단순 평균하면 약 44,871.10달러입니다. 인구 가중치는 적용하지 않았습니다.  \n최종값: 44871.10 달러",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R03": {
+  "id": "R03",
+  "condition": "A",
+  "answer": "사하라이남아프리카 국가 44곳의 기대수명을 단순 평균하면 약 64.336세입니다.  \n최종값: 64.336 세",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R04": {
+  "id": "R04",
+  "condition": "A",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "R05": {
+  "id": "R05",
+  "condition": "A",
+  "answer": "2023년 기대수명의 최댓값은 홍콩의 85.247세입니다.  \n최종값: 85.247 세",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R06": {
+  "id": "R06",
+  "condition": "A",
+  "answer": "자료에서 1인당GDP 최솟값은 부룬디의 249.80달러입니다.\n최종값: 249.80 달러",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R07": {
+  "id": "R07",
+  "condition": "A",
+  "answer": "유럽·중앙아시아 지역의 국가 46곳 실업률을 사용해 \\(n-1=45\\)로 나누어 계산한 표본표준편차는 약 2.938%입니다.  \n최종값: 2.938 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R08": {
+  "id": "R08",
+  "condition": "A",
+  "answer": "2023년 국가별 1인당 GDP와 기대수명 사이의 피어슨 상관계수는 약 0.68입니다. 이는 두 지표가 양의 상관을 보인다는 뜻입니다.\n최종값: 0.68 무단위",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R09": {
+  "id": "R09",
+  "condition": "A",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "R10": {
+  "id": "R10",
+  "condition": "A",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "R11": {
+  "id": "R11",
+  "condition": "A",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "R12": {
+  "id": "R12",
+  "condition": "A",
+  "answer": "북미 지역에 해당하는 캐나다와 미국의 총인구를 합산하면 376,804,140명입니다.\n최종값: 376804140 명",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R13": {
+  "id": "R13",
+  "condition": "A",
+  "answer": "중동·북아프리카 지역 20개국의 실업률을 단순 평균하면 약 8.84%입니다.  \n최종값: 8.84 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R14": {
+  "id": "R14",
+  "condition": "A",
+  "answer": "국가코드 KOR인 대한민국의 2023년 1인당 GDP는 35,674.10달러입니다.  \n최종값: 35674.10 달러",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R15": {
+  "id": "R15",
+  "condition": "A",
+  "answer": "저소득 국가들의 총인구는 약 5억 7,276만 명이며, 176개 국가의 총인구 합계 대비 비율은 약 7.3%입니다.  \n최종값: 7.3 %",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R16": {
+  "id": "R16",
+  "condition": "A",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "R17": {
+  "id": "R17",
+  "condition": "A",
+  "answer": "",
+  "tool_calls": [],
+  "status": "incomplete"
+ },
+ "R18": {
+  "id": "R18",
+  "condition": "A",
+  "answer": "제공된 176개 국가의 실업률과 기대수명을 함께 계산한 피어슨 상관계수는 약한 음의 상관을 나타냅니다.  \n최종값: -0.25 상관계수",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R19": {
+  "id": "R19",
+  "condition": "A",
+  "answer": "국가코드 JPN인 일본의 2023년 기대수명은 84.041세입니다.\n최종값: 84.041 세",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R20": {
+  "id": "R20",
+  "condition": "A",
+  "answer": "제공된 자료는 2023년 지표만 포함하며, KOR의 2024년 실업률은 확인할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R21": {
+  "id": "R21",
+  "condition": "A",
+  "answer": "제공된 표에 국가코드 PRK에 해당하는 국가가 없어 2023년 1인당 GDP를 확인할 수 없습니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ },
+ "R22": {
+  "id": "R22",
+  "condition": "A",
+  "answer": "자료에는 국가별 소득그룹과 기대수명만 있어, 고소득 국가의 기대수명이 더 높은 원인을 판단할 수 없습니다. 원인을 밝히려면 의료 접근성, 영양, 위생 등 관련 자료와 별도의 분석이 필요합니다.\n최종값: 판단불가",
+  "tool_calls": [],
+  "status": "completed"
+ }
+}

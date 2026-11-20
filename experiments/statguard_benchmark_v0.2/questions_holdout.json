@@ -1,0 +1,16 @@
+[
+  {"id": "LH01", "dataset": "seattle_daily", "category": "mean", "question": "2023년 4월 일 최고기온의 평균은 몇 ℃인가요?", "calc": {"op": "mean", "column": "최고기온", "filters": {"월": "4"}}},
+  {"id": "LH02", "dataset": "seattle_daily", "category": "sum", "question": "2023년 3월 일별 강수량의 합계는 몇 mm인가요?", "calc": {"op": "sum", "column": "강수량", "filters": {"월": "3"}}},
+  {"id": "LH03", "dataset": "seattle_daily", "category": "max", "question": "2023년 1월 일 최고기온의 최댓값은 몇 ℃인가요?", "calc": {"op": "max", "column": "최고기온", "filters": {"월": "1"}}},
+  {"id": "LH04", "dataset": "seattle_daily", "category": "stdev", "question": "2023년 1월 일 최저기온의 표본표준편차(n−1로 나눔)는 몇 ℃인가요?", "calc": {"op": "stdev", "column": "최저기온", "filters": {"월": "1"}}},
+  {"id": "LH05", "dataset": "seattle_daily", "category": "correlation", "question": "2023년 일 강수량과 일 최저기온의 피어슨 상관계수는 얼마인가요?", "calc": {"op": "correlation", "column": "강수량", "column2": "최저기온", "filters": {}}},
+  {"id": "LH06", "dataset": "seattle_daily", "category": "percent_change", "question": "2023년 2월 대비 8월 강수량 합계는 몇 % 변했나요?", "calc": {"op": "percent_change", "column": "강수량", "filters": {"월": "8"}, "reference": {"월": "2"}}},
+  {"id": "LH07", "dataset": "seattle_daily", "category": "min", "question": "2023년 7월 일 최저기온의 최솟값은 몇 ℃인가요?", "calc": {"op": "min", "column": "최저기온", "filters": {"월": "7"}}},
+  {"id": "LH08", "dataset": "cities_daily", "category": "mean", "question": "시애틀의 2023년 1월 일 최고기온 평균은 몇 ℃인가요?", "calc": {"op": "mean", "column": "최고기온", "filters": {"도시": "시애틀", "월": "1"}}},
+  {"id": "LH09", "dataset": "cities_daily", "category": "sum", "question": "뉴욕의 2023년 연간 강수량 합계는 몇 mm인가요?", "calc": {"op": "sum", "column": "강수량", "filters": {"도시": "뉴욕"}}},
+  {"id": "LH10", "dataset": "cities_daily", "category": "ratio", "question": "4개 도시의 2023년 강수량 총합 중 뉴욕 강수량의 비율은 몇 %인가요?", "calc": {"op": "ratio", "column": "강수량", "filters": {"도시": "뉴욕"}, "reference": {}}},
+  {"id": "LH11", "dataset": "cities_daily", "category": "median", "question": "시카고의 2023년 일 최고기온 중앙값은 몇 ℃인가요?", "calc": {"op": "median", "column": "최고기온", "filters": {"도시": "시카고"}}},
+  {"id": "LH12", "dataset": "cities_daily", "category": "t_test_p", "question": "뉴욕과 시카고의 2023년 일 최고기온 평균 차이에 대한 Welch t-검정(양측) p값은 얼마인가요?", "calc": {"op": "t_p", "column": "최고기온", "filters": {"도시": "뉴욕"}, "reference": {"도시": "시카고"}}},
+  {"id": "LH13", "dataset": "cities_daily", "category": "stdev", "question": "시애틀의 2023년 일 강수량 표본표준편차(n−1로 나눔)는 몇 mm인가요?", "calc": {"op": "stdev", "column": "강수량", "filters": {"도시": "시애틀"}}},
+  {"id": "LH14", "dataset": "cities_daily", "category": "not_covered", "question": "시카고의 2022년 연간 강수량 합계는 몇 mm인가요?", "answerable": false}
+]

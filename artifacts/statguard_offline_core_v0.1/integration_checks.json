@@ -1,0 +1,21 @@
+{
+  "original_protected_files": 946,
+  "original_hash_mismatches": [],
+  "installed_payload_files": 22,
+  "installed_hash_mismatches": [],
+  "staged_vs_installed_demo_identical": {
+    "demo_results.json": true,
+    "demo_readable_ko.md": true
+  },
+  "overwrite_refusal": {
+    "refusal": "EXISTING_DEMO_OUTPUT_REFUSED",
+    "expected_exit_code": 2,
+    "prior_result_files_unchanged": true
+  },
+  "paid_api_calls": 0,
+  "external_search_fetch": 0,
+  "api_db_deployment_changes": 0,
+  "model_training_runs": 0,
+  "past_live_set_reruns": 0,
+  "real_user_data_used": false
+}
