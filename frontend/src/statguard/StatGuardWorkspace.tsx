@@ -91,7 +91,7 @@ export default function StatGuardWorkspace({ initialMode = 'answer' }: { initial
       const next = await calculateLocal(request, table.rows.length, controller.signal);
       if (calcGeneration.current === epoch && !controller.signal.aborted) { setResult(next); setCalculationSnapshot(request); }
     } catch (e) {
-      if (calcGeneration.current === epoch) setCalculationError(timedOut ? '계산 시간이 초과되었습니다. 자동으로 다시 실행하지 않았습니다.' : e instanceof CalculationError ? e.message : '로컬 계산 엔진에 연결하지 못했습니다. 실행기를 확인한 뒤 직접 다시 시도해 주세요.');
+      if (calcGeneration.current === epoch) setCalculationError(timedOut ? '계산 시간이 초과되었습니다. 자동으로 다시 실행하지 않았습니다.' : e instanceof CalculationError ? e.message : (cloudCalculation() ? '계산 서버에 연결하지 못했습니다. 잠시 뒤 직접 다시 시도해 주세요.' : '로컬 계산 엔진에 연결하지 못했습니다. 실행기를 확인한 뒤 직접 다시 시도해 주세요.'));
     } finally {
       clearTimeout(timer); if (calcAbort.current === controller) calcAbort.current = null;
       if (calcGeneration.current === epoch) setComputing(false);
