@@ -7,7 +7,7 @@ import StatGuardWorkspace from '../statguard/StatGuardWorkspace';
 import BenchmarkResults from '../statguard/BenchmarkResults';
 import StatGuardHome from '../statguard/StatGuardHome';
 import { STATGUARD_VERSION } from '../statguard/StatGuardChrome';
-import { TOTALS } from '../statguard/benchmarkTotals';
+import { TOTALS, upperLimit, WRONG_UPPER } from '../statguard/benchmarkTotals';
 import stability from '../statguard/benchmarkStability.json';
 
 beforeEach(() => { vi.stubGlobal('crypto', webcrypto); vi.spyOn(window, 'scrollTo').mockImplementation(() => {}); vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('no network in this test')); });
@@ -35,7 +35,9 @@ describe('StatGuard site consistency', () => {
     const passed = rows.reduce((a, r) => a + r.total_passed, 0), wrong = rows.reduce((a, r) => a + r.total_wrong_among_passed, 0);
     expect(within(screen.getByLabelText('핵심 실험 결과')).getByText(`${passed}건 중 ${wrong}건`)).toBeVisible();
     expect(screen.getByText(new RegExp(`질문 ${TOTALS.questions}개·자료 ${TOTALS.datasets}종`))).toBeVisible();
-    expect(screen.getByRole('link', { name: '이전 프로젝트(WHEN2WARN) 보기' })).toHaveAttribute('href', '/when2warn');
+    expect(screen.queryByRole('link', { name: /WHEN2WARN/ })).toBeNull();
+    expect(document.querySelector('a[href="/when2warn"]')).toBeNull();
+    expect(within(screen.getByLabelText('핵심 실험 결과')).getByText(/95% 신뢰구간 상한 1\.3%/)).toBeVisible();
   });
 
   it('describes the 3D hero scene in text and shows the real model sentence and the recount', () => {
@@ -126,5 +128,20 @@ describe('StatGuard site consistency', () => {
     expect(bars[11]).toHaveClass('is-on');
     fireEvent.pointerLeave(screen.getByRole('figure'));
     expect(hud).toHaveTextContent('12개월 다시 합산888.9mm');
+  });
+
+  it('computes exact Clopper-Pearson upper limits and shows both the all-runs and first-run-only bounds', () => {
+    expect(upperLimit(0, 279)).toBeCloseTo(1 - Math.pow(0.025, 1 / 279), 10);
+    expect(upperLimit(0, 279)).toBeCloseTo(0.01313, 4);
+    expect(upperLimit(1, 10)).toBeCloseTo(0.44502, 4);
+    expect(upperLimit(5, 5)).toBe(1);
+    expect(TOTALS.firstRunPassed).toBeGreaterThan(0);
+    expect(TOTALS.firstRunPassed).toBeLessThan(TOTALS.passed);
+    render(<BenchmarkResults/>);
+    const note = screen.getByLabelText('오답률 신뢰구간');
+    expect(note).toHaveTextContent(`최대 ${(WRONG_UPPER.all * 100).toFixed(1)}%`);
+    expect(note).toHaveTextContent(`1회차 통과 답변 ${TOTALS.firstRunPassed}건`);
+    expect(note).toHaveTextContent(`${(WRONG_UPPER.firstRun * 100).toFixed(1)}%`);
+    expect(screen.getByLabelText('전체 실험 규모')).toHaveTextContent('오답률 95% 상한1.3%');
   });
 });

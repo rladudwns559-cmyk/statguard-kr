@@ -1,5 +1,5 @@
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle, useRevealOnScroll } from './StatGuardChrome';
-import { TOTALS } from './benchmarkTotals';
+import { pct1, TOTALS, WRONG_UPPER } from './benchmarkTotals';
 import summary from './benchmarkSummary.json';
 import summaryLarge from './benchmarkSummaryLarge.json';
 import summaryDomain from './benchmarkSummaryDomain.json';
@@ -86,6 +86,7 @@ function StabilitySection() {
   const passed = rows.reduce((a, r) => a + r.total_passed, 0), wrong = rows.reduce((a, r) => a + r.total_wrong_among_passed, 0);
   return <section className="sg-card sg-large" aria-label="반복 실행 안정성"><p className="sg-eyebrow">반복 실행</p><h2>같은 질문을 세 번 물으면?</h2>
     <p className="sg-hint">A·C 조건을 같은 요청으로 3회 실행했습니다. StatGuard는 고정 사본(규칙 v0.6)으로 판정했습니다. <strong>통과시킨 답변 {passed}건 중 오답 {wrong}건.</strong></p>
+    <p className="sg-hint" aria-label="오답률 신뢰구간">오답 0건이 ‘오답률 0%’를 뜻하지는 않습니다. 정확(Clopper–Pearson) 95% 신뢰구간으로 보면 통과 답변의 오답률은 <strong>최대 {pct1(WRONG_UPPER.all)}</strong>까지 가능합니다. 다만 같은 질문을 3번 반복한 답변은 서로 독립이 아니므로, 반복을 빼고 1회차 통과 답변 {TOTALS.firstRunPassed}건({TOTALS.firstRunWrong}건 오답)만 쓰면 상한은 <strong>{pct1(WRONG_UPPER.firstRun)}</strong>로 더 넓어집니다. 실제 오답률은 0%에서 이 상한 사이 어딘가로 보는 것이 정직한 해석입니다.</p>
     <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="반복 실행 표"><table><thead><tr><th scope="col">벤치마크 · 조건</th><th scope="col">회차별 정답률</th><th scope="col">정답 여부가 3회 모두 같은 문항</th><th scope="col">한 번이라도 틀린 문항</th><th scope="col">통과 답변 중 오답</th><th scope="col">회차별 판정 비율</th></tr></thead>
       <tbody>{rows.map(r => <tr key={r.benchmark + r.condition}><th scope="row">{r.benchmark} · {r.condition}</th><td>{r.per_run.map(p => pct(p.accuracy)).join(' / ')}</td><td>{pct(r.questions_same_correctness_all_runs)}</td><td>{r.questions_wrong_in_some_run}</td><td>{r.total_wrong_among_passed}/{r.total_passed}</td><td>{r.per_run.map(p => pct(p.coverage)).join(' / ')}</td></tr>)}</tbody></table></div>
     <p className="sg-hint">일반 LLM(A)은 같은 질문에도 회차마다 정답이 바뀌었습니다(큰 표에서 문항의 약 20%). 계산 도구(C)는 거의 일정했습니다.</p>
@@ -105,7 +106,7 @@ export default function BenchmarkResults() {
     <main className="sg-main sg-results">
       <div className="sg-intro"><div><h1>LLM의 숫자, 다시 계산하면 맞을까?</h1>
         <p>공개 표 자료 {TOTALS.datasets}종(작은 표·큰 표·국가별)에 대한 질문 {TOTALS.questions}개로 일반 LLM(A), 자료 설명을 더한 LLM(B), 계산 도구를 쓴 LLM(C)과 StatGuard를 비교했습니다. 기대값은 계산 엔진과 별도로 계산해 실행 전에 고정했고, 조건은 각 실험의 PROTOCOL.md에 실행 전에 기록했습니다.</p></div></div>
-      <dl className="sg-data-meta sg-results-meta" aria-label="전체 실험 규모"><div><dt>모델</dt><dd>{TOTALS.model}</dd></div><div><dt>질문</dt><dd>{TOTALS.questions}개 · 자료 {TOTALS.datasets}종</dd></div><div><dt>API 호출(반복 포함)</dt><dd>{TOTALS.calls.toLocaleString('ko-KR')}회</dd></div><div><dt>추정 비용</dt><dd>${TOTALS.usd.toFixed(2)}</dd></div><div><dt>통과 답변 중 오답</dt><dd>{TOTALS.wrongPassed}/{TOTALS.passed}건</dd></div></dl>
+      <dl className="sg-data-meta sg-results-meta" aria-label="전체 실험 규모"><div><dt>모델</dt><dd>{TOTALS.model}</dd></div><div><dt>질문</dt><dd>{TOTALS.questions}개 · 자료 {TOTALS.datasets}종</dd></div><div><dt>API 호출(반복 포함)</dt><dd>{TOTALS.calls.toLocaleString('ko-KR')}회</dd></div><div><dt>추정 비용</dt><dd>${TOTALS.usd.toFixed(2)}</dd></div><div><dt>통과 답변 중 오답</dt><dd>{TOTALS.wrongPassed}/{TOTALS.passed}건</dd></div><div><dt>오답률 95% 상한</dt><dd>{pct1(WRONG_UPPER.all)}</dd></div></dl>
       <OverviewChart/>
       <StabilitySection/>
       <LargeSection large={large} eyebrow="실험 v0.2 · 큰 표와 통계" title="행이 많아지면 LLM은 틀리기 시작한다" intro="NOAA 일별 기상 365행·1,460행. 합계·평균에 더해 표준편차·중앙값·최댓값·상관계수·Welch t-검정을 물었습니다. 규칙 추출 v0.4는 실행 전에 고정했습니다."/>

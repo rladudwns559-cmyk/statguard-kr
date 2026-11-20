@@ -1,5 +1,5 @@
 import large from './benchmarkSummaryLarge.json';
-import { TOTALS } from './benchmarkTotals';
+import { pct1, TOTALS, WRONG_UPPER } from './benchmarkTotals';
 import RecountScene from './RecountScene';
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle } from './StatGuardChrome';
 import './statguard.css';
@@ -41,7 +41,7 @@ export default function StatGuardHome() {
 
       <section className="sg-receipt" aria-label="핵심 실험 결과">
         {a && c && <div><strong>{pct(a.rate)} → {pct(c.rate)}</strong><span>365·1,460행 표에서 일반 LLM의 정답률 → 계산 도구를 쓴 LLM의 정답률</span></div>}
-        <div><strong>{TOTALS.passed}건 중 {TOTALS.wrongPassed}건</strong><span>StatGuard가 통과시킨 LLM 답변 중 오답 (실험 3개, A·C 조건, 각 3회)</span></div>
+        <div><strong>{TOTALS.passed}건 중 {TOTALS.wrongPassed}건</strong><span>StatGuard가 통과시킨 LLM 답변 중 오답 (실험 3개, A·C 조건, 각 3회). 95% 신뢰구간 상한 {pct1(WRONG_UPPER.all)}</span></div>
         {p && <div><strong>{p.precision?.toFixed(2)} / {p.recall?.toFixed(2)}</strong><span>일부러 틀린 숫자를 넣은 문장에서 오류 탐지 정밀도 / 재현율 (판정한 문장 기준)</span></div>}
       </section>
 
@@ -68,7 +68,7 @@ export default function StatGuardHome() {
         <p className="sg-note">‘계산 일치’는 답변의 숫자 하나가 연결된 계산과 맞는다는 뜻입니다. 답변 전체의 사실, 인과관계, 자료 자체의 정확성은 보증하지 않습니다. 실험은 질문 {TOTALS.questions}개·자료 {TOTALS.datasets}종·모델 1종({TOTALS.model})의 소규모이며, 조건과 한계는 <a href="/statguard/results">실험 결과</a>에 모두 공개합니다.</p>
       </section>
 
-      <footer className="sg-footer">{SITE_NAME} {STATGUARD_VERSION} · 2026 하반기 SW·AI 융합연구개발 일반과제 · <a href="/when2warn">이전 프로젝트(WHEN2WARN) 보기</a></footer>
+      <footer className="sg-footer">{SITE_NAME} {STATGUARD_VERSION} · 2026 하반기 SW·AI 융합연구개발 일반과제</footer>
     </main>
   </div>;
 }
