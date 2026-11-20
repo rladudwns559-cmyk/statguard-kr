@@ -95,29 +95,39 @@ export async function verifyAnswer(request: AnswerRequest, signal: AbortSignal):
   return validateAnswer(payload, request);
 }
 
-/** Local live demo (server started with --live). Never available on the cloud deployment. */
-export type LiveStatus = { enabled: boolean; remaining: number; model: string };
+/**
+ * Live demo: ask the model about this CSV, then verify its answer.
+ * Local: the launcher started with --live. Public site: password-protected endpoint, off unless configured.
+ */
+export type LiveStatus = { enabled: boolean; remaining: number; model: string; password: boolean };
+const LIVE_OFF: LiveStatus = { enabled: false, remaining: 0, model: '', password: false };
 export async function liveStatus(): Promise<LiveStatus> {
-  if (cloudCalculation() || !localCalculationAvailable()) return { enabled: false, remaining: 0, model: '' };
+  if (!localCalculationAvailable()) return LIVE_OFF;
+  const cloud = cloudCalculation();
   try {
-    const response = await fetch('/__statguard/live-status', { cache: 'no-store', credentials: 'omit' });
+    const response = await fetch(cloud ? '/api/statguard_ask' : '/__statguard/live-status', { cache: 'no-store', credentials: 'omit' });
     const payload: unknown = await response.json();
-    if (!obj(payload) || payload.ok !== true || typeof payload.enabled !== 'boolean') return { enabled: false, remaining: 0, model: '' };
-    return { enabled: payload.enabled, remaining: Number(payload.remaining) || 0, model: String(payload.model ?? '') };
-  } catch { return { enabled: false, remaining: 0, model: '' }; }
+    if (!obj(payload) || payload.ok !== true || typeof payload.enabled !== 'boolean') return LIVE_OFF;
+    return { enabled: payload.enabled, remaining: Number(payload.remaining) || 0, model: String(payload.model ?? ''), password: cloud };
+  } catch { return LIVE_OFF; }
 }
 const LIVE_MESSAGES: Record<string, string> = {
   QUESTION_REQUIRED: '질문을 입력해 주세요.', QUESTION_TOO_LONG: '질문은 500자 이내로 입력해 주세요.',
-  LIVE_ASK_LIMIT: '이번 실행에서 쓸 수 있는 질문 횟수(30회)를 모두 사용했습니다.', LIVE_ASK_DISABLED: 'AI 질문 기능이 꺼져 있습니다.',
+  LIVE_ASK_LIMIT: '쓸 수 있는 질문 횟수를 모두 사용했습니다. 잠시 뒤 다시 시도하거나 답변을 직접 붙여 넣어 검증하세요.', LIVE_ASK_DISABLED: 'AI 질문 기능이 꺼져 있습니다.',
   CSV_TOO_LARGE_FOR_LIVE_ASK: 'AI 질문은 200KB 이하 CSV에서만 사용할 수 있습니다.', LIVE_ASK_NOT_CONFIGURED: 'API 키가 설정되지 않았습니다.',
+  DEMO_PASSWORD_INVALID: '시연 비밀번호가 맞지 않습니다.', DEMO_LOCKED: '비밀번호를 여러 번 틀려 잠시 사용할 수 없습니다.',
+  LIVE_ASK_BUSY: '다른 질문을 처리하는 중입니다. 잠시 뒤 다시 시도해 주세요.', REQUEST_TOO_LARGE: 'AI 질문은 200KB 이하 CSV에서만 사용할 수 있습니다.',
 };
-export async function askLive(request: { csv_base64: string; encoding: 'utf-8-sig' | 'cp949'; question: string }, signal: AbortSignal): Promise<{ answer: string; model: string }> {
-  const response = await fetch('/__statguard/ask', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-StatGuard-Client': 'local-v0.1' }, body: JSON.stringify(request), cache: 'no-store', credentials: 'omit', redirect: 'error', signal });
+export async function askLive(request: { csv_base64: string; encoding: 'utf-8-sig' | 'cp949'; question: string; password?: string }, signal: AbortSignal): Promise<{ answer: string; model: string; remaining: number | null }> {
+  const cloud = cloudCalculation();
+  const { password, ...rest } = request;
+  const body = cloud ? { ...rest, password: password ?? '' } : rest;
+  const response = await fetch(cloud ? '/api/statguard_ask' : '/__statguard/ask', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-StatGuard-Client': cloud ? 'cloud-v0.1' : 'local-v0.1' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', redirect: 'error', signal });
   let payload: unknown;
-  try { payload = await response.json(); } catch { throw new CalculationError('AI 답변을 받지 못했습니다.'); }
+  try { payload = await response.json(); } catch { throw new CalculationError('AI 답변을 받지 못했습니다. 잠시 뒤 다시 시도해 주세요.'); }
   if (!response.ok || !obj(payload) || payload.ok !== true || typeof payload.answer !== 'string') {
     const code = obj(payload) && obj(payload.error) && typeof payload.error.code === 'string' ? payload.error.code : '';
     throw new CalculationError(LIVE_MESSAGES[code] || 'AI 답변을 받지 못했습니다. 잠시 뒤 다시 시도해 주세요.');
   }
-  return { answer: payload.answer, model: String(payload.model ?? '') };
+  return { answer: payload.answer, model: String(payload.model ?? ''), remaining: typeof payload.remaining === 'number' ? payload.remaining : null };
 }

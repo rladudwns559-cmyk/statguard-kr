@@ -68,19 +68,20 @@ export default function AnswerVerification({ table, onVerified, active = true }:
   useEffect(() => { if (result) output.current?.focus(); onVerified?.(!!result); }, [result, onVerified]);
   const confirmed = Object.fromEntries(Object.entries(units).map(([k, v]) => [k, v.trim()]).filter(([, v]) => v));
   function change(next: () => void) { abort.current?.abort(); abort.current = null; setBusy(false); setResult(null); setError(''); next(); }
-  const [live, setLive] = useState<LiveStatus | null>(null), [question, setQuestion] = useState(''), [asking, setAsking] = useState(false), [askedModel, setAskedModel] = useState('');
+  const [live, setLive] = useState<LiveStatus | null>(null), [question, setQuestion] = useState(''), [demoPassword, setDemoPassword] = useState(''), [asking, setAsking] = useState(false), [askedModel, setAskedModel] = useState('');
   // Live-demo status is only asked for while this panel is visible (kept mounted when another tab is shown).
   useEffect(() => { if (!active || live) return; let alive = true; void liveStatus().then(s => { if (alive) setLive(s); }); return () => { alive = false; }; }, [active, live]);
   async function askAndVerify() {
     if (asking || busy) return;
     if (!question.trim()) { setError('AI에게 할 질문을 입력해 주세요.'); return; }
     if (!Object.keys(confirmed).length) { setError('숫자 열 하나 이상의 단위를 먼저 입력해 주세요.'); return; }
+    if (live?.password && !demoPassword) { setError('시연 비밀번호를 입력해 주세요.'); return; }
     const controller = new AbortController(); abort.current = controller; setAsking(true); setError(''); setResult(null); setAskedModel('');
     const timer = setTimeout(() => controller.abort(), 100000);
     try {
-      const reply = await askLive({ csv_base64: base64Bytes(table.rawBytes), encoding: table.encoding === 'UTF-8' ? 'utf-8-sig' : 'cp949', question }, controller.signal);
+      const reply = await askLive({ csv_base64: base64Bytes(table.rawBytes), encoding: table.encoding === 'UTF-8' ? 'utf-8-sig' : 'cp949', question, ...(live?.password ? { password: demoPassword } : {}) }, controller.signal);
       if (abort.current !== controller) return;
-      setAnswer(reply.answer); setAskedModel(reply.model); setLive(l => l && { ...l, remaining: Math.max(0, l.remaining - 1) });
+      setAnswer(reply.answer); setAskedModel(reply.model); setLive(l => l && { ...l, remaining: reply.remaining ?? Math.max(0, l.remaining - 1) });
       abort.current = null; setAsking(false);
       await run(reply.answer);
     } catch (e) {
@@ -112,9 +113,10 @@ export default function AnswerVerification({ table, onVerified, active = true }:
       <p className="sg-hint">연도·월처럼 구분용 숫자 열은 비워 두세요. 단위는 자동 추정하지 않으며, 단위를 입력한 열만 계산 대상이 됩니다.</p>
     </fieldset>
     {live?.enabled && <fieldset className="sg-live" aria-label="AI에게 질문하기"><legend>시연 · AI에게 직접 질문 <span className="sg-new">LIVE</span></legend>
-      <p className="sg-hint">이 PC에서만 켜진 시연 기능입니다. 질문과 CSV를 {live.model}에 보내 받은 답변을 아래에 넣고 바로 검증합니다. 남은 질문 {live.remaining}회.</p>
+      <p className="sg-hint">{live.password ? <>시연 비밀번호를 아는 사용자만 쓸 수 있습니다. 질문과 CSV를 {live.model}에 보내 받은 답변을 아래에 넣고 바로 검증합니다. 질문 횟수는 서버에서 제한합니다.</> : <>이 PC에서만 켜진 시연 기능입니다. 질문과 CSV를 {live.model}에 보내 받은 답변을 아래에 넣고 바로 검증합니다. 남은 질문 {live.remaining}회.</>}</p>
+      {live.password && <label className="sg-live-password">시연 비밀번호<input type="password" autoComplete="off" maxLength={64} value={demoPassword} onChange={e => setDemoPassword(e.target.value)}/></label>}
       <div className="sg-live-row"><input aria-label="AI에게 할 질문" maxLength={500} value={question} placeholder="예: 2023년 7월 일 최고기온의 평균은 몇 ℃인가요?" onChange={e => setQuestion(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') void askAndVerify(); }}/>
-        <button type="button" className="sg-primary" disabled={asking || busy || live.remaining <= 0} aria-busy={asking} onClick={() => void askAndVerify()}>{asking ? 'AI 답변 기다리는 중…' : '질문하고 검증'}</button></div>
+        <button type="button" className="sg-primary" disabled={asking || busy || (!live.password && live.remaining <= 0)} aria-busy={asking} onClick={() => void askAndVerify()}>{asking ? 'AI 답변 기다리는 중…' : '질문하고 검증'}</button></div>
     </fieldset>}
     <label className="sg-answer-input">2. AI 답변{askedModel && <span className="sg-badge"> {askedModel}가 방금 작성한 답변</span>}<textarea value={answer} maxLength={6000} rows={6} placeholder="예: 2023년 강수량 합계는 1,000mm입니다." onChange={e => { setAskedModel(''); change(() => setAnswer(e.target.value)); }}/></label>
     <div className="sg-answer-actions">

@@ -45,6 +45,10 @@
     "api/statguard.py": {
       "maxDuration": 10,
       "excludeFiles": "{node_modules/**,src/**,public/**,dist/**,scripts/**,**/*.test.*,*.lock,*.yaml}"
+    },
+    "api/statguard_ask.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{node_modules/**,src/**,public/**,dist/**,scripts/**,**/*.test.*,*.lock,*.yaml}"
     }
   }
 }

@@ -272,3 +272,6 @@
 @keyframes sg-vt-in{from{opacity:0;transform:translateY(18px)}}
 @media(max-width:640px){.sg-hud{bottom:44px;min-width:0;padding:8px 10px;white-space:nowrap}.sg-hud small{font-size:11px}.sg-hud b{font-size:19px}.sg-scene{height:560px}.sg-scene .sg-stamp{width:68%;bottom:146px}.sg-header{min-height:0;padding:10px 16px}}
 @media(prefers-reduced-motion:reduce){.sg-iso{transform:rotateX(58deg) rotateZ(-42deg) scale(var(--iso-scale,1))}.sg-shell .is-tilting{transform:none}::view-transition-old(root),::view-transition-new(root),::view-transition-group(*){animation:none!important}}
+
+/* Public demo: password for the live ask box */
+.sg-live-password{display:block;max-width:280px;margin:0 0 10px}

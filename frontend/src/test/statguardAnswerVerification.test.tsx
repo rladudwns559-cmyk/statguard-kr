@@ -132,4 +132,37 @@ describe('AI answer verification tab', () => {
     expect(screen.getByText(/gpt-6-luna가 방금 작성한 답변/)).toBeInTheDocument();
     expect(await screen.findByText('남은 질문 29회', { exact: false })).toBeInTheDocument();
   });
+
+  it('on the public site asks for the demo password and sends it only to the same-origin demo endpoint', async () => {
+    vi.stubGlobal('location', { protocol: 'https:', hostname: 'when2warn-public-beta.vercel.app', href: 'https://when2warn-public-beta.vercel.app/statguard', origin: 'https://when2warn-public-beta.vercel.app', pathname: '/statguard' });
+    const asked: { url: string; body: Record<string, unknown>; headers: Record<string, string> }[] = [];
+    vi.spyOn(globalThis, 'fetch').mockImplementation(async (u, init) => {
+      const url = String(u);
+      if (url === '/api/statguard_ask' && !init?.method) return json({ ok: true, enabled: true, requires_password: true, model: 'gpt-6-luna', remaining: 20 });
+      if (url === '/api/statguard_ask') {
+        const body = JSON.parse(String(init?.body)); asked.push({ url, body, headers: init?.headers as Record<string, string> });
+        return body.password === 'right-pass' ? json({ ok: true, answer: SAMPLE_ANSWER, model: 'gpt-6-luna', remaining: 19 }) : json({ ok: false, error: { code: 'DEMO_PASSWORD_INVALID' } }, 401);
+      }
+      seen = JSON.parse(String(init?.body)); return json(responseFor(seen));
+    });
+    await openAnswerTab();
+    const box = await screen.findByRole('group', { name: 'AI에게 질문하기' });
+    expect(box).toHaveTextContent('시연 비밀번호를 아는 사용자만');
+    await userEvent.type(within(box).getByLabelText('AI에게 할 질문'), 'A지역 방문자 증가율은?');
+    await userEvent.click(within(box).getByRole('button', { name: '질문하고 검증' }));
+    expect(await screen.findByText('시연 비밀번호를 입력해 주세요.')).toBeVisible();
+    expect(asked).toHaveLength(0);
+    await userEvent.type(within(box).getByLabelText('시연 비밀번호'), 'wrong');
+    await userEvent.click(within(box).getByRole('button', { name: '질문하고 검증' }));
+    expect(await screen.findByText('시연 비밀번호가 맞지 않습니다.')).toBeVisible();
+    await userEvent.clear(within(box).getByLabelText('시연 비밀번호'));
+    await userEvent.type(within(box).getByLabelText('시연 비밀번호'), 'right-pass');
+    await userEvent.click(within(box).getByRole('button', { name: '질문하고 검증' }));
+    await screen.findByRole('region', { name: '답변 검증 결과' });
+    expect(seen.answer_text).toBe(SAMPLE_ANSWER);
+    expect(asked).toHaveLength(2);
+    expect(Object.keys(asked[1].body).sort()).toEqual(['csv_base64', 'encoding', 'password', 'question']);
+    expect(asked[1].headers['X-StatGuard-Client']).toBe('cloud-v0.1');
+    expect(within(box).getByLabelText('시연 비밀번호')).toHaveAttribute('type', 'password');
+  });
 });

@@ -32,7 +32,7 @@ def headers(**changes):
 
 class CloudTransport(unittest.TestCase):
     def test_exact_runtime_bundle_matches_existing_engine(self):
-        for name in ['core.py','local_bridge.py','claims.py']:
+        for name in ['core.py','local_bridge.py','claims.py','live_ask.py']:
             self.assertEqual((ROOT/'src/when2warn/statguard'/name).read_bytes(),(ROOT/'frontend/_statguard_runtime'/name).read_bytes())
 
     def test_existing_engine_sum_and_comparison_are_preserved(self):

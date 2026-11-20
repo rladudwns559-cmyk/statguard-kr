@@ -1,6 +1,8 @@
-"""LOCAL DEMO ONLY: ask an LLM about a CSV, so its answer can be verified on screen.
+"""DEMO ONLY: ask an LLM about a CSV, so its answer can be verified on screen.
 
-Started by the local launcher with `--live`; never part of the Vercel bundle.
+Used by the local launcher with `--live`, and by the password-protected public demo
+endpoint (frontend/api/statguard_ask.py, byte-identical copy in _statguard_runtime).
+The verification itself never calls an LLM.
 stdin: {"csv_base64", "encoding", "question"}  stdout: {"ok", "answer", "model", "usage"} or {"ok": false, "error": {"code"}}
 The API key comes only from the OPENAI_API_KEY environment variable of this child process.
 Same prompt as benchmark condition A (CSV + question, no tools), so the demo shows the
@@ -37,7 +39,7 @@ def output_text(response: dict) -> str:
                    for c in item.get("content", []) if c.get("type") == "output_text").strip()
 
 
-def ask(payload: object, post=None) -> dict:
+def ask(payload: object, post=None, timeout: float = 90) -> dict:
     if not isinstance(payload, dict) or set(payload) != {"csv_base64", "encoding", "question"}:
         return _error("INVALID_REQUEST")
     question = payload["question"]
@@ -66,7 +68,7 @@ def ask(payload: object, post=None) -> dict:
         def post(request_body):
             req = urllib.request.Request("https://api.openai.com/v1/responses", data=json.dumps(request_body).encode(),
                                          headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"})
-            return json.load(urllib.request.urlopen(req, timeout=90))
+            return json.load(urllib.request.urlopen(req, timeout=timeout))
     try:
         response = post(body)
     except urllib.error.HTTPError as error:

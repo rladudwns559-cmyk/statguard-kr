@@ -1,5 +1,6 @@
 {
   "claims.py": "09fe5cbe86391110aabcfbe183defec11cdf0e3af5d13632731a5c4195bd31d6",
   "core.py": "5dd04b7d9f888f6b185456779b482ba572a8b0212a851050169d138a243b7104",
-  "local_bridge.py": "99b1119b6ee316373a8a3a5154d42b60ad9a3cbb0ffd85c3141f9303a4d4b491"
+  "local_bridge.py": "99b1119b6ee316373a8a3a5154d42b60ad9a3cbb0ffd85c3141f9303a4d4b491",
+  "live_ask.py": "4ff6dfc3fa0c51ebaf6af1096c3bf4b25a23abeee697d4973287b5abdb44d039"
 }
