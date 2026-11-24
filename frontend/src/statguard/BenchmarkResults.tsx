@@ -6,7 +6,7 @@ import summaryDomain from './benchmarkSummaryDomain.json';
 import stability from './benchmarkStability.json';
 import correction from './benchmarkCorrection.json';
 import DarkBackdrop from './DarkBackdrop';
-import { CorrectionBars, CoverageRiskSection, DatasetSection, RelatedWorkSection } from './ResultsExtras';
+import { ComparisonSection, CorrectionBars, CoverageRiskSection, DatasetSection, ForensicsSection, RelatedWorkSection } from './ResultsExtras';
 import './statguard.css';
 import './statguard-theme.css';
 
@@ -138,6 +138,8 @@ export default function BenchmarkResults() {
       <OverviewChart/>
       <StabilitySection/>
       <CorrectionSection/>
+      <ComparisonSection/>
+      <ForensicsSection/>
       <CoverageRiskSection/>
       <RelatedWorkSection/>
       <DatasetSection questions={TOTALS.questions} wrong={(correction as unknown as { groups: Record<string, { n: number; A: number }> }).groups['전체'].n - (correction as unknown as { groups: Record<string, { n: number; A: number }> }).groups['전체'].A}/>

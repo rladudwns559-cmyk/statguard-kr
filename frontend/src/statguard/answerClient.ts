@@ -9,7 +9,10 @@ export type Claim = {
   claimed: { text: string; value: string | null; unit: string | null; unit_stated: boolean; tolerance: string; approximate: boolean; target?: string; significant?: boolean; comparator?: string } | null;
   computed: { value: string; unit: string; expression: string; usage: Usage; reference_usage: Usage | null; extra?: Record<string, unknown> | null } | null;
   difference?: { signed: string; absolute: string; unit: string; relative_percent: string | null };
+  diagnosis?: Diagnosis;
 };
+/** Error forensics (statguard-forensics-v0.1): a common calculation mistake that reproduces the wrong number exactly. A likely cause, not proof. */
+export type Diagnosis = { kind: string; title: string; explanation: string; reproduced_value: string; rows: number[]; candidates: number; confidence: 'high' | 'medium'; other_explanations: string[]; note: string };
 export type AnswerVerification = { extractor: string; claims: Claim[]; summary: Record<ClaimStatus, number>; scope: string };
 export type AnswerRequest = { mode: 'verify_answer'; request_id: string; csv_base64: string; source_sha256: string; preview_sha256: string; encoding: 'utf-8-sig' | 'cp949'; units: Record<string, string>; answer_text: string };
 
@@ -80,6 +83,7 @@ export function validateAnswer(payload: unknown, request: AnswerRequest): Answer
   for (const c of v.claims) {
     if (!obj(c) || !STATUSES.includes(c.status as ClaimStatus) || typeof c.sentence !== 'string' || typeof c.reason_code !== 'string') return fail();
     if ((c.status === 'VERIFIED' || c.status === 'CONTRADICTED') && (!obj(c.computed) || !obj(c.claimed) || !obj(c.spec))) return fail();
+    if (c.diagnosis !== undefined && (c.status !== 'CONTRADICTED' || !obj(c.diagnosis) || typeof c.diagnosis.title !== 'string' || typeof c.diagnosis.explanation !== 'string')) return fail();
   }
   const summary = v.summary as Record<string, unknown>;
   if (STATUSES.some(s => summary[s] !==(v.claims as Claim[]).filter(c => c.status === s).length)) return fail();

@@ -5,7 +5,7 @@ import { reducedMotion } from './navigation';
 /**
  * Four WebGL hero models built from the 365 real daily rainfall values (NOAA, Seattle 2023), raw WebGL, no library.
  * In each, a scan sweeps the days in date order, lighting them green while the running total counts up to 888.9 mm;
- * a red marker stays where the running total equals the model's answer (888.4 mm = through 30 December).
+ * a red marker stays where the running total equals the model's answer (first day the running total passes 888.4 mm: 30 December, 886.4 → 888.9).
  *   helix   – the year as a rotating double helix (DNA)
  *   sphere  – the days as a spiky point sphere (galaxy), scanned by a ring
  *   terrain – 12 months x 31 days as a glowing wireframe mountain range, scanned by a laser plane

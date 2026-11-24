@@ -11,10 +11,10 @@ const SIZE = 44, GAP = 12, MAX_H = 168;
 type Mode = 'bars' | DataMode;
 const MODES: { id: Mode; label: string; caption: string }[] = [
   { id: 'bars', label: '막대', caption: '막대 높이 = 시애틀 2023년 월별 강수량(NOAA) · 막대를 가리키면 그 달의 값이 보이고, 주기적으로 12개월이 한 탑으로 쌓여 다시 합산됩니다' },
-  { id: 'helix', label: '데이터 나선', caption: '점 하나 = 하루(시애틀 2023년 일별 강수량 365일, NOAA) · 초록 고리가 날짜 순으로 지나가며 다시 합산하고, 빨간 고리는 누적 888.4mm(12월 30일까지) 지점입니다' },
-  { id: 'sphere', label: '데이터 구체', caption: '점 하나 = 하루(365일) · 비가 많은 날일수록 바깥으로 튀어나옵니다 · 고리가 훑으며 다시 합산하고, 빨간 고리는 누적 888.4mm 지점입니다' },
+  { id: 'helix', label: '데이터 나선', caption: '점 하나 = 하루(시애틀 2023년 일별 강수량 365일, NOAA) · 초록 고리가 날짜 순으로 지나가며 다시 합산하고, 빨간 고리는 누적 합계가 AI의 답 888.4mm를 처음 넘어서는 날(12월 30일)입니다' },
+  { id: 'sphere', label: '데이터 구체', caption: '점 하나 = 하루(365일) · 비가 많은 날일수록 바깥으로 튀어나옵니다 · 고리가 훑으며 다시 합산하고, 빨간 고리는 누적 합계가 888.4mm를 처음 넘어서는 날입니다' },
   { id: 'terrain', label: '강수량 지형', caption: '가로 12개월 × 세로 31일 · 봉우리 높이 = 그날 강수량(NOAA) · 레이저 평면이 날짜 순으로 훑으며 다시 합산합니다' },
-  { id: 'cube', label: '유리 큐브', caption: '점 하나 = CSV의 한 행(365행) · 레이저가 층별로 행을 읽으며 다시 합산하고, 빨간 면은 누적 888.4mm 지점입니다' },
+  { id: 'cube', label: '유리 큐브', caption: '점 하나 = CSV의 한 행(365행) · 레이저가 층별로 행을 읽으며 다시 합산하고, 빨간 면은 누적 합계가 888.4mm를 처음 넘어서는 행입니다' },
 ];
 const initialMode = (): Mode => {
   if (typeof window === 'undefined') return 'helix';

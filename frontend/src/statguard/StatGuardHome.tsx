@@ -6,7 +6,8 @@ import RecountScene from './RecountScene';
 import CorrectionReplay from './CorrectionReplay';
 import ProductShot from './ProductShot';
 import DarkBackdrop from './DarkBackdrop';
-import { RiseHeadline, WrongTicker } from './HomeFx';
+import { ForensicShowcase, RiseHeadline, WrongTicker } from './HomeFx';
+import { COMPARISON } from './ResultsExtras';
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle } from './StatGuardChrome';
 import './statguard.css';
 import './statguard-theme.css';
@@ -22,6 +23,7 @@ const STEPS = [
   { title: '다시 계산', en: 'Statistical Executor', body: '같은 CSV로 34자리 정밀도의 결정적 계산을 합니다. 계산식과 쓴 행을 남깁니다.' },
   { title: '비교', en: 'Claim Verifier', body: '답변에 적힌 자릿수로 반올림했을 때 같은지 봅니다. 단위가 다르면 비교하지 않습니다.' },
   { title: '판정 또는 보류', en: 'Abstention', body: '열·기간·기준이 모호하거나 해석이 필요한 문장은 판정하지 않고 보류합니다.' },
+  { title: '틀린 이유 찾기', en: 'Error Forensics', body: '불일치한 숫자는 흔한 계산 실수를 하나씩 다시 계산해, AI의 숫자가 그대로 나오는 실수를 찾습니다.' },
 ];
 const STAMPS = [
   { cls: 'ok', label: '계산 일치', body: '연결된 계산이 답변의 숫자와 맞습니다.' },
@@ -51,16 +53,19 @@ export default function StatGuardHome() {
       <section className="sg-receipt" aria-label="핵심 실험 결과">
         {a && c && <div><strong className="sg-num">{pct(a.rate)} → {pct(c.rate)}</strong><span>365·1,460행 표에서 일반 LLM의 정답률 → 계산 도구를 쓴 LLM의 정답률</span></div>}
         <div><strong className="sg-num">{TOTALS.passed}건 중 {TOTALS.wrongPassed}건</strong><span>StatGuard가 통과시킨 LLM 답변 중 오답 (실험 3개, A·C 조건, 각 3회). 95% 신뢰구간 상한 {pct1(WRONG_UPPER.all)}</span></div>
+        <div><strong className="sg-num">{COMPARISON.verifiers.judge.passed_wrong} vs {COMPARISON.verifiers.prereg.passed_wrong}</strong><span>AI 3종이 쓴 답 360개에서 ‘맞다’고 통과시킨 오답 수: LLM에게 채점을 맡겼을 때 vs StatGuard</span></div>
         {p && <div><strong className="sg-num">{p.precision?.toFixed(2)} / {p.recall?.toFixed(2)}</strong><span>일부러 틀린 숫자를 넣은 문장에서 오류 탐지 정밀도 / 재현율 (판정한 문장 기준)</span></div>}
       </section>
 
       <CorrectionReplay/>
 
+      <ForensicShowcase/>
+
       <ProductShot/>
 
       <section className="sg-section" aria-labelledby="how-heading">
         <h2 id="how-heading">답변 하나를 이렇게 확인합니다</h2>
-        <p>네 단계는 순서대로 실행됩니다. 어느 단계에서든 확정할 수 없으면 그 자리에서 보류합니다. 판정 뒤에는 불일치한 수치의 재계산 값과 계산식을 AI에게 돌려보내 답변을 고치게 할 수 있습니다. 실험에서 불일치로 잡힌 오답 {flagFix.n}건 중 {flagFix.S1}건이 한 번에 고쳐졌고, 근거 없이 다시 확인만 시킨 경우는 {flagFix.R1}건이었습니다.</p>
+        <p>다섯 단계는 순서대로 실행됩니다. 어느 단계에서든 확정할 수 없으면 그 자리에서 보류합니다. 판정 뒤에는 불일치한 수치의 재계산 값과 계산식을 AI에게 돌려보내 답변을 고치게 할 수 있습니다. 실험에서 불일치로 잡힌 오답 {flagFix.n}건 중 {flagFix.S1}건이 한 번에 고쳐졌고, 근거 없이 다시 확인만 시킨 경우는 {flagFix.R1}건이었습니다.</p>
         <ol className="sg-rail">{STEPS.map((s, i) => <li key={s.title}><span className="num" aria-hidden="true">{i + 1}</span><h3>{s.title}</h3><small>{s.en}</small><p>{s.body}</p></li>)}</ol>
       </section>
 
@@ -78,7 +83,7 @@ export default function StatGuardHome() {
 
       <section className="sg-section" aria-labelledby="limit-heading">
         <h2 id="limit-heading">‘계산 일치’가 보증하지 않는 것</h2>
-        <p className="sg-note">‘계산 일치’는 답변의 숫자 하나가 연결된 계산과 맞는다는 뜻입니다. 답변 전체의 사실, 인과관계, 자료 자체의 정확성은 보증하지 않습니다. 실험은 질문 {TOTALS.questions}개·자료 {TOTALS.datasets}종·모델 1종({TOTALS.model})의 소규모이며, 조건과 한계는 <a href="/statguard/results">실험 결과</a>에 모두 공개합니다.</p>
+        <p className="sg-note">‘계산 일치’는 답변의 숫자 하나가 연결된 계산과 맞는다는 뜻입니다. 답변 전체의 사실, 인과관계, 자료 자체의 정확성은 보증하지 않습니다. 실험은 질문 {TOTALS.questions}개·자료 {TOTALS.datasets}종의 소규모이고 주 실험은 모델 1종({TOTALS.model}), 비교 실험은 답변 모델 3종(모두 OpenAI)이며, 조건과 한계는 <a href="/statguard/results">실험 결과</a>에 모두 공개합니다.</p>
       </section>
 
       <footer className="sg-footer">{SITE_NAME} {STATGUARD_VERSION} · 2026 하반기 SW·AI 융합연구개발 일반과제</footer>

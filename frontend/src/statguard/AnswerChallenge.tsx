@@ -13,6 +13,7 @@ export type Item = {
   key: string; bench: string; set: string; dataset: string; rows: number; question: string; answer: string; final: string; expected: string;
   answerable: boolean; correct: boolean; error_kind: string; statguard: 'FLAG' | 'PASS' | 'HOLD';
   flag: { claimed: string; recomputed: string } | null; targeted: boolean; corrected_round: number | null; recheck_fixed: boolean | null;
+  why?: { title: string; explanation: string; confidence: 'high' | 'medium' } | null;
 };
 const D = data as unknown as { model: string; items: Item[] };
 const ROUND = 5;
@@ -70,18 +71,20 @@ export function Challenge({ seed }: { seed?: () => number } = {}) {
       <p><span className={'sg-chal-sg sg-chal-sg-' + item.statguard.toLowerCase()}>StatGuard: {SG_LABEL[item.statguard]}</span>
         {item.flag && <> 답변의 {item.flag.claimed} → CSV 재계산 {item.flag.recomputed}</>}
         {!item.correct && item.corrected_round !== null && <> · 근거를 돌려주자 {item.corrected_round}번째 수정에서 고쳐짐</>}</p>
+      {item.why && <p className="sg-why"><b>왜 틀렸을까 · {item.why.title}</b> {item.why.explanation}</p>}
       <button type="button" className="sg-primary" onClick={next}>{i + 1 < round.length ? '다음 문제' : '결과 보기'}</button>
     </div>}
   </div>;
 }
 
-type Filter = 'all' | 'FLAG' | 'HOLD' | 'fixed';
+type Filter = 'all' | 'FLAG' | 'HOLD' | 'fixed' | 'why';
 export function Gallery() {
   const wrong = useMemo(() => D.items.filter(i => !i.correct), []);
   const [filter, setFilter] = useState<Filter>('all');
-  const shown = wrong.filter(i => filter === 'all' || (filter === 'fixed' ? i.corrected_round !== null : i.statguard === filter));
-  const count = (f: Filter) => wrong.filter(i => f === 'all' || (f === 'fixed' ? i.corrected_round !== null : i.statguard === f)).length;
-  const tabs: [Filter, string][] = [['all', '전체'], ['FLAG', 'StatGuard가 잡은 것'], ['HOLD', '보류한 것'], ['fixed', '근거로 고쳐진 것']];
+  const keep = (f: Filter, i: Item) => f === 'all' || (f === 'fixed' ? i.corrected_round !== null : f === 'why' ? !!i.why : i.statguard === f);
+  const shown = wrong.filter(i => keep(filter, i));
+  const count = (f: Filter) => wrong.filter(i => keep(f, i)).length;
+  const tabs: [Filter, string][] = [['all', '전체'], ['FLAG', 'StatGuard가 잡은 것'], ['HOLD', '보류한 것'], ['fixed', '근거로 고쳐진 것'], ['why', '틀린 이유를 찾은 것']];
   return <>
     <div className="sg-result-tabs" aria-label="오답 갤러리 거르기">{tabs.map(([f, l]) => <button key={f} type="button" aria-pressed={filter === f} onClick={() => setFilter(f)}>{l} ({count(f)})</button>)}</div>
     <div className="sg-gallery">{shown.map(i => <article key={i.key} className={'sg-gallery-card sg-gallery-' + i.statguard.toLowerCase()} aria-label={`${i.key} 오답`}>
@@ -89,6 +92,7 @@ export function Gallery() {
       <h3>{i.question}</h3>
       <dl><div><dt>AI의 최종값</dt><dd className="sg-gallery-bad">{i.final}</dd></div><div><dt>실제 값</dt><dd>{i.expected}</dd></div></dl>
       <p className="sg-gallery-sg"><b>StatGuard</b> {SG_LABEL[i.statguard]}{i.flag ? ` (재계산 ${i.flag.recomputed})` : ''}</p>
+      {i.why && <p className="sg-why"><b>왜 틀렸을까 · {i.why.title}</b> {i.why.explanation}</p>}
       <p className="sg-gallery-fix"><b>근거 교정</b> {i.corrected_round !== null ? `${i.corrected_round}번째 수정에서 고쳐짐` : '고쳐지지 않음'} · <b>단순 재확인</b> {i.recheck_fixed ? '고쳐짐' : '고쳐지지 않음'}</p>
       <details><summary>AI 답변 원문</summary><p>{i.answer}</p></details>
     </article>)}</div>

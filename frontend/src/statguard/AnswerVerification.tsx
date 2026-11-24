@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { CsvTable } from './csv';
 import { base64Bytes, CalculationError } from './calculationClient';
 import { wordDiff } from './textDiff';
-import { askLive, correctionFeedback, liveStatus, NOTES, OPERATION_LABEL, REASONS, STATUS_LABEL, STATUSES, verifyAnswer, type AnswerVerification as Result, type Claim, type LiveStatus } from './answerClient';
+import { askLive, correctionFeedback, liveStatus, NOTES, OPERATION_LABEL, REASONS, STATUS_LABEL, STATUSES, verifyAnswer, type AnswerVerification as Result, type Claim, type Diagnosis, type LiveStatus } from './answerClient';
 import { UsedRows } from './CalculationResult';
 import type { SamplePreset } from './samples';
 import { STATGUARD_VERSION } from './StatGuardChrome';
@@ -35,6 +35,17 @@ function ReadBack({ answer, claims }: { answer: string; claims: Claim[] }) {
     {parts.map((p, i) => p.claim ? <button key={i} type="button" className={'sg-rb-' + p.claim.status.toLowerCase().replace('_', '-')} title={STATUS_LABEL[p.claim.status]} onClick={() => jump(p.claim!.claim_id)}>{p.text}</button> : <span key={i}>{p.text}</span>)}</div>;
 }
 
+/** Why the number is wrong: the mistake StatGuard reproduced by recomputing (no LLM). */
+export function Forensic({ d }: { d: Diagnosis }) {
+  return <aside className="sg-forensic" aria-label="틀린 이유 역추적">
+    <p className="sg-forensic-head"><span>왜 틀렸을까 · 계산으로 재현</span><b className={'sg-forensic-conf sg-forensic-' + d.confidence}>{d.confidence === 'high' ? '확신 높음' : '확신 중간'}</b></p>
+    <h4>{d.title}</h4>
+    <p>{d.explanation}</p>
+    {d.other_explanations.length > 0 && <p className="sg-hint">같은 값을 만드는 다른 설명: {d.other_explanations.join(', ')}</p>}
+    <p className="sg-hint">{d.note}</p>
+  </aside>;
+}
+
 function ClaimCard({ claim, table }: { claim: Claim; table: CsvTable }) {
   const tone = claim.status.toLowerCase().replace('_', '-');
   return <article id={'sg-claim-' + claim.claim_id} className={'sg-claim sg-claim-' + tone} aria-label={`${claim.claim_id} ${STATUS_LABEL[claim.status]}`}>
@@ -46,6 +57,7 @@ function ClaimCard({ claim, table }: { claim: Claim; table: CsvTable }) {
       {claim.difference && claim.claimed.target !== 'significance' && <div><dt>차이</dt><dd>{claim.difference.signed.startsWith('-') ? '' : '+'}{short(claim.difference.signed)} {claim.difference.unit}{claim.difference.relative_percent && claim.status === 'CONTRADICTED' ? ` (${claim.difference.relative_percent}%)` : ''}</dd></div>}
     </dl> : claim.claimed && <p className="sg-hint">답변의 수치: {claim.claimed.text} · 재계산하지 않음</p>}
     <p className="sg-claim-reason">{REASONS[claim.reason_code] ?? claim.reason_code}</p>
+    {claim.diagnosis && <Forensic d={claim.diagnosis}/>}
     {claim.notes.filter(n => NOTES[n]).map(n => <p className="sg-hint" key={n}>※ {NOTES[n]}</p>)}
     {claim.interpretive && claim.computed && <p className="sg-hint">※ 문장의 해석(원인·영향 등) 부분은 판정 범위 밖입니다.</p>}
     {claim.computed && claim.spec && <details><summary>계산 근거 보기</summary>

@@ -50,4 +50,13 @@ describe('AI 오답 체험', () => {
     expect(screen.getAllByRole('article').every(a => /번째 수정에서 고쳐짐/.test(a.textContent ?? ''))).toBe(true);
     expect(screen.getByText(/틀린 답을 ‘계산 일치’로 통과시킨 경우는 0개/)).toBeVisible();
   });
+
+  it('shows the reproduced cause (error forensics) on wrong answers that have one', async () => {
+    window.history.replaceState(null, '', '/statguard/challenge'); render(<AnswerChallenge/>);
+    await userEvent.click(screen.getByRole('button', { name: /틀린 이유를 찾은 것 \(4\)/ }));
+    const cards = screen.getAllByRole('article');
+    expect(cards).toHaveLength(4);
+    expect(cards.every(a => /왜 틀렸을까/.test(a.textContent ?? ''))).toBe(true);
+    expect(screen.getByLabelText('v0.3:R02 오답')).toHaveTextContent(/Guyana.*44,871\.10달러로 답변의 숫자와 같습니다/);
+  });
 });

@@ -1,0 +1,8846 @@
+{
+ "meta": {
+  "questions": 120,
+  "models": [
+   "gpt-6-luna",
+   "gpt-4o-mini",
+   "gpt-5-mini"
+  ],
+  "judges": [
+   "gpt-6-luna",
+   "gpt-5-mini"
+  ],
+  "verifier": "rule v0.7 (frozen)",
+  "pending": {
+   "judge:gpt-5-mini:gpt-4o-mini": 117,
+   "judge:gpt-5-mini:gpt-5-mini": 117,
+   "judge:gpt-5-mini:gpt-6-luna": 26
+  }
+ },
+ "q1": {
+  "statguard": {
+   "gpt-6-luna": {
+    "n": 120,
+    "correct": 93,
+    "wrong": 27,
+    "pass": 53,
+    "passed_wrong": 0,
+    "passed_wrong_rate": 0.0,
+    "passed_wrong_upper95": 0.0672,
+    "wrong_flagged": 8,
+    "wrong_held": 19,
+    "false_alarm": 0,
+    "hold": 59,
+    "coverage": 0.4417
+   },
+   "gpt-4o-mini": {
+    "n": 120,
+    "correct": 53,
+    "wrong": 67,
+    "pass": 19,
+    "passed_wrong": 0,
+    "passed_wrong_rate": 0.0,
+    "passed_wrong_upper95": 0.1765,
+    "wrong_flagged": 34,
+    "wrong_held": 33,
+    "false_alarm": 1,
+    "hold": 66,
+    "coverage": 0.1583
+   },
+   "gpt-5-mini": {
+    "n": 120,
+    "correct": 81,
+    "wrong": 39,
+    "pass": 33,
+    "passed_wrong": 1,
+    "passed_wrong_rate": 0.0303,
+    "passed_wrong_upper95": 0.1576,
+    "wrong_flagged": 7,
+    "wrong_held": 31,
+    "false_alarm": 8,
+    "hold": 72,
+    "coverage": 0.275
+   },
+   "전체": {
+    "n": 360,
+    "correct": 227,
+    "wrong": 133,
+    "pass": 105,
+    "passed_wrong": 1,
+    "passed_wrong_rate": 0.0095,
+    "passed_wrong_upper95": 0.0519,
+    "wrong_flagged": 49,
+    "wrong_held": 83,
+    "false_alarm": 9,
+    "hold": 197,
+    "coverage": 0.2917
+   }
+  },
+  "judge_gpt-6-luna": {
+   "gpt-6-luna": {
+    "n": 120,
+    "correct": 93,
+    "wrong": 27,
+    "pass": 99,
+    "passed_wrong": 9,
+    "passed_wrong_rate": 0.0909,
+    "passed_wrong_upper95": 0.1656,
+    "wrong_flagged": 7,
+    "wrong_held": 11,
+    "false_alarm": 3,
+    "hold": 11,
+    "coverage": 0.825
+   },
+   "gpt-4o-mini": {
+    "n": 120,
+    "correct": 53,
+    "wrong": 67,
+    "pass": 53,
+    "passed_wrong": 1,
+    "passed_wrong_rate": 0.0189,
+    "passed_wrong_upper95": 0.1007,
+    "wrong_flagged": 66,
+    "wrong_held": 0,
+    "false_alarm": 1,
+    "hold": 0,
+    "coverage": 0.4417
+   },
+   "gpt-5-mini": {
+    "n": 120,
+    "correct": 81,
+    "wrong": 39,
+    "pass": 83,
+    "passed_wrong": 3,
+    "passed_wrong_rate": 0.0361,
+    "passed_wrong_upper95": 0.102,
+    "wrong_flagged": 36,
+    "wrong_held": 0,
+    "false_alarm": 1,
+    "hold": 0,
+    "coverage": 0.6917
+   },
+   "전체": {
+    "n": 360,
+    "correct": 227,
+    "wrong": 133,
+    "pass": 235,
+    "passed_wrong": 13,
+    "passed_wrong_rate": 0.0553,
+    "passed_wrong_upper95": 0.0927,
+    "wrong_flagged": 109,
+    "wrong_held": 11,
+    "false_alarm": 5,
+    "hold": 11,
+    "coverage": 0.6528
+   }
+  },
+  "judge_gpt-5-mini": {
+   "gpt-6-luna": {
+    "n": 94,
+    "correct": 80,
+    "wrong": 14,
+    "pass": 77,
+    "passed_wrong": 3,
+    "passed_wrong_rate": 0.039,
+    "passed_wrong_upper95": 0.1097,
+    "wrong_flagged": 2,
+    "wrong_held": 9,
+    "false_alarm": 1,
+    "hold": 14,
+    "coverage": 0.8191
+   },
+   "gpt-4o-mini": {
+    "n": 3,
+    "correct": 0,
+    "wrong": 3,
+    "pass": 0,
+    "passed_wrong": 0,
+    "passed_wrong_rate": null,
+    "passed_wrong_upper95": null,
+    "wrong_flagged": 3,
+    "wrong_held": 0,
+    "false_alarm": 0,
+    "hold": 0,
+    "coverage": 0.0
+   },
+   "gpt-5-mini": {
+    "n": 3,
+    "correct": 2,
+    "wrong": 1,
+    "pass": 2,
+    "passed_wrong": 0,
+    "passed_wrong_rate": 0.0,
+    "passed_wrong_upper95": 0.8419,
+    "wrong_flagged": 1,
+    "wrong_held": 0,
+    "false_alarm": 0,
+    "hold": 0,
+    "coverage": 0.6667
+   },
+   "전체": {
+    "n": 100,
+    "correct": 82,
+    "wrong": 18,
+    "pass": 79,
+    "passed_wrong": 3,
+    "passed_wrong_rate": 0.038,
+    "passed_wrong_upper95": 0.107,
+    "wrong_flagged": 6,
+    "wrong_held": 9,
+    "false_alarm": 1,
+    "hold": 14,
+    "coverage": 0.79
+   }
+  },
+  "self_consistency": {
+   "gpt-6-luna": {
+    "n": 88,
+    "correct": 65,
+    "wrong": 23,
+    "pass": 53,
+    "passed_wrong": 0,
+    "passed_wrong_rate": 0.0,
+    "passed_wrong_upper95": 0.0672,
+    "wrong_flagged": 0,
+    "wrong_held": 23,
+    "false_alarm": 0,
+    "hold": 35,
+    "coverage": 0.6023
+   },
+   "전체": {
+    "n": 88,
+    "correct": 65,
+    "wrong": 23,
+    "pass": 53,
+    "passed_wrong": 0,
+    "passed_wrong_rate": 0.0,
+    "passed_wrong_upper95": 0.0672,
+    "wrong_flagged": 0,
+    "wrong_held": 23,
+    "false_alarm": 0,
+    "hold": 35,
+    "coverage": 0.6023
+   }
+  }
+ },
+ "q1_main88_gpt6luna": {
+  "statguard": {
+   "n": 88,
+   "correct": 65,
+   "wrong": 23,
+   "pass": 35,
+   "passed_wrong": 0,
+   "passed_wrong_rate": 0.0,
+   "passed_wrong_upper95": 0.1,
+   "wrong_flagged": 7,
+   "wrong_held": 16,
+   "false_alarm": 0,
+   "hold": 46,
+   "coverage": 0.3977
+  },
+  "judge_gpt-6-luna": {
+   "n": 88,
+   "correct": 65,
+   "wrong": 23,
+   "pass": 71,
+   "passed_wrong": 8,
+   "passed_wrong_rate": 0.1127,
+   "passed_wrong_upper95": 0.21,
+   "wrong_flagged": 6,
+   "wrong_held": 9,
+   "false_alarm": 2,
+   "hold": 9,
+   "coverage": 0.8068
+  },
+  "judge_gpt-5-mini": {
+   "n": 67,
+   "correct": 54,
+   "wrong": 13,
+   "pass": 52,
+   "passed_wrong": 3,
+   "passed_wrong_rate": 0.0577,
+   "passed_wrong_upper95": 0.1595,
+   "wrong_flagged": 2,
+   "wrong_held": 8,
+   "false_alarm": 1,
+   "hold": 12,
+   "coverage": 0.7761
+  },
+  "self_consistency": {
+   "n": 88,
+   "correct": 65,
+   "wrong": 23,
+   "pass": 53,
+   "passed_wrong": 0,
+   "passed_wrong_rate": 0.0,
+   "passed_wrong_upper95": 0.0672,
+   "wrong_flagged": 0,
+   "wrong_held": 23,
+   "false_alarm": 0,
+   "hold": 35,
+   "coverage": 0.6023
+  }
+ },
+ "q2": {
+  "gpt-4o-mini": {
+   "n": 120,
+   "A": 53,
+   "format_error": 0,
+   "statguard": {
+    "FLAG": 35,
+    "HOLD": 66,
+    "PASS": 19
+   },
+   "targeted": 73,
+   "R1": {
+    "correct": 55,
+    "fixed": 2,
+    "broken": 0,
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 53,
+    "fixed": 1,
+    "broken": 1,
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 82,
+    "fixed": 30,
+    "broken": 1,
+    "passed_wrong": 4
+   },
+   "S2": {
+    "correct": 88,
+    "fixed": 36,
+    "broken": 1,
+    "passed_wrong": 7
+   },
+   "flagged": {
+    "n": 35,
+    "R1_fixed": 2,
+    "S1_fixed": 29,
+    "A_correct": 1
+   }
+  },
+  "gpt-5-mini": {
+   "n": 120,
+   "A": 81,
+   "format_error": 0,
+   "statguard": {
+    "PASS": 33,
+    "HOLD": 72,
+    "FLAG": 15
+   },
+   "targeted": 48,
+   "R1": {
+    "correct": 81,
+    "fixed": 0,
+    "broken": 0,
+    "passed_wrong": 3
+   },
+   "R2": {
+    "correct": 82,
+    "fixed": 1,
+    "broken": 0,
+    "passed_wrong": 3
+   },
+   "S1": {
+    "correct": 83,
+    "fixed": 5,
+    "broken": 3,
+    "passed_wrong": 3
+   },
+   "S2": {
+    "correct": 81,
+    "fixed": 4,
+    "broken": 4,
+    "passed_wrong": 4
+   },
+   "flagged": {
+    "n": 15,
+    "R1_fixed": 8,
+    "S1_fixed": 10,
+    "A_correct": 8
+   }
+  }
+ },
+ "usage": {
+  "gpt-4o-mini": {
+   "calls": 377,
+   "input_tokens": 3332579,
+   "output_tokens": 38348,
+   "errors": 0
+  },
+  "gpt-4.1-mini": {
+   "calls": 76,
+   "input_tokens": 304117,
+   "output_tokens": 5840,
+   "errors": 0
+  },
+  "gpt-5-mini": {
+   "calls": 388,
+   "input_tokens": 2517901,
+   "output_tokens": 179928,
+   "errors": 0
+  },
+  "gpt-6-luna": {
+   "calls": 372,
+   "input_tokens": 3120989,
+   "output_tokens": 194914,
+   "errors": 0
+  }
+ },
+ "per_question": {
+  "v0.1:S01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "FLAG",
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:S08": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:P01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.1:S02": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:S03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:S04": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.1:S05": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:S06": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:S07": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:C01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:C02": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:C03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.1:C04": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:C05": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:C06": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:P02": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:P03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.1:K02": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K04": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K05": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K06": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K07": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K08": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K09": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:K10": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:V01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:V02": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:V03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.1:V04": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:V05": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:V06": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:V07": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.1:V08": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1:V09": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H02": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H04": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H05": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H06": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H07": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H08": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H09": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H10": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H11": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H12": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H13": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H14": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H15": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H16": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H17": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.1_holdout:H18": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W08": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "FLAG",
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "FLAG",
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:F06": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:W01": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W02": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W04": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W05": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W06": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W07": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W09": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:W10": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "FLAG",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W11": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:W12": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "FLAG",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:W13": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W14": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:W15": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:W16": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:F01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:F02": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:F03": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:F04": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:F05": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:F07": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:F08": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:F09": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:F10": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:F11": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "FLAG",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:F12": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2:F13": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2:F14": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH02": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH04": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH05": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH06": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH07": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH08": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH09": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "HOLD",
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH10": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH11": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH12": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH13": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.2_holdout:LH14": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": null
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R01": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "FLAG",
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "judge_gpt-5-mini": "PASS",
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R02": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R03": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R04": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R05": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R06": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R07": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R08": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R09": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R10": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R11": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R12": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R13": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R14": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 1,
+      "decision": "HOLD",
+      "correct": true
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R15": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R16": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 2,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     },
+     {
+      "round": 1,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "FLAG",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "FLAG",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R17": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "FORMAT_ERROR",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "HOLD",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R18": {
+   "gpt-6-luna": {
+    "correct": false,
+    "final": "VALUE",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "self_consistency": "HOLD"
+   },
+   "gpt-4o-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": false,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "FLAG",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": false
+     }
+    ]
+   }
+  },
+  "v0.3:R19": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "VALUE",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R20": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "PASS",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "PASS",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R21": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  },
+  "v0.3:R22": {
+   "gpt-6-luna": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "self_consistency": "PASS"
+   },
+   "gpt-4o-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   },
+   "gpt-5-mini": {
+    "correct": true,
+    "final": "ABSTAIN",
+    "statguard": "HOLD",
+    "judge_gpt-6-luna": "PASS",
+    "judge_invalid": 0,
+    "R": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ],
+    "S": [
+     {
+      "round": 0,
+      "decision": "HOLD",
+      "correct": true
+     }
+    ]
+   }
+  }
+ }
+}

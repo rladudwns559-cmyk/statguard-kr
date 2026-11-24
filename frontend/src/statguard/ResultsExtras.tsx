@@ -1,5 +1,6 @@
 import coverage from './benchmarkCoverage.json';
 import correction from './benchmarkCorrection.json';
+import comparison from './benchmarkComparison.json';
 
 /** Two charts for the results page: verify→correct accuracy bars, and coverage vs. risk of the verifier. Data from result files only. */
 
@@ -82,5 +83,65 @@ export function DatasetSection({ questions, wrong }: { questions: number; wrong:
     <p className="sg-hint">다른 연구자가 같은 실험을 하거나 다른 모델·검증기를 비교할 수 있도록, 질문 {questions}개와 기대값, 일반 LLM 답변(오답 {wrong}개), StatGuard 판정, 교정 결과, 표 {TABLES.length}종을 그대로 공개합니다. 표의 숫자는 원본과 같으며 출처·라이선스는 설명서에 있습니다.</p>
     <ul className="sg-files">{DATA_FILES.map(f => <li key={f.name}><a href={f.href} download>{f.name}</a><span>{f.what}</span></li>)}
       <li><span className="sg-files-name">tables/</span><span>{TABLES.map((t, i) => <a key={t} href={`/statguard-dataset/tables/${encodeURIComponent(t)}.csv`} download>{t}.csv{i < TABLES.length - 1 ? ' · ' : ''}</a>)}</span></li></ul>
+  </section>;
+}
+
+/* ---- statguard_comparison_v0.1: LLM judge vs StatGuard, three answer models; statguard_forensics_v0.1 ---- */
+type V = { n: number; pass: number; passed_wrong: number; wrong: number; wrong_flagged: number; false_alarm: number; coverage: number; upper95: number };
+type ModelRow = { n: number; A: number; R1: number; S1: number; S2: number; flagged: number; flagged_R1: number; flagged_S1: number; S1_broken: number; passed_wrong: Record<string, [number, number]> };
+type Fx = { injected: Record<string, number>; random: { explained: number; n: number; high: number }; real_by_model: Record<string, { contradicted: number; explained: number; high?: number }>;
+  injected_by_kind: Record<string, Record<string, number>>; examples: { model: string; question: string; sentence: string; diagnosis: { title: string; explanation: string } }[] };
+const CMP = comparison as unknown as { verifiers: Record<'prereg' | 'final_rule' | 'judge' | 'hybrid', V>; main88: Record<string, V>; models: Record<string, ModelRow>;
+  after_correction_prereg: Record<string, { R2: number; S2: number }>; judge5_partial: { done: number; of: number }; forensics: Fx };
+const rate = (a: number, n: number) => n ? `${(a / n * 100).toFixed(1)}%` : '-';
+export const COMPARISON = CMP;
+
+export function ComparisonSection() {
+  const v = CMP.verifiers;
+  const bars = [
+    { k: 'judge', label: 'LLM에게 채점을 맡김 (gpt-6-luna 심판)', t: v.judge, cls: 'bad' },
+    { k: 'hybrid', label: 'StatGuard 보류분만 LLM 심판 (결합·탐색)', t: v.hybrid, cls: 'mid' },
+    { k: 'prereg', label: 'StatGuard (사전 등록 규칙)', t: v.prereg, cls: 'ok' },
+    { k: 'final_rule', label: 'StatGuard 최종값 규칙 (탐색)', t: v.final_rule, cls: 'ok2' },
+  ];
+  const max = Math.max(...bars.map(b => b.t.passed_wrong), 1);
+  const models = Object.entries(CMP.models);
+  const m88 = CMP.main88;
+  return <section className="sg-card sg-large" aria-labelledby="compare-heading"><p className="sg-eyebrow">검증 방식 비교 · 답변 모델 3종</p><h2 id="compare-heading">LLM에게 채점을 맡기면 어떻게 될까?</h2>
+    <p className="sg-hint">같은 질문 120개에 대해 답변 모델 3종(gpt-6-luna·gpt-4o-mini·gpt-5-mini)이 쓴 답 360개를, ① CSV를 보고 맞는지 판정하라고 LLM(gpt-6-luna)에게 맡긴 경우와 ② StatGuard가 다시 계산한 경우로 비교했습니다. 정답은 채점에만 썼고, 조건은 실행 전에 PROTOCOL로 고정했습니다.</p>
+    <div className="sg-cbars" role="img" aria-label={'통과시킨 답 중 오답 수: ' + bars.map(b => `${b.label} ${b.t.passed_wrong}개(통과 ${b.t.pass}개 중)`).join(', ')}>
+      {bars.map(b => <div className="sg-cbar" key={b.k}>
+        <span className="sg-hbar-label">{b.label}</span>
+        <span className="sg-hbar-track"><span className={'sg-cbar-fill sg-cbar-' + b.cls} style={{ width: `${Math.max(1.5, b.t.passed_wrong / max * 100)}%` }}/></span>
+        <b className="sg-num">{b.t.passed_wrong}<small>/{b.t.pass}</small></b></div>)}
+      <small className="sg-hint">막대 = ‘맞다’고 통과시킨 답 중 실제로 틀린 답의 수(오른쪽: 통과시킨 답 수).</small>
+    </div>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="검증 방식 비교 표"><table><thead><tr><th scope="col">방식</th><th scope="col">통과시킨 답</th><th scope="col">그중 오답 (95% 상한)</th><th scope="col">오답을 틀렸다고 지적</th><th scope="col">맞는 답을 틀렸다고 함</th></tr></thead>
+      <tbody>{bars.map(b => <tr key={b.k}><th scope="row">{b.label}</th><td>{b.t.pass}/{b.t.n} ({rate(b.t.pass, b.t.n)})</td><td>{b.t.passed_wrong} ({rate(b.t.passed_wrong, b.t.pass)}, ≤{(b.t.upper95 * 100).toFixed(1)}%)</td><td>{b.t.wrong_flagged}/{b.t.wrong}</td><td>{b.t.false_alarm}</td></tr>)}</tbody></table></div>
+    <p className="sg-hint"><strong>해석:</strong> LLM 심판은 더 많은 답을 판정하지만, ‘맞다’고 한 답 중 {v.judge.passed_wrong}개가 실제로는 틀렸습니다. StatGuard는 판정하는 답이 적은 대신(보류가 많음) 틀린 답을 통과시킨 경우가 {v.prereg.passed_wrong}개였습니다. 틀린 숫자를 ‘맞다’고 믿게 만드는 실수가 가장 위험하다는 것이 이 연구의 출발점입니다.</p>
+    <p className="sg-hint"><strong>정직하게 밝히는 점:</strong> 사전 등록 규칙(불일치 없이 일치한 숫자가 하나라도 있으면 통과)은 긴 답변에서 중간 숫자만 맞고 최종값은 보류인 답 {v.prereg.passed_wrong}개를 통과시켰고, 교정 후 답변에서는 이런 경우가 {Object.entries(CMP.after_correction_prereg).map(([m, x]) => `${m} ${x.S2}개`).join(', ')}로 늘었습니다. 결과를 본 뒤 ‘최종값이 재계산과 일치할 때만 통과’로 바꾼 규칙(탐색 분석)에서는 통과 중 오답이 {v.final_rule.passed_wrong}개였지만, 사후에 만든 규칙이므로 새 문항으로 다시 확인해야 합니다. 같은 질문을 세 번 물어 답이 같을 때만 믿는 ‘자기 일관성’도 gpt-6-luna 88문항에서 통과 {m88.self_consistency?.pass}개 중 오답 {m88.self_consistency?.passed_wrong}개로 좋았습니다(StatGuard {m88.statguard?.pass}개 중 {m88.statguard?.passed_wrong}개, LLM 심판 {m88['judge_gpt-6-luna']?.pass}개 중 {m88['judge_gpt-6-luna']?.passed_wrong}개). 추론 모델 gpt-5-mini를 심판으로 쓴 비교는 예산 한도로 {CMP.judge5_partial.done}/{CMP.judge5_partial.of}개만 실행해 결과에서 뺐습니다.</p>
+    <h3 className="sg-subhead">다른 AI 모델에서도 근거 교정이 통할까?</h3>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="답변 모델별 정확도와 교정 표"><table><thead><tr><th scope="col">답변 모델</th><th scope="col">원래 정답률</th><th scope="col">“다시 확인해” 1회</th><th scope="col">StatGuard 근거 1회</th><th scope="col">불일치로 잡힌 오답 고침 (근거 / 재확인)</th><th scope="col">맞던 답이 틀려짐 (근거 1회)</th></tr></thead>
+      <tbody>{models.map(([m, r]) => <tr key={m}><th scope="row">{m}</th><td>{rate(r.A, r.n)}</td><td>{rate(r.R1, r.n)}</td><td><strong>{rate(r.S1, r.n)}</strong></td><td>{r.flagged_S1}/{r.flagged} · {r.flagged_R1}/{r.flagged}</td><td>{r.S1_broken}</td></tr>)}</tbody></table></div>
+    <p className="sg-hint">계산 불일치로 잡힌 오답은 세 모델 모두에서 재계산 근거를 받았을 때 더 많이 고쳐졌습니다. 효과는 원래 오답이 많던 gpt-4o-mini에서 가장 컸고(정답률 {rate(CMP.models['gpt-4o-mini'].A, 120)} → {rate(CMP.models['gpt-4o-mini'].S1, 120)}), 추론 모델 gpt-5-mini에서는 작았습니다. gpt-6-luna 행은 기존 교정 실험(statguard_correction_v0.1)의 결과입니다. 모델·문항이 적어 경향으로만 해석합니다.</p>
+  </section>;
+}
+
+const FX_KIND: Record<string, string> = { OMITTED_ROW: '행 하나 누락', WRONG_STATISTIC: '다른 통계량(평균↔중앙값 등)', WRONG_COUNT: '개수 잘못 셈', SCALE: '자릿수(단위) 오류', WRONG_COLUMN: '다른 열 계산' };
+export function ForensicsSection() {
+  const f = CMP.forensics, inj = f.injected, nInj = (inj.correct ?? 0) + (inj.other ?? 0) + (inj.missed ?? 0);
+  const real = Object.entries(f.real_by_model);
+  return <section className="sg-card sg-large" aria-labelledby="forensics-heading"><p className="sg-eyebrow">오류 역추적</p><h2 id="forensics-heading">틀렸다는 것에서 끝나지 않고, 왜 틀렸는지 계산으로 재현합니다</h2>
+    <p className="sg-hint">‘계산 불일치’로 잡힌 숫자마다, 흔한 계산 실수(행 누락, 평균·중앙값 혼동, 개수 잘못 셈, 다른 열·범위, 자릿수, 앞 문장의 틀린 숫자 재사용)를 정해진 목록에서 하나씩 다시 계산해 AI의 숫자와 똑같이 나오는 실수를 찾습니다. LLM은 쓰지 않습니다. 우연히 맞을 확률을 함께 계산해, 그 확률이 크면 설명을 내지 않습니다.</p>
+    <dl className="sg-data-meta sg-results-meta" aria-label="역추적 검증 결과">
+      <div><dt>일부러 넣은 계산 실수의 원인을 맞게 찾음</dt><dd>{inj.correct}/{nInj} ({rate(inj.correct, nInj)})</dd></div>
+      <div><dt>이유 없이 틀린 숫자에 설명을 붙임</dt><dd>{f.random.explained}/{f.random.n} ({rate(f.random.explained, f.random.n)})</dd></div>
+      <div><dt>그중 ‘확신 높음’</dt><dd>{f.random.high}/{f.random.n} ({rate(f.random.high, f.random.n)})</dd></div>
+    </dl>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="실수 종류별 역추적 결과"><table><thead><tr><th scope="col">넣은 실수</th><th scope="col">맞게 찾음</th><th scope="col">다른 설명</th><th scope="col">못 찾음</th></tr></thead>
+      <tbody>{Object.entries(f.injected_by_kind).map(([k, c]) => { const n = (c.correct ?? 0) + (c.other ?? 0) + (c.missed ?? 0); return <tr key={k}><th scope="row">{FX_KIND[k] ?? k}</th><td>{c.correct ?? 0}/{n}</td><td>{c.other ?? 0}</td><td>{c.missed ?? 0}</td></tr>; })}</tbody></table></div>
+    <p className="sg-hint">실제 LLM 오답에 적용하면, 계산 불일치로 잡힌 숫자 중 {real.map(([m, c]) => `${m} ${c.contradicted}개 중 ${c.explained}개`).join(', ')}의 원인을 재현했습니다. 이 중에는 AI의 실수가 아니라 <strong>한 문장에 숫자가 여러 개라 StatGuard가 범위를 잘못 연결한 경우</strong>도 있었고, 역추적은 이를 ‘다른 범위의 값과 일치’로 따로 표시합니다. 검증기 자신의 오독을 드러내는 장치이기도 합니다.</p>
+    <ul className="sg-fx-examples">{f.examples.slice(0, 5).map((e, i) => <li key={i}><small>{e.model} · {e.question}</small><q>{e.sentence.length > 70 ? e.sentence.slice(0, 70) + '…' : e.sentence}</q><b>{e.diagnosis.title}</b><span>{e.diagnosis.explanation}</span></li>)}</ul>
+    <p className="sg-hint">기준값(설명을 내지 않는 우연 확률 0.25)은 첫 시험에서 정했고, 위 숫자는 기준을 고정한 뒤 새 무작위 시드로 다시 시험한 결과입니다(experiments/statguard_forensics_v0.1). 같은 숫자를 만드는 실수가 여럿일 수 있어, 재현은 ‘가능성이 높은 원인’이지 증명이 아닙니다.</p>
   </section>;
 }

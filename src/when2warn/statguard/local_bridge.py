@@ -13,6 +13,7 @@ from uuid import UUID
 from .core import (ARITHMETIC, CONTRACT_VERSION, CalculationSpec, NumericClaim, StatGuardError,
                    Tolerance, decimal_text, execute, load_csv_bytes, parse_number, verify_numeric_claim)
 from .claims import MAX_ANSWER_CHARS, verify_answer
+from .forensics import diagnose_answer
 
 BRIDGE_VERSION = "statguard-local-calculation-v0.1"
 MAX_REQUEST_BYTES = 1_500_000
@@ -65,7 +66,7 @@ def _verify_answer(payload):
     return {"ok": True, "bridge_version": BRIDGE_VERSION, "verification_version": "statguard-answer-verification-v0.1",
             "request_id": payload["request_id"], "preview_sha256": payload["preview_sha256"],
             "source_sha256": dataset.source_sha256, "dataset_version": dataset.dataset_version,
-            "units": dict(dataset.units), "verification": verify_answer(dataset, answer)}
+            "units": dict(dataset.units), "verification": diagnose_answer(dataset, verify_answer(dataset, answer))}
 
 
 def _validated_dataset(payload, units):

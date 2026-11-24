@@ -1,0 +1,849 @@
+{
+ "version": "statguard-forensics-v0.1",
+ "seed": 20261201,
+ "base_claims": 32,
+ "injected": {
+  "correct": 166,
+  "other": 10,
+  "missed": 6
+ },
+ "injected_by_kind": {
+  "OMITTED_ROW": {
+   "correct": 76,
+   "missed": 3,
+   "other": 5
+  },
+  "WRONG_STATISTIC": {
+   "correct": 24
+  },
+  "SCALE": {
+   "correct": 27,
+   "other": 2,
+   "missed": 3
+  },
+  "WRONG_COUNT": {
+   "correct": 10,
+   "other": 2
+  },
+  "WRONG_COLUMN": {
+   "correct": 29,
+   "other": 1
+  }
+ },
+ "random": {
+  "not_explained": 300,
+  "explained": 16,
+  "explained:WRONG_COUNT:medium": 2,
+  "explained:WRONG_GROUP:medium": 6,
+  "explained:WRONG_STATISTIC:medium": 1,
+  "explained:OMITTED_ROW:high": 1,
+  "explained:OMITTED_ROW:medium": 2,
+  "explained:DOUBLE_COUNTED:medium": 1,
+  "explained:WRONG_GROUP:high": 2,
+  "explained:DOUBLE_COUNTED:high": 1
+ },
+ "real_by_model": {
+  "gpt-4o-mini": {
+   "contradicted": 43,
+   "explained": 4,
+   "high": 3
+  },
+  "gpt-5-mini": {
+   "contradicted": 17,
+   "explained": 7,
+   "high": 7
+  },
+  "gpt-6-luna": {
+   "contradicted": 9,
+   "explained": 4,
+   "high": 2
+  }
+ },
+ "real": [
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:S01",
+   "sentence": "2023년 시애틀 관측소의 월별 강수량을 모두 더한 연간 강수량은 78.5 + 60.1 + 65.3 + 98.1 + 23.8 + 31.0 + 2.3 + 6.8 + 87.3 + 73.3 + 147.0 + 215.4 = 789.0 mm입니다.",
+   "claimed": "789.0mm",
+   "recomputed": "888.9",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:P01",
+   "sentence": "따라서 2022년 대비 2023년 총인구 증감률은 약 0.077%입니다.",
+   "claimed": "0.077%",
+   "recomputed": "0.07750727470120558550127438022289931",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:S02",
+   "sentence": "2023년의 월별 강수량을 모두 합산한 후 12로 나누어 월평균을 계산할 수 있습니다.",
+   "claimed": "12",
+   "recomputed": "74.075",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:S02",
+   "sentence": "강수량의 총합은 78.5 + 60.1 + 65.3 + 98.1 + 23.8 + 31.0 + 2.3 + 6.8 + 87.3 + 73.3 + 147.0 + 215.4 =  788.0 mm입니다.",
+   "claimed": "788.0mm",
+   "recomputed": "888.9",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:S02",
+   "sentence": "따라서 월평균은 788.0 / 12 = 65.67 mm입니다.",
+   "claimed": "65.67mm",
+   "recomputed": "74.075",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1:S02",
+   "sentence": "제공된 12개월 월별 강수량 합계는 888.9 mm이며 이를 12로 나누면 월평균이 계산됩니다.",
+   "claimed": "12",
+   "recomputed": "74.075",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:S05",
+   "sentence": "연간 강수량 합계는 2,023.0 mm입니다.",
+   "claimed": "2,023.0mm",
+   "recomputed": "888.9",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1:S05",
+   "sentence": "2023년 11월 강수량은 147.0 mm이고 2023년 총 합계는 888.9 mm입니다.",
+   "claimed": "888.9mm",
+   "recomputed": "147",
+   "unit": "mm",
+   "diagnosis": {
+    "kind": "SCOPE_AMBIGUOUS",
+    "title": "전체 범위의 값과 일치",
+    "explanation": "이 숫자는 ‘연월=2023-11’ 조건이 없는 전체의 합계 888.9mm와 같습니다. 문장에 숫자가 여러 개라 StatGuard가 이 숫자를 ‘연월=2023-11’ 범위와 잘못 연결했을 수 있습니다. 숫자마다 문장을 나눠 다시 확인하세요.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1:S06",
+   "sentence": "제공된 CSV에서 2023년 1월부터 6월까지 월별 강수량을 더하면 356.8 mm입니다.",
+   "claimed": "356.8mm",
+   "recomputed": "78.5",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:C01",
+   "sentence": "산술평균: (422.80 + 424.55 + 425.38 + 426.51 + 426.90 + 426.91 + 425.55 + 422.99 + 422.03 + 422.38 + 423.85 + 425.40) / 12 = 424.15 ppm",
+   "claimed": "424.15ppm",
+   "recomputed": "424.6041666666666666666666666666667",
+   "unit": "ppm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:C04",
+   "sentence": "따라서, 2024년 6월 대비 9월의 이산화탄소농도 변화율은 약 -1.03%입니다.",
+   "claimed": "-1.03%",
+   "recomputed": "-1.143098076878030498231477360567801",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1:K02",
+   "sentence": "따라서 2021년 대비 2022년 인구는 약 0.187% 감소했습니다.",
+   "claimed": "0.187%",
+   "recomputed": "-21.48942017037647705413575158010442",
+   "unit": "%",
+   "diagnosis": {
+    "kind": "SCOPE_AMBIGUOUS",
+    "title": "다른 열의 값과 일치",
+    "explanation": "이 숫자는 ‘총인구’ 열의 증감률 -0.187%와 같습니다. 문장에 ‘총인구’가 나오는데 StatGuard가 ‘실업률’ 열과 잘못 연결했을 수 있습니다. 문장을 다시 확인하세요.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:K03",
+   "sentence": "이를 10으로 나누면 평균은 3.4794%입니다.",
+   "claimed": "3.4794%",
+   "recomputed": "3.4603",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1:K03",
+   "sentence": "각 연도의 실업률 합계는 34.603%이고 이를 10으로 나누어 계산했습니다.",
+   "claimed": "10",
+   "recomputed": "34.603",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:K05",
+   "sentence": "따라서, 2021년 대비 2022년 실업률 변화율은 약 -21.44%입니다.",
+   "claimed": "-21.44%",
+   "recomputed": "-21.48942017037647705413575158010442",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1:V02",
+   "sentence": "전체 지역과 연도의 방문자수 합계는 1000 + 1178 + 800 + 960 + 500 + 500 = 3938명입니다.",
+   "claimed": "3938명",
+   "recomputed": "4938",
+   "unit": "명",
+   "diagnosis": {
+    "kind": "OMITTED_ROW",
+    "title": "행 하나를 빠뜨림",
+    "explanation": "6개 행 중 첫 ‘A’ 행(값 1000)을 빼고 합계를 구하면 3938명으로 답변의 숫자와 같습니다.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1:V03",
+   "sentence": "2024년 A지역 방문자수는 1,178명이고 2024년 전체 방문자수 합계는 1,178+960+500=2,638명입니다.",
+   "claimed": "2,638명",
+   "recomputed": "1178",
+   "unit": "명",
+   "diagnosis": {
+    "kind": "SCOPE_AMBIGUOUS",
+    "title": "전체 범위의 값과 일치",
+    "explanation": "이 숫자는 ‘지역=A’ 조건이 없는 전체의 합계 2638명과 같습니다. 문장에 숫자가 여러 개라 StatGuard가 이 숫자를 ‘지역=A’ 범위와 잘못 연결했을 수 있습니다. 숫자마다 문장을 나눠 다시 확인하세요.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1_holdout:H01",
+   "sentence": "이 값을 합치면 532.1 mm이고, 이를 6개월로 나누면 월평균 강수량은 약 88.68 mm입니다.",
+   "claimed": "88.68mm",
+   "recomputed": "74.075",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1_holdout:H02",
+   "sentence": "2023년 3월 강수량은 65.3mm이고 9월은 87.3mm입니다.",
+   "claimed": "87.3mm",
+   "recomputed": "65.3",
+   "unit": "mm",
+   "diagnosis": {
+    "kind": "SCOPE_AMBIGUOUS",
+    "title": "다른 범위의 값과 일치",
+    "explanation": "이 숫자는 ‘연월=2023-09’의 합계 87.3mm와 같습니다. 문장에 숫자가 여러 개라 StatGuard가 이 숫자를 ‘연월=2023-03’ 범위와 잘못 연결했을 수 있습니다. 숫자마다 문장을 나눠 다시 확인하세요.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1_holdout:H03",
+   "sentence": "각 월의 강수량을 더하면  78.5 + 60.1 + 65.3 + 98.1 + 23.8 + 31.0 + 2.3 + 6.8 + 87.3 + 73.3 + 147.0 + 215.4 =  789.0 mm입니다.",
+   "claimed": "789.0mm",
+   "recomputed": "888.9",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1_holdout:H03",
+   "sentence": "2023년 12월 강수량 215.4 mm는 연간 강수량의 약 27.3%에 해당합니다.",
+   "claimed": "27.3%",
+   "recomputed": "24.23219709753628079649004387445157",
+   "unit": "%",
+   "diagnosis": {
+    "kind": "PROPAGATED",
+    "title": "앞의 틀린 숫자를 그대로 사용",
+    "explanation": "답변이 다른 문장에서 틀리게 말한 ‘789.0mm’라는 값을 분모로 쓰면 27.3%로 답변의 숫자와 같습니다. 앞 문장의 오류가 이 계산으로 번졌습니다.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1_holdout:H03",
+   "sentence": "2023년 전체 강수량 합계는 888.9 mm이고, 12월 강수량은 215.4 mm입니다.",
+   "claimed": "215.4mm",
+   "recomputed": "888.9",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.1_holdout:H11",
+   "sentence": "따라서, 2014년 대비 2023년 실업률의 상대 변화율은 -13.17%입니다.",
+   "claimed": "-13.17%",
+   "recomputed": "-13.2057105775470473718364698247891",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1_holdout:H18",
+   "sentence": "2023년 대한민국 총인구는 2022년의 51,672,569명에서 51,712,619명으로 증가했습니다.",
+   "claimed": "51,672,569명",
+   "recomputed": "51712619",
+   "unit": "명",
+   "diagnosis": {
+    "kind": "SCOPE_AMBIGUOUS",
+    "title": "다른 범위의 값과 일치",
+    "explanation": "이 숫자는 ‘연도=2022’의 합계 51,672,569명과 같습니다. 문장에 숫자가 여러 개라 StatGuard가 이 숫자를 ‘연도=2023’ 범위와 잘못 연결했을 수 있습니다. 숫자마다 문장을 나눠 다시 확인하세요.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.1_holdout:H18",
+   "sentence": "2023년 대한민국 총인구는 2022년의 51,672,569명에서 51,712,619명으로 증가했습니다.",
+   "claimed": "51,712,619명",
+   "recomputed": "51672569",
+   "unit": "명",
+   "diagnosis": {
+    "kind": "SCOPE_AMBIGUOUS",
+    "title": "다른 범위의 값과 일치",
+    "explanation": "이 숫자는 ‘연도=2023’의 합계 51,712,619명과 같습니다. 문장에 숫자가 여러 개라 StatGuard가 이 숫자를 ‘연도=2022’ 범위와 잘못 연결했을 수 있습니다. 숫자마다 문장을 나눠 다시 확인하세요.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.2:W08",
+   "sentence": "2023년 일별 최고기온의 표본표준편차는 약 7.9℃입니다.",
+   "claimed": "7.9℃",
+   "recomputed": "7.633338216387142068259075446280247",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.2:W01",
+   "sentence": "2023년 시애틀의 일별 강수량을 모두 합한 연간 강수량은 888.4mm입니다.",
+   "claimed": "888.4mm",
+   "recomputed": "888.9",
+   "unit": "mm",
+   "diagnosis": {
+    "kind": "OMITTED_ROW",
+    "title": "행 하나를 빠뜨림",
+    "explanation": "365개 행 중 ‘2023-01-04’ 행(값 0.5)을 빼고 합계를 구하면 888.4mm로 답변의 숫자와 같습니다. 같은 값이 나오는 행이 14개라 어느 행인지는 특정할 수 없습니다.",
+    "confidence": "medium",
+    "candidates": 14
+   }
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:W01",
+   "sentence": "2023년 시애틀의 일별 강수량을 모두 더한 결과, 연간 강수량 합계는 413.9 mm입니다.",
+   "claimed": "413.9mm",
+   "recomputed": "888.9",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:W06",
+   "sentence": "2023년 11월의 일별 강수량을 모두 합산하면 총 84.9 mm입니다.",
+   "claimed": "84.9mm",
+   "recomputed": "147",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:W09",
+   "sentence": "2023년의 일 최고기온 데이터를 수집하여 정렬한 뒤, 중앙값을 계산하면 10.6 ℃입니다.",
+   "claimed": "10.6℃",
+   "recomputed": "15",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.2:W10",
+   "sentence": "2023년 일 최고기온과 일 최저기온의 피어슨 상관계수는 약 0.86입니다.",
+   "claimed": "0.86",
+   "recomputed": "0.8954823621047148673963613371519228",
+   "unit": "",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:W10",
+   "sentence": "주어진 데이터로 2023년 일 최고기온과 일 최저기온 간의 피어슨 상관계수를 계산한 결과, 약 0.77로 나타났습니다.",
+   "claimed": "0.77",
+   "recomputed": "0.8954823621047148673963613371519228",
+   "unit": "",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.2:W12",
+   "sentence": "2023년 12월 강수량 합계는 215.4mm이고, 연간 강수량 합계는 888.4mm입니다.",
+   "claimed": "888.4mm",
+   "recomputed": "215.4",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.2:W12",
+   "sentence": "따라서 12월 강수량은 연간 합계의 약 24.25%입니다.",
+   "claimed": "24.25%",
+   "recomputed": "24.23219709753628079649004387445157",
+   "unit": "%",
+   "diagnosis": {
+    "kind": "PROPAGATED",
+    "title": "앞의 틀린 숫자를 그대로 사용",
+    "explanation": "답변이 다른 문장에서 틀리게 말한 ‘888.4mm’라는 값을 분모로 쓰면 24.25%로 답변의 숫자와 같습니다. 앞 문장의 오류가 이 계산으로 번졌습니다.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:W12",
+   "sentence": "따라서 12월 강수량이 연간 강수량의 약 23.4%에 해당합니다.",
+   "claimed": "23.4%",
+   "recomputed": "24.23219709753628079649004387445157",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.2:W12",
+   "sentence": "2023년 12월 강수량 합계는 215.4 mm이고 2023년 연간 강수량 합계는 888.9 mm였습니다.",
+   "claimed": "888.9mm",
+   "recomputed": "215.4",
+   "unit": "mm",
+   "diagnosis": {
+    "kind": "SCOPE_AMBIGUOUS",
+    "title": "전체 범위의 값과 일치",
+    "explanation": "이 숫자는 ‘월=12’ 조건이 없는 전체의 합계 888.9mm와 같습니다. 문장에 숫자가 여러 개라 StatGuard가 이 숫자를 ‘월=12’ 범위와 잘못 연결했을 수 있습니다. 숫자마다 문장을 나눠 다시 확인하세요.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.2:W12",
+   "sentence": "따라서 12월은 연간 강수량의 약 24.25%를 차지합니다.",
+   "claimed": "24.25%",
+   "recomputed": "24.23219709753628079649004387445157",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F01",
+   "sentence": "주어진 자료를 통해 시카고의 일별 강수량을 모두 더한 결과, 총 합계는 490.9 mm로 확인되었습니다.",
+   "claimed": "490.9mm",
+   "recomputed": "857.4",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F02",
+   "sentence": "로스앤젤레스의 2023년 일 최고기온의 총합은 26.8℃이고, 일수는 365일입니다.",
+   "claimed": "26.8℃",
+   "recomputed": "7560.8",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F03",
+   "sentence": "- 시애틀의 총 강수량: 166.4 mm",
+   "claimed": "166.4mm",
+   "recomputed": "888.9",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F03",
+   "sentence": "- 로스앤젤레스의 총 강수량: 228.7 mm",
+   "claimed": "228.7mm",
+   "recomputed": "644.4",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F03",
+   "sentence": "- 뉴욕의 총 강수량: 321.1 mm",
+   "claimed": "321.1mm",
+   "recomputed": "1336.1",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F03",
+   "sentence": "- 시카고의 총 강수량: 195.8 mm",
+   "claimed": "195.8mm",
+   "recomputed": "857.4",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F03",
+   "sentence": "총 강수량 = 166.4 + 228.7 + 321.1 + 195.8 = 912.0 mm",
+   "claimed": "912.0mm",
+   "recomputed": "3726.8",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F04",
+   "sentence": "2023년 4개 도시의 일 최고기온 데이터를 통합하여 분석한 결과, 시애틀에서의 최고기온이 35.0℃로 가장 높았습니다.",
+   "claimed": "35.0℃",
+   "recomputed": "37.8",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F05",
+   "sentence": "뉴욕의 2023년 7월 일 최고기온 데이터를 통해 평균을 계산해보면, 총 31일 중 최고기온 합계는 30.0 + 28.9 + 28.9 + 30.0 + 31.1 + 31.1 + 31.1 + 30.0 + 24.4 + 30.0 + 29.4 + 27.2 + 28.3 + 28.6 + 29.4 + 29.9 + 27.8 + 22.2 + 30.0 + 29.4 + 31.1 + 30.0 + 31.1 + 32.8 + 27.8 + 25.0 + 27.2 + 22.2 + 27.0 + 29.4 + 31.1 + 28.9 = 851.8℃입니다.",
+   "claimed": "851.8℃",
+   "recomputed": "29.33548387096774193548387096774194",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F09",
+   "sentence": "로스앤젤레스의 2023년 일 최고기온 데이터를 기반으로 하면, 최고기온의 중앙값은 22.8℃입니다.",
+   "claimed": "22.8℃",
+   "recomputed": "20.6",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.2:F12",
+   "sentence": "4개 도시의 2023년 일별 최고기온을 모두 합산해 평균하면 약 17.8℃입니다.",
+   "claimed": "17.8℃",
+   "recomputed": "17.92773972602739726027397260273973",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2:F12",
+   "sentence": "각 도시의 데이터에서 2023년의 일 최고기온을 추출하여 평균을 구한 결과는 약 17.3℃입니다.",
+   "claimed": "17.3℃",
+   "recomputed": "17.92773972602739726027397260273973",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2_holdout:LH01",
+   "sentence": "2023년 4월의 일 최고기온 데이터를 수집하여 평균을 계산하면 2023년 4월의 일 최고기온 평균은 약 11.9℃입니다.",
+   "claimed": "11.9℃",
+   "recomputed": "12.96666666666666666666666666666667",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2_holdout:LH02",
+   "sentence": "2023년 3월의 일별 강수량 데이터를 모두 합산하면, 총 63.8 mm입니다.",
+   "claimed": "63.8mm",
+   "recomputed": "65.3",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2_holdout:LH06",
+   "sentence": "이들의 변화를 계산하면, (14.0 - 58.2) / 58.2 * 100 = -76.04%로, 8월의 강수량이 2월에 비해 약 76.04% 감소했습니다.",
+   "claimed": "76.04%",
+   "recomputed": "-88.68552412645590682196339434276206",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2_holdout:LH07",
+   "sentence": "2023년 7월의 최저기온 데이터를 살펴본 결과, 7월 29일에 최저기온이 -1.0℃로 가장 낮았습니다.",
+   "claimed": "-1.0℃",
+   "recomputed": "-5.5",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2_holdout:LH07",
+   "sentence": "따라서 2023년 7월의 최저기온 최솟값은 -1.0℃입니다.",
+   "claimed": "-1.0℃",
+   "recomputed": "12.2",
+   "unit": "℃",
+   "diagnosis": {
+    "kind": "WRONG_GROUP",
+    "title": "다른 범위를 계산함",
+    "explanation": "‘월=7’이 아니라 ‘월=12’의 최솟값을 구하면 -1℃로 답변의 숫자와 같습니다.",
+    "confidence": "medium",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.2_holdout:LH07",
+   "sentence": "2023년 7월의 일별 최저기온을 보면 가장 낮은 값은 12.2℃입니다.",
+   "claimed": "12.2℃",
+   "recomputed": "-5.5",
+   "unit": "℃",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2_holdout:LH09",
+   "sentence": "뉴욕의 2023년 강수량 데이터를 합산하여 총 강수량을 계산하면 585.9 mm입니다.",
+   "claimed": "585.9mm",
+   "recomputed": "1336.1",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.2_holdout:LH10",
+   "sentence": "강수량 총합: 257.2 + 300.7 + 350.9 + 217.4 = 1126.2 mm",
+   "claimed": "1126.2mm",
+   "recomputed": "3726.8",
+   "unit": "mm",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.2_holdout:LH12",
+   "sentence": "뉴욕과 시카고의 일 최고기온 평균 차이에 대한 Welch 양측 t-검정 p값은 약 0.16입니다.",
+   "claimed": "p=0.16",
+   "recomputed": "0.9271368256232044481409686961377319",
+   "unit": "",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.3:R02",
+   "sentence": "고소득 국가 60개의 2023년 1인당 GDP를 단순 평균하면 약 44,871.10달러입니다.",
+   "claimed": "44,871.10달러",
+   "recomputed": "44471.14163934426229508196721311475",
+   "unit": "달러",
+   "diagnosis": {
+    "kind": "OMITTED_ROW",
+    "title": "행 하나를 빠뜨림",
+    "explanation": "61개 행 중 ‘Guyana · GUY’ 행(값 20473.7)을 빼고 평균을 구하면 44,871.10달러로 답변의 숫자와 같습니다. 답변도 스스로 60개라고 적었습니다.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.3:R02",
+   "sentence": "고소득 국가들의 2023년 1인당 GDP의 단순 평균을 계산해보면, 고소득 국가의 수가 37개이고, 이들의 1인당 GDP 합계는 1,167,847.91달러입니다.",
+   "claimed": "1,167,847.91달러",
+   "recomputed": "44471.14163934426229508196721311475",
+   "unit": "달러",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.3:R02",
+   "sentence": "자료에서 '고소득'으로 표기된 57개 국가의 1인당 GDP를 단순 평균한 값은 약 46,065.42달러입니다.",
+   "claimed": "46,065.42달러",
+   "recomputed": "44471.14163934426229508196721311475",
+   "unit": "달러",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-6-luna",
+   "question": "v0.3:R07",
+   "sentence": "유럽·중앙아시아 지역의 국가 46곳 실업률을 사용해 \\(n-1=45\\)로 나누어 계산한 표본표준편차는 약 2.938%입니다.",
+   "claimed": "2.938%",
+   "recomputed": "3.020837258593683563155929557012768",
+   "unit": "%",
+   "diagnosis": {
+    "kind": "OMITTED_ROWS",
+    "title": "행 두 개를 빠뜨림",
+    "explanation": "실제로는 48개 행인데 답변은 46개라고 적었습니다. 두 행(맞는 조합 5개, 예: ‘Armenia · ARM’, ‘Kazakhstan · KAZ’)을 빼고 46개로 표준편차를 구하면 2.938%로 답변의 숫자와 같습니다.",
+    "confidence": "medium",
+    "candidates": 5
+   }
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.3:R07",
+   "sentence": "유럽·중앙아시아 국가들의 2023년 실업률 데이터로 표본표준편차를 계산한 결과는 약 3.57%입니다.",
+   "claimed": "3.57%",
+   "recomputed": "3.020837258593683563155929557012768",
+   "unit": "%",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.3:R10",
+   "sentence": "동아시아·태평양(n=27)과 중남미·카리브(n=30)의 실업률 평균 차이에 대해 Welch의 t-검정을 수행한 결과 t = -3.63, 자유도 ≈ 51.4로 계산됩니다.",
+   "claimed": "t=-3.63",
+   "recomputed": "-3.953679472178959109142477599038283",
+   "unit": "",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.3:R11",
+   "sentence": "176개 국가의 총인구 합계는 7,061,902,537명입니다.",
+   "claimed": "7,061,902,537명",
+   "recomputed": "7827435200",
+   "unit": "명",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.3:R11",
+   "sentence": "제공된 CSV에서 '동아시아·태평양' 지역 총인구 합계는 약 2,334,067,423명이며, 전체 176개 국가의 총인구 합계(데이터셋 기준)는 약 7,900,000,000명으로 계산됩니다.",
+   "claimed": "7,900,000,000명",
+   "recomputed": "2334067423",
+   "unit": "명",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.3:R15",
+   "sentence": "저소득 국가들의 총인구 합계는 약 882,192,918명이고, 전체 176개 국가의 총인구 합계는 약 7,568,073,517명입니다.",
+   "claimed": "7,568,073,517명",
+   "recomputed": "572761877",
+   "unit": "명",
+   "diagnosis": null
+  },
+  {
+   "model": "gpt-4o-mini",
+   "question": "v0.3:R16",
+   "sentence": "176개 국가의 기대수명을 모두 합산 후 평균을 계산하면, 2023년 기대수명의 단순 평균은 73.577세입니다.",
+   "claimed": "73.577세",
+   "recomputed": "73.54214772727272727272727272727273",
+   "unit": "세",
+   "diagnosis": {
+    "kind": "OMITTED_ROW",
+    "title": "행 하나를 빠뜨림",
+    "explanation": "176개 행 중 ‘Namibia · NAM’ 행(값 67.385)을 빼고 평균을 구하면 73.577세로 답변의 숫자와 같습니다.",
+    "confidence": "high",
+    "candidates": 1
+   }
+  },
+  {
+   "model": "gpt-5-mini",
+   "question": "v0.3:R16",
+   "sentence": "제공된 CSV의 176개 기대수명 값을 모두 더해 176으로 나누면 단순 평균을 구할 수 있습니다.",
+   "claimed": "176",
+   "recomputed": "73.54214772727272727272727272727273",
+   "unit": "세",
+   "diagnosis": null
+  }
+ ],
+ "examples_not_correct": [
+  {
+   "question": "v0.1:K03",
+   "kind": "SCALE",
+   "result": "other",
+   "diagnosis": "평균 대신 합계"
+  },
+  {
+   "question": "v0.1:K06",
+   "kind": "SCALE",
+   "result": "other",
+   "diagnosis": "평균 대신 합계"
+  },
+  {
+   "question": "v0.1:V04",
+   "kind": "OMITTED_ROW",
+   "result": "missed",
+   "diagnosis": null
+  },
+  {
+   "question": "v0.1:V04",
+   "kind": "OMITTED_ROW",
+   "result": "other",
+   "diagnosis": "다른 범위를 계산함"
+  },
+  {
+   "question": "v0.1:V04",
+   "kind": "SCALE",
+   "result": "missed",
+   "diagnosis": null
+  },
+  {
+   "question": "v0.2:W03",
+   "kind": "OMITTED_ROW",
+   "result": "other",
+   "diagnosis": "개수를 잘못 셈"
+  },
+  {
+   "question": "v0.2:W03",
+   "kind": "OMITTED_ROW",
+   "result": "other",
+   "diagnosis": "개수를 잘못 셈"
+  },
+  {
+   "question": "v0.2:W03",
+   "kind": "OMITTED_ROW",
+   "result": "other",
+   "diagnosis": "개수를 잘못 셈"
+  },
+  {
+   "question": "v0.2:W03",
+   "kind": "OMITTED_ROW",
+   "result": "other",
+   "diagnosis": "개수를 잘못 셈"
+  },
+  {
+   "question": "v0.2:W03",
+   "kind": "SCALE",
+   "result": "missed",
+   "diagnosis": null
+  },
+  {
+   "question": "v0.2:W05",
+   "kind": "SCALE",
+   "result": "missed",
+   "diagnosis": null
+  },
+  {
+   "question": "v0.2_holdout:LH01",
+   "kind": "WRONG_COUNT",
+   "result": "other",
+   "diagnosis": "행 하나를 두 번 셈"
+  }
+ ]
+}

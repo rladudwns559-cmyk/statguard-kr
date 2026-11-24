@@ -15,6 +15,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import run_correction as rc  # noqa: E402
+from when2warn.statguard.forensics import diagnose_answer  # noqa: E402  (error forensics, shown in the gallery)
 
 
 def nice(value: str, digits: int = 4) -> str:
@@ -42,6 +43,7 @@ for it in rc.items():
     result = rc.verify_answer(it["dataset"], it["answer"])
     decision = rc.decide(result["summary"])
     flagged = next((c for c in result["claims"] if c["status"] == "CONTRADICTED"), None)
+    why = next((c["diagnosis"] for c in diagnose_answer(it["dataset"], result)["claims"] if c.get("diagnosis")), None)
     t = trails[key]
     s, r = t["S"], t["R"]
     fixed_round = next((x["round"] for x in s[1:] if x["correct"]), None) if not ok else None
@@ -56,6 +58,7 @@ for it in rc.items():
         "targeted": len(s) > 1,
         "corrected_round": fixed_round,
         "recheck_fixed": (any(x["correct"] for x in r[1:]) if not ok else None),
+        "why": ({k: why[k] for k in ("title", "explanation", "confidence")} if why else None),
     })
 out = HERE.parents[1] / "frontend/src/statguard/aiAnswers.json"
 out.write_text(json.dumps({"source": "experiments/statguard_correction_v0.1 (조건 A 1회차 답변, 규칙 v0.7 판정, 교정 기록)", "model": rc.MODEL,

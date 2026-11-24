@@ -81,7 +81,7 @@ node scripts/statguard-local.mjs --live --live-env-file ..\.env.retrieval-live.p
 
 ```powershell
 $env:PYTHONPATH=(Resolve-Path .\src).Path
-python -m unittest tests.test_statguard_offline_v0_1 tests.test_statguard_local_calculation_v0_1 tests.test_statguard_manual_comparison_v0_1 tests.test_statguard_cloud_transport_v0_1 tests.test_statguard_answer_verification_v0_1 tests.test_statguard_llm_extractor_v0_1 tests.test_statguard_statistics_v0_1 tests.test_statguard_live_ask_v0_1
+python -m unittest tests.test_statguard_offline_v0_1 tests.test_statguard_local_calculation_v0_1 tests.test_statguard_manual_comparison_v0_1 tests.test_statguard_cloud_transport_v0_1 tests.test_statguard_answer_verification_v0_1 tests.test_statguard_llm_extractor_v0_1 tests.test_statguard_statistics_v0_1 tests.test_statguard_live_ask_v0_1 tests.test_statguard_forensics_v0_1 tests.test_statguard_version_sync_v0_1
 ```
 
 ```powershell
@@ -128,13 +128,50 @@ python -X utf8 -I make_report.py
 
 자세한 표는 각 `results/REPORT.md`와 `experiments/STABILITY.md`에 있습니다.
 
+## 비교 실험: LLM 심판 vs StatGuard, 답변 모델 3종 (`experiments/statguard_comparison_v0.1`)
+
+같은 120문항에 답변 모델 3종(gpt-6-luna 기존 답변 + gpt-4o-mini·gpt-5-mini 새 답변)의 답 360개를 놓고, LLM에게 채점을 맡긴 경우(gpt-6-luna 심판)와 StatGuard를 비교했다. 조건은 실행 전 `PROTOCOL.md`에 고정했고, API 잔액 때문에 실행 중 범위를 줄인 내용(gpt-4.1-mini 제외, 추정 비용 상한 $2.00)도 같은 문서 ‘변경 기록’에 남겼다. 실제 추정 비용 약 $2.05.
+
+| 방식 (답 360개) | 통과 | 통과 중 오답 (95% 상한) | 오답 중 지적 |
+|---|---|---|---|
+| LLM 심판 gpt-6-luna | 235 | **13** (≤9.3%) | 109/133 |
+| StatGuard (사전 등록 규칙) | 105 | **1** (≤5.2%) | 49/133 |
+| StatGuard 최종값 규칙 (사후 탐색) | 90 | 0 (≤4.0%) | 49/133 |
+| 결합: StatGuard 보류분만 LLM 심판 (사후 탐색) | 224 | 7 (≤6.3%) | 115/133 |
+
+- 사전 등록 규칙(불일치 없이 일치가 하나라도 있으면 통과)은 긴 답변에서 **중간 숫자만 맞고 최종값은 보류**인 답을 통과시켰다(전체 1건, 교정 후 gpt-4o-mini 7건·gpt-5-mini 4건). ‘최종값이 재계산과 일치할 때만 통과’ 규칙은 결과를 본 뒤 만든 것이라 `analyze_final_rule.py`에 탐색 분석으로 분리했다.
+- 근거 교정: gpt-4o-mini는 계산 불일치 오답 35건 중 **29건**을 고침(단순 재확인 2건), 정답률 44.2% → 68.3%. gpt-5-mini는 15건 중 10건(재확인 8건), 정답률 67.5% → 69.2%로 효과가 작았다.
+- 자기 일관성(같은 질문 3회 답이 같으면 통과)도 gpt-6-luna 88문항에서 통과 53개 중 오답 0개로 좋았다(StatGuard 35개 중 0개, LLM 심판 71개 중 8개).
+- gpt-5-mini 심판은 예산 한도로 일부(100/360)만 실행해 결론에서 뺐다.
+
+```powershell
+cd experiments\statguard_comparison_v0.1
+python -X utf8 -I run_comparison.py report      # 저장된 응답으로 집계 (API 호출 없음)
+python -X utf8 -I analyze_final_rule.py         # 사후 탐색 분석
+cd ..; python -X utf8 -I export_site_comparison.py   # 웹 데이터 benchmarkComparison.json
+```
+
+## 오류 역추적 (`src/when2warn/statguard/forensics.py`, `experiments/statguard_forensics_v0.1`)
+
+‘계산 불일치’로 잡힌 숫자마다 흔한 계산 실수(행 하나·두 개 누락, 평균↔중앙값·표준편차↔분산, 개수 잘못 셈, 다른 열·범위, 조건 누락, 자릿수, 앞 문장의 틀린 숫자 재사용, 단측 p값)를 정해진 목록에서 다시 계산해, AI의 숫자가 답변 자릿수로 정확히 재현되는 실수를 찾는다. LLM을 쓰지 않는다. 후보 값들이 올바른 값 ±20% 구간을 덮는 비율로 **우연 일치 확률**을 계산해 0.25 이상이면 설명을 내지 않고, 0.05 미만이며 후보가 하나일 때만 ‘확신 높음’으로 표시한다. 한 문장에 숫자가 여러 개이거나 문장에 다른 열 이름이 나오면 AI의 실수로 단정하지 않고 ‘다른 범위(열)의 값과 일치 — StatGuard가 잘못 연결했을 수 있음’으로 표시한다.
+
+- 검증(시드 20261201, 기준을 고정한 뒤 처음 쓴 시드): 일부러 넣은 계산 실수 **182개 중 166개(91.2%)** 원인을 맞게 찾음, 이유 없이 틀린 숫자 316개 중 16개(5.1%)에만 설명(‘확신 높음’ 4개, 1.3%).
+- 실제 오답: 계산 불일치 gpt-6-luna 9개 중 4개, gpt-4o-mini 43개 중 4개, gpt-5-mini 17개 중 7개 재현. 예: “고소득 국가 60개 평균 44,871.10달러” → 61개국 중 Guyana를 빼면 정확히 같은 값(답변도 60개라고 적음).
+- 웹: 검증 결과의 불일치 카드에 ‘왜 틀렸을까’ 상자, AI 오답 갤러리·챌린지에 원인 표시, 홈에 사례.
+
+```powershell
+cd experiments\statguard_forensics_v0.1
+python -X utf8 -I run_eval.py 20261201
+```
+
 ## 선행연구와의 차이
 
 PAL(ICML 2023), CRITIC(ICLR 2024), Chain-of-Verification(ACL Findings 2024)은 답 생성·비평·검증에 LLM을 쓴다. StatGuard-KR은 LLM 없이 사용자의 CSV로 결정적으로 재계산해 어떤 답변이든 사후 판정하고, 확정할 수 없으면 사유와 함께 보류하며, 그 근거로 교정까지 잇는다. 외부 피드백 없는 자기 교정의 한계(Huang 외, ICLR 2024)를 대조군으로 재확인했고, 표·통계에서의 LLM 약점은 TableBench(AAAI 2025)·StatQA(NeurIPS 2024), 수치 주장 사실 확인은 QuanTemp(SIGIR 2024), 판정 보류는 Wen 외 서베이(TACL 2025)와 비교했다. 링크는 실험 결과 페이지의 ‘기존 연구와 무엇이 다른가’에 있다.
 
 ## 한계
 
-- 소규모 실험(질문 120개, 자료 8종, 모델 1종, A·C는 3회·나머지 1회)이라 통계적 유의성을 주장하지 않습니다.
+- 소규모 실험(질문 120개, 자료 8종, 주 실험 모델 1종·비교 실험 답변 모델 3종(모두 OpenAI), A·C는 3회·나머지 1회)이라 통계적 유의성을 주장하지 않습니다.
+- 한 문장에 숫자가 여러 개인 긴 답변에서 규칙 추출기가 범위를 잘못 연결하는 경우가 있습니다(비교 실험의 gpt-5-mini 답변에서 확인, 역추적이 ‘다른 범위의 값과 일치’로 표시).
 - 모델의 실제 오답이 적어(본 세트 A 3건) 실제 답변 기준 재현율은 결론 내리지 않았습니다.
 - 규칙 추출기는 문장에 열·기간이 드러나야 판정하므로 실제 답변에 대한 판정 비율이 실험·조건별 42~77%입니다. 일부 기간 범위(예: 2016~2020년), %p·인원 차이, 조건부 개수, 회귀·추세, 순위는 아직 보류합니다. 앞 문장에서 정한 대상(예: 도시)을 이어받는 문장도 보류합니다.
 - 추출기는 실험 결과를 보며 고친 버전(v0.3, v0.5)이 있어, 각 수정 뒤 새로 만든 별도 검증 세트 결과를 함께 보고합니다.
