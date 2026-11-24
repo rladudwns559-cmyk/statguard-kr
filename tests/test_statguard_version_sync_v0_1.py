@@ -19,7 +19,7 @@ class VersionSync(unittest.TestCase):
 
     def test_runtime_bundle_matches_sources_and_manifest(self):
         manifest = json.loads((ROOT / "frontend/_statguard_runtime/upstream_sha256.json").read_text(encoding="utf-8"))
-        for name in ("core.py", "claims.py", "local_bridge.py", "forensics.py"):
+        for name in ("core.py", "claims.py", "local_bridge.py", "forensics.py", "arithmetic.py"):
             src = (ROOT / "src/when2warn/statguard" / name).read_bytes()
             self.assertEqual(src, (ROOT / "frontend/_statguard_runtime" / name).read_bytes(), name)
             self.assertEqual(hashlib.sha256(src).hexdigest(), manifest[name], name)

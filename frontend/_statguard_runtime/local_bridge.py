@@ -14,6 +14,7 @@ from .core import (ARITHMETIC, CONTRACT_VERSION, CalculationSpec, NumericClaim, 
                    Tolerance, decimal_text, execute, load_csv_bytes, parse_number, verify_numeric_claim)
 from .claims import MAX_ANSWER_CHARS, verify_answer
 from .forensics import diagnose_answer
+from .arithmetic import check_answer
 
 BRIDGE_VERSION = "statguard-local-calculation-v0.1"
 MAX_REQUEST_BYTES = 1_500_000
@@ -66,7 +67,23 @@ def _verify_answer(payload):
     return {"ok": True, "bridge_version": BRIDGE_VERSION, "verification_version": "statguard-answer-verification-v0.1",
             "request_id": payload["request_id"], "preview_sha256": payload["preview_sha256"],
             "source_sha256": dataset.source_sha256, "dataset_version": dataset.dataset_version,
-            "units": dict(dataset.units), "verification": diagnose_answer(dataset, verify_answer(dataset, answer))}
+            "units": dict(dataset.units), "verification": diagnose_answer(dataset, verify_answer(dataset, answer)),
+            "arithmetic": check_answer(answer)}
+
+
+def _check_arithmetic(payload):
+    """No CSV: recompute only the calculations the answer writes out itself (statguard-arithmetic)."""
+    if set(payload) != {"mode", "request_id", "answer_text"}:
+        raise StatGuardError("INVALID_REQUEST")
+    answer = payload["answer_text"]
+    if not isinstance(answer, str) or not answer.strip():
+        raise StatGuardError("ANSWER_TEXT_REQUIRED")
+    if len(answer) > MAX_ANSWER_CHARS:
+        raise StatGuardError("ANSWER_TEXT_LIMIT")
+    request_id = payload["request_id"]
+    if not isinstance(request_id, str) or len(request_id) > 64:
+        raise StatGuardError("INVALID_REQUEST")
+    return {"ok": True, "bridge_version": BRIDGE_VERSION, "request_id": request_id, "arithmetic": check_answer(answer)}
 
 
 def _validated_dataset(payload, units):
@@ -145,6 +162,8 @@ def calculate_request(payload: object) -> dict:
             return _compare(payload)
         if payload.get("mode") == "verify_answer":
             return _verify_answer(payload)
+        if payload.get("mode") == "check_arithmetic":
+            return _check_arithmetic(payload)
         result = _execute_calculation(payload)
         return {"ok": True, "bridge_version": BRIDGE_VERSION, "request_id": payload["request_id"],
                 "preview_sha256": payload["preview_sha256"], "result": result.as_dict()}

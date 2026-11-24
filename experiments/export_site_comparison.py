@@ -13,6 +13,10 @@ cmp = json.loads((EXP / "statguard_comparison_v0.1/results/summary.json").read_t
 exp = json.loads((EXP / "statguard_comparison_v0.1/results/exploratory_final_rule.json").read_text(encoding="utf-8"))
 fx = json.loads((EXP / "statguard_forensics_v0.1/results/summary.json").read_text(encoding="utf-8"))
 corr = json.loads((EXP / "statguard_correction_v0.1/results/summary.json").read_text(encoding="utf-8"))
+frv = json.loads((EXP / "statguard_final_rule_validation_v0.1/results/summary.json").read_text(encoding="utf-8"))
+ari = json.loads((EXP / "statguard_arithmetic_v0.1/results/summary.json").read_text(encoding="utf-8"))
+x08 = json.loads((EXP / "statguard_extractor_v0.8/results/summary.json").read_text(encoding="utf-8"))
+ari0 = json.loads((EXP / "statguard_arithmetic_v0.1/results/summary_v0.1_before_fix.json").read_text(encoding="utf-8"))
 
 
 def pick(t: dict) -> dict:
@@ -40,6 +44,17 @@ site = {
     "after_correction_final_rule": {k: [v["passed_wrong"], v["pass"]] for k, v in exp["after_correction_final_rule"].items()},
     "judge5_partial": {"done": cmp["q1"]["judge_gpt-5-mini"]["전체"]["n"], "of": 360},
     "models": models,
+    "extractor_v08": {"adopted": x08["adopt"], "table": {k: x08["table"][k] for k in ("v0.7|prereg|all", "v0.8|prereg|all", "v0.7|final_rule|all", "v0.8|final_rule|all")}},
+    "final_rule_validation": {"answers": frv["answers"], "prereg": pick(frv["overall"]["prereg"]), "final_rule": pick(frv["overall"]["final_rule"])},
+    "arithmetic": {"version": ari["version"], "groups": ari["groups"], "total": ari["total"], "before_fix_total": ari0["total"],
+                   "right_flagged": [c for c in ari["cases"] if c["correct"]],
+                   # clear arithmetic slips for the page: shortest expressions first, one per question, skipping
+                   # a ratio written as a percent without "× 100" (a notation difference, not a calculation error)
+                   "examples": list({c["question"]: c for c in sorted(
+                       (c for c in ari["cases"] if not c["correct"] and len(c["expression"]) < 90
+                        and abs(float(c["stated"].replace(",", "")) - float(c["recomputed"]) * 100) > 0.01 * abs(float(c["stated"].replace(",", "")) or 1)
+                        and abs(float(c["stated"].replace(",", "")) - float(c["recomputed"])) > 0.005 * abs(float(c["recomputed"]) or 1)),
+                       key=lambda c: (c["statguard"] == "FLAG", len(c["expression"])))}.values())[:4]},
     "forensics": {"version": fx["version"], "seed": fx["seed"], "injected": fx["injected"], "injected_by_kind": fx["injected_by_kind"],
                   "random": {"explained": fx["random"].get("explained", 0), "n": fx["random"].get("explained", 0) + fx["random"]["not_explained"],
                              "high": sum(v for k, v in fx["random"].items() if k.endswith(":high"))},

@@ -1,0 +1,1938 @@
+{
+ "extractor": "statguard-rule-extractor-v0.8",
+ "claims": {
+  "v0.7": {
+   "VERIFIED": 563,
+   "CONTRADICTED": 285,
+   "UNCERTAIN": 1518,
+   "INSUFFICIENT_EVIDENCE": 29
+  },
+  "v0.8": {
+   "VERIFIED": 751,
+   "CONTRADICTED": 297,
+   "UNCERTAIN": 1556,
+   "INSUFFICIENT_EVIDENCE": 30
+  }
+ },
+ "changed": [
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1:P01",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "PASS"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.1:S04",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:S04",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:S04",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1:S04",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1:S04",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-6-luna 원래 답변",
+   "question": "v0.1:S05",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1:S05",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna B",
+   "question": "v0.1:S05",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C",
+   "question": "v0.1:S05",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "PASS"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1:S05",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1:S05",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 S",
+   "question": "v0.1:S05",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-6-luna 원래 답변",
+   "question": "v0.1:C01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna A_r2",
+   "question": "v0.1:C01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna B",
+   "question": "v0.1:C01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.1:C03",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:C03",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:C03",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1:C03",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1:C03",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1:C03",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1:C04",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1:K01",
+   "correct": false,
+   "v0.7": [
+    "PASS",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1:K02",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.1:K08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1:K08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:K08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:K08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1:K08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1:K08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.1:V01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:V01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-6-luna 원래 답변",
+   "question": "v0.1:V03",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "PASS"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1:V03",
+   "correct": false,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna A_r2",
+   "question": "v0.1:V03",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "HOLD"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna A_r3",
+   "question": "v0.1:V03",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "HOLD"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna B",
+   "question": "v0.1:V03",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "HOLD"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C_r3",
+   "question": "v0.1:V03",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.1:V03",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.1:V03",
+   "correct": false,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 S",
+   "question": "v0.1:V05",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1:V06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1:V06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1:V06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.1:V07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:V07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:V07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1:V07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.1:V07",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1_holdout:H01",
+   "correct": false,
+   "v0.7": [
+    "PASS",
+    "PASS"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1_holdout:H02",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1_holdout:H02",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.1_holdout:H02",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.1_holdout:H02",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-6-luna 원래 답변",
+   "question": "v0.1_holdout:H03",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1_holdout:H03",
+   "correct": false,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.1_holdout:H03",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.1_holdout:H03",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 S",
+   "question": "v0.1_holdout:H03",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.1_holdout:H03",
+   "correct": false,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.1_holdout:H03",
+   "correct": false,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1_holdout:H07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1_holdout:H07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1_holdout:H07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1_holdout:H07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.1_holdout:H08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1_holdout:H08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1_holdout:H08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1_holdout:H08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1_holdout:H08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1_holdout:H08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1_holdout:H09",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1_holdout:H09",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1_holdout:H09",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1_holdout:H11",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1_holdout:H11",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.1_holdout:H12",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1_holdout:H14",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1_holdout:H14",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-6-luna 원래 답변",
+   "question": "v0.1_holdout:H15",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "HOLD"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.1_holdout:H18",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.1_holdout:H18",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.1_holdout:H18",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1_holdout:H18",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1_holdout:H18",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1_holdout:H18",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.1_holdout:H18",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.2:W07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.2:W07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.2:W07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.2:W07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 S",
+   "question": "v0.2:W07",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "PASS"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.2:W07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.2:W07",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna A_r3",
+   "question": "v0.2:W12",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C_r3",
+   "question": "v0.2:W12",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "PASS"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 S",
+   "question": "v0.2:W12",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 S",
+   "question": "v0.2:W12",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.2:W12",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C",
+   "question": "v0.2:F03",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C_r2",
+   "question": "v0.2:F03",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C_r3",
+   "question": "v0.2:F03",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.2:F08",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.2:F11",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.2:F11",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.2:F11",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.2:F11",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.2:F11",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 R",
+   "question": "v0.2:F11",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.2:F11",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.2:F11",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-5-mini 교정 S",
+   "question": "v0.2:F11",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.2_holdout:LH08",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "PASS"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.2_holdout:LH11",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.3:R01",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.3:R01",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.3:R01",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.3:R01",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.3:R02",
+   "correct": false,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.3:R02",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.3:R02",
+   "correct": true,
+   "v0.7": [
+    "FLAG",
+    "FLAG"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna B",
+   "question": "v0.3:R06",
+   "correct": true,
+   "v0.7": [
+    "PASS",
+    "PASS"
+   ],
+   "v0.8": [
+    "HOLD",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna A_r2",
+   "question": "v0.3:R11",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.3:R11",
+   "correct": false,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.3:R12",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna A_r2",
+   "question": "v0.3:R15",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.3:R15",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.3:R15",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.8": [
+    "PASS",
+    "HOLD"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.3:R15",
+   "correct": false,
+   "v0.7": [
+    "PASS",
+    "HOLD"
+   ],
+   "v0.8": [
+    "FLAG",
+    "FLAG"
+   ]
+  }
+ ],
+ "table": {
+  "v0.7|prereg|G1": {
+   "n": 360,
+   "pass": 105,
+   "passed_wrong": 1,
+   "false_alarm": 9,
+   "wrong_flagged": 49,
+   "hold": 197
+  },
+  "v0.7|prereg|G2": {
+   "n": 1132,
+   "pass": 380,
+   "passed_wrong": 12,
+   "false_alarm": 57,
+   "wrong_flagged": 134,
+   "hold": 561
+  },
+  "v0.7|prereg|all": {
+   "n": 1492,
+   "pass": 485,
+   "passed_wrong": 13,
+   "false_alarm": 66,
+   "wrong_flagged": 183,
+   "hold": 758
+  },
+  "v0.7|final_rule|G1": {
+   "n": 360,
+   "pass": 90,
+   "passed_wrong": 0,
+   "false_alarm": 9,
+   "wrong_flagged": 49,
+   "hold": 212
+  },
+  "v0.7|final_rule|G2": {
+   "n": 1132,
+   "pass": 330,
+   "passed_wrong": 1,
+   "false_alarm": 57,
+   "wrong_flagged": 134,
+   "hold": 611
+  },
+  "v0.7|final_rule|all": {
+   "n": 1492,
+   "pass": 420,
+   "passed_wrong": 1,
+   "false_alarm": 66,
+   "wrong_flagged": 183,
+   "hold": 823
+  },
+  "v0.8|prereg|G1": {
+   "n": 360,
+   "pass": 122,
+   "passed_wrong": 6,
+   "false_alarm": 9,
+   "wrong_flagged": 49,
+   "hold": 180
+  },
+  "v0.8|prereg|G2": {
+   "n": 1132,
+   "pass": 448,
+   "passed_wrong": 29,
+   "false_alarm": 49,
+   "wrong_flagged": 141,
+   "hold": 494
+  },
+  "v0.8|prereg|all": {
+   "n": 1492,
+   "pass": 570,
+   "passed_wrong": 35,
+   "false_alarm": 58,
+   "wrong_flagged": 190,
+   "hold": 674
+  },
+  "v0.8|final_rule|G1": {
+   "n": 360,
+   "pass": 89,
+   "passed_wrong": 0,
+   "false_alarm": 9,
+   "wrong_flagged": 49,
+   "hold": 213
+  },
+  "v0.8|final_rule|G2": {
+   "n": 1132,
+   "pass": 329,
+   "passed_wrong": 0,
+   "false_alarm": 49,
+   "wrong_flagged": 141,
+   "hold": 613
+  },
+  "v0.8|final_rule|all": {
+   "n": 1492,
+   "pass": 418,
+   "passed_wrong": 0,
+   "false_alarm": 58,
+   "wrong_flagged": 190,
+   "hold": 826
+  }
+ },
+ "adopt": false
+}

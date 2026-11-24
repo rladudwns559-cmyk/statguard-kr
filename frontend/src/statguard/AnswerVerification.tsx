@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { CsvTable } from './csv';
 import { base64Bytes, CalculationError } from './calculationClient';
 import { wordDiff } from './textDiff';
+import { ArithmeticList } from './ArithmeticCheck';
 import { askLive, correctionFeedback, liveStatus, NOTES, OPERATION_LABEL, REASONS, STATUS_LABEL, STATUSES, verifyAnswer, type AnswerVerification as Result, type Claim, type Diagnosis, type LiveStatus } from './answerClient';
 import { UsedRows } from './CalculationResult';
 import type { SamplePreset } from './samples';
@@ -176,6 +177,7 @@ export default function AnswerVerification({ table, onVerified, active = true }:
       {!result.claims.length && <p className="sg-hint">답변에서 검증할 수치 주장을 찾지 못했습니다. 숫자와 단위, 열 이름이 들어간 문장인지 확인해 주세요.</p>}
       {!!result.claims.length && <ReadBack answer={answer} claims={result.claims}/>}
       {result.claims.map(c => <ClaimCard key={c.claim_id} claim={c} table={table}/>)}
+      {result.arithmetic && <ArithmeticList result={result.arithmetic}/>}
       <p className="sg-hint">‘계산 일치’는 연결된 계산 하나가 맞는다는 뜻이며, 답변 전체의 사실·인과관계·자료의 진실성을 보증하지 않습니다.</p>
     </section>}
   </section>;

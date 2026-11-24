@@ -213,6 +213,211 @@
    }
   }
  },
+ "extractor_v08": {
+  "adopted": false,
+  "table": {
+   "v0.7|prereg|all": {
+    "n": 1492,
+    "pass": 485,
+    "passed_wrong": 13,
+    "false_alarm": 66,
+    "wrong_flagged": 183,
+    "hold": 758
+   },
+   "v0.8|prereg|all": {
+    "n": 1492,
+    "pass": 570,
+    "passed_wrong": 35,
+    "false_alarm": 58,
+    "wrong_flagged": 190,
+    "hold": 674
+   },
+   "v0.7|final_rule|all": {
+    "n": 1492,
+    "pass": 420,
+    "passed_wrong": 1,
+    "false_alarm": 66,
+    "wrong_flagged": 183,
+    "hold": 823
+   },
+   "v0.8|final_rule|all": {
+    "n": 1492,
+    "pass": 418,
+    "passed_wrong": 0,
+    "false_alarm": 58,
+    "wrong_flagged": 190,
+    "hold": 826
+   }
+  }
+ },
+ "final_rule_validation": {
+  "answers": 528,
+  "prereg": {
+   "n": 528,
+   "pass": 279,
+   "passed_wrong": 0,
+   "wrong": 78,
+   "wrong_flagged": 22,
+   "false_alarm": 5,
+   "coverage": 0.5284,
+   "upper95": 0.0131
+  },
+  "final_rule": {
+   "n": 528,
+   "pass": 257,
+   "passed_wrong": 0,
+   "wrong": 78,
+   "wrong_flagged": 22,
+   "false_alarm": 5,
+   "coverage": 0.4867,
+   "upper95": 0.0143
+  }
+ },
+ "arithmetic": {
+  "version": "statguard-arithmetic-v0.1.1",
+  "groups": {
+   "G1": {
+    "answers": 360,
+    "wrong": 133,
+    "with_checks": 56,
+    "flagged": 27,
+    "flagged_wrong": 27,
+    "flagged_right": 0,
+    "added": 11
+   },
+   "G2": {
+    "answers": 1132,
+    "wrong": 368,
+    "with_checks": 189,
+    "flagged": 73,
+    "flagged_wrong": 67,
+    "flagged_right": 6,
+    "added": 38
+   }
+  },
+  "total": {
+   "answers": 1492,
+   "wrong": 501,
+   "with_checks": 245,
+   "flagged": 100,
+   "flagged_wrong": 94,
+   "flagged_right": 6,
+   "added": 49
+  },
+  "before_fix_total": {
+   "answers": 1492,
+   "wrong": 501,
+   "with_checks": 256,
+   "flagged": 107,
+   "flagged_wrong": 100,
+   "flagged_right": 7,
+   "added": 52
+  },
+  "right_flagged": [
+   {
+    "group": "G2",
+    "source": "gpt-5-mini 교정 S",
+    "question": "v0.1:C01",
+    "correct": true,
+    "statguard": "PASS",
+    "expression": "5095.25/12",
+    "stated": "424.604166",
+    "recomputed": "424.6041666666666666666666666666667"
+   },
+   {
+    "group": "G2",
+    "source": "gpt-5-mini 교정 S",
+    "question": "v0.1_holdout:H16",
+    "correct": true,
+    "statguard": "HOLD",
+    "expression": "(10 + 8 + 5) / 3",
+    "stated": "7.666",
+    "recomputed": "7.666666666666666666666666666666667"
+   },
+   {
+    "group": "G2",
+    "source": "gpt-5-mini 교정 S",
+    "question": "v0.1_holdout:H16",
+    "correct": true,
+    "statguard": "FLAG",
+    "expression": "(10 + 8 + 5) / 3",
+    "stated": "7.666",
+    "recomputed": "7.666666666666666666666666666666667"
+   },
+   {
+    "group": "G2",
+    "source": "gpt-4o-mini 교정 S",
+    "question": "v0.1_holdout:H18",
+    "correct": true,
+    "statguard": "HOLD",
+    "expression": "(40,050 / 51,672,569) × 100",
+    "stated": "0.077",
+    "recomputed": "0.07750727470120558550127438022289931"
+   },
+   {
+    "group": "G2",
+    "source": "gpt-4o-mini 교정 S",
+    "question": "v0.1_holdout:H18",
+    "correct": true,
+    "statguard": "HOLD",
+    "expression": "(40,050 / 51,672,569) × 100",
+    "stated": "0.077",
+    "recomputed": "0.07750727470120558550127438022289931"
+   },
+   {
+    "group": "G2",
+    "source": "gpt-4o-mini 교정 S",
+    "question": "v0.2:W07",
+    "correct": true,
+    "statguard": "PASS",
+    "expression": "7.8 + 10.0 + 9.4 + 10.0 + 15.0 + 11.7 + 9.4 + 9.4 + 13.3 + 12.2 + 13.9 + 15.0 + 10.0 + 10.7 + 10.0 + 8.9 + 8.9 + 8.3 + 7.8 + 6.1 + 6.7 + 6.7 + 7.8 + 6.7 + 9.4 + 8.9 + 8.9 + 8.3 + 7.8 + 5.0 + 5.0",
+    "stated": "293.3",
+    "recomputed": "289"
+   }
+  ],
+  "examples": [
+   {
+    "group": "G2",
+    "source": "gpt-4o-mini 교정 S",
+    "question": "v0.1:C03",
+    "correct": false,
+    "statguard": "HOLD",
+    "expression": "((425.40 - 422.80) / 422.80) × 100",
+    "stated": "0.38",
+    "recomputed": "0.6149479659413434247871333964049196"
+   },
+   {
+    "group": "G2",
+    "source": "gpt-4o-mini 교정 R",
+    "question": "v0.1_holdout:H02",
+    "correct": false,
+    "statguard": "FLAG",
+    "expression": "((87.3 - 65.3))/(65.3) × 100",
+    "stated": "33.07",
+    "recomputed": "33.69065849923430321592649310872894"
+   },
+   {
+    "group": "G2",
+    "source": "gpt-4o-mini 교정 S",
+    "question": "v0.2:F08",
+    "correct": false,
+    "statguard": "HOLD",
+    "expression": "4.1 + 28.4 + 0.5 + 3.6 + 7.6 + 1.5 + 3.8 + 0.5",
+    "stated": "49.6",
+    "recomputed": "50"
+   },
+   {
+    "group": "G1",
+    "source": "gpt-4o-mini 원래 답변",
+    "question": "v0.2:F02",
+    "correct": false,
+    "statguard": "FLAG",
+    "expression": "26.8 / 365",
+    "stated": "19.18",
+    "recomputed": "0.07342465753424657534246575342465753"
+   }
+  ]
+ },
  "forensics": {
   "version": "statguard-forensics-v0.1",
   "seed": 20261201,

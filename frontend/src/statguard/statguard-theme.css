@@ -650,3 +650,20 @@
 .sg-fx-cause strong{color:#FFE3C8}
 .sg-fx-cause p{color:#F1DCCB}
 @media(max-width:860px){.sg-fx-chain{grid-template-columns:minmax(0,1fr)}.sg-fx-step:not(:last-child)::after{top:auto;bottom:-15px;right:50%;transform:translateX(50%) rotate(135deg)}}
+
+/* ---- inline arithmetic check (no CSV) ---- */
+.sg-arith{margin:16px 0 6px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface)}
+.sg-arith h3{margin:0 0 4px;font-size:17px}
+.sg-arith h3 small{font-size:12.5px;font-weight:600;color:var(--ink-3);margin-left:6px}
+.sg-arith ul{list-style:none;margin:8px 0;padding:0;display:grid;gap:8px}
+.sg-arith li{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);min-width:0}
+.sg-arith li code{overflow-wrap:anywhere;font-size:13.5px}
+.sg-arith li.is-bad{background:var(--bad-soft,#FDECEA);border-color:#F0B8AF}
+.sg-arith li.is-ok{background:var(--ok-soft,#E7F6EF)}
+.sg-arith-status{font-size:12px;font-weight:800;padding:2px 9px;border-radius:20px;white-space:nowrap}
+.sg-arith li.is-bad .sg-arith-status{background:#C8412F;color:#fff}
+.sg-arith li.is-ok .sg-arith-status{background:#1C9467;color:#fff}
+.sg-arith-fix{font-size:13.5px}
+.sg-arith-only{margin-top:18px}
+.sg-arith-only .sg-arith-input{display:grid;gap:6px;margin:10px 0;font-weight:600}
+.sg-arith-only textarea{width:100%;font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);resize:vertical;box-sizing:border-box}

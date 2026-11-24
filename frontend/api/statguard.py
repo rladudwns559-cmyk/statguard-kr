@@ -50,12 +50,12 @@ def process_body(raw):
     try:
         payload = json.loads(raw.decode("utf-8"), object_pairs_hook=_unique_pairs,
             parse_constant=lambda _: (_ for _ in ()).throw(ValueError()))
-        if not isinstance(payload, dict) or payload.get("mode") not in ("calculate", "compare", "verify_answer"):
+        if not isinstance(payload, dict) or payload.get("mode") not in ("calculate", "compare", "verify_answer", "check_arithmetic"):
             return 400, error("INVALID_REQUEST")
         response = calculate_request(payload)
         # The bridge also exposes a read-only capabilities response, but POST
         # only accepts calculation/comparison modes on this public transport.
-        if not isinstance(payload, dict) or payload.get("mode") not in ("calculate", "compare", "verify_answer"):
+        if not isinstance(payload, dict) or payload.get("mode") not in ("calculate", "compare", "verify_answer", "check_arithmetic"):
             return 400, error("INVALID_REQUEST")
         if len(json.dumps(response, ensure_ascii=False).encode("utf-8")) > MAX_RESPONSE_BYTES:
             return 413, error("ENGINE_RESPONSE_LIMIT")

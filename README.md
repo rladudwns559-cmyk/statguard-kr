@@ -81,7 +81,7 @@ node scripts/statguard-local.mjs --live --live-env-file ..\.env.retrieval-live.p
 
 ```powershell
 $env:PYTHONPATH=(Resolve-Path .\src).Path
-python -m unittest tests.test_statguard_offline_v0_1 tests.test_statguard_local_calculation_v0_1 tests.test_statguard_manual_comparison_v0_1 tests.test_statguard_cloud_transport_v0_1 tests.test_statguard_answer_verification_v0_1 tests.test_statguard_llm_extractor_v0_1 tests.test_statguard_statistics_v0_1 tests.test_statguard_live_ask_v0_1 tests.test_statguard_forensics_v0_1 tests.test_statguard_version_sync_v0_1
+python -m unittest tests.test_statguard_offline_v0_1 tests.test_statguard_local_calculation_v0_1 tests.test_statguard_manual_comparison_v0_1 tests.test_statguard_cloud_transport_v0_1 tests.test_statguard_answer_verification_v0_1 tests.test_statguard_llm_extractor_v0_1 tests.test_statguard_statistics_v0_1 tests.test_statguard_live_ask_v0_1 tests.test_statguard_forensics_v0_1 tests.test_statguard_arithmetic_v0_1 tests.test_statguard_version_sync_v0_1
 ```
 
 ```powershell
@@ -163,6 +163,35 @@ cd ..; python -X utf8 -I export_site_comparison.py   # 웹 데이터 benchmarkCo
 cd experiments\statguard_forensics_v0.1
 python -X utf8 -I run_eval.py 20261201
 ```
+
+## 사후 규칙 별도 검증 (`experiments/statguard_final_rule_validation_v0.1`)
+
+비교 실험 뒤 만든 ‘최종값 규칙’(최종값이 재계산과 일치할 때만 통과)을 규칙을 만들 때 보지 않은 gpt-6-luna 답변 528개(A 반복 2·3회차, B, C 1~3회차)로 다시 확인했다. 최종값 규칙 통과 257개 중 오답 **0개**(95% 상한 1.4%), 사전 등록 규칙 279개 중 0개. 이 답변들은 짧아서 두 규칙의 차이를 가르는 시험은 아니며, 긴 답변을 쓰는 새 모델·문항 검증이 남아 있다.
+
+## CSV 없이 답변 속 계산 검산 (`src/when2warn/statguard/arithmetic.py`, `experiments/statguard_arithmetic_v0.1`)
+
+답변에 적힌 계산식(“a + b + c = d”, “(a / b) × 100 ≈ c%”, LaTeX 분수 포함)만 찾아 LLM 없이 Decimal로 다시 계산하고, 결과의 마지막 자릿수 반 단위를 넘으면 ‘계산 틀림’으로 표시한다. CSV가 필요 없다(계산 서버 `check_arithmetic` 모드, 검증하기 화면 ‘CSV가 없나요?’). CSV 검증 결과에도 함께 표시된다.
+
+- 저장된 답변 1,492개(모델 3종, 원래·교정 답변): 계산 틀림 100개 중 실제 오답 **94개(94.0%)**, 오답 501개 중 94개(18.8%) 검출, CSV 재계산이 ‘불일치’로 잡지 못한 오답 49개 추가. 처음 적용한 답변(1,132개)만 보면 73개 중 67개(91.8%).
+- 첫 실행(107개 중 100개)에서 긴 식의 일부만 읽는 버그 두 가지를 찾아 고쳤고(v0.1.1, 결과를 본 뒤 수정), 위 숫자는 수정 후 결과다. 맞는 답인데 잡힌 6개는 대부분 반올림 대신 버림이다.
+- 계산식을 적지 않는 답변에서는 작동하지 않고, 자료를 잘못 옮겨 적은 오류는 CSV 검증으로만 찾을 수 있다.
+
+```powershell
+cd experiments\statguard_final_rule_validation_v0.1; python -X utf8 -I run_validation.py
+cd ..\statguard_arithmetic_v0.1; python -X utf8 -I run_eval.py
+```
+
+## 추출기 v0.8 시도와 미적용 (`experiments/statguard_extractor_v0.8`)
+
+역추적이 찾은 ‘숫자가 여러 개인 문장’ 오독을 고치려고, “~이고/~이며”로 이어진 문장을 절로 나눠 숫자마다 범위를 따로 정하는 v0.8을 만들었다. 채택 기준(두 답변 판정 규칙 모두에서 통과 중 오답이 늘지 않고 오경보도 늘지 않을 것)을 실행 전에 정하고 저장된 답변 1,492개로 v0.7과 비교했다.
+
+| | v0.7 | v0.8 (수정판) |
+|---|---|---|
+| 맞는 답을 ‘불일치’로 판정(오경보) | 66 | **58** |
+| 최종값 규칙: 통과 중 오답 | 1 | **0** |
+| 사전 등록 규칙: 통과 중 오답 | 13 | **35** |
+
+중간 수치가 더 많이 ‘계산 일치’가 되면서 ‘일치가 하나라도 있으면 통과’ 규칙의 허점이 커졌다. 기준을 넘지 못했으므로 **v0.8은 엔진·웹에 적용하지 않았다**(첫 실행 결과와 수정 내용은 PROTOCOL ‘변경 기록’과 `results/REPORT_first_run.md`). 다음 판은 답변 판정을 최종값 규칙으로 정하고 새 답변으로 평가해야 한다.
 
 ## 선행연구와의 차이
 

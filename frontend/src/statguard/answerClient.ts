@@ -13,7 +13,10 @@ export type Claim = {
 };
 /** Error forensics (statguard-forensics-v0.1): a common calculation mistake that reproduces the wrong number exactly. A likely cause, not proof. */
 export type Diagnosis = { kind: string; title: string; explanation: string; reproduced_value: string; rows: number[]; candidates: number; confidence: 'high' | 'medium'; other_explanations: string[]; note: string };
-export type AnswerVerification = { extractor: string; claims: Claim[]; summary: Record<ClaimStatus, number>; scope: string };
+/** statguard-arithmetic: calculations written out in the answer, recomputed without a CSV. */
+export type ArithmeticCheck = { sentence: string; expression: string; stated: string; recomputed: string; tolerance: string; status: 'CONSISTENT' | 'INCONSISTENT' };
+export type ArithmeticResult = { version: string; checks: ArithmeticCheck[]; summary: { checked: number; inconsistent: number } };
+export type AnswerVerification = { extractor: string; claims: Claim[]; summary: Record<ClaimStatus, number>; scope: string; arithmetic?: ArithmeticResult };
 export type AnswerRequest = { mode: 'verify_answer'; request_id: string; csv_base64: string; source_sha256: string; preview_sha256: string; encoding: 'utf-8-sig' | 'cp949'; units: Record<string, string>; answer_text: string };
 
 export const STATUS_LABEL: Record<ClaimStatus, string> = {
@@ -87,7 +90,30 @@ export function validateAnswer(payload: unknown, request: AnswerRequest): Answer
   }
   const summary = v.summary as Record<string, unknown>;
   if (STATUSES.some(s => summary[s] !==(v.claims as Claim[]).filter(c => c.status === s).length)) return fail();
-  return v as unknown as AnswerVerification;
+  const arithmetic = validArithmetic(payload.arithmetic);
+  return (arithmetic ? { ...v, arithmetic } : v) as unknown as AnswerVerification;
+}
+
+function validArithmetic(a: unknown): ArithmeticResult | null {
+  if (!obj(a) || !Array.isArray(a.checks) || a.checks.length > 30 || !obj(a.summary)) return null;
+  if (!a.checks.every(c => obj(c) && typeof c.expression === 'string' && typeof c.stated === 'string' && typeof c.recomputed === 'string' && (c.status === 'CONSISTENT' || c.status === 'INCONSISTENT'))) return null;
+  return a as unknown as ArithmeticResult;
+}
+
+/** No CSV: ask the calculation engine to recompute the calculations the answer writes out (no LLM). */
+export async function checkArithmetic(answer: string, signal: AbortSignal): Promise<ArithmeticResult> {
+  if (!localCalculationAvailable()) throw new CalculationError('이 주소에서는 검증 엔진을 사용할 수 없습니다.');
+  const request_id = crypto.randomUUID();
+  const response = await fetch(calculationEndpoint(), { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-StatGuard-Client': calculationClientHeader() }, body: JSON.stringify({ mode: 'check_arithmetic', request_id, answer_text: answer }), cache: 'no-store', credentials: 'omit', redirect: 'error', signal });
+  let payload: unknown;
+  try { payload = await response.json(); } catch { throw new CalculationError('검증 엔진에 연결하지 못했습니다.'); }
+  if (!response.ok || !obj(payload) || payload.ok !== true || payload.request_id !== request_id) {
+    const code = obj(payload) && obj(payload.error) && typeof payload.error.code === 'string' ? payload.error.code : '';
+    throw new CalculationError(MESSAGES[code] || '검산을 완료하지 못했습니다. 답변을 다시 확인해 주세요.');
+  }
+  const result = validArithmetic(payload.arithmetic);
+  if (!result) throw new CalculationError('검산 결과를 확인할 수 없어 표시하지 않았습니다.');
+  return result;
 }
 
 export async function verifyAnswer(request: AnswerRequest, signal: AbortSignal): Promise<AnswerVerification> {

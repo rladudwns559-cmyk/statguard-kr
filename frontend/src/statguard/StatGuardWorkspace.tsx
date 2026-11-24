@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { ArithmeticOnly } from './ArithmeticCheck';
 import { STATGUARD_VERSION, SITE_NAME, StatGuardHeader, usePageTitle } from './StatGuardChrome';
 import { LEAVE_EVENT, withTransition } from './navigation';
 import { CsvError, decodeCsv, LIMITS, type CsvTable, type Encoding } from './csv';
@@ -108,6 +109,7 @@ export default function StatGuardWorkspace({ initialMode = 'answer' }: { initial
         {busy && <p role="status">파일을 읽는 중…</p>}{error && <p role="alert" className="sg-error">{error}</p>}
       </section>
       {!table && !busy && <section className="sg-empty"><div aria-hidden="true">▤</div><h2>CSV 하나로 시작하세요.</h2><p>파일을 고르거나 ‘실제 공개 자료 예시’를 선택하면 AI 답변 검증 화면이 열립니다.</p><p>AI 답변 검증: 합계·평균·증감률·비율·값 조회, 표준편차·분산·중앙값·최댓값·최솟값·상관계수·t-검정 주장을 판정합니다. 직접 계산: 합계·평균·증감률을 조건을 정해 계산합니다.</p></section>}
+      {!table && !busy && <ArithmeticOnly/>}
       {table && <div className="sg-mode-tabs" role="tablist" aria-label="작업 방식"><button role="tab" aria-selected={mode === 'answer'} onClick={() => withTransition(() => setMode('answer'))}>AI 답변 검증</button><button role="tab" aria-selected={mode === 'calculate'} onClick={() => withTransition(() => setMode('calculate'))}>직접 계산·수치 비교</button></div>}
       {table && <div hidden={mode !== 'answer'}><AnswerVerification key={table.sha256 + table.name} table={table} onVerified={setVerified} active={mode === 'answer'}/></div>}
       {table && mode === 'calculate' && <p className="sg-hint sg-calc-note">직접 계산은 합계·평균·증감률을 지원합니다. 표준편차·상관계수·t-검정 같은 통계 주장은 ‘AI 답변 검증’ 탭에서 확인하세요.</p>}
