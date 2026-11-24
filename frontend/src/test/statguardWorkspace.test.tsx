@@ -25,7 +25,7 @@ describe('StatGuard existing page integration', () => {
     render(<App/>); expect(await screen.findByRole('heading', { name: 'AI가 말한 숫자, CSV로 다시 계산해 확인하세요.' })).toBeVisible();
     expect(window.location.pathname).toBe('/statguard'); expect(fetch).not.toHaveBeenCalled();
     const nav = screen.getByRole('navigation', { name: 'StatGuard 메뉴' });
-    expect([...nav.querySelectorAll('a')].map(a => [a.textContent, a.getAttribute('href')])).toEqual([['소개', '/'], ['검증하기', '/statguard'], ['실험 결과', '/statguard/results']]);
+    expect([...nav.querySelectorAll('a')].map(a => [a.textContent, a.getAttribute('href')])).toEqual([['소개', '/'], ['검증하기', '/statguard'], ['AI 오답 체험', '/statguard/challenge'], ['실험 결과', '/statguard/results']]);
     expect(screen.getByRole('link', { name: '검증하기' })).toHaveAttribute('aria-current', 'page');
     expect(document.querySelector('a[href="/ask"], a[href="/projects"]')).toBeNull();
     await waitFor(() => expect(document.title).toBe('검증하기 · StatGuard-KR'));

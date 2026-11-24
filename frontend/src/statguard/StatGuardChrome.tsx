@@ -6,10 +6,11 @@ import { BrandMark } from '../components/Brand';
 export const STATGUARD_VERSION = 'v0.7';
 export const SITE_NAME = 'StatGuard-KR';
 
-type Page = 'home' | 'workspace' | 'results';
+type Page = 'home' | 'workspace' | 'challenge' | 'results';
 const NAV: { page: Page; href: string; label: string }[] = [
   { page: 'home', href: '/', label: '소개' },
   { page: 'workspace', href: '/statguard', label: '검증하기' },
+  { page: 'challenge', href: '/statguard/challenge', label: 'AI 오답 체험' },
   { page: 'results', href: '/statguard/results', label: '실험 결과' },
 ];
 

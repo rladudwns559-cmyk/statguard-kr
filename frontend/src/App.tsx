@@ -18,7 +18,8 @@ function lazyPage(loader:()=>Promise<{default:ComponentType}>){
 const StatGuardWorkspace=lazyPage(()=>import('./statguard/StatGuardWorkspace'));
 const BenchmarkResults=lazyPage(()=>import('./statguard/BenchmarkResults'));
 const StatGuardHome=lazyPage(()=>import('./statguard/StatGuardHome'));
-const PRELOAD:Record<string,()=>Promise<unknown>>={'/':StatGuardHome.preload,'/statguard':StatGuardWorkspace.preload,'/statguard/results':BenchmarkResults.preload};
+const AnswerChallenge=lazyPage(()=>import('./statguard/AnswerChallenge'));
+const PRELOAD:Record<string,()=>Promise<unknown>>={'/':StatGuardHome.preload,'/statguard':StatGuardWorkspace.preload,'/statguard/results':BenchmarkResults.preload,'/statguard/challenge':AnswerChallenge.preload};
 setPreloader(path=>PRELOAD[path]?.()??Promise.resolve());
 const currentPath=()=>window.location.pathname.replace(/\/$/,'')||'/';
 const sgLoading={minHeight:'100vh',padding:24,background:'#f3f6f9',color:'#193347'} as const;
@@ -40,6 +41,7 @@ export default function App(){
   if(import.meta.env.DEV && import.meta.env.VITE_LOCAL_RESEARCH_MODE === 'true' && path.startsWith('/runs'))return <LocalDashboard/>;
   if(path==='/')return <Suspense fallback={<main role="status" style={sgLoading}>StatGuard-KR을 불러오는 중…</main>}><StatGuardHome/></Suspense>;
   if(path==='/when2warn')return <Landing/>;
+  if(path==='/statguard/challenge')return <Suspense fallback={<main role="status" style={sgLoading}>체험 문제를 준비하는 중…</main>}><AnswerChallenge/></Suspense>;
   if(path==='/statguard/results')return <Suspense fallback={<main role="status" style={sgLoading}>실험 결과를 불러오는 중…</main>}><BenchmarkResults/></Suspense>;
   if(path==='/statguard')return <Suspense fallback={<main role="status" style={sgLoading}>CSV 화면을 준비하는 중…</main>}><StatGuardWorkspace/></Suspense>;
   if(path==='/privacy')return <Privacy/>;

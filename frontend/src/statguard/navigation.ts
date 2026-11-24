@@ -1,7 +1,7 @@
 import { flushSync } from 'react-dom';
 
 /** Pages that switch in place (no reload) with a view transition. Everything else is a normal link. */
-export const SPA_PATHS = ['/', '/statguard', '/statguard/results'];
+export const SPA_PATHS = ['/', '/statguard', '/statguard/challenge', '/statguard/results'];
 export const NAVIGATE_EVENT = 'sg:navigate';
 /** Cancelable; a page with unsaved work calls preventDefault() so we can ask before leaving. */
 export const LEAVE_EVENT = 'sg:beforeleave';
@@ -36,7 +36,8 @@ export async function navigate(href: string) {
   withTransition(() => {
     window.history.pushState(null, '', url.pathname + url.search + url.hash);
     window.dispatchEvent(new Event(NAVIGATE_EVENT));
-    window.scrollTo(0, 0);
+    const target = url.hash ? document.getElementById(decodeURIComponent(url.hash.slice(1))) : null;
+    if (target) target.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0);
   });
 }
 

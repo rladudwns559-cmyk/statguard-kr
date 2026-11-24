@@ -118,12 +118,36 @@ const LIVE_MESSAGES: Record<string, string> = {
   QUESTION_REQUIRED: '질문을 입력해 주세요.', QUESTION_TOO_LONG: '질문은 500자 이내로 입력해 주세요.',
   LIVE_ASK_LIMIT: '쓸 수 있는 질문 횟수를 모두 사용했습니다. 잠시 뒤 다시 시도하거나 답변을 직접 붙여 넣어 검증하세요.', LIVE_ASK_DISABLED: 'AI 질문 기능이 꺼져 있습니다.',
   CSV_TOO_LARGE_FOR_LIVE_ASK: 'AI 질문은 200KB 이하 CSV에서만 사용할 수 있습니다.', LIVE_ASK_NOT_CONFIGURED: 'API 키가 설정되지 않았습니다.',
-  DEMO_PASSWORD_INVALID: '시연 비밀번호가 맞지 않습니다.', DEMO_LOCKED: '비밀번호를 여러 번 틀려 잠시 사용할 수 없습니다.',
+  DEMO_PASSWORD_INVALID: '시연 비밀번호가 맞지 않습니다.', CORRECTION_TOO_LONG: '답변이나 검증 근거가 너무 길어 고치기를 요청할 수 없습니다.', DEMO_LOCKED: '비밀번호를 여러 번 틀려 잠시 사용할 수 없습니다.',
   LIVE_ASK_BUSY: '다른 질문을 처리하는 중입니다. 잠시 뒤 다시 시도해 주세요.', REQUEST_TOO_LARGE: 'AI 질문은 200KB 이하 CSV에서만 사용할 수 있습니다.',
 };
-export async function askLive(request: { csv_base64: string; encoding: 'utf-8-sig' | 'cp949'; question: string; password?: string }, signal: AbortSignal): Promise<{ answer: string; model: string; remaining: number | null }> {
+/**
+ * Evidence sent back to the model when the user asks it to fix its answer (wording of experiments/statguard_correction_v0.1, plus one web-only line).
+ * Only what StatGuard computed from the CSV: recomputed values, formulas, row counts, and the reasons for holding.
+ */
+export function correctionFeedback(v: AnswerVerification, mode: 'answer' | 'report' = 'answer'): string {
+  // Web-only addition after the experiment (see PROTOCOL 변경 기록): one number per sentence keeps the fixed answer verifiable.
+  const FORMAT = mode === 'report' ? '수치는 한 문장에 하나씩 쓰고, 문단으로 된 보고서 형식을 유지하세요.' : '수치는 한 문장에 하나씩 쓰세요. 마지막 줄의 ‘최종값’ 형식을 지키세요.';
+  // Answer mode keeps the experiment's wording exactly; report mode asks to keep the report format.
+  const FIX = mode === 'report' ? '검증 결과를 반영해 보고서를 고쳐 다시 작성하세요. ' : '검증 결과를 반영해 답변을 고쳐 같은 형식으로 다시 작성하세요. ';
+  const REDO = mode === 'report' ? '어떤 열·기간·계산인지 문장에 드러나게, 숫자를 다시 확인해 보고서를 다시 작성하세요. ' : '어떤 열·기간·계산인지 문장에 드러나게, 숫자를 다시 확인해 같은 형식으로 다시 작성하세요. ';
+  if (v.summary.CONTRADICTED) {
+    const lines = ['같은 CSV로 다시 계산해 답변의 수치를 검증했습니다.'];
+    for (const c of v.claims) {
+      if (c.status === 'CONTRADICTED' && c.computed && c.claimed) lines.push(`- 불일치: “${c.sentence}” 답변의 수치 ${c.claimed.text} / CSV 재계산 값 ${c.computed.value} ${c.computed.unit} / 계산식 ${c.computed.expression} / 사용한 행 ${c.computed.usage.used_rows.length}개`);
+      else if (c.status === 'VERIFIED') lines.push(`- 확인됨: “${c.sentence}”`);
+    }
+    lines.push(FIX + FORMAT);
+    return lines.join('\n');
+  }
+  const reasons = [...new Set(v.claims.map(c => REASONS[c.reason_code] ?? c.reason_code))];
+  return ['답변의 수치를 CSV 계산과 연결해 검증할 수 없었습니다.', ...(reasons.length ? reasons : ['답변에서 검증할 수 있는 수치 주장을 찾지 못했습니다.']).map(r => '- ' + r),
+    REDO + FORMAT].join('\n');
+}
+export async function askLive(request: { csv_base64: string; encoding: 'utf-8-sig' | 'cp949'; question: string; password?: string; previous_answer?: string; feedback?: string; mode?: 'answer' | 'report' }, signal: AbortSignal): Promise<{ answer: string; model: string; remaining: number | null }> {
   const cloud = cloudCalculation();
-  const { password, ...rest } = request;
+  const { password, mode, ...rest } = request;
+  if (mode === 'report') (rest as Record<string, unknown>).mode = 'report';
   const body = cloud ? { ...rest, password: password ?? '' } : rest;
   const response = await fetch(cloud ? '/api/statguard_ask' : '/__statguard/ask', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-StatGuard-Client': cloud ? 'cloud-v0.1' : 'local-v0.1' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', redirect: 'error', signal });
   let payload: unknown;

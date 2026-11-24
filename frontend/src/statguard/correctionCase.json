@@ -1,0 +1,43 @@
+{
+ "source": {
+  "experiment": "experiments/statguard_correction_v0.1",
+  "case": "v0.2:W08",
+  "model": "gpt-6-luna",
+  "verifier": "rule v0.7"
+ },
+ "dataset": {
+  "file": "06_시애틀_2023_일별기상.csv",
+  "rows": 365
+ },
+ "question": "2023년 일 최고기온의 표본표준편차(n−1로 나눔)는 몇 ℃인가요?",
+ "original": {
+  "answer": "2023년 일별 최고기온의 표본표준편차는 약 7.9℃입니다.  \n최종값: 7.9 ℃",
+  "correct": false,
+  "decision": "FLAG"
+ },
+ "recompute": {
+  "claimed": "7.9℃",
+  "value": "7.633338216387142068259075446280247",
+  "unit": "℃",
+  "expression": "sqrt(sum((x - mean)^2) / (n - 1)), n = 365",
+  "used_rows": 365,
+  "difference": {
+   "signed": "0.266661783612857931740924553719753",
+   "absolute": "0.2666617836128579317409245537",
+   "unit": "℃",
+   "relative_percent": "3.49"
+  }
+ },
+ "feedback": "같은 CSV로 다시 계산해 답변의 수치를 검증했습니다.\n- 불일치: “2023년 일별 최고기온의 표본표준편차는 약 7.9℃입니다.” 답변의 수치 7.9℃ / CSV 재계산 값 7.633338216387142068259075446280247 ℃ / 계산식 sqrt(sum((x - mean)^2) / (n - 1)), n = 365 / 사용한 행 365개\n검증 결과를 반영해 답변을 고쳐 같은 형식으로 다시 작성하세요. 마지막 줄의 ‘최종값’ 형식을 지키세요.",
+ "corrected": {
+  "answer": "검증 결과를 반영하면 2023년 일별 최고기온의 표본표준편차는 약 7.6333℃입니다.  \n최종값: 7.6333 ℃",
+  "correct": true,
+  "decision": "PASS",
+  "claimed": "7.6333℃"
+ },
+ "recheck_only": {
+  "answer": "CSV의 365개 일 최고기온을 기준으로 표본표준편차를 다시 확인한 결과, 약 7.9℃입니다.  \n최종값: 7.9 ℃",
+  "correct": false,
+  "decision": "FLAG"
+ }
+}

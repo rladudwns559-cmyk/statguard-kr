@@ -102,6 +102,38 @@ class CloudAsk(unittest.TestCase):
         self.assertEqual(cloud.validate_headers(headers(**{'Content-Length': str(cloud.MAX_REQUEST_BYTES + 1)}))[0], 413)
         self.assertEqual(cloud.validate_headers(headers(**{'Content-Type': 'text/plain'}))[0], 415)
 
+    def test_correction_request_continues_the_conversation(self):
+        seen = []
+
+        def capture(request):
+            seen.append(request); return reply(request)
+        with patch.dict(os.environ, ENV, clear=True):
+            extra = json.loads(body()); extra.update(previous_answer='최종값: 23 %', feedback='불일치: 재계산 값 17.8 %')
+            code, result = cloud.process_body(json.dumps(extra).encode(), post=capture)
+            self.assertEqual(code, 200)
+            roles = [m['role'] for m in seen[0]['input']]
+            self.assertEqual(roles, ['user', 'assistant', 'user'])
+            self.assertIn('17.8', seen[0]['input'][2]['content'])
+            half = json.loads(body()); half['feedback'] = 'only feedback'
+            self.assertEqual(cloud.process_body(json.dumps(half).encode(), post=capture)[0], 400)
+            long = json.loads(body()); long.update(previous_answer='x', feedback='y' * 4001)
+            code, result = cloud.process_body(json.dumps(long).encode(), post=capture)
+            self.assertEqual(code, 400); self.assertEqual(result['error']['code'], 'CORRECTION_TOO_LONG')
+
+    def test_report_mode_uses_the_report_instructions(self):
+        seen = []
+
+        def capture(request):
+            seen.append(request); return reply(request)
+        with patch.dict(os.environ, ENV, clear=True):
+            r = json.loads(body()); r['mode'] = 'report'
+            self.assertEqual(cloud.process_body(json.dumps(r).encode(), post=capture)[0], 200)
+            self.assertIn('분석 보고서', seen[0]['instructions'])
+            self.assertEqual(cloud.process_body(body(), post=capture)[0], 200)
+            self.assertIn('최종값', seen[1]['instructions'])
+            bad = json.loads(body()); bad['mode'] = 'poem'
+            self.assertEqual(cloud.process_body(json.dumps(bad).encode(), post=capture)[0], 400)
+
 
 if __name__ == '__main__':
     unittest.main()

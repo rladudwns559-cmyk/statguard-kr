@@ -1,0 +1,382 @@
+{
+ "meta": {
+  "questions": 120,
+  "pending": 0,
+  "rounds": 2,
+  "verifier": "rule v0.7 (frozen)",
+  "model": "gpt-6-luna"
+ },
+ "usage": {
+  "calls": 182,
+  "input_tokens": 1767541,
+  "output_tokens": 182803,
+  "estimated_usd": 0.2682
+ },
+ "groups": {
+  "전체": {
+   "n": 120,
+   "A": 93,
+   "targeted": 50,
+   "R1": {
+    "correct": 96,
+    "fixed": 4,
+    "broken": 1,
+    "decisions": {
+     "PASS": 57,
+     "HOLD": 53,
+     "FLAG": 10
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 95,
+    "fixed": 4,
+    "broken": 2,
+    "decisions": {
+     "PASS": 59,
+     "HOLD": 53,
+     "FLAG": 8
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 100,
+    "fixed": 9,
+    "broken": 2,
+    "decisions": {
+     "PASS": 67,
+     "HOLD": 47,
+     "FLAG": 6
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 103,
+    "fixed": 11,
+    "broken": 1,
+    "decisions": {
+     "PASS": 73,
+     "HOLD": 42,
+     "FLAG": 5
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 8,
+    "A": 0,
+    "R1": 0,
+    "S1": 7
+   },
+   "targeted_HOLD": {
+    "n": 42,
+    "A": 23,
+    "R1": 26,
+    "S1": 23
+   }
+  },
+  "v0.1": {
+   "n": 54,
+   "A": 51,
+   "targeted": 20,
+   "R1": {
+    "correct": 53,
+    "fixed": 2,
+    "broken": 0,
+    "decisions": {
+     "PASS": 27,
+     "HOLD": 26,
+     "FLAG": 1
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 53,
+    "fixed": 2,
+    "broken": 0,
+    "decisions": {
+     "PASS": 28,
+     "HOLD": 25,
+     "FLAG": 1
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 52,
+    "fixed": 1,
+    "broken": 0,
+    "decisions": {
+     "PASS": 32,
+     "HOLD": 20,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 54,
+    "fixed": 3,
+    "broken": 0,
+    "decisions": {
+     "PASS": 35,
+     "HOLD": 17,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 0,
+    "A": 0,
+    "R1": 0,
+    "S1": 0
+   },
+   "targeted_HOLD": {
+    "n": 20,
+    "A": 17,
+    "R1": 19,
+    "S1": 18
+   }
+  },
+  "v0.2": {
+   "n": 44,
+   "A": 30,
+   "targeted": 19,
+   "R1": {
+    "correct": 31,
+    "fixed": 2,
+    "broken": 1,
+    "decisions": {
+     "FLAG": 7,
+     "HOLD": 15,
+     "PASS": 22
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 30,
+    "fixed": 2,
+    "broken": 2,
+    "decisions": {
+     "HOLD": 16,
+     "PASS": 23,
+     "FLAG": 5
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 33,
+    "fixed": 5,
+    "broken": 2,
+    "decisions": {
+     "PASS": 24,
+     "HOLD": 17,
+     "FLAG": 3
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 34,
+    "fixed": 5,
+    "broken": 1,
+    "decisions": {
+     "PASS": 26,
+     "HOLD": 15,
+     "FLAG": 3
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 6,
+    "A": 0,
+    "R1": 0,
+    "S1": 5
+   },
+   "targeted_HOLD": {
+    "n": 13,
+    "A": 5,
+    "R1": 6,
+    "S1": 3
+   }
+  },
+  "v0.3": {
+   "n": 22,
+   "A": 12,
+   "targeted": 11,
+   "R1": {
+    "correct": 12,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "PASS": 8,
+     "HOLD": 12,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 12,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "PASS": 8,
+     "HOLD": 12,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 15,
+    "fixed": 3,
+    "broken": 0,
+    "decisions": {
+     "PASS": 11,
+     "HOLD": 10,
+     "FLAG": 1
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 15,
+    "fixed": 3,
+    "broken": 0,
+    "decisions": {
+     "PASS": 12,
+     "HOLD": 10
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 2,
+    "A": 0,
+    "R1": 0,
+    "S1": 2
+   },
+   "targeted_HOLD": {
+    "n": 9,
+    "A": 1,
+    "R1": 1,
+    "S1": 2
+   }
+  },
+  "본 세트": {
+   "n": 88,
+   "A": 65,
+   "targeted": 39,
+   "R1": {
+    "correct": 68,
+    "fixed": 4,
+    "broken": 1,
+    "decisions": {
+     "PASS": 38,
+     "HOLD": 42,
+     "FLAG": 8
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 67,
+    "fixed": 4,
+    "broken": 2,
+    "decisions": {
+     "PASS": 40,
+     "HOLD": 42,
+     "FLAG": 6
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 72,
+    "fixed": 9,
+    "broken": 2,
+    "decisions": {
+     "PASS": 47,
+     "HOLD": 37,
+     "FLAG": 4
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 75,
+    "fixed": 11,
+    "broken": 1,
+    "decisions": {
+     "PASS": 51,
+     "HOLD": 35,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 7,
+    "A": 0,
+    "R1": 0,
+    "S1": 7
+   },
+   "targeted_HOLD": {
+    "n": 32,
+    "A": 16,
+    "R1": 19,
+    "S1": 16
+   }
+  },
+  "별도 검증 세트": {
+   "n": 32,
+   "A": 28,
+   "targeted": 11,
+   "R1": {
+    "correct": 28,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "HOLD": 11,
+     "FLAG": 2,
+     "PASS": 19
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 28,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "HOLD": 11,
+     "FLAG": 2,
+     "PASS": 19
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 28,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "HOLD": 10,
+     "FLAG": 2,
+     "PASS": 20
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 28,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "HOLD": 7,
+     "PASS": 22,
+     "FLAG": 3
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 1,
+    "A": 0,
+    "R1": 0,
+    "S1": 0
+   },
+   "targeted_HOLD": {
+    "n": 10,
+    "A": 7,
+    "R1": 7,
+    "S1": 7
+   }
+  }
+ }
+}

@@ -1,0 +1,3214 @@
+{
+ "meta": {
+  "questions": 120,
+  "pending": 0,
+  "rounds": 2,
+  "verifier": "rule v0.7 (frozen)",
+  "model": "gpt-6-luna"
+ },
+ "groups": {
+  "전체": {
+   "n": 120,
+   "A": 93,
+   "targeted": 50,
+   "R1": {
+    "correct": 96,
+    "fixed": 4,
+    "broken": 1,
+    "decisions": {
+     "PASS": 57,
+     "HOLD": 53,
+     "FLAG": 10
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 95,
+    "fixed": 4,
+    "broken": 2,
+    "decisions": {
+     "PASS": 59,
+     "HOLD": 53,
+     "FLAG": 8
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 100,
+    "fixed": 9,
+    "broken": 2,
+    "decisions": {
+     "PASS": 67,
+     "HOLD": 47,
+     "FLAG": 6
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 103,
+    "fixed": 11,
+    "broken": 1,
+    "decisions": {
+     "PASS": 73,
+     "HOLD": 42,
+     "FLAG": 5
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 8,
+    "A": 0,
+    "R1": 0,
+    "S1": 7
+   },
+   "targeted_HOLD": {
+    "n": 42,
+    "A": 23,
+    "R1": 26,
+    "S1": 23
+   }
+  },
+  "v0.1": {
+   "n": 54,
+   "A": 51,
+   "targeted": 20,
+   "R1": {
+    "correct": 53,
+    "fixed": 2,
+    "broken": 0,
+    "decisions": {
+     "PASS": 27,
+     "HOLD": 26,
+     "FLAG": 1
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 53,
+    "fixed": 2,
+    "broken": 0,
+    "decisions": {
+     "PASS": 28,
+     "HOLD": 25,
+     "FLAG": 1
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 52,
+    "fixed": 1,
+    "broken": 0,
+    "decisions": {
+     "PASS": 32,
+     "HOLD": 20,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 54,
+    "fixed": 3,
+    "broken": 0,
+    "decisions": {
+     "PASS": 35,
+     "HOLD": 17,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 0,
+    "A": 0,
+    "R1": 0,
+    "S1": 0
+   },
+   "targeted_HOLD": {
+    "n": 20,
+    "A": 17,
+    "R1": 19,
+    "S1": 18
+   }
+  },
+  "v0.2": {
+   "n": 44,
+   "A": 30,
+   "targeted": 19,
+   "R1": {
+    "correct": 31,
+    "fixed": 2,
+    "broken": 1,
+    "decisions": {
+     "FLAG": 7,
+     "HOLD": 15,
+     "PASS": 22
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 30,
+    "fixed": 2,
+    "broken": 2,
+    "decisions": {
+     "HOLD": 16,
+     "PASS": 23,
+     "FLAG": 5
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 33,
+    "fixed": 5,
+    "broken": 2,
+    "decisions": {
+     "PASS": 24,
+     "HOLD": 17,
+     "FLAG": 3
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 34,
+    "fixed": 5,
+    "broken": 1,
+    "decisions": {
+     "PASS": 26,
+     "HOLD": 15,
+     "FLAG": 3
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 6,
+    "A": 0,
+    "R1": 0,
+    "S1": 5
+   },
+   "targeted_HOLD": {
+    "n": 13,
+    "A": 5,
+    "R1": 6,
+    "S1": 3
+   }
+  },
+  "v0.3": {
+   "n": 22,
+   "A": 12,
+   "targeted": 11,
+   "R1": {
+    "correct": 12,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "PASS": 8,
+     "HOLD": 12,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 12,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "PASS": 8,
+     "HOLD": 12,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 15,
+    "fixed": 3,
+    "broken": 0,
+    "decisions": {
+     "PASS": 11,
+     "HOLD": 10,
+     "FLAG": 1
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 15,
+    "fixed": 3,
+    "broken": 0,
+    "decisions": {
+     "PASS": 12,
+     "HOLD": 10
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 2,
+    "A": 0,
+    "R1": 0,
+    "S1": 2
+   },
+   "targeted_HOLD": {
+    "n": 9,
+    "A": 1,
+    "R1": 1,
+    "S1": 2
+   }
+  },
+  "본 세트": {
+   "n": 88,
+   "A": 65,
+   "targeted": 39,
+   "R1": {
+    "correct": 68,
+    "fixed": 4,
+    "broken": 1,
+    "decisions": {
+     "PASS": 38,
+     "HOLD": 42,
+     "FLAG": 8
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 67,
+    "fixed": 4,
+    "broken": 2,
+    "decisions": {
+     "PASS": 40,
+     "HOLD": 42,
+     "FLAG": 6
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 72,
+    "fixed": 9,
+    "broken": 2,
+    "decisions": {
+     "PASS": 47,
+     "HOLD": 37,
+     "FLAG": 4
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 75,
+    "fixed": 11,
+    "broken": 1,
+    "decisions": {
+     "PASS": 51,
+     "HOLD": 35,
+     "FLAG": 2
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 7,
+    "A": 0,
+    "R1": 0,
+    "S1": 7
+   },
+   "targeted_HOLD": {
+    "n": 32,
+    "A": 16,
+    "R1": 19,
+    "S1": 16
+   }
+  },
+  "별도 검증 세트": {
+   "n": 32,
+   "A": 28,
+   "targeted": 11,
+   "R1": {
+    "correct": 28,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "HOLD": 11,
+     "FLAG": 2,
+     "PASS": 19
+    },
+    "passed_wrong": 0
+   },
+   "R2": {
+    "correct": 28,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "HOLD": 11,
+     "FLAG": 2,
+     "PASS": 19
+    },
+    "passed_wrong": 0
+   },
+   "S1": {
+    "correct": 28,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "HOLD": 10,
+     "FLAG": 2,
+     "PASS": 20
+    },
+    "passed_wrong": 0
+   },
+   "S2": {
+    "correct": 28,
+    "fixed": 0,
+    "broken": 0,
+    "decisions": {
+     "HOLD": 7,
+     "PASS": 22,
+     "FLAG": 3
+    },
+    "passed_wrong": 0
+   },
+   "targeted_FLAG": {
+    "n": 1,
+    "A": 0,
+    "R1": 0,
+    "S1": 0
+   },
+   "targeted_HOLD": {
+    "n": 10,
+    "A": 7,
+    "R1": 7,
+    "S1": 7
+   }
+  }
+ },
+ "per_question": {
+  "v0.1:S01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:S08": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:P01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:S02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:S03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:S04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:S05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:S06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:S07": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:C01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:C02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:C03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:C04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:C05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:C06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:P02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:P03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K07": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K08": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K09": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:K10": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V07": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V08": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1:V09": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H07": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H08": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H09": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H10": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H11": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H12": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H13": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H14": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H15": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H16": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H17": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.1_holdout:H18": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W08": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2:W01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W07": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W09": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W10": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W11": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W12": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W13": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W14": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2:W15": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:W16": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2:F03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2:F04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F07": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F08": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F09": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2:F10": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2:F11": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F12": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F13": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2:F14": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2_holdout:LH06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH07": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH08": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH09": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH10": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2_holdout:LH11": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.2_holdout:LH12": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2_holdout:LH13": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.2_holdout:LH14": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R01": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R02": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R03": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R04": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R05": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R06": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R07": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R08": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.3:R09": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.3:R10": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.3:R11": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "FLAG",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.3:R12": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R13": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R14": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R15": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    },
+    {
+     "round": 1,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R16": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.3:R17": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "FLAG",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.3:R18": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 1,
+     "decision": "HOLD",
+     "correct": false
+    },
+    {
+     "round": 2,
+     "decision": "HOLD",
+     "correct": false
+    }
+   ]
+  },
+  "v0.3:R19": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "PASS",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R20": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R21": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  },
+  "v0.3:R22": {
+   "R": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ],
+   "S": [
+    {
+     "round": 0,
+     "decision": "HOLD",
+     "correct": true
+    }
+   ]
+  }
+ },
+ "usage": {
+  "calls": 182,
+  "input_tokens": 1767541,
+  "output_tokens": 182803,
+  "estimated_usd": 0.2682
+ }
+}

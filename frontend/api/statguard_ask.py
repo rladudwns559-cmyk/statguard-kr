@@ -72,7 +72,8 @@ def process_body(raw, post=None):
         payload = json.loads(raw.decode("utf-8"))
     except Exception:
         return 400, error("INVALID_REQUEST")
-    if not isinstance(payload, dict) or set(payload) != {"csv_base64", "encoding", "question", "password"}:
+    base = {"csv_base64", "encoding", "question", "password"}
+    if not isinstance(payload, dict) or set(payload) - {"mode"} not in (base, base | {"previous_answer", "feedback"}):
         return 400, error("INVALID_REQUEST")
     password = payload.pop("password")
     with _lock:
@@ -92,7 +93,7 @@ def process_body(raw, post=None):
     if not result.get("ok"):
         code = result.get("error", {}).get("code", "")
         if code in ("QUESTION_REQUIRED", "QUESTION_TOO_LONG", "UNSUPPORTED_ENCODING", "INVALID_CSV_BASE64",
-                    "CSV_TOO_LARGE_FOR_LIVE_ASK", "CSV_DECODE_FAILED", "INVALID_REQUEST"):
+                    "CSV_TOO_LARGE_FOR_LIVE_ASK", "CSV_DECODE_FAILED", "INVALID_REQUEST", "CORRECTION_TOO_LONG"):
             with _lock:
                 _state["asked"] -= 1  # rejected before any provider call
             return 400, result

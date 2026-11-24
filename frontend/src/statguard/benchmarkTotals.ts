@@ -39,6 +39,18 @@ export const TOTALS = {
   firstRunPassed: stableRows.reduce((a, r) => a + r.per_run[0].passed, 0),
   firstRunWrong: stableRows.reduce((a, r) => a + r.per_run[0].wrong_among_passed, 0),
 };
+type Detection = { errors_total: number; tp: number; fn: number; missed_errors_on_hold: number };
+/** Plain-LLM (A) wrong answers in each main set, judged by the rule extractor frozen before that run (not a later fix). */
+const PRE_FIXED: [unknown, string][] = [[small, 'A/rule_v0.1'], [large, 'A/rule_v0.4'], [domain, 'A/rule_v0.6']];
+const det = PRE_FIXED.map(([s, k]) => (s as { statguard: Record<string, Detection> }).statguard[k]);
+export const REAL_A = {
+  errors: det.reduce((a, d) => a + d.errors_total, 0),
+  flagged: det.reduce((a, d) => a + d.tp, 0),
+  held: det.reduce((a, d) => a + d.missed_errors_on_hold, 0),
+  passedWrong: det.reduce((a, d) => a + d.fn, 0),
+  /** Passed answers from condition A across the 3 repeated runs (the rest of the passed answers are condition C). */
+  passedA: Object.entries(stability as unknown as Record<string, { total_passed: number }>).filter(([k]) => k.endsWith('/A')).reduce((a, [, r]) => a + r.total_passed, 0),
+};
 /** 95% upper limits for "wrong among passed": all 3 runs treated as independent, and the stricter first-run-only count. */
 export const WRONG_UPPER = { all: upperLimit(TOTALS.wrongPassed, TOTALS.passed), firstRun: upperLimit(TOTALS.firstRunWrong, TOTALS.firstRunPassed) };
 export const pct1 = (v: number) => `${(v * 100).toFixed(1)}%`;

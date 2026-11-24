@@ -7,14 +7,15 @@ import StatGuardWorkspace from '../statguard/StatGuardWorkspace';
 import BenchmarkResults from '../statguard/BenchmarkResults';
 import StatGuardHome from '../statguard/StatGuardHome';
 import { STATGUARD_VERSION } from '../statguard/StatGuardChrome';
-import { TOTALS, upperLimit, WRONG_UPPER } from '../statguard/benchmarkTotals';
+import { REAL_A, TOTALS, upperLimit, WRONG_UPPER } from '../statguard/benchmarkTotals';
 import stability from '../statguard/benchmarkStability.json';
+import correction from '../statguard/benchmarkCorrection.json';
 
 beforeEach(() => { vi.stubGlobal('crypto', webcrypto); vi.spyOn(window, 'scrollTo').mockImplementation(() => {}); vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('no network in this test')); });
 afterEach(() => vi.unstubAllGlobals());
 const navOf = () => [...screen.getByRole('navigation', { name: 'StatGuard 메뉴' }).querySelectorAll('a')].map(a => [a.textContent, a.getAttribute('href')]);
 const menu = (name: string) => within(screen.getByRole('navigation', { name: 'StatGuard 메뉴' })).getByRole('link', { name });
-const NAV = [['소개', '/'], ['검증하기', '/statguard'], ['실험 결과', '/statguard/results']];
+const NAV = [['소개', '/'], ['검증하기', '/statguard'], ['AI 오답 체험', '/statguard/challenge'], ['실험 결과', '/statguard/results']];
 
 describe('StatGuard site consistency', () => {
   it('serves the StatGuard home at / with its own title, menu and calls to action, and no old service links', async () => {
@@ -143,5 +144,51 @@ describe('StatGuard site consistency', () => {
     expect(note).toHaveTextContent(`1회차 통과 답변 ${TOTALS.firstRunPassed}건`);
     expect(note).toHaveTextContent(`${(WRONG_UPPER.firstRun * 100).toFixed(1)}%`);
     expect(screen.getByLabelText('전체 실험 규모')).toHaveTextContent('오답률 95% 상한1.3%');
+    expect(REAL_A).toEqual({ errors: 23, flagged: 6, held: 17, passedWrong: 0, passedA: 107 });
+    expect(screen.getByLabelText('일반 LLM 실제 오답 처리')).toHaveTextContent('실제 오답 23건을 보면, 실행 전 고정한 규칙은 6건만 ‘계산 불일치’로 잡고 17건은 보류');
+  });
+
+  it('reports the verify-then-correct experiment from its result file, including where it did not help', () => {
+    render(<BenchmarkResults/>);
+    const g = (correction as unknown as { groups: Record<string, { n: number; A: number; S1: { correct: number }; targeted_FLAG: { n: number; S1: number; R1: number } }> }).groups['전체'];
+    expect(g.n).toBe(120);
+    const key = screen.getByLabelText('자동 교정 핵심 결과');
+    expect(key).toHaveTextContent(`S ${g.targeted_FLAG.S1}/${g.targeted_FLAG.n}건 · R ${g.targeted_FLAG.R1}/${g.targeted_FLAG.n}건`);
+    expect(key).toHaveTextContent(`${(g.A / g.n * 100).toFixed(1)}% → ${(g.S1.correct / g.n * 100).toFixed(1)}%`);
+    expect(screen.getByRole('region', { name: '자동 교정 정답률 표' }).querySelectorAll('tbody tr')).toHaveLength(6);
+    expect(screen.getByText(/보류된 답변 .*단순 재확인.*보다 낫지 않았고/)).toBeVisible();
+  });
+
+  it('shows the recorded verify-then-correct case on the home page, from the experiment file', () => {
+    render(<StatGuardHome/>);
+    const replay = screen.getByRole('region', { name: '틀린 숫자를 잡고, 근거를 주면 AI가 스스로 고칩니다' });
+    expect(replay).toHaveTextContent('7.9℃');
+    expect(replay).toHaveTextContent('7.6333℃');
+    expect(replay).toHaveTextContent('계산 불일치');
+    expect(replay).toHaveTextContent('계산 일치');
+    expect(within(replay).getByLabelText('근거 없이 다시 확인만 시킨 경우')).toHaveTextContent('7.9 ℃ → 7.9 ℃그대로 틀림');
+  });
+
+  it('plots coverage vs. risk and lists verified related work on the results page', () => {
+    render(<BenchmarkResults/>);
+    const table = screen.getByRole('region', { name: '검증 방식별 판정 범위와 위험 표' });
+    expect(table).toHaveTextContent('검증 안 함100.0% (88/88)23/88 (26.1%)');
+    expect(table).toHaveTextContent('규칙 → 보류만 LLM');
+    expect(screen.getByRole('img', { name: /검증 안 함: 판정 100\.0%, 통과 답변 중 오답 26\.1%/ })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /교정 실험 정답률: 원래 답변 \(일반 LLM\) 77\.5%/ })).toBeInTheDocument();
+    const related = screen.getByRole('region', { name: '기존 연구와 무엇이 다른가' });
+    expect(related.querySelectorAll('.sg-related-card')).toHaveLength(8);
+    expect(within(related).getByRole('link', { name: 'CRITIC' })).toHaveAttribute('href', expect.stringContaining('iclr.cc'));
+  });
+
+  it('offers the public dataset files and every table for download', async () => {
+    const { existsSync } = await import('node:fs');
+    const { resolve } = await import('node:path');
+    render(<BenchmarkResults/>);
+    const section = screen.getByRole('region', { name: '한국어 수치 주장 벤치마크 v0.1 내려받기' });
+    const links = [...section.querySelectorAll('a')].map(a => decodeURIComponent(a.getAttribute('href') ?? ''));
+    expect(links).toHaveLength(11);
+    for (const href of links) expect(existsSync(resolve(__dirname, '../../public' + href))).toBe(true);
+    expect(section).toHaveTextContent('오답 27개');
   });
 });

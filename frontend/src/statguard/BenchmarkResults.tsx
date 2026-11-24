@@ -1,9 +1,11 @@
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle, useRevealOnScroll } from './StatGuardChrome';
-import { pct1, TOTALS, WRONG_UPPER } from './benchmarkTotals';
+import { pct1, REAL_A, TOTALS, WRONG_UPPER } from './benchmarkTotals';
 import summary from './benchmarkSummary.json';
 import summaryLarge from './benchmarkSummaryLarge.json';
 import summaryDomain from './benchmarkSummaryDomain.json';
 import stability from './benchmarkStability.json';
+import correction from './benchmarkCorrection.json';
+import { CorrectionBars, CoverageRiskSection, DatasetSection, RelatedWorkSection } from './ResultsExtras';
 import './statguard.css';
 import './statguard-theme.css';
 
@@ -87,9 +89,33 @@ function StabilitySection() {
   return <section className="sg-card sg-large" aria-label="반복 실행 안정성"><p className="sg-eyebrow">반복 실행</p><h2>같은 질문을 세 번 물으면?</h2>
     <p className="sg-hint">A·C 조건을 같은 요청으로 3회 실행했습니다. StatGuard는 고정 사본(규칙 v0.6)으로 판정했습니다. <strong>통과시킨 답변 {passed}건 중 오답 {wrong}건.</strong></p>
     <p className="sg-hint" aria-label="오답률 신뢰구간">오답 0건이 ‘오답률 0%’를 뜻하지는 않습니다. 정확(Clopper–Pearson) 95% 신뢰구간으로 보면 통과 답변의 오답률은 <strong>최대 {pct1(WRONG_UPPER.all)}</strong>까지 가능합니다. 다만 같은 질문을 3번 반복한 답변은 서로 독립이 아니므로, 반복을 빼고 1회차 통과 답변 {TOTALS.firstRunPassed}건({TOTALS.firstRunWrong}건 오답)만 쓰면 상한은 <strong>{pct1(WRONG_UPPER.firstRun)}</strong>로 더 넓어집니다. 실제 오답률은 0%에서 이 상한 사이 어딘가로 보는 것이 정직한 해석입니다.</p>
+    <p className="sg-hint" aria-label="일반 LLM 실제 오답 처리">통과 답변 {passed}건 중 {REAL_A.passedA}건은 오답이 많은 일반 LLM(A) 답변이며, 이 답변들도 오답은 0건이었습니다. 다만 1회차 본 세트에서 일반 LLM의 실제 오답 {REAL_A.errors}건을 보면, 실행 전 고정한 규칙은 {REAL_A.flagged}건만 ‘계산 불일치’로 잡고 {REAL_A.held}건은 보류했으며 통과시킨 오답은 {REAL_A.passedWrong}건이었습니다. 즉 오답을 막는 주된 방식은 틀렸다고 잡아내기보다 확정하지 않고 보류하는 것이었습니다(보류에는 답을 끝내지 못한 형식 오류도 포함).</p>
     <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="반복 실행 표"><table><thead><tr><th scope="col">벤치마크 · 조건</th><th scope="col">회차별 정답률</th><th scope="col">정답 여부가 3회 모두 같은 문항</th><th scope="col">한 번이라도 틀린 문항</th><th scope="col">통과 답변 중 오답</th><th scope="col">회차별 판정 비율</th></tr></thead>
       <tbody>{rows.map(r => <tr key={r.benchmark + r.condition}><th scope="row">{r.benchmark} · {r.condition}</th><td>{r.per_run.map(p => pct(p.accuracy)).join(' / ')}</td><td>{pct(r.questions_same_correctness_all_runs)}</td><td>{r.questions_wrong_in_some_run}</td><td>{r.total_wrong_among_passed}/{r.total_passed}</td><td>{r.per_run.map(p => pct(p.coverage)).join(' / ')}</td></tr>)}</tbody></table></div>
     <p className="sg-hint">일반 LLM(A)은 같은 질문에도 회차마다 정답이 바뀌었습니다(큰 표에서 문항의 약 20%). 계산 도구(C)는 거의 일정했습니다.</p>
+  </section>;
+}
+type CorrStep = { correct: number; fixed: number; broken: number; passed_wrong: number };
+type CorrGroup = { n: number; A: number; targeted: number; R1: CorrStep; S1: CorrStep; R2: CorrStep; S2: CorrStep;
+  targeted_FLAG: { n: number; A: number; R1: number; S1: number }; targeted_HOLD: { n: number; A: number; R1: number; S1: number } };
+const corr = correction as unknown as { groups: Record<string, CorrGroup>; usage: { calls: number; estimated_usd: number } };
+function CorrectionSection() {
+  const all = corr.groups['전체'], flag = all.targeted_FLAG, hold = all.targeted_HOLD;
+  const rate = (a: number, n: number) => `${a}/${n} (${(a / n * 100).toFixed(1)}%)`;
+  const rows = ['전체', '본 세트', '별도 검증 세트', 'v0.1', 'v0.2', 'v0.3'];
+  const label: Record<string, string> = { 'v0.1': '작은 표 (v0.1)', 'v0.2': '큰 표 (v0.2)', 'v0.3': '국가별 (v0.3)' };
+  return <section className="sg-card sg-large" aria-labelledby="correction-heading"><p className="sg-eyebrow">검증 → 교정</p><h2 id="correction-heading">근거를 돌려주면 AI가 고칠까?</h2>
+    <p className="sg-hint">일반 LLM(A)의 기존 답변 {all.n}개에서 출발해, StatGuard가 ‘통과’시키지 않은 {all.targeted}개 답변에 대해 두 가지를 비교했습니다. <strong>R 단순 재확인</strong>은 “CSV로 다시 확인해 다시 쓰라”고만 하고, <strong>S StatGuard 근거</strong>는 불일치한 수치의 재계산 값·계산식과 보류 사유를 보냅니다. 정답은 채점에만 쓰고 모델에게 보내지 않았으며, 조건은 실행 전에 PROTOCOL로 고정했습니다(모델 {TOTALS.model}, 최대 2회, 호출 {corr.usage.calls}회).</p>
+    <dl className="sg-data-meta sg-results-meta" aria-label="자동 교정 핵심 결과">
+      <div><dt>불일치로 잡힌 오답 고침 (1회)</dt><dd>S {flag.S1}/{flag.n}건 · R {flag.R1}/{flag.n}건</dd></div>
+      <div><dt>전체 정답률 A → S 1회 → S 2회</dt><dd>{(all.A / all.n * 100).toFixed(1)}% → {(all.S1.correct / all.n * 100).toFixed(1)}% → {(all.S2.correct / all.n * 100).toFixed(1)}%</dd></div>
+      <div><dt>같은 문항 R 단순 재확인 1회</dt><dd>{(all.R1.correct / all.n * 100).toFixed(1)}%</dd></div>
+      <div><dt>맞던 답이 틀려짐 (S 1회 / 2회)</dt><dd>{all.S1.broken}건 / {all.S2.broken}건</dd></div>
+    </dl>
+    <CorrectionBars/>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="자동 교정 정답률 표"><table><thead><tr><th scope="col">묶음</th><th scope="col">A 원래</th><th scope="col">R 단순 재확인 1회</th><th scope="col">S StatGuard 근거 1회</th><th scope="col">S 2회</th><th scope="col">교정 대상</th></tr></thead>
+      <tbody>{rows.map(k => { const g = corr.groups[k]; return <tr key={k}><th scope="row">{label[k] ?? k}</th><td>{rate(g.A, g.n)}</td><td>{rate(g.R1.correct, g.n)}</td><td>{rate(g.S1.correct, g.n)}</td><td>{rate(g.S2.correct, g.n)}</td><td>{g.targeted}</td></tr>; })}</tbody></table></div>
+    <p className="sg-hint">효과는 ‘계산 불일치’로 잡힌 답변에서 뚜렷했습니다(S {flag.S1}/{flag.n}건 고침, R {flag.R1}건). 반면 보류된 답변 {hold.n}건에서는 근거 피드백(정답 {hold.S1}건)이 단순 재확인(정답 {hold.R1}건)보다 낫지 않았고, 별도 검증 세트에서는 변화가 없었습니다. 교정 후에도 통과 답변 중 오답은 0건이었지만, 계산 도구를 처음부터 쓴 조건(C)의 정답률에는 미치지 못합니다. 소규모·1회 실행이므로 경향으로만 해석합니다.</p>
   </section>;
 }
 function DetectionTable({ rows, label }: { rows: Record<string, Metric>; label: string }) {
@@ -109,6 +135,10 @@ export default function BenchmarkResults() {
       <dl className="sg-data-meta sg-results-meta" aria-label="전체 실험 규모"><div><dt>모델</dt><dd>{TOTALS.model}</dd></div><div><dt>질문</dt><dd>{TOTALS.questions}개 · 자료 {TOTALS.datasets}종</dd></div><div><dt>API 호출(반복 포함)</dt><dd>{TOTALS.calls.toLocaleString('ko-KR')}회</dd></div><div><dt>추정 비용</dt><dd>${TOTALS.usd.toFixed(2)}</dd></div><div><dt>통과 답변 중 오답</dt><dd>{TOTALS.wrongPassed}/{TOTALS.passed}건</dd></div><div><dt>오답률 95% 상한</dt><dd>{pct1(WRONG_UPPER.all)}</dd></div></dl>
       <OverviewChart/>
       <StabilitySection/>
+      <CorrectionSection/>
+      <CoverageRiskSection/>
+      <RelatedWorkSection/>
+      <DatasetSection questions={TOTALS.questions} wrong={(correction as unknown as { groups: Record<string, { n: number; A: number }> }).groups['전체'].n - (correction as unknown as { groups: Record<string, { n: number; A: number }> }).groups['전체'].A}/>
       <LargeSection large={large} eyebrow="실험 v0.2 · 큰 표와 통계" title="행이 많아지면 LLM은 틀리기 시작한다" intro="NOAA 일별 기상 365행·1,460행. 합계·평균에 더해 표준편차·중앙값·최댓값·상관계수·Welch t-검정을 물었습니다. 규칙 추출 v0.4는 실행 전에 고정했습니다."/>
       <LargeSection large={domain} eyebrow="실험 v0.3 · 다른 분야" title="다른 분야에서도 그럴까? — 176개국 인구·경제·보건" intro="World Bank WDI 2023, 176개국의 총인구·실업률·1인당GDP·기대수명. 규칙 추출 v0.6은 실행 전에 고정했습니다."/>
       <h2 className="sg-results-divider">실험 v0.1 · 작은 표 (2~12행)</h2>

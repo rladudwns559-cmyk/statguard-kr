@@ -1,6 +1,9 @@
 import large from './benchmarkSummaryLarge.json';
 import { pct1, TOTALS, WRONG_UPPER } from './benchmarkTotals';
+import correction from './benchmarkCorrection.json';
+const flagFix = (correction as unknown as { groups: Record<string, { targeted_FLAG: { n: number; S1: number; R1: number } }> }).groups['전체'].targeted_FLAG;
 import RecountScene from './RecountScene';
+import CorrectionReplay from './CorrectionReplay';
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle } from './StatGuardChrome';
 import './statguard.css';
 import './statguard-theme.css';
@@ -34,7 +37,7 @@ export default function StatGuardHome() {
         <div className="sg-hero">
           <h1 id="home-heading">AI가 말한 숫자, 다시 계산해서 확인합니다.</h1>
           <p className="sg-hero-lead">LLM이 표(CSV)를 보고 쓴 답변에서 수치 주장을 찾아 같은 자료로 다시 계산합니다. 맞으면 일치, 틀리면 불일치로 표시하고, 근거가 부족하거나 해석이 필요한 문장은 억지로 판정하지 않고 보류합니다.</p>
-          <div className="sg-hero-actions"><a className="sg-primary sg-link-button" href="/statguard">바로 체험하기</a><a className="sg-secondary sg-link-button" href="/statguard/results">실험 결과 보기</a></div>
+          <div className="sg-hero-actions"><a className="sg-primary sg-link-button" href="/statguard">바로 체험하기</a><a className="sg-secondary sg-link-button" href="/statguard/challenge">AI 오답 맞혀 보기</a><a className="sg-secondary sg-link-button" href="/statguard/results">실험 결과 보기</a></div>
         </div>
         <RecountScene/>
       </section>
@@ -45,9 +48,11 @@ export default function StatGuardHome() {
         {p && <div><strong>{p.precision?.toFixed(2)} / {p.recall?.toFixed(2)}</strong><span>일부러 틀린 숫자를 넣은 문장에서 오류 탐지 정밀도 / 재현율 (판정한 문장 기준)</span></div>}
       </section>
 
+      <CorrectionReplay/>
+
       <section className="sg-section" aria-labelledby="how-heading">
         <h2 id="how-heading">답변 하나를 이렇게 확인합니다</h2>
-        <p>네 단계는 순서대로 실행됩니다. 어느 단계에서든 확정할 수 없으면 그 자리에서 보류합니다.</p>
+        <p>네 단계는 순서대로 실행됩니다. 어느 단계에서든 확정할 수 없으면 그 자리에서 보류합니다. 판정 뒤에는 불일치한 수치의 재계산 값과 계산식을 AI에게 돌려보내 답변을 고치게 할 수 있습니다. 실험에서 불일치로 잡힌 오답 {flagFix.n}건 중 {flagFix.S1}건이 한 번에 고쳐졌고, 근거 없이 다시 확인만 시킨 경우는 {flagFix.R1}건이었습니다.</p>
         <ol className="sg-rail">{STEPS.map((s, i) => <li key={s.title}><span className="num" aria-hidden="true">{i + 1}</span><h3>{s.title}</h3><small>{s.en}</small><p>{s.body}</p></li>)}</ol>
       </section>
 

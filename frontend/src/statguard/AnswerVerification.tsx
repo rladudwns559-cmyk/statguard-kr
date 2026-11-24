@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { CsvTable } from './csv';
 import { base64Bytes, CalculationError } from './calculationClient';
-import { askLive, liveStatus, NOTES, OPERATION_LABEL, REASONS, STATUS_LABEL, STATUSES, verifyAnswer, type AnswerVerification as Result, type Claim, type LiveStatus } from './answerClient';
+import { wordDiff } from './textDiff';
+import { askLive, correctionFeedback, liveStatus, NOTES, OPERATION_LABEL, REASONS, STATUS_LABEL, STATUSES, verifyAnswer, type AnswerVerification as Result, type Claim, type LiveStatus } from './answerClient';
 import { UsedRows } from './CalculationResult';
 import type { SamplePreset } from './samples';
 import { STATGUARD_VERSION } from './StatGuardChrome';
@@ -57,6 +58,10 @@ function ClaimCard({ claim, table }: { claim: Claim; table: CsvTable }) {
   </article>;
 }
 
+const REPORT_QUESTION = '이 자료로 분석 보고서를 작성해 주세요.';
+/** The units the user confirmed on screen are passed along, so the report states them and every number can be checked. */
+const reportQuestion = (units: Record<string, string>) => REPORT_QUESTION + (Object.keys(units).length ? ' 열 단위: ' + Object.entries(units).map(([k, v]) => `${k} ${v}`).join(', ') + '.' : '');
+
 export default function AnswerVerification({ table, onVerified, active = true }: { table: Source; onVerified?: (done: boolean) => void; active?: boolean }) {
   const numericColumns = useMemo(() => table.columns.filter((_, i) => table.rows.every(r => !r[i].trim() || numeric(r[i])) && table.rows.some(r => r[i].trim())), [table]);
   const example = table.sample ? { units: SAMPLE_UNITS, answer: SAMPLE_ANSWER } : table.preset ? { units: table.preset.units, answer: table.preset.answer } : null;
@@ -69,17 +74,19 @@ export default function AnswerVerification({ table, onVerified, active = true }:
   const confirmed = Object.fromEntries(Object.entries(units).map(([k, v]) => [k, v.trim()]).filter(([, v]) => v));
   function change(next: () => void) { abort.current?.abort(); abort.current = null; setBusy(false); setResult(null); setError(''); next(); }
   const [live, setLive] = useState<LiveStatus | null>(null), [question, setQuestion] = useState(''), [demoPassword, setDemoPassword] = useState(''), [asking, setAsking] = useState(false), [askedModel, setAskedModel] = useState('');
+  const [correction, setCorrection] = useState<{ round: number; before: Result['summary']; previous: string } | null>(null);
+  const [askMode, setAskMode] = useState<'answer' | 'report'>('answer');
   // Live-demo status is only asked for while this panel is visible (kept mounted when another tab is shown).
   useEffect(() => { if (!active || live) return; let alive = true; void liveStatus().then(s => { if (alive) setLive(s); }); return () => { alive = false; }; }, [active, live]);
-  async function askAndVerify() {
+  async function askAndVerify(mode: 'answer' | 'report' = 'answer') {
     if (asking || busy) return;
-    if (!question.trim()) { setError('AI에게 할 질문을 입력해 주세요.'); return; }
+    if (mode === 'answer' && !question.trim()) { setError('AI에게 할 질문을 입력해 주세요.'); return; }
     if (!Object.keys(confirmed).length) { setError('숫자 열 하나 이상의 단위를 먼저 입력해 주세요.'); return; }
     if (live?.password && !demoPassword) { setError('시연 비밀번호를 입력해 주세요.'); return; }
-    const controller = new AbortController(); abort.current = controller; setAsking(true); setError(''); setResult(null); setAskedModel('');
+    const controller = new AbortController(); abort.current = controller; setAsking(true); setError(''); setResult(null); setAskedModel(''); setCorrection(null); setAskMode(mode);
     const timer = setTimeout(() => controller.abort(), 100000);
     try {
-      const reply = await askLive({ csv_base64: base64Bytes(table.rawBytes), encoding: table.encoding === 'UTF-8' ? 'utf-8-sig' : 'cp949', question, ...(live?.password ? { password: demoPassword } : {}) }, controller.signal);
+      const reply = await askLive({ csv_base64: base64Bytes(table.rawBytes), encoding: table.encoding === 'UTF-8' ? 'utf-8-sig' : 'cp949', question: mode === 'report' ? reportQuestion(confirmed) : question, mode, ...(live?.password ? { password: demoPassword } : {}) }, controller.signal);
       if (abort.current !== controller) return;
       setAnswer(reply.answer); setAskedModel(reply.model); setLive(l => l && { ...l, remaining: reply.remaining ?? Math.max(0, l.remaining - 1) });
       abort.current = null; setAsking(false);
@@ -88,6 +95,24 @@ export default function AnswerVerification({ table, onVerified, active = true }:
       if (abort.current === controller) setError(controller.signal.aborted ? 'AI 답변 시간이 초과되었습니다.' : e instanceof CalculationError ? e.message : 'AI 답변을 받지 못했습니다.');
     } finally { clearTimeout(timer); if (abort.current === controller) { abort.current = null; setAsking(false); } }
   }
+  async function correctAnswer() {
+    if (asking || busy || !result) return;
+    if (askMode === 'answer' && !question.trim()) { setError('위 ‘AI에게 할 질문’ 칸에 원래 질문을 적어야 고치기를 요청할 수 있습니다.'); return; }
+    if (live?.password && !demoPassword) { setError('시연 비밀번호를 입력해 주세요.'); return; }
+    const before = result.summary, feedback = correctionFeedback(result, askMode), previous = answer, round = (correction?.round ?? 0) + 1;
+    const controller = new AbortController(); abort.current = controller; setAsking(true); setError('');
+    const timer = setTimeout(() => controller.abort(), 100000);
+    try {
+      const reply = await askLive({ csv_base64: base64Bytes(table.rawBytes), encoding: table.encoding === 'UTF-8' ? 'utf-8-sig' : 'cp949', question: askMode === 'report' ? reportQuestion(confirmed) : question, mode: askMode, previous_answer: previous, feedback, ...(live?.password ? { password: demoPassword } : {}) }, controller.signal);
+      if (abort.current !== controller) return;
+      setAnswer(reply.answer); setAskedModel(reply.model); setCorrection({ round, before, previous }); setLive(l => l && { ...l, remaining: reply.remaining ?? Math.max(0, l.remaining - 1) });
+      abort.current = null; setAsking(false);
+      await run(reply.answer);
+    } catch (e) {
+      if (abort.current === controller) setError(controller.signal.aborted ? 'AI 답변 시간이 초과되었습니다.' : e instanceof CalculationError ? e.message : 'AI 답변을 받지 못했습니다.');
+    } finally { clearTimeout(timer); if (abort.current === controller) { abort.current = null; setAsking(false); } }
+  }
+  const canCorrect = !!live?.enabled && !!result && !/최종값\s*[:：]?\s*판단\s?불가/.test(answer) && (result.summary.CONTRADICTED > 0 || result.summary.VERIFIED === 0);
   async function run(text = answer) {
     if (busy) return;
     if (!Object.keys(confirmed).length) { setError('숫자 열 하나 이상의 단위를 입력해 주세요.'); return; }
@@ -116,9 +141,11 @@ export default function AnswerVerification({ table, onVerified, active = true }:
       <p className="sg-hint">{live.password ? <>시연 비밀번호를 아는 사용자만 쓸 수 있습니다. 질문과 CSV를 {live.model}에 보내 받은 답변을 아래에 넣고 바로 검증합니다. 질문 횟수는 서버에서 제한합니다.</> : <>이 PC에서만 켜진 시연 기능입니다. 질문과 CSV를 {live.model}에 보내 받은 답변을 아래에 넣고 바로 검증합니다. 남은 질문 {live.remaining}회.</>}</p>
       {live.password && <label className="sg-live-password">시연 비밀번호<input type="password" autoComplete="off" maxLength={64} value={demoPassword} onChange={e => setDemoPassword(e.target.value)}/></label>}
       <div className="sg-live-row"><input aria-label="AI에게 할 질문" maxLength={500} value={question} placeholder="예: 2023년 7월 일 최고기온의 평균은 몇 ℃인가요?" onChange={e => setQuestion(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') void askAndVerify(); }}/>
-        <button type="button" className="sg-primary" disabled={asking || busy || (!live.password && live.remaining <= 0)} aria-busy={asking} onClick={() => void askAndVerify()}>{asking ? 'AI 답변 기다리는 중…' : '질문하고 검증'}</button></div>
+        <button type="button" className="sg-primary" disabled={asking || busy || (!live.password && live.remaining <= 0)} aria-busy={asking} onClick={() => void askAndVerify('answer')}>{asking ? 'AI 답변 기다리는 중…' : '질문하고 검증'}</button></div>
+      <div className="sg-report-row"><button type="button" className="sg-secondary" disabled={asking || busy || (!live.password && live.remaining <= 0)} aria-busy={asking} onClick={() => void askAndVerify('report')}>AI에게 분석 보고서 쓰게 하기</button>
+        <span className="sg-hint">질문 없이 이 CSV로 여러 문단짜리 분석 보고서를 쓰게 한 뒤, 보고서 속 숫자를 모두 검증합니다.</span></div>
     </fieldset>}
-    <label className="sg-answer-input">2. AI 답변{askedModel && <span className="sg-badge"> {askedModel}가 방금 작성한 답변</span>}<textarea value={answer} maxLength={6000} rows={6} placeholder="예: 2023년 강수량 합계는 1,000mm입니다." onChange={e => { setAskedModel(''); change(() => setAnswer(e.target.value)); }}/></label>
+    <label className="sg-answer-input">2. AI 답변{askedModel && <span className="sg-badge"> {askedModel}가 방금 작성한 {askMode === 'report' ? '분석 보고서' : '답변'}</span>}<textarea value={answer} maxLength={6000} rows={6} placeholder="예: 2023년 강수량 합계는 1,000mm입니다." onChange={e => { setAskedModel(''); setCorrection(null); setAskMode('answer'); change(() => setAnswer(e.target.value)); }}/></label>
     <div className="sg-answer-actions">
       {example && <button type="button" className="sg-secondary" onClick={() => change(() => { setUnits({ ...example.units }); setAnswer(example.answer); })}>예시 답변 넣기</button>}
       <span className="sg-hint">{answer.length.toLocaleString('ko-KR')} / 6,000자</span>
@@ -127,7 +154,13 @@ export default function AnswerVerification({ table, onVerified, active = true }:
     <p className="sg-hint">검증 단계에서는 답변 문장과 CSV를 계산 엔진에만 전달하며 GPT로 보내지 않습니다. 규칙 기반 추출기({STATGUARD_VERSION})가 합계·평균·증감률·비율·값 조회와 표준편차·분산·중앙값·최댓값·최솟값·상관계수·t-검정(유의성·p값) 주장을 인식합니다.</p>
     {error && <p className="sg-error" role="alert">{error}</p>}
     {result && <section ref={output} tabIndex={-1} className="sg-answer-result" aria-label="답변 검증 결과">
+      {correction && <p className="sg-correction-note" role="status">StatGuard 근거로 고친 답변 ({correction.round}회차) · 계산 불일치 {correction.before.CONTRADICTED}건 → {result.summary.CONTRADICTED}건, 계산 일치 {correction.before.VERIFIED}건 → {result.summary.VERIFIED}건</p>}
       <div className="sg-summary">{STATUSES.map(s => <div key={s} className={'sg-summary-' + s.toLowerCase().replace('_', '-')}><strong>{result.summary[s]}</strong><span>{STATUS_LABEL[s]}</span></div>)}</div>
+      {correction && correction.previous !== answer && <section className="sg-diff" aria-label="수정 전후 비교"><h3>수정 전후 비교</h3>
+        <p>{wordDiff(correction.previous, answer).map((p, n) => p.kind === 'same' ? <span key={n}>{p.text}</span> : p.kind === 'del' ? <del key={n}>{p.text}</del> : <ins key={n}>{p.text}</ins>)}</p>
+        <small className="sg-hint">빨간 취소선은 AI가 지운 부분, 초록은 StatGuard 근거를 받고 새로 쓴 부분입니다.</small></section>}
+      {canCorrect && <div className="sg-correct-row"><button type="button" className="sg-primary" disabled={asking || busy} aria-busy={asking} onClick={() => void correctAnswer()}>{asking ? 'AI가 고치는 중…' : '근거 보내고 AI에게 고치게 하기'}</button>
+        <p className="sg-hint">불일치한 수치의 재계산 값·계산식과 보류 사유만 AI에게 보내고, 고친 답변을 다시 검증합니다. 정답은 보내지 않습니다.</p></div>}
       {!result.claims.length && <p className="sg-hint">답변에서 검증할 수치 주장을 찾지 못했습니다. 숫자와 단위, 열 이름이 들어간 문장인지 확인해 주세요.</p>}
       {!!result.claims.length && <ReadBack answer={answer} claims={result.claims}/>}
       {result.claims.map(c => <ClaimCard key={c.claim_id} claim={c} table={table}/>)}
