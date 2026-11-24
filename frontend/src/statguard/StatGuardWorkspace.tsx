@@ -3,6 +3,7 @@ import { ArithmeticOnly } from './ArithmeticCheck';
 import { STATGUARD_VERSION, SITE_NAME, StatGuardHeader, usePageTitle } from './StatGuardChrome';
 import { LEAVE_EVENT, withTransition } from './navigation';
 import { CsvError, decodeCsv, LIMITS, type CsvTable, type Encoding } from './csv';
+import { pastedToCsv, xlsxToCsv } from './tableImport';
 import { calculationSpec, emptyDraft, inspectConditions, OPERATIONS, type Draft, type Filter } from './conditions';
 import { base64Bytes, calculateLocal, cloudCalculation, CalculationError, localCalculationAvailable, previewHash, type EngineResult, type CalculationRequest } from './calculationClient';
 import CalculationResult from './CalculationResult';
@@ -56,8 +57,9 @@ export default function StatGuardWorkspace({ initialMode = 'answer' }: { initial
     return () => { window.removeEventListener('beforeunload', warn); window.removeEventListener(LEAVE_EVENT, stay); };
   }, [table]);
   function invalidateCalculation() { calcGeneration.current++; calcAbort.current?.abort(); calcAbort.current = null; setResult(null); setCalculationSnapshot(null); setComputing(false); setCalculationError(''); }
-  function reset() { setVerified(false); invalidateCalculation(); generation.current++; setTable(null); setDraft(emptyDraft()); setAgreed(false); setConfirmed(false); setBusy(false); setError(''); if (fileInput.current) fileInput.current.value = ''; }
+  function reset() { setVerified(false); setImportNote(''); invalidateCalculation(); generation.current++; setTable(null); setDraft(emptyDraft()); setAgreed(false); setConfirmed(false); setBusy(false); setError(''); if (fileInput.current) fileInput.current.value = ''; }
   function update(next: Draft) { invalidateCalculation(); setDraft(next); setAgreed(false); setConfirmed(false); }
+  const [importNote, setImportNote] = useState(''), [pasteOpen, setPasteOpen] = useState(false), [pasted, setPasted] = useState('');
   async function loadPreset(id: string) {
     const preset = PRESETS.find(p => p.id === id); if (!preset) return;
     setError('');
@@ -68,13 +70,22 @@ export default function StatGuardWorkspace({ initialMode = 'answer' }: { initial
       setMode('answer');
     } catch { setError('예시 자료를 불러오지 못했습니다. 잠시 뒤 다시 시도해 주세요.'); }
   }
-  async function load(file: File, sample = false, preset?: SamplePreset) {
+  async function load(file: File, sample = false, preset?: SamplePreset, converted?: string) {
     if (fileInput.current) fileInput.current.value = '';
-    invalidateCalculation(); const run = ++generation.current; setTable(null); setDraft(emptyDraft()); setAgreed(false); setConfirmed(false); setError(''); setBusy(true);
+    invalidateCalculation(); const run = ++generation.current; setTable(null); setDraft(emptyDraft()); setAgreed(false); setConfirmed(false); setError(''); setImportNote(converted ?? ''); setBusy(true);
     try {
-      if (!file.name.toLowerCase().endsWith('.csv')) throw new CsvError('CSV 파일 한 개를 선택해 주세요. Excel 파일은 CSV로 저장한 뒤 선택하세요.');
+      const lower = file.name.toLowerCase();
+      if (lower.endsWith('.xls')) throw new CsvError('엑셀 97-2003 형식(.xls)은 읽을 수 없습니다. 엑셀에서 .xlsx 또는 CSV로 저장한 뒤 선택해 주세요.');
+      if (lower.endsWith('.xlsx')) {
+        // Excel → CSV in the browser; the converted CSV is what the engine checks and computes on.
+        const x = await xlsxToCsv(await readBytes(file));
+        if (generation.current !== run) return;
+        const note = `엑셀 파일의 ‘${x.sheet}’ 시트${x.sheets > 1 ? `(시트 ${x.sheets}개 중 첫 번째)` : ''}를 CSV로 바꿔 읽었습니다. 날짜 서식 칸은 YYYY-MM-DD로 바꿨습니다.`;
+        return await load(new File([x.csv], file.name.replace(/\.xlsx$/i, '.csv'), { type: 'text/csv' }), sample, preset, note);
+      }
+      if (!lower.endsWith('.csv')) throw new CsvError('CSV 또는 엑셀(.xlsx) 파일 한 개를 선택해 주세요.');
       if (file.size > LIMITS.bytes) throw new CsvError('파일은 최대 1 MiB까지 지원합니다.');
-      const bytes = await readBytes(file), parsed = decodeCsv(bytes, encoding);
+      const bytes = await readBytes(file), parsed = decodeCsv(bytes, converted ? 'utf-8' : encoding);
       const [digest, previewSha256] = await Promise.all([crypto.subtle.digest('SHA-256', bytes), previewHash(parsed)]);
       if (generation.current !== run) return;
       setTable({ ...parsed, name: file.name, bytes: file.size, rawBytes: bytes, previewSha256, sha256: [...new Uint8Array(digest)].map(n => n.toString(16).padStart(2, '0')).join(''), sample, preset });
@@ -104,10 +115,12 @@ export default function StatGuardWorkspace({ initialMode = 'answer' }: { initial
     <main className="sg-main"><div className="sg-intro"><div><h1>AI가 말한 숫자, CSV로 다시 계산해 확인하세요.</h1><p>CSV를 고르고 AI 답변을 붙여 넣으면 숫자 주장을 다시 계산해 일치·불일치·보류로 판정합니다. 직접 계산과 수치 비교도 할 수 있습니다.</p></div></div>
       <ol className="sg-steps" aria-label="작업 단계"><li aria-current={!table ? 'step' : undefined}><b>01</b> CSV 선택 {table && <span>완료</span>}</li><li aria-current={table && !(mode === 'answer' ? verified : result) ? 'step' : undefined}><b>02</b> {mode === 'answer' ? 'AI 답변·단위 입력' : '미리보기·조건 확인'}</li><li aria-current={(mode === 'answer' ? verified : result) ? 'step' : undefined}><b>03</b> 판정·근거 확인 {(mode === 'answer' ? verified : result) && <span>완료</span>}</li></ol>
       <div className="sg-privacy"><span aria-hidden="true">▣</span><p><strong>{cloudCalculation()?"검증·계산할 때 CSV가 계산 서버로 전송됩니다.":"CSV는 이 PC에서만 처리합니다."}</strong> {cloudCalculation()?"Vercel 서버 메모리에서 계산하며 파일·DB에 보관하지 않습니다. 검증과 계산에는 GPT를 쓰지 않습니다(시연 비밀번호로 ‘AI에게 직접 질문’을 쓸 때만 질문과 CSV가 OpenAI로 전송). 민감한 개인정보는 올리지 마세요.":"검증·계산은 이 PC의 계산 엔진에서만 하며 파일로 저장하지 않습니다. 검증과 계산에는 GPT를 쓰지 않습니다(시연용 ‘AI에게 직접 질문’을 누를 때만 질문과 CSV가 OpenAI로 전송)."} 새로고침·페이지 이동 시 입력이 사라집니다.</p></div>
-      <section className="sg-card sg-upload" aria-labelledby="upload-heading"><div><h2 id="upload-heading">CSV 업로드</h2><p>파일 한 개 · 최대 1 MiB · 10,000행 · 64열 · UTF-8 / CP949 호환</p></div><div className="sg-upload-controls"><label className="sg-file-label">CSV 파일 선택<input ref={fileInput} type="file" accept=".csv,text/csv" aria-label="CSV 파일 선택" disabled={busy} onChange={e => { const file = e.currentTarget.files?.[0]; if (file) void load(file); }}/></label><label>문자 인코딩<select value={encoding} disabled={busy} onChange={e => { reset(); setEncoding(e.target.value as Encoding); }}><option value="auto">자동 감지</option><option value="utf-8">UTF-8</option><option value="euc-kr">CP949 호환</option></select></label><button className="sg-secondary" disabled={busy} onClick={() => void load(new File([SAMPLE], '방문자_합성예제.csv', { type: 'text/csv' }), true)}>예제 CSV로 시작</button><label className="sg-preset">실제 공개 자료 예시<select value="" disabled={busy} onChange={e => void loadPreset(e.target.value)}><option value="">선택해서 바로 체험</option>{PRESETS.map(p => <option key={p.id} value={p.id}>{p.label}</option>)}</select></label>{table && <button className="sg-text-button" onClick={reset}>자료 비우기</button>}</div>
+      <section className="sg-card sg-upload" aria-labelledby="upload-heading"><div><h2 id="upload-heading">CSV 업로드</h2><p>파일 한 개 · 최대 1 MiB · 10,000행 · 64열 · UTF-8 / CP949 호환</p></div><div className="sg-upload-controls"><label className="sg-file-label">CSV·엑셀 파일 선택<input ref={fileInput} type="file" accept=".csv,text/csv,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" aria-label="CSV·엑셀 파일 선택" disabled={busy} onChange={e => { const file = e.currentTarget.files?.[0]; if (file) void load(file); }}/></label><label>문자 인코딩<select value={encoding} disabled={busy} onChange={e => { reset(); setEncoding(e.target.value as Encoding); }}><option value="auto">자동 감지</option><option value="utf-8">UTF-8</option><option value="euc-kr">CP949 호환</option></select></label><button className="sg-secondary" disabled={busy} onClick={() => void load(new File([SAMPLE], '방문자_합성예제.csv', { type: 'text/csv' }), true)}>예제 CSV로 시작</button><label className="sg-preset">실제 공개 자료 예시<select value="" disabled={busy} onChange={e => void loadPreset(e.target.value)}><option value="">선택해서 바로 체험</option>{PRESETS.map(p => <option key={p.id} value={p.id}>{p.label}</option>)}</select></label><button type="button" className="sg-text-button" aria-expanded={pasteOpen} disabled={busy} onClick={() => setPasteOpen(o => !o)}>표 붙여넣기</button>{table && <button className="sg-text-button" onClick={reset}>자료 비우기</button>}</div>
         {table && <p className="sg-current-file" aria-live="polite">{'현재 자료: ' + table.name}</p>}
         {busy && <p role="status">파일을 읽는 중…</p>}{error && <p role="alert" className="sg-error">{error}</p>}
       </section>
+      {pasteOpen && <section className="sg-card sg-paste" aria-labelledby="paste-heading"><h2 id="paste-heading">표 붙여넣기</h2><p className="sg-hint">엑셀이나 구글 시트에서 열 이름이 있는 첫 행부터 범위를 복사해 붙여 넣으세요. 쉼표로 구분한 CSV 글도 됩니다.</p><label className="sg-arith-input">붙여 넣을 표<textarea value={pasted} rows={6} placeholder={'연도\t방문자수\n2023\t1000\n2024\t1178'} onChange={e => setPasted(e.target.value)}/></label><button type="button" className="sg-primary" disabled={busy || !pasted.trim()} onClick={() => { try { const csv = pastedToCsv(pasted); setPasteOpen(false); void load(new File([csv], '붙여넣은_표.csv', { type: 'text/csv' }), false, undefined, '붙여 넣은 표를 CSV로 바꿔 읽었습니다.'); } catch (e) { setError(e instanceof CsvError ? e.message : '표를 읽지 못했습니다.'); } }}>이 표로 시작</button></section>}
+      {table && importNote && <p className="sg-import-note" role="status">{importNote}</p>}
       {!table && !busy && <section className="sg-empty"><div aria-hidden="true">▤</div><h2>CSV 하나로 시작하세요.</h2><p>파일을 고르거나 ‘실제 공개 자료 예시’를 선택하면 AI 답변 검증 화면이 열립니다.</p><p>AI 답변 검증: 합계·평균·증감률·비율·값 조회, 표준편차·분산·중앙값·최댓값·최솟값·상관계수·t-검정 주장을 판정합니다. 직접 계산: 합계·평균·증감률을 조건을 정해 계산합니다.</p></section>}
       {!table && !busy && <ArithmeticOnly/>}
       {table && <div className="sg-mode-tabs" role="tablist" aria-label="작업 방식"><button role="tab" aria-selected={mode === 'answer'} onClick={() => withTransition(() => setMode('answer'))}>AI 답변 검증</button><button role="tab" aria-selected={mode === 'calculate'} onClick={() => withTransition(() => setMode('calculate'))}>직접 계산·수치 비교</button></div>}

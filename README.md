@@ -81,7 +81,7 @@ node scripts/statguard-local.mjs --live --live-env-file ..\.env.retrieval-live.p
 
 ```powershell
 $env:PYTHONPATH=(Resolve-Path .\src).Path
-python -m unittest tests.test_statguard_offline_v0_1 tests.test_statguard_local_calculation_v0_1 tests.test_statguard_manual_comparison_v0_1 tests.test_statguard_cloud_transport_v0_1 tests.test_statguard_answer_verification_v0_1 tests.test_statguard_llm_extractor_v0_1 tests.test_statguard_statistics_v0_1 tests.test_statguard_live_ask_v0_1 tests.test_statguard_forensics_v0_1 tests.test_statguard_arithmetic_v0_1 tests.test_statguard_version_sync_v0_1
+python -m unittest tests.test_statguard_offline_v0_1 tests.test_statguard_local_calculation_v0_1 tests.test_statguard_manual_comparison_v0_1 tests.test_statguard_cloud_transport_v0_1 tests.test_statguard_answer_verification_v0_1 tests.test_statguard_llm_extractor_v0_1 tests.test_statguard_statistics_v0_1 tests.test_statguard_live_ask_v0_1 tests.test_statguard_forensics_v0_1 tests.test_statguard_arithmetic_v0_1 tests.test_statguard_api_v0_1 tests.test_statguard_version_sync_v0_1
 ```
 
 ```powershell
@@ -193,6 +193,41 @@ cd ..\statguard_arithmetic_v0.1; python -X utf8 -I run_eval.py
 
 중간 수치가 더 많이 ‘계산 일치’가 되면서 ‘일치가 하나라도 있으면 통과’ 규칙의 허점이 커졌다. 기준을 넘지 못했으므로 **v0.8은 엔진·웹에 적용하지 않았다**(첫 실행 결과와 수정 내용은 PROTOCOL ‘변경 기록’과 `results/REPORT_first_run.md`). 다음 판은 답변 판정을 최종값 규칙으로 정하고 새 답변으로 평가해야 한다.
 
+## 실제로 쓰기: 속도·비용, 기간 범위, 엑셀, 파이썬
+
+### 비용·속도 (`experiments/statguard_cost_speed_v0.1`)
+
+같은 답 360개를 검증할 때 StatGuard는 답변 하나에 **중앙값 2.15ms**(이 PC의 계산 시간, CSV 읽기·판정·역추적·검산 포함), LLM 심판은 **2.48초**(API 왕복)였다. 답변 1,000개 추정 비용은 StatGuard $0, LLM 심판 약 $1.10(사전 고정 단가). 통과 중 오답은 StatGuard 1/105, LLM 심판 13/235.
+
+### 기간 범위 계산 — 추출기 v0.7.1 (`experiments/statguard_ranges_v0.7.1`)
+
+“7~12월”, “상반기·하반기”, “1분기”, “2016~2020년”을 자료의 연도·월 값 묶음으로 바꿔 해당 행만 계산한다(계산 엔진에 `value_sets` 조건 추가, 값 묶음이 없는 계산의 식별값은 그대로). 증감률·비율에 범위가 있거나 어느 해의 범위인지 불분명하면 계속 보류한다. 채택 기준(통과 중 오답·오경보가 늘지 않고 범위 보류가 줄 것)을 실행 전에 정하고 저장된 답변 1,492개로 비교했다: 범위 보류 34→11(24개 계산), 통과 485→504, 통과 중 오답·오경보 변화 없음. **기준을 통과해 적용했다.** 기존 범위 테스트 2개의 기대값을 바꾼 이유와, 적용 직후 고친 ‘같은 범위를 두 번 쓴 문장’ 버그는 PROTOCOL ‘변경 기록’에 있다.
+
+> 재현성 보완: 교정 실험은 보류 사유 문구를 웹 코드에서 읽었는데, v0.7.1에서 문구를 바꾸자 저장된 응답을 찾지 못하는 문제가 생겼다. 실행 당시 문구를 `experiments/statguard_correction_v0.1/frozen/reasons_ko.json`에 고정했고, 교정·비교 실험 결과 파일이 이전과 바이트 단위로 같게 재현됨을 확인했다.
+
+### 엑셀·표 붙여넣기 (웹)
+
+검증하기 화면에서 .xlsx 파일을 올리거나 엑셀·구글 시트에서 복사한 표를 붙여 넣으면, 브라우저에서 CSV로 바꿔 같은 방식으로 검증한다(라이브러리 없이 내장 압축 해제 사용, 첫 시트, 날짜 서식 → YYYY-MM-DD, 부동소수 찌꺼기 정리). .xls(97-2003)는 안내 후 거절.
+
+### 파이썬과 명령줄 (`src/when2warn/statguard/api.py`, `examples/statguard_quickstart.ipynb`)
+
+```python
+import sys; sys.path.insert(0, "src")
+from when2warn.statguard.api import verify, check_calculations
+report = verify("자료.csv", "2023년 연간 강수량 합계는 888.4mm입니다.", units={"강수량": "mm"})
+print(report.text())      # 숫자마다 판정, 재계산 값, 왜 틀렸을까, 답변 속 계산 검산
+report.summary, report.ok
+check_calculations("78.5 + 60.1 = 140.7mm")   # CSV 없이 계산식만
+```
+
+```powershell
+$env:PYTHONPATH = (Resolve-Path .\src).Path
+python -m when2warn.statguard verify --csv 자료.csv --unit 강수량=mm --answer "2023년 연간 강수량 합계는 888.4mm입니다."
+python -m when2warn.statguard check --answer "78.5 + 60.1 = 140.7mm"
+```
+
+계산 불일치나 검산 오류가 있으면 종료 코드 1을 돌려준다. 노트북의 출력은 실제 실행 결과다. 설치 파일(pyproject)은 이 PC에 빌드 도구가 없어 아직 만들지 않았다(저장소의 `src`를 경로에 추가해 쓴다).
+
 ## 선행연구와의 차이
 
 PAL(ICML 2023), CRITIC(ICLR 2024), Chain-of-Verification(ACL Findings 2024)은 답 생성·비평·검증에 LLM을 쓴다. StatGuard-KR은 LLM 없이 사용자의 CSV로 결정적으로 재계산해 어떤 답변이든 사후 판정하고, 확정할 수 없으면 사유와 함께 보류하며, 그 근거로 교정까지 잇는다. 외부 피드백 없는 자기 교정의 한계(Huang 외, ICLR 2024)를 대조군으로 재확인했고, 표·통계에서의 LLM 약점은 TableBench(AAAI 2025)·StatQA(NeurIPS 2024), 수치 주장 사실 확인은 QuanTemp(SIGIR 2024), 판정 보류는 Wen 외 서베이(TACL 2025)와 비교했다. 링크는 실험 결과 페이지의 ‘기존 연구와 무엇이 다른가’에 있다.
@@ -202,7 +237,7 @@ PAL(ICML 2023), CRITIC(ICLR 2024), Chain-of-Verification(ACL Findings 2024)은 �
 - 소규모 실험(질문 120개, 자료 8종, 주 실험 모델 1종·비교 실험 답변 모델 3종(모두 OpenAI), A·C는 3회·나머지 1회)이라 통계적 유의성을 주장하지 않습니다.
 - 한 문장에 숫자가 여러 개인 긴 답변에서 규칙 추출기가 범위를 잘못 연결하는 경우가 있습니다(비교 실험의 gpt-5-mini 답변에서 확인, 역추적이 ‘다른 범위의 값과 일치’로 표시).
 - 모델의 실제 오답이 적어(본 세트 A 3건) 실제 답변 기준 재현율은 결론 내리지 않았습니다.
-- 규칙 추출기는 문장에 열·기간이 드러나야 판정하므로 실제 답변에 대한 판정 비율이 실험·조건별 42~77%입니다. 일부 기간 범위(예: 2016~2020년), %p·인원 차이, 조건부 개수, 회귀·추세, 순위는 아직 보류합니다. 앞 문장에서 정한 대상(예: 도시)을 이어받는 문장도 보류합니다.
+- 규칙 추출기는 문장에 열·기간이 드러나야 판정하므로 실제 답변에 대한 판정 비율이 실험·조건별 42~77%입니다(v0.7 기준). 범위가 있는 증감률·비율, %p·인원 차이, 조건부 개수, 회귀·추세, 순위는 아직 보류합니다. 앞 문장에서 정한 대상(예: 도시)을 이어받는 문장도 보류합니다.
 - 추출기는 실험 결과를 보며 고친 버전(v0.3, v0.5)이 있어, 각 수정 뒤 새로 만든 별도 검증 세트 결과를 함께 보고합니다.
 - 단위는 사용자가 직접 확인해 입력하며 자동 추정하지 않습니다.
 

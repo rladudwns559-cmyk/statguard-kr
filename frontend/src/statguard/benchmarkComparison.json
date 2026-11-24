@@ -213,6 +213,41 @@
    }
   }
  },
+ "cost_speed": {
+  "machine": "Windows 11, Python 3.12.10",
+  "statguard": {
+   "answers": 360,
+   "median_ms": 2.15,
+   "p95_ms": 15.21,
+   "total_s": 2.12,
+   "usd_per_1000": 0.0,
+   "passed": 105,
+   "passed_wrong": 1
+  },
+  "llm_judge": {
+   "calls": 372,
+   "median_s": 2.48,
+   "p95_s": 17.38,
+   "total_s": 1862.0,
+   "mean_input_tokens": 8390,
+   "mean_output_tokens": 524,
+   "usd_per_1000": 1.101,
+   "passed": 235,
+   "passed_wrong": 13
+  },
+  "speedup_median": 1153
+ },
+ "ranges": {
+  "holds_before": 34,
+  "holds_after": 11,
+  "computed": 24,
+  "passed_before": 485,
+  "passed_after": 504,
+  "passed_wrong_after": 1,
+  "false_alarm_after": 66,
+  "passed_wrong_before": 1,
+  "false_alarm_before": 66
+ },
  "extractor_v08": {
   "adopted": false,
   "table": {

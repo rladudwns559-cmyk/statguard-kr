@@ -1,0 +1,390 @@
+{
+ "extractor": "statguard-rule-extractor-v0.7.1",
+ "claims": {
+  "v0.7": {
+   "VERIFIED": 563,
+   "CONTRADICTED": 285,
+   "UNCERTAIN": 1518,
+   "INSUFFICIENT_EVIDENCE": 29
+  },
+  "v0.7.1": {
+   "VERIFIED": 585,
+   "CONTRADICTED": 286,
+   "UNCERTAIN": 1495,
+   "INSUFFICIENT_EVIDENCE": 29
+  }
+ },
+ "range_holds": {
+  "v0.7": 34,
+  "v0.7 set": 0,
+  "v0.7.1": 11,
+  "v0.7.1 set": 24
+ },
+ "changed": [
+  {
+   "group": "G1",
+   "source": "gpt-6-luna 원래 답변",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-4o-mini 원래 답변",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna A_r2",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna A_r3",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna B",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C_r2",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna C_r3",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 R",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 S",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 S",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-4o-mini 교정 S",
+   "question": "v0.1:S06",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-6-luna 원래 답변",
+   "question": "v0.1_holdout:H01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G1",
+   "source": "gpt-5-mini 원래 답변",
+   "question": "v0.1_holdout:H01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.1_holdout:H01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  },
+  {
+   "group": "G2",
+   "source": "gpt-6-luna 교정 R",
+   "question": "v0.1_holdout:H01",
+   "correct": true,
+   "v0.7": [
+    "HOLD",
+    "HOLD"
+   ],
+   "v0.7.1": [
+    "PASS",
+    "PASS"
+   ]
+  }
+ ],
+ "table": {
+  "v0.7|prereg|G1": {
+   "n": 360,
+   "pass": 105,
+   "passed_wrong": 1,
+   "false_alarm": 9,
+   "wrong_flagged": 49,
+   "hold": 197
+  },
+  "v0.7|prereg|G2": {
+   "n": 1132,
+   "pass": 380,
+   "passed_wrong": 12,
+   "false_alarm": 57,
+   "wrong_flagged": 134,
+   "hold": 561
+  },
+  "v0.7|prereg|all": {
+   "n": 1492,
+   "pass": 485,
+   "passed_wrong": 13,
+   "false_alarm": 66,
+   "wrong_flagged": 183,
+   "hold": 758
+  },
+  "v0.7|final_rule|G1": {
+   "n": 360,
+   "pass": 90,
+   "passed_wrong": 0,
+   "false_alarm": 9,
+   "wrong_flagged": 49,
+   "hold": 212
+  },
+  "v0.7|final_rule|G2": {
+   "n": 1132,
+   "pass": 330,
+   "passed_wrong": 1,
+   "false_alarm": 57,
+   "wrong_flagged": 134,
+   "hold": 611
+  },
+  "v0.7|final_rule|all": {
+   "n": 1492,
+   "pass": 420,
+   "passed_wrong": 1,
+   "false_alarm": 66,
+   "wrong_flagged": 183,
+   "hold": 823
+  },
+  "v0.7.1|prereg|G1": {
+   "n": 360,
+   "pass": 109,
+   "passed_wrong": 1,
+   "false_alarm": 9,
+   "wrong_flagged": 49,
+   "hold": 193
+  },
+  "v0.7.1|prereg|G2": {
+   "n": 1132,
+   "pass": 395,
+   "passed_wrong": 12,
+   "false_alarm": 57,
+   "wrong_flagged": 134,
+   "hold": 546
+  },
+  "v0.7.1|prereg|all": {
+   "n": 1492,
+   "pass": 504,
+   "passed_wrong": 13,
+   "false_alarm": 66,
+   "wrong_flagged": 183,
+   "hold": 739
+  },
+  "v0.7.1|final_rule|G1": {
+   "n": 360,
+   "pass": 94,
+   "passed_wrong": 0,
+   "false_alarm": 9,
+   "wrong_flagged": 49,
+   "hold": 208
+  },
+  "v0.7.1|final_rule|G2": {
+   "n": 1132,
+   "pass": 345,
+   "passed_wrong": 1,
+   "false_alarm": 57,
+   "wrong_flagged": 134,
+   "hold": 596
+  },
+  "v0.7.1|final_rule|all": {
+   "n": 1492,
+   "pass": 439,
+   "passed_wrong": 1,
+   "false_alarm": 66,
+   "wrong_flagged": 183,
+   "hold": 804
+  }
+ },
+ "adopt": true
+}

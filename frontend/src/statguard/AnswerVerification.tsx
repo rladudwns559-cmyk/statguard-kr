@@ -64,7 +64,10 @@ function ClaimCard({ claim, table }: { claim: Claim; table: CsvTable }) {
     {claim.computed && claim.spec && <details><summary>계산 근거 보기</summary>
       <p className="sg-hint">전체 재계산 값(유효숫자 34자리): {claim.computed.value} {claim.computed.unit}</p>
       <p className="sg-hint">계산식: <code>{claim.computed.expression}</code> · 허용 차이 ±{claim.claimed?.tolerance} (답변 자릿수 기준 반올림)</p>
-      <p className="sg-hint">선택 범위: {describe(claim.spec.filters)}{claim.spec.reference_filters && ` · 기준 범위: ${describe(claim.spec.reference_filters)}`}</p>
+      <p className="sg-hint">선택 범위: {[
+        ...(Object.keys(claim.spec.filters).length || !claim.spec.value_sets ? [describe(claim.spec.filters)] : []),
+        ...Object.entries(claim.spec.value_sets ?? {}).map(([c, vs]) => `${c}: ${vs.length > 4 ? `${vs[0]} ~ ${vs[vs.length - 1]} (${vs.length}개 값)` : vs.join(', ')}`),
+      ].join(' · ')}{claim.spec.reference_filters && ` · 기준 범위: ${describe(claim.spec.reference_filters)}`}</p>
       <UsedRows table={table} usage={claim.computed.usage} title={claim.computed.reference_usage ? '선택 범위' : '계산 범위'}/>
       {claim.computed.reference_usage && <UsedRows table={table} usage={claim.computed.reference_usage} title="기준 범위"/>}
     </details>}

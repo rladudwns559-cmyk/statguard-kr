@@ -13,7 +13,7 @@ beforeEach(() => {
 });
 afterEach(() => vi.unstubAllGlobals());
 async function upload(text = SAMPLE, name = '사례.csv') {
-  await userEvent.upload(screen.getByLabelText('CSV 파일 선택'), new File([text], name, { type: 'text/csv' }));
+  await userEvent.upload(screen.getByLabelText('CSV·엑셀 파일 선택'), new File([text], name, { type: 'text/csv' }));
   await screen.findByRole('heading', { name: '자료 미리보기' });
 }
 async function setValid() {
@@ -71,7 +71,7 @@ describe('StatGuard existing page integration', () => {
   it('clears stale preview and confirmation when a new invalid file is selected', async () => {
     render(<StatGuardWorkspace initialMode="calculate"/>); await upload(); await setValid();
     await userEvent.click(screen.getByRole('checkbox')); await userEvent.click(screen.getByRole('button', { name: '이 조건으로 확인' }));
-    await userEvent.upload(screen.getByLabelText('CSV 파일 선택'), new File(['열,열\n1,2'], 'bad.csv', { type: 'text/csv' }));
+    await userEvent.upload(screen.getByLabelText('CSV·엑셀 파일 선택'), new File(['열,열\n1,2'], 'bad.csv', { type: 'text/csv' }));
     expect(await screen.findByRole('alert')).toHaveTextContent('중복된 열 이름');
     expect(screen.queryByRole('table')).not.toBeInTheDocument();
     expect(screen.queryByRole('region', { name: '확정된 계산 조건' })).not.toBeInTheDocument();
@@ -85,7 +85,7 @@ describe('StatGuard existing page integration', () => {
   });
   it('refuses oversized upload before reading it and catches unreadable content without echo', async () => {
     render(<StatGuardWorkspace initialMode="calculate"/>);
-    await userEvent.upload(screen.getByLabelText('CSV 파일 선택'), new File([new Uint8Array(1_048_577)], 'large.csv', { type: 'text/csv' }));
+    await userEvent.upload(screen.getByLabelText('CSV·엑셀 파일 선택'), new File([new Uint8Array(1_048_577)], 'large.csv', { type: 'text/csv' }));
     expect(await screen.findByRole('alert')).toHaveTextContent('최대 1 MiB');
   });
   it('keeps HTML and spreadsheet formula content inert in the actual DOM', async () => {

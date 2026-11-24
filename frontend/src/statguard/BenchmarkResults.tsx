@@ -6,7 +6,7 @@ import summaryDomain from './benchmarkSummaryDomain.json';
 import stability from './benchmarkStability.json';
 import correction from './benchmarkCorrection.json';
 import DarkBackdrop from './DarkBackdrop';
-import { ArithmeticSection, ComparisonSection, CorrectionBars, CoverageRiskSection, DatasetSection, ForensicsSection, RelatedWorkSection } from './ResultsExtras';
+import { ArithmeticSection, ComparisonSection, PracticalSection, CorrectionBars, CoverageRiskSection, DatasetSection, ForensicsSection, RelatedWorkSection } from './ResultsExtras';
 import './statguard.css';
 import './statguard-theme.css';
 
@@ -139,6 +139,7 @@ export default function BenchmarkResults() {
       <StabilitySection/>
       <CorrectionSection/>
       <ComparisonSection/>
+      <PracticalSection/>
       <ForensicsSection/>
       <ArithmeticSection/>
       <CoverageRiskSection/>

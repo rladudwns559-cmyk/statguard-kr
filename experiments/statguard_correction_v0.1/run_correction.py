@@ -41,10 +41,10 @@ SETS = [("v0.1", "statguard_benchmark_v0.1", ""), ("v0.1", "statguard_benchmark_
 
 
 def _reasons() -> dict[str, str]:
-    """Korean reason texts shown on the website (single source: answerClient.ts)."""
-    ts = (ROOT / "frontend/src/statguard/answerClient.ts").read_text(encoding="utf-8")
-    block = ts.split("export const REASONS")[1].split("};")[0]
-    return dict(re.findall(r"([A-Z0-9_]+):\s*'([^']*)'", block))
+    """Korean reason texts as they were sent to the model in this experiment (frozen copy of the website's
+    answerClient.ts REASONS at the time of the run). Reading the live file would change the feedback text — and so
+    the cache keys — whenever the website wording changes (it did for RANGE_FILTER_UNSUPPORTED in v0.7.1)."""
+    return json.loads((HERE / "frozen" / "reasons_ko.json").read_text(encoding="utf-8"))
 
 
 REASONS = _reasons()

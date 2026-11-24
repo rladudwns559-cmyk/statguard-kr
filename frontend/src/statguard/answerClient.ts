@@ -2,7 +2,7 @@ import { calculationClientHeader, calculationEndpoint, CalculationError, cloudCa
 
 export type ClaimStatus = 'VERIFIED' | 'CONTRADICTED' | 'UNCERTAIN' | 'INSUFFICIENT_EVIDENCE';
 export const STATUSES: ClaimStatus[] = ['VERIFIED', 'CONTRADICTED', 'UNCERTAIN', 'INSUFFICIENT_EVIDENCE'];
-export type ClaimSpec = { operation: string; column: string; filters: Record<string, string>; reference_filters: Record<string, string> | null };
+export type ClaimSpec = { operation: string; column: string; filters: Record<string, string>; reference_filters: Record<string, string> | null; value_sets?: Record<string, string[]> };
 export type Claim = {
   claim_id: string; sentence: string; status: ClaimStatus; reason_code: string; operation: string | null;
   spec: ClaimSpec | null; notes: string[]; interpretive: boolean; column?: string;
@@ -40,7 +40,7 @@ export const REASONS: Record<string, string> = {
   CONDITION_FILTER_UNSUPPORTED: '‘0mm보다 큰 날’처럼 조건을 만족하는 행을 세거나 고르는 계산은 아직 지원하지 않아 보류했습니다.',
   SCOPE_FROM_PREVIOUS_SENTENCE: '앞 문장에서 정한 대상(도시·기간 등)을 이어받는 문장이라, 이 문장만으로는 계산 범위를 정할 수 없어 보류했습니다.',
   RATIO_SCOPE_NOT_STATED: '비율의 분모(전체 범위)가 문장에 드러나지 않아 보류했습니다.',
-  RANGE_FILTER_UNSUPPORTED: '‘2016~2020년’, ‘상반기’처럼 일부 기간을 고르는 범위 계산은 아직 지원하지 않아 보류했습니다.',
+  RANGE_FILTER_UNSUPPORTED: '기간 범위를 이 자료의 연도·월 값으로 바꿀 수 없거나(예: 어느 해의 상반기인지 불분명), 증감률·비율처럼 범위 계산을 지원하지 않는 계산이라 보류했습니다.',
   CLAIM_VALUE_NOT_IDENTIFIED: '주장한 수치를 숫자로 읽을 수 없습니다.',
   MISSING_VALUES_IN_RANGE: '계산 범위에 빈 값이 있어 계산하지 않았습니다.',
   INVALID_NUMBERS_IN_RANGE: '계산 범위에 잘못된 숫자가 있습니다.',
@@ -65,6 +65,7 @@ export const NOTES: Record<string, string> = {
   POPULATION_DEFINITION_MATCH: '모집단 기준(n으로 나눔) 값과 일치합니다. 답변이 정의를 밝히지 않아 두 정의를 모두 확인했습니다.',
   WELCH_T_TEST_TWO_SIDED_ALPHA_005: '두 집단의 등분산을 가정하지 않는 Welch t-검정(양측)으로 다시 계산했습니다. p값은 부동소수점 근사입니다.',
   RANGE_COVERS_ALL_ROWS: '언급된 기간이 자료 전체 행과 같아 전체 행으로 계산했습니다.',
+  RANGE_AS_VALUE_SET: '언급된 기간 범위(예: 7~12월, 상반기, 2016~2020년)에 해당하는 행만 골라 계산했습니다.',
   YEAR_PREFIX_FILTER_UNSUPPORTED: '연도만으로 일부 행을 고르는 조건은 아직 지원하지 않아 전체 행을 기준으로 했습니다.',
 };
 export const OPERATION_LABEL: Record<string, string> = { sum: '합계', mean: '평균', percent_change: '증감률', ratio_percent: '비율', lookup: '값 조회', stdev: '표준편차', variance: '분산', median: '중앙값', max: '최댓값', min: '최솟값', correlation: '상관계수', t_test: 't-검정' };

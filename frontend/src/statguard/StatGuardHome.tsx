@@ -7,7 +7,7 @@ import CorrectionReplay from './CorrectionReplay';
 import ProductShot from './ProductShot';
 import DarkBackdrop from './DarkBackdrop';
 import { ForensicShowcase, RiseHeadline, WrongTicker } from './HomeFx';
-import { COMPARISON } from './ResultsExtras';
+import { COMPARISON } from './comparisonData';
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle } from './StatGuardChrome';
 import './statguard.css';
 import './statguard-theme.css';
@@ -76,8 +76,8 @@ export default function StatGuardHome() {
       </section>
 
       <section className="sg-section sg-columns" aria-label="확인 범위와 자료 처리">
-        <div><h2>확인할 수 있는 주장</h2><ul><li>합계·평균·증감률·비율·특정 행의 값</li><li>표준편차·분산(표본과 모집단 정의 모두 확인)·중앙값</li><li>최댓값·최솟값, “가장 많은 달”처럼 지목한 행</li><li>피어슨 상관계수, Welch t-검정의 p값과 유의성(유의수준 0.05)</li></ul>
-          <p className="sg-hint">보류하는 것: 회귀·추세, 원인·영향 해석, 일부 기간 범위(예: 2016~2020년), 조건부 개수, 앞 문장의 대상을 이어받는 문장, 자료에 없는 기간·대상.</p></div>
+        <div><h2>확인할 수 있는 주장</h2><ul><li>합계·평균·증감률·비율·특정 행의 값</li><li>“7~12월”, “상반기”, “1분기”, “2016~2020년” 같은 기간 범위의 합계·평균·통계</li><li>표준편차·분산(표본과 모집단 정의 모두 확인)·중앙값</li><li>최댓값·최솟값, “가장 많은 달”처럼 지목한 행</li><li>피어슨 상관계수, Welch t-검정의 p값과 유의성(유의수준 0.05)</li></ul>
+          <p className="sg-hint">보류하는 것: 회귀·추세, 원인·영향 해석, 범위가 있는 증감률·비율, 조건부 개수, 앞 문장의 대상을 이어받는 문장, 자료에 없는 기간·대상.</p></div>
         <div><h2>자료를 다루는 방식</h2><ul><li>CSV와 답변은 계산에만 쓰고 파일·DB·브라우저 저장소에 보관하지 않습니다.</li><li>검증과 계산에는 GPT를 쓰지 않습니다. 규칙 기반 추출과 결정적 계산만 씁니다.</li><li>단위는 추정하지 않고 사용자가 직접 확인해 입력합니다.</li><li>‘AI에게 직접 질문’은 시연 비밀번호를 아는 사용자만 쓸 수 있으며, 그때만 질문과 CSV가 OpenAI로 전송됩니다.</li></ul></div>
       </section>
 

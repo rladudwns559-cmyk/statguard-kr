@@ -13,7 +13,7 @@ from typing import Iterable
 
 from .core import ARITHMETIC, CalculationSpec, StatGuardError, TableDataset, decimal_text, execute, parse_number
 
-EXTRACTOR_VERSION = "statguard-rule-extractor-v0.7"
+EXTRACTOR_VERSION = "statguard-rule-extractor-v0.7.1"
 # v0.7 (domain-extension answers, post-hoc): counts such as "국가 48개", "2곳" are not claims
 # unless the counter is the confirmed unit of a column.
 # v0.6 (before the domain-extension run): digits inside a column name ("1인당GDP") are not numbers;
@@ -209,6 +209,16 @@ def extract_claims(dataset: TableDataset, answer: str) -> list[dict]:
             break
         mentions, _ = _value_mentions(ctx, sentence)
         range_problem, range_spans = _ranges(ctx, sentence)
+        value_sets = None
+        if range_problem == ("UNCERTAIN", "RANGE_FILTER_UNSUPPORTED") and operation_hint(sentence) in _SET_OPS:
+            value_sets = _range_sets(ctx, sentence)  # v0.7.1: a period range the data can express as a set of values
+            if value_sets:
+                range_problem = None
+                base_notes = ["RANGE_AS_VALUE_SET"]
+            else:
+                base_notes = []
+        else:
+            base_notes = []
         mentions = [m for m in mentions if not any(a <= m[0] < b for a, b in range_spans)]
         excluded = [(a, b) for a, b, _, _ in mentions] + range_spans
         excluded += [m.span() for c in dataset.columns if any(ch.isdigit() for ch in c) for m in re.finditer(re.escape(c), sentence)]
@@ -219,7 +229,7 @@ def extract_claims(dataset: TableDataset, answer: str) -> list[dict]:
         operation = next((name for name, rx in _OPS if rx.search(sentence)), None)
         interpretive = bool(_INTERPRETIVE.search(sentence))
         base = {"claim_id": f"c{len(claims) + 1}", "sentence": sentence, "operation": None, "spec": None,
-                "claimed": None, "notes": [], "interpretive": interpretive, "extractor": EXTRACTOR_VERSION}
+                "claimed": None, "notes": list(base_notes), "interpretive": interpretive, "extractor": EXTRACTOR_VERSION}
         if operation == "t_test":
             t_claim = _t_test_claim(ctx, sentence, mentions, base)
             if t_claim is not None:
@@ -314,7 +324,7 @@ def extract_claims(dataset: TableDataset, answer: str) -> list[dict]:
         if range_problem:
             claims.append(_abstain(dict(base, claimed=_claimed(primary)), *range_problem))
             continue
-        if range_spans:
+        if range_spans and not value_sets:
             base["notes"].append("RANGE_COVERS_ALL_ROWS")
         if operation == "unsupported":
             claims.append(_abstain(dict(base, claimed=_claimed(primary)), "INSUFFICIENT_EVIDENCE", "UNSUPPORTED_OPERATION"))
@@ -359,8 +369,12 @@ def extract_claims(dataset: TableDataset, answer: str) -> list[dict]:
             # "지역별 방문자수 표준편차": per-group totals or all rows? Several rows per group → abstain.
             claims.append(_abstain(dict(base, claimed=_claimed(primary)), "UNCERTAIN", "GROUPED_STATISTIC_AMBIGUOUS"))
             continue
+        if value_sets and (operation not in _SET_OPS or set(value_sets) & set(filters)):
+            claims.append(_abstain(dict(base, claimed=_claimed(primary)), "UNCERTAIN", "RANGE_FILTER_UNSUPPORTED"))
+            continue
+        extra = {"value_sets": value_sets} if value_sets else {}
         if operation in ("sum", "mean", "stdev", "variance", "median"):
-            spec = CalculationSpec.from_mapping({"operation": operation, "column": column, "filters": filters})
+            spec = CalculationSpec.from_mapping({"operation": operation, "column": column, "filters": filters, **extra})
             unit = ctx.units[column] + ("²" if operation == "variance" else "")
             claims.append(dict(base, operation=operation, spec=spec.as_dict(), claimed=_claimed(primary, unit)))
             continue
@@ -372,7 +386,7 @@ def extract_claims(dataset: TableDataset, answer: str) -> list[dict]:
             if filters and re.search(r"가장", sentence):
                 subject = max(filters, key=lambda c: len(ctx.categorical.get(c, ())))
                 argmax = {"column": subject, "value": filters.pop(subject)}
-            spec = CalculationSpec.from_mapping({"operation": operation, "column": column, "filters": filters})
+            spec = CalculationSpec.from_mapping({"operation": operation, "column": column, "filters": filters, **extra})
             claims.append(dict(base, operation=operation, spec=spec.as_dict(), claimed=_claimed(primary, ctx.units[column]), argmax=argmax))
             continue
         # No operation keyword: a single-cell lookup only when the filters select exactly one row.
@@ -500,6 +514,75 @@ def _ranges(ctx: _Context, sentence: str) -> tuple[tuple[str, str] | None, list[
         if not (months and lo <= months[0] and hi >= months[-1]):
             problem = problem or ("UNCERTAIN", "RANGE_FILTER_UNSUPPORTED")
     return problem, spans
+
+
+_SET_OPS = ("sum", "mean", "stdev", "variance", "median", "max", "min")
+
+
+def operation_hint(sentence: str) -> str | None:
+    return next((name for name, rx in _OPS if rx.search(sentence)), None)
+
+
+def _range_bounds(text: str) -> tuple[int, int] | None:
+    m = re.search(r"(1[0-2]|0?[1-9])\s*월?\s*[~\-–]\s*(1[0-2]|0?[1-9])\s*월", text)
+    if m:
+        return int(m.group(1)), int(m.group(2))
+    if "상반기" in text:
+        return 1, 6
+    if "하반기" in text:
+        return 7, 12
+    q = re.search(r"([1-4])\s*분기", text)
+    return ((int(q.group(1)) - 1) * 3 + 1, int(q.group(1)) * 3) if q else None
+
+
+def _range_sets(ctx: "_Context", sentence: str) -> dict[str, list[str]] | None:
+    """v0.7.1: a period range as the set of matching values of one column, or None if the data cannot express it."""
+    sets: dict[str, list[str]] = {}
+    year_cols, ym_cols = ctx.year_columns(), ctx.year_month_columns()
+    month_cols = [c for c, vs in ctx.categorical.items() if "월" in c and c not in ym_cols and all(v.isdigit() for v in vs)]
+    for m in _YEAR_RANGE.finditer(sentence):
+        lo, hi = int(m.group(1)), int(m.group(2))
+        if lo > hi:
+            return None
+        if len(year_cols) == 1:
+            col = year_cols[0]; values = [v for v in ctx.categorical[col] if lo <= int(v) <= hi]
+        elif len(ym_cols) == 1:
+            col = ym_cols[0]; values = [v for v in ctx.categorical[col] if lo <= int(v[:4]) <= hi]
+        else:
+            return None
+        if not values or col in sets:
+            return None
+        sets[col] = values
+    for m in _MONTH_RANGE.finditer(sentence):
+        bounds = _range_bounds(m.group(0))
+        if not bounds or bounds[0] > bounds[1]:
+            return None
+        lo, hi = bounds
+        if len(month_cols) == 1:
+            col = month_cols[0]; values = [v for v in ctx.categorical[col] if lo <= int(v) <= hi]
+            if col in sets:  # "하반기(7~12월)": the same range written twice
+                if values != sets[col]:
+                    return None
+                continue
+        elif len(ym_cols) == 1:
+            col = ym_cols[0]
+            years = {v[:4] for v in ctx.categorical[col]}
+            named = [y for y in re.findall(r"(?<![0-9])((?:19|20)[0-9]{2})\s*년", sentence) if y in years]
+            if len(years) > 1 and len(set(named)) != 1:
+                return None  # which year's July–December? not stated
+            values = [v for v in ctx.categorical[col] if lo <= int(v[5:7]) <= hi and (not named or v[:4] == named[0])]
+            if col in sets:
+                values = [v for v in values if v in sets[col]]
+                if not values:
+                    return None
+                sets[col] = values
+                continue
+        else:
+            return None
+        if not values or col in sets:
+            return None
+        sets[col] = values
+    return sets or None
 
 
 def _claimed(number: dict, default_unit: str | None = None) -> dict:

@@ -1,6 +1,6 @@
 import coverage from './benchmarkCoverage.json';
 import correction from './benchmarkCorrection.json';
-import comparison from './benchmarkComparison.json';
+import { COMPARISON } from './comparisonData';
 
 /** Two charts for the results page: verify→correct accuracy bars, and coverage vs. risk of the verifier. Data from result files only. */
 
@@ -87,19 +87,8 @@ export function DatasetSection({ questions, wrong }: { questions: number; wrong:
 }
 
 /* ---- statguard_comparison_v0.1: LLM judge vs StatGuard, three answer models; statguard_forensics_v0.1 ---- */
-type V = { n: number; pass: number; passed_wrong: number; wrong: number; wrong_flagged: number; false_alarm: number; coverage: number; upper95: number };
-type ModelRow = { n: number; A: number; R1: number; S1: number; S2: number; flagged: number; flagged_R1: number; flagged_S1: number; S1_broken: number; passed_wrong: Record<string, [number, number]> };
-type Fx = { injected: Record<string, number>; random: { explained: number; n: number; high: number }; real_by_model: Record<string, { contradicted: number; explained: number; high?: number }>;
-  injected_by_kind: Record<string, Record<string, number>>; examples: { model: string; question: string; sentence: string; diagnosis: { title: string; explanation: string } }[] };
-const CMP = comparison as unknown as { verifiers: Record<'prereg' | 'final_rule' | 'judge' | 'hybrid', V>; main88: Record<string, V>; models: Record<string, ModelRow>;
-  after_correction_prereg: Record<string, { R2: number; S2: number }>; judge5_partial: { done: number; of: number }; forensics: Fx;
-  final_rule_validation: { answers: number; prereg: V; final_rule: V };
-  extractor_v08: { adopted: boolean; table: Record<string, { pass: number; passed_wrong: number; false_alarm: number; wrong_flagged: number }> };
-  arithmetic: { version: string; groups: Record<string, Ar>; total: Ar; before_fix_total: Ar; right_flagged: ArCase[]; examples: ArCase[] } };
-type Ar = { answers: number; wrong: number; with_checks: number; flagged: number; flagged_wrong: number; flagged_right: number; added: number };
-type ArCase = { source: string; question: string; expression: string; stated: string; recomputed: string; correct: boolean; statguard: string };
 const rate = (a: number, n: number) => n ? `${(a / n * 100).toFixed(1)}%` : '-';
-export const COMPARISON = CMP;
+const CMP = COMPARISON;
 
 export function ComparisonSection() {
   const v = CMP.verifiers;
@@ -145,6 +134,28 @@ export function ArithmeticSection() {
       <tbody><tr><th scope="row">모듈을 만들기 전 훑어본 답변</th><td>{g1.answers}</td><td>{g1.with_checks}</td><td>{g1.flagged}</td><td>{g1.flagged_wrong}</td></tr><tr><th scope="row">처음 적용한 답변</th><td>{g2.answers}</td><td>{g2.with_checks}</td><td>{g2.flagged}</td><td>{g2.flagged_wrong}</td></tr></tbody></table></div>
     <ul className="sg-fx-examples">{a.examples.map((e, i) => <li key={i}><small>{e.source} · {e.question} · CSV 판정 {({ HOLD: '보류', PASS: '통과', FLAG: '불일치' } as Record<string, string>)[e.statguard] ?? e.statguard}</small><q>{e.expression.length > 80 ? e.expression.slice(0, 80) + '…' : e.expression} = {e.stated}</q><b>다시 계산하면 {Number(e.recomputed).toLocaleString('ko-KR', { maximumFractionDigits: 4 })}</b></li>)}</ul>
     <p className="sg-hint"><strong>정직하게 밝히는 점:</strong> 첫 실행(계산 틀림 {b.flagged}개 중 오답 {b.flagged_wrong}개)에서 긴 식의 일부만 잘라 읽는 버그 두 가지를 찾아 고쳤고, 위 숫자는 고친 뒤 같은 데이터로 다시 낸 결과입니다. 맞는 답인데 ‘계산 틀림’으로 잡힌 {t.flagged_right}개는 대부분 반올림 대신 버림(예: 7.666…을 ‘7.666’)이었고, 1개는 최종값은 맞지만 중간 덧셈이 실제로 틀린 경우였습니다. 계산식을 적지 않는 모델(gpt-6-luna 원래 답변)에서는 거의 작동하지 않고, 자료에서 숫자를 잘못 옮겨 적은 경우는 CSV 검증으로만 찾을 수 있습니다(experiments/statguard_arithmetic_v0.1).</p>
+  </section>;
+}
+
+/** Practicality: speed and cost against an LLM judge, period ranges, Excel/paste input, Python use. */
+export function PracticalSection() {
+  const c = CMP.cost_speed, r = CMP.ranges;
+  if (!c || !r) return null;
+  return <section className="sg-card sg-large" aria-labelledby="practical-heading"><p className="sg-eyebrow">실제로 쓰기</p><h2 id="practical-heading">더 정확하고, 천 배 빠르고, 무료입니다</h2>
+    <p className="sg-hint">같은 답 {c.statguard.answers}개를 검증하는 데 든 시간과 비용입니다. StatGuard는 이 PC에서 CSV 읽기부터 판정·역추적·검산까지 한 번에 잰 계산 시간(네트워크 왕복 제외), LLM 심판은 OpenAI API 왕복 전체 시간입니다. LLM 비용은 실험의 사전 고정 단가로 낸 추정치입니다(experiments/statguard_cost_speed_v0.1).</p>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="비용·속도 비교 표"><table><thead><tr><th scope="col"></th><th scope="col">StatGuard (LLM 없음)</th><th scope="col">LLM 심판 (gpt-6-luna)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">답변 하나 검증 (중앙값)</th><td><strong>{c.statguard.median_ms} ms</strong></td><td>{c.llm_judge.median_s} 초</td></tr>
+        <tr><th scope="row">느린 쪽 5% (95번째 백분위)</th><td>{c.statguard.p95_ms} ms</td><td>{c.llm_judge.p95_s} 초</td></tr>
+        <tr><th scope="row">답변 1,000개 추정 비용</th><td><strong>$0</strong></td><td>${c.llm_judge.usd_per_1000.toFixed(2)}</td></tr>
+        <tr><th scope="row">‘맞다’고 통과시킨 답 중 오답</th><td><strong>{c.statguard.passed_wrong}/{c.statguard.passed}</strong></td><td>{c.llm_judge.passed_wrong}/{c.llm_judge.passed}</td></tr>
+      </tbody></table></div>
+    <h3 className="sg-subhead">실제 질문에 가까워지도록 넓힌 것</h3>
+    <ul className="sg-practical">
+      <li><b>기간 범위 계산</b> “7~12월”, “상반기”, “1분기”, “2016~2020년”을 해당 행만 골라 계산합니다(추출기 v0.7.1). 저장된 답변 1,492개에서 범위 때문에 보류하던 주장이 {r.holds_before}개 → {r.holds_after}개로 줄었고({r.computed}개를 계산), 통과 중 오답({r.passed_wrong_before} → {r.passed_wrong_after})과 오경보({r.false_alarm_before} → {r.false_alarm_after})는 늘지 않았습니다. 실행 전에 정한 채택 기준을 통과해 적용했습니다(experiments/statguard_ranges_v0.7.1).</li>
+      <li><b>엑셀 파일과 표 붙여넣기</b> .xlsx 파일을 올리거나 엑셀·구글 시트에서 복사한 표를 붙여 넣으면, 브라우저에서 CSV로 바꿔 같은 방식으로 검증합니다(첫 시트, 날짜 서식은 YYYY-MM-DD).</li>
+      <li><b>파이썬에서 한 줄로</b> <code>verify(csv, 답변, units)</code>와 명령줄 <code>python -m when2warn.statguard verify</code>로 노트북·자동화 파이프라인에서 씁니다. 계산 불일치가 있으면 종료 코드 1을 돌려줍니다(examples/statguard_quickstart.ipynb).</li>
+    </ul>
   </section>;
 }
 

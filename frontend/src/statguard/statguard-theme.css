@@ -667,3 +667,13 @@
 .sg-arith-only{margin-top:18px}
 .sg-arith-only .sg-arith-input{display:grid;gap:6px;margin:10px 0;font-weight:600}
 .sg-arith-only textarea{width:100%;font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);resize:vertical;box-sizing:border-box}
+
+/* ---- Excel / paste import ---- */
+.sg-paste{margin-top:14px}
+.sg-paste textarea{width:100%;font:inherit;font-family:var(--mono,ui-monospace),monospace;padding:10px 12px;border-radius:10px;border:1px solid var(--line);resize:vertical;box-sizing:border-box}
+.sg-import-note{margin:10px 0 0;padding:9px 12px;border-radius:10px;background:var(--hold-soft,#EEF2F5);color:var(--ink-2);font-size:14px}
+
+/* ---- practical section ---- */
+.sg-practical{display:grid;gap:10px;padding-left:1.1em;margin:6px 0 4px}
+.sg-practical li{line-height:1.65}
+.sg-practical b{margin-right:6px}

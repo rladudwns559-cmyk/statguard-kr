@@ -151,6 +151,17 @@ def _filters(raw: object) -> tuple[tuple[str, str], ...]:
     return tuple(sorted(raw.items()))
 
 
+def _value_sets(raw: object) -> tuple[tuple[str, tuple[str, ...]], ...]:
+    if not isinstance(raw, Mapping) or not 1 <= len(raw) <= 4:
+        raise StatGuardError("INVALID_VALUE_SET")
+    out = []
+    for k, vs in raw.items():
+        if not isinstance(k, str) or not isinstance(vs, (list, tuple)) or not all(isinstance(v, str) for v in vs):
+            raise StatGuardError("INVALID_VALUE_SET")
+        out.append((k, tuple(dict.fromkeys(vs))))
+    return tuple(sorted(out))
+
+
 @dataclass(frozen=True)
 class CalculationSpec:
     operation: str
@@ -161,6 +172,8 @@ class CalculationSpec:
     aggregation: str | None = None
     missing_policy: str = "reject"
     column2: str | None = None  # second numeric column, correlation only
+    # v0.7.1: rows whose value in a column is one of several ("7~12월" → 월 ∈ {7..12}); selection side only
+    value_sets: tuple[tuple[str, tuple[str, ...]], ...] | None = None
 
     def __post_init__(self) -> None:
         if self.operation == "correlation":
@@ -184,6 +197,16 @@ class CalculationSpec:
         is_comparison = self.operation in {"ratio_percent", "percent_change", "t_test"}
         if is_comparison != (self.reference_filters is not None):
             raise StatGuardError("REFERENCE_SELECTION_REQUIRED" if is_comparison else "UNEXPECTED_REFERENCE_SELECTION")
+        if self.value_sets is not None:
+            if is_comparison or self.operation in {"rank", "grouped_aggregate"}:
+                raise StatGuardError("UNEXPECTED_VALUE_SET")
+            if not isinstance(self.value_sets, tuple) or not 1 <= len(self.value_sets) <= 4 or any(
+                    not isinstance(pair, tuple) or len(pair) != 2 or not isinstance(pair[0], str) or not pair[0] or len(pair[0]) > 512
+                    or not isinstance(pair[1], tuple) or not 1 <= len(pair[1]) <= 400 or not all(isinstance(v, str) and len(v) <= 512 for v in pair[1])
+                    for pair in self.value_sets):
+                raise StatGuardError("INVALID_VALUE_SET")
+            if len({k for k, _ in self.value_sets}) != len(self.value_sets) or {k for k, _ in self.value_sets} & {k for k, _ in self.filters}:
+                raise StatGuardError("DUPLICATE_FILTER_COLUMN")
         is_grouped = self.operation in {"rank", "grouped_aggregate"}
         if is_grouped and (not isinstance(self.group_by, str) or not self.group_by):
             raise StatGuardError("GROUP_COLUMN_REQUIRED")
@@ -199,19 +222,21 @@ class CalculationSpec:
     def from_mapping(cls, raw: Mapping[str, object]) -> CalculationSpec:
         if not isinstance(raw, Mapping):
             raise StatGuardError("INVALID_CALCULATION_SPEC")
-        if set(raw) - {"operation", "column", "filters", "reference_filters", "group_by", "aggregation", "missing_policy", "column2"}:
+        if set(raw) - {"operation", "column", "filters", "reference_filters", "group_by", "aggregation", "missing_policy", "column2", "value_sets"}:
             raise StatGuardError("UNKNOWN_SPEC_FIELD")
         if not isinstance(raw.get("operation"), str) or not isinstance(raw.get("column"), str):
             raise StatGuardError("INVALID_CALCULATION_SPEC")
         return cls(operation=raw["operation"], column=raw["column"], filters=_filters(raw.get("filters", {})),
                    reference_filters=_filters(raw["reference_filters"]) if raw.get("reference_filters") is not None else None,
                    group_by=raw.get("group_by"), aggregation=raw.get("aggregation"), missing_policy=raw.get("missing_policy", "reject"),
-                   column2=raw.get("column2"))
+                   column2=raw.get("column2"), value_sets=_value_sets(raw["value_sets"]) if raw.get("value_sets") is not None else None)
 
     def as_dict(self) -> dict:
         out = {"operation": self.operation, "column": self.column, "filters": dict(self.filters),
                "reference_filters": None if self.reference_filters is None else dict(self.reference_filters),
                "group_by": self.group_by, "aggregation": self.aggregation, "missing_policy": self.missing_policy}
+        if self.value_sets is not None:  # only present with a range, so earlier identifiers are unchanged
+            out["value_sets"] = {k: list(vs) for k, vs in self.value_sets}
         if self.column2 is not None:  # only present for correlation, so earlier identifiers are unchanged
             out["column2"] = self.column2
         return out
@@ -269,13 +294,16 @@ class CalculationResult:
                 "precision": 34, "rounding": "ROUND_HALF_EVEN", "unit_provenance": "CALLER_ASSERTED_NOT_INFERRED"}
 
 
-def _selection(dataset: TableDataset, spec: CalculationSpec, filters: tuple[tuple[str, str], ...]) -> tuple[list[tuple[int, Decimal]], RowUsage]:
+def _selection(dataset: TableDataset, spec: CalculationSpec, filters: tuple[tuple[str, str], ...],
+               sets: tuple[tuple[str, tuple[str, ...]], ...] = ()) -> tuple[list[tuple[int, Decimal]], RowUsage]:
     columns = {name: i for i, name in enumerate(dataset.columns)}
-    if spec.column not in columns or any(name not in columns for name, _ in filters):
+    if spec.column not in columns or any(name not in columns for name, _ in filters) or any(name not in columns for name, _ in sets):
         raise StatGuardError("UNKNOWN_COLUMN")
     selected, used, omitted, values = [], [], [], []
     for index, row in enumerate(dataset.rows, 1):
         if not all(row[columns[name]] == value for name, value in filters):
+            continue
+        if not all(row[columns[name]] in allowed for name, allowed in sets):
             continue
         selected.append(index)
         text = row[columns[spec.column]]
@@ -300,7 +328,7 @@ def execute(dataset: TableDataset, spec: CalculationSpec) -> CalculationResult:
     if spec.operation in STATISTICS:
         return _execute_statistic(dataset, spec)
     with localcontext(ARITHMETIC):
-        values, usage = _selection(dataset, spec, spec.filters)
+        values, usage = _selection(dataset, spec, spec.filters, spec.value_sets or ())
         total = sum((value for _, value in values), Decimal(0))
         value, groups, reference_usage = None, (), None
         unit = dataset.unit_for(spec.column)
@@ -405,7 +433,7 @@ def t_two_sided_p(t: float, df: float) -> float:
 def _execute_statistic(dataset: TableDataset, spec: CalculationSpec) -> CalculationResult:
     """Descriptive statistics, Pearson correlation and Welch's two-sample t-test."""
     with localcontext(ARITHMETIC):
-        pairs, usage = _selection(dataset, spec, spec.filters)
+        pairs, usage = _selection(dataset, spec, spec.filters, spec.value_sets or ())
         values = [v for _, v in pairs]
         unit = dataset.unit_for(spec.column)
         warnings = [] if unit else ["UNIT_NOT_CONFIRMED"]

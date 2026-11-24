@@ -1,6 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react';
 import data from './aiAnswers.json';
-import { COMPARISON } from './ResultsExtras';
+import { COMPARISON } from './comparisonData';
 
 /** Headline whose words rise into place one after another (Lusion-style reveal). Text content stays a plain sentence. */
 export function RiseHeadline({ id, parts }: { id: string; parts: { text: string; grad?: boolean }[] }) {

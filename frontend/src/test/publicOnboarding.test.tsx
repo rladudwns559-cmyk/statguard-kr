@@ -42,7 +42,7 @@ afterEach(()=>setTokenProvider(null));
 describe('public pages and protected onboarding',()=>{
   it.each(['/','/demo','/docs/quickstart','/how-it-works'])('%s renders without session or private requests',async(path)=>{
     window.history.replaceState(null,'',path);render(<App/>);
-    expect(await screen.findByRole('heading',{level:1})).toBeVisible();
+    expect(await screen.findByRole('heading',{level:1},{timeout:5000})).toBeVisible();  // lazy-loaded route: allow the chunk to load
     expect(mocks.getSession).not.toHaveBeenCalled();expect(globalThis.fetch).not.toHaveBeenCalled();
   });
   it('landing remains available when Auth would fail',()=>{

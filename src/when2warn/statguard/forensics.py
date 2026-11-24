@@ -206,7 +206,7 @@ class _Search:
         sp = self.spec
         if sp.operation not in ("ratio_percent", "percent_change") or sp.reference_filters is None:
             return
-        sel = sum((v for _, v in _selection(self.ds, sp, sp.filters)[0]), Decimal(0))
+        sel = sum((v for _, v in _selection(self.ds, sp, sp.filters, sp.value_sets or ())[0]), Decimal(0))
         ref = sum((v for _, v in _selection(self.ds, sp, sp.reference_filters)[0]), Decimal(0))
         for o in self.others:
             c = o.get("claimed") or {}
@@ -229,7 +229,7 @@ class _Search:
         sp, op = self.spec, self.spec.operation
         if op not in ("sum", "mean", "median", "stdev", "variance"):
             return
-        pairs, _ = _selection(self.ds, sp, sp.filters)
+        pairs, _ = _selection(self.ds, sp, sp.filters, sp.value_sets or ())
         values = [v for _, v in pairs]
         st = _stats(values)
         alts = {"sum": ["mean"], "mean": ["median", "sum"], "median": ["mean"], "stdev": ["variance"], "variance": ["stdev"]}[op]
@@ -244,7 +244,7 @@ class _Search:
         sp, op = self.spec, self.spec.operation
         if op not in ("sum", "mean", "stdev", "variance", "median", "max", "min", "correlation"):
             return
-        pairs, _ = _selection(self.ds, sp, sp.filters)
+        pairs, _ = _selection(self.ds, sp, sp.filters, sp.value_sets or ())
         rows, values = [i for i, _ in pairs], [v for _, v in pairs]
         n = len(values)
         if n < 3 or n > MAX_ROWS_SINGLE:
@@ -308,7 +308,7 @@ class _Search:
         sp = self.spec
         if sp.operation != "mean":
             return
-        pairs, _ = _selection(self.ds, sp, sp.filters)
+        pairs, _ = _selection(self.ds, sp, sp.filters, sp.value_sets or ())
         n, s = len(pairs), sum((v for _, v in pairs), Decimal(0))
         odds = self.chance([s / (n - 1) if n > 1 else None, s / (n + 1)])
         for m in (n - 1, n + 1):

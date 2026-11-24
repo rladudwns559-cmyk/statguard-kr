@@ -4,7 +4,7 @@ import './fonts';
 import { BrandMark } from '../components/Brand';
 
 /** One place for the version shown on every StatGuard page (must match claims.EXTRACTOR_VERSION). */
-export const STATGUARD_VERSION = 'v0.7';
+export const STATGUARD_VERSION = 'v0.7.1';
 export const SITE_NAME = 'StatGuard-KR';
 
 type Page = 'home' | 'workspace' | 'challenge' | 'results';

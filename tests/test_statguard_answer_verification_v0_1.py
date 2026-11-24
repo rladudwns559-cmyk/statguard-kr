@@ -90,18 +90,54 @@ class RealCsv(unittest.TestCase):
 
 
 class PeriodRanges(unittest.TestCase):
-    """v0.2: a range is not read as its last year/month."""
+    """v0.2: a range is not read as its last year/month. v0.7.1: a partial range the data can express is computed
+    over that set of values (these two tests asserted RANGE_FILTER_UNSUPPORTED before v0.7.1 — see
+    experiments/statguard_ranges_v0.7.1/PROTOCOL.md 변경 기록)."""
 
     def test_full_partial_and_uncovered_year_ranges(self):
         raw = (ROOT / "experiments/statguard_benchmark_v0.1/datasets/04_대한민국_2014_2023_인구_실업률.csv").read_bytes()
         r = run(raw, {"총인구": "명", "실업률": "%"}, "2014~2023년 실업률 평균은 3.6%입니다. 2016~2020년 실업률 평균은 3.8%입니다. 2010~2023년 총인구 평균은 5,100만 명입니다.")
-        self.assertEqual(statuses(r), [("CONTRADICTED", "NUMERIC_VALUE_CONFLICT"), ("UNCERTAIN", "RANGE_FILTER_UNSUPPORTED"), ("INSUFFICIENT_EVIDENCE", "DATA_NOT_COVERED")])
+        self.assertEqual(statuses(r), [("CONTRADICTED", "NUMERIC_VALUE_CONFLICT"), ("VERIFIED", "WITHIN_ROUNDING_OF_STATED_PRECISION"), ("INSUFFICIENT_EVIDENCE", "DATA_NOT_COVERED")])
         self.assertEqual(r["claims"][0]["computed"]["value"], "3.4603")
+        self.assertEqual(r["claims"][1]["spec"]["value_sets"], {"연도": ["2016", "2017", "2018", "2019", "2020"]})
+        self.assertEqual(r["claims"][1]["computed"]["value"], "3.7608")
+        self.assertIn("RANGE_AS_VALUE_SET", r["claims"][1]["notes"])
 
-    def test_half_year_abstains_full_year_months_pass(self):
-        r = run((REAL / "01_시애틀_2023_월별강수량.csv").read_bytes(), {"강수량": "mm"},
-                "2023년 상반기(1~6월) 강수량 합계는 356.8mm입니다. 1~12월 강수량 합계는 888.9mm입니다.")
-        self.assertEqual(statuses(r), [("UNCERTAIN", "RANGE_FILTER_UNSUPPORTED"), ("VERIFIED", "WITHIN_ROUNDING_OF_STATED_PRECISION")])
+    def test_half_year_and_quarter_are_computed_full_year_months_pass(self):
+        raw = (REAL / "01_시애틀_2023_월별강수량.csv").read_bytes()
+        r = run(raw, {"강수량": "mm"}, "2023년 상반기(1~6월) 강수량 합계는 356.8mm입니다. 1~12월 강수량 합계는 888.9mm입니다.")
+        self.assertEqual(statuses(r), [("VERIFIED", "WITHIN_ROUNDING_OF_STATED_PRECISION"), ("VERIFIED", "WITHIN_ROUNDING_OF_STATED_PRECISION")])
+        self.assertEqual(len(r["claims"][0]["spec"]["value_sets"]["연월"]), 6)
+        q = run(raw, {"강수량": "mm"}, "2023년 3분기 강수량 합계는 100.0mm입니다.")
+        self.assertEqual(statuses(q), [("CONTRADICTED", "NUMERIC_VALUE_CONFLICT")])
+        self.assertEqual(q["claims"][0]["computed"]["value"], "96.4")
+
+    def test_ranges_stay_held_where_they_cannot_be_computed(self):
+        raw = (REAL / "01_시애틀_2023_월별강수량.csv").read_bytes()
+        # a change rate over a range is not supported → still held
+        r = run(raw, {"강수량": "mm"}, "2023년 상반기 대비 하반기 강수량은 49.1% 증가했습니다.")
+        self.assertEqual(r["claims"][0]["status"], "UNCERTAIN")
+
+
+class ValueSets(unittest.TestCase):
+    def test_spec_without_value_sets_keeps_its_identifier(self):
+        from when2warn.statguard.core import CalculationSpec, StatGuardError
+        plain = CalculationSpec.from_mapping({"operation": "sum", "column": "값", "filters": {}})
+        self.assertNotIn("value_sets", plain.as_dict())
+        ranged = CalculationSpec.from_mapping({"operation": "sum", "column": "값", "filters": {}, "value_sets": {"연도": ["2023", "2024"]}})
+        self.assertEqual(ranged.as_dict()["value_sets"], {"연도": ["2023", "2024"]})
+        with self.assertRaises(StatGuardError):
+            CalculationSpec.from_mapping({"operation": "percent_change", "column": "값", "filters": {}, "reference_filters": {}, "value_sets": {"연도": ["2023"]}})
+        with self.assertRaises(StatGuardError):
+            CalculationSpec.from_mapping({"operation": "sum", "column": "값", "filters": {"연도": "2023"}, "value_sets": {"연도": ["2023"]}})
+
+    def test_value_set_selects_rows(self):
+        r = run(SAMPLE, UNITS, "전체 방문자수 합계는 4,938명입니다.")
+        self.assertEqual(r["claims"][0]["status"], "VERIFIED")
+        from when2warn.statguard.core import CalculationSpec, execute
+        ds = load_csv_bytes(SAMPLE, dataset_id="t", units=UNITS)
+        spec = CalculationSpec.from_mapping({"operation": "sum", "column": "방문자수", "filters": {"연도": "2024"}, "value_sets": {"지역": ["A", "B"]}})
+        self.assertEqual(str(execute(ds, spec).value), "2138")
 
 
 class Bridge(unittest.TestCase):

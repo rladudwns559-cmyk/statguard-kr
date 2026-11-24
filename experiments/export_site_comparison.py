@@ -15,6 +15,8 @@ fx = json.loads((EXP / "statguard_forensics_v0.1/results/summary.json").read_tex
 corr = json.loads((EXP / "statguard_correction_v0.1/results/summary.json").read_text(encoding="utf-8"))
 frv = json.loads((EXP / "statguard_final_rule_validation_v0.1/results/summary.json").read_text(encoding="utf-8"))
 ari = json.loads((EXP / "statguard_arithmetic_v0.1/results/summary.json").read_text(encoding="utf-8"))
+cost = json.loads((EXP / "statguard_cost_speed_v0.1/results/summary.json").read_text(encoding="utf-8"))
+rng = json.loads((EXP / "statguard_ranges_v0.7.1/results/summary.json").read_text(encoding="utf-8"))
 x08 = json.loads((EXP / "statguard_extractor_v0.8/results/summary.json").read_text(encoding="utf-8"))
 ari0 = json.loads((EXP / "statguard_arithmetic_v0.1/results/summary_v0.1_before_fix.json").read_text(encoding="utf-8"))
 
@@ -44,6 +46,11 @@ site = {
     "after_correction_final_rule": {k: [v["passed_wrong"], v["pass"]] for k, v in exp["after_correction_final_rule"].items()},
     "judge5_partial": {"done": cmp["q1"]["judge_gpt-5-mini"]["전체"]["n"], "of": 360},
     "models": models,
+    "cost_speed": cost,
+    "ranges": {"holds_before": rng["range_holds"]["v0.7"], "holds_after": rng["range_holds"]["v0.7.1"], "computed": rng["range_holds"]["v0.7.1 set"],
+               "passed_before": rng["table"]["v0.7|prereg|all"]["pass"], "passed_after": rng["table"]["v0.7.1|prereg|all"]["pass"],
+               "passed_wrong_after": rng["table"]["v0.7.1|final_rule|all"]["passed_wrong"], "false_alarm_after": rng["table"]["v0.7.1|prereg|all"]["false_alarm"],
+               "passed_wrong_before": rng["table"]["v0.7|final_rule|all"]["passed_wrong"], "false_alarm_before": rng["table"]["v0.7|prereg|all"]["false_alarm"]},
     "extractor_v08": {"adopted": x08["adopt"], "table": {k: x08["table"][k] for k in ("v0.7|prereg|all", "v0.8|prereg|all", "v0.7|final_rule|all", "v0.8|final_rule|all")}},
     "final_rule_validation": {"answers": frv["answers"], "prereg": pick(frv["overall"]["prereg"]), "final_rule": pick(frv["overall"]["final_rule"])},
     "arithmetic": {"version": ari["version"], "groups": ari["groups"], "total": ari["total"], "before_fix_total": ari0["total"],
