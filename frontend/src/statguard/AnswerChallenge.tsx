@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import data from './aiAnswers.json';
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle } from './StatGuardChrome';
+import DarkBackdrop from './DarkBackdrop';
 import './statguard.css';
 import './statguard-theme.css';
 
@@ -97,7 +98,8 @@ export function Gallery() {
 export default function AnswerChallenge() {
   usePageTitle(`AI 오답 체험 · ${SITE_NAME}`);
   const wrong = D.items.filter(i => !i.correct);
-  return <div className="sg-shell">
+  return <div className="sg-shell sg-dark">
+    <DarkBackdrop/>
     <StatGuardHeader current="challenge"/>
     <main className="sg-main sg-challenge">
       <section className="sg-section" aria-labelledby="chal-heading">

@@ -30,10 +30,11 @@ function Marked({ text, mark, tone }: { text: string; mark: string; tone: 'bad' 
 const STEPS = ['AI 답변', 'StatGuard 재계산', '근거를 AI에게', 'AI가 고친 답변'];
 
 export default function CorrectionReplay() {
-  const [step, setStep] = useState(STEPS.length), box = useRef<HTMLElement>(null), timers = useRef<number[]>([]);
+  const [step, setStep] = useState(STEPS.length), [pinned, setPinned] = useState(false), box = useRef<HTMLElement>(null), timers = useRef<number[]>([]);
   const clear = () => { timers.current.forEach(t => window.clearTimeout(t)); timers.current = []; };
   function play() {
     clear();
+    if (pinned) { box.current?.scrollIntoView({ block: 'start', behavior: reducedMotion() ? 'auto' : 'smooth' }); return; }
     if (reducedMotion()) { setStep(STEPS.length); return; }
     setStep(0);
     STEPS.forEach((_, i) => timers.current.push(window.setTimeout(() => setStep(i + 1), 500 + i * 1500)));
@@ -41,6 +42,18 @@ export default function CorrectionReplay() {
   useEffect(() => {
     const el = box.current;
     if (!el || typeof IntersectionObserver !== 'function' || reducedMotion()) return;
+    // Wide screens: pin the scene and advance one step per stretch of scrolling (Apple-style). Phones: timed replay.
+    if (typeof window.matchMedia === 'function' && window.matchMedia('(min-width: 900px)').matches) {
+      setPinned(true);
+      const onScroll = () => {
+        const r = el.getBoundingClientRect(), travel = Math.max(1, r.height - window.innerHeight);
+        const p = Math.min(1, Math.max(0, -r.top / travel));
+        setStep(Math.min(STEPS.length, Math.floor(p * (STEPS.length + 1.4))));
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll);
+      return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); clear(); };
+    }
     setStep(0);
     const io = new IntersectionObserver(entries => { if (entries.some(e => e.isIntersecting)) { play(); io.disconnect(); } }, { threshold: 0.3 });
     io.observe(el);
@@ -48,7 +61,7 @@ export default function CorrectionReplay() {
   }, []);
   const value = short(c.recompute.value), diff = c.recompute.difference;
   const on = (i: number) => (step > i ? ' is-on' : '');
-  return <section ref={box} className="sg-section sg-replay" aria-labelledby="replay-heading">
+  return <section ref={box} className={'sg-section sg-replay' + (pinned ? ' is-pinned' : '')} aria-labelledby="replay-heading"><div className="sg-replay-stage">
     <h2 id="replay-heading">틀린 숫자를 잡고, 근거를 주면 AI가 스스로 고칩니다</h2>
     <p>실험에서 실제로 기록된 한 장면입니다. 질문: “{c.question}” (CSV {c.dataset.rows.toLocaleString('ko-KR')}행)</p>
     <ol className="sg-rp-track">
@@ -56,7 +69,7 @@ export default function CorrectionReplay() {
         <blockquote><Marked text={sentence(c.original.answer)} mark={c.recompute.claimed} tone="bad"/></blockquote>
         <small>{c.source.model}의 실제 답변</small></li>
       <li className={'sg-rp-step' + on(1)}><span className="sg-rp-num">2</span><h3>{STEPS[1]}</h3>
-        <p className="sg-rp-big">{value}{c.recompute.unit}</p>
+        <p className="sg-rp-big sg-num">{value}{c.recompute.unit}</p>
         <code>{c.recompute.expression}</code>
         <span className="sg-rp-stamp sg-rp-bad">계산 불일치{diff ? ` · 차이 ${short(diff.absolute, 2)}${c.recompute.unit} (${diff.relative_percent}%)` : ''}</span></li>
       <li className={'sg-rp-step' + on(2)}><span className="sg-rp-num">3</span><h3>{STEPS[2]}</h3>
@@ -72,8 +85,8 @@ export default function CorrectionReplay() {
       <span className={'sg-rp-stamp ' + (c.recheck_only.correct ? 'sg-rp-ok' : 'sg-rp-bad')}>{c.recheck_only.correct ? '고쳐짐' : '그대로 틀림'}</span>
     </div>
     <div className="sg-rp-foot">
-      <button type="button" className="sg-secondary" onClick={play}>다시 재생</button>
+      <button type="button" className="sg-secondary" onClick={play}>{pinned ? '처음부터 보기' : '다시 재생'}</button>{pinned && <span className="sg-hint">스크롤하면 한 단계씩 진행됩니다.</span>}
       <span className="sg-hint">기록 그대로 · 실험 {c.source.case} · 전체 결과는 <a href="/statguard/results#correction-heading">실험 결과</a>에서 볼 수 있습니다.</span>
     </div>
-  </section>;
+  </div></section>;
 }

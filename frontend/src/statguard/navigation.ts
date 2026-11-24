@@ -19,7 +19,9 @@ export function reducedMotion() {
 export function withTransition(update: () => void) {
   const doc = document as Document & { startViewTransition?: (cb: () => void) => unknown };
   if (typeof doc.startViewTransition !== 'function' || reducedMotion()) { update(); return; }
-  doc.startViewTransition.call(doc, () => flushSync(update));
+  const vt = doc.startViewTransition.call(doc, () => flushSync(update)) as { ready?: Promise<unknown>; finished?: Promise<unknown>; updateCallbackDone?: Promise<unknown> } | undefined;
+  // A newer click skips the running transition; that rejection is expected, not an error.
+  for (const p of [vt?.ready, vt?.finished, vt?.updateCallbackDone]) p?.catch(() => {});
 }
 
 export function confirmLeave() {

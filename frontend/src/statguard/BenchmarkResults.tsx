@@ -5,6 +5,7 @@ import summaryLarge from './benchmarkSummaryLarge.json';
 import summaryDomain from './benchmarkSummaryDomain.json';
 import stability from './benchmarkStability.json';
 import correction from './benchmarkCorrection.json';
+import DarkBackdrop from './DarkBackdrop';
 import { CorrectionBars, CoverageRiskSection, DatasetSection, RelatedWorkSection } from './ResultsExtras';
 import './statguard.css';
 import './statguard-theme.css';
@@ -127,7 +128,8 @@ const KIND: Record<string, string> = { correct: '정답 문장', scaled_10pct: '
 export default function BenchmarkResults() {
   const m = data.meta;
   usePageTitle(`실험 결과 · ${SITE_NAME}`);
-  return <div className="sg-shell">
+  return <div className="sg-shell sg-dark">
+    <DarkBackdrop/>
     <StatGuardHeader current="results"/>
     <main className="sg-main sg-results">
       <div className="sg-intro"><div><h1>LLM의 숫자, 다시 계산하면 맞을까?</h1>

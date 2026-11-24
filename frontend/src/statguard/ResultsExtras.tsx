@@ -18,7 +18,7 @@ export function CorrectionBars() {
     {bars.map(b => { const p = b.v / g.n * 100; return <div className="sg-hbar" key={b.k}>
       <span className="sg-hbar-label">{b.label}</span>
       <span className="sg-hbar-track"><span className={'sg-hbar-fill sg-hbar-' + b.cls} style={{ width: `${Math.max(2, (p - min) / span * 100)}%` }}/></span>
-      <b>{p.toFixed(1)}%</b></div>; })}
+      <b className="sg-num">{p.toFixed(1)}%</b></div>; })}
     <small className="sg-hint">가로축은 60%부터 시작합니다. 문항 {g.n}개, 같은 답변에서 출발.</small>
   </div>;
 }

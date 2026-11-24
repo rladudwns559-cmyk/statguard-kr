@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { reducedMotion } from './navigation';
+import './fonts';
 import { BrandMark } from '../components/Brand';
 
 /** One place for the version shown on every StatGuard page (must match claims.EXTRACTOR_VERSION). */

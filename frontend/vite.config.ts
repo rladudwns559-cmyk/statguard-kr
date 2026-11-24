@@ -19,5 +19,7 @@ export default defineConfig(({mode,command})=>{
   return {
   plugins: [react()],
   server: { port: 5173, strictPort: true },
+  // Fonts must stay separate files: the CSP allows `font-src 'self'` only, so an inlined data: font would be blocked.
+  build: { assetsInlineLimit: (file: string) => (/\.(woff2?|ttf|otf)$/i.test(file) ? false : undefined) },
   test: { include: ['src/**/*.test.{ts,tsx}'], environment: 'jsdom', setupFiles: ['./src/test/setup.ts'], restoreMocks: true },
 };});

@@ -191,4 +191,12 @@ describe('StatGuard site consistency', () => {
     for (const href of links) expect(existsSync(resolve(__dirname, '../../public' + href))).toBe(true);
     expect(section).toHaveTextContent('오답 27개');
   });
+
+  it('shows the tilted verification preview built from the recorded case, and the gradient headline keeps its accessible name', () => {
+    render(<StatGuardHome/>);
+    expect(screen.getByRole('heading', { level: 1 })).toHaveAccessibleName('AI가 말한 숫자, 다시 계산해서 확인합니다.');
+    const shot = screen.getByRole('region', { name: '숫자 하나하나에 도장을 찍습니다.' });
+    expect(shot).toHaveTextContent('7.6333℃');
+    expect(within(shot).getByRole('link', { name: '직접 검증해 보기' })).toHaveAttribute('href', '/statguard');
+  });
 });

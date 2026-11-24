@@ -4,6 +4,9 @@ import correction from './benchmarkCorrection.json';
 const flagFix = (correction as unknown as { groups: Record<string, { targeted_FLAG: { n: number; S1: number; R1: number } }> }).groups['전체'].targeted_FLAG;
 import RecountScene from './RecountScene';
 import CorrectionReplay from './CorrectionReplay';
+import ProductShot from './ProductShot';
+import DarkBackdrop from './DarkBackdrop';
+import { RiseHeadline, WrongTicker } from './HomeFx';
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle } from './StatGuardChrome';
 import './statguard.css';
 import './statguard-theme.css';
@@ -30,25 +33,30 @@ const STAMPS = [
 export default function StatGuardHome() {
   usePageTitle(`${SITE_NAME} · LLM 데이터 분석 수치 검증`);
   const a = largeAcc.A?.accuracy.all, c = largeAcc.C?.accuracy.all, p = largePert[latestRule];
-  return <div className="sg-shell">
+  return <div className="sg-shell sg-dark">
+    <DarkBackdrop/>
     <StatGuardHeader current="home"/>
     <main className="sg-main sg-home">
       <section className="sg-hero-grid" aria-labelledby="home-heading">
         <div className="sg-hero">
-          <h1 id="home-heading">AI가 말한 숫자, 다시 계산해서 확인합니다.</h1>
-          <p className="sg-hero-lead">LLM이 표(CSV)를 보고 쓴 답변에서 수치 주장을 찾아 같은 자료로 다시 계산합니다. 맞으면 일치, 틀리면 불일치로 표시하고, 근거가 부족하거나 해석이 필요한 문장은 억지로 판정하지 않고 보류합니다.</p>
+          <RiseHeadline id="home-heading" parts={[{ text: 'AI가 말한 숫자, ' }, { text: '다시 계산해서', grad: true }, { text: ' 확인합니다.' }]}/>
+          <p className="sg-hero-lead"><strong>LLM이 표(CSV)를 보고 쓴 답변에서 수치 주장을 찾아 같은 자료로 다시 계산합니다.</strong> 맞으면 일치, 틀리면 불일치로 표시하고, 근거가 부족하거나 해석이 필요한 문장은 억지로 판정하지 않고 보류합니다.</p>
           <div className="sg-hero-actions"><a className="sg-primary sg-link-button" href="/statguard">바로 체험하기</a><a className="sg-secondary sg-link-button" href="/statguard/challenge">AI 오답 맞혀 보기</a><a className="sg-secondary sg-link-button" href="/statguard/results">실험 결과 보기</a></div>
         </div>
         <RecountScene/>
       </section>
 
+      <WrongTicker/>
+
       <section className="sg-receipt" aria-label="핵심 실험 결과">
-        {a && c && <div><strong>{pct(a.rate)} → {pct(c.rate)}</strong><span>365·1,460행 표에서 일반 LLM의 정답률 → 계산 도구를 쓴 LLM의 정답률</span></div>}
-        <div><strong>{TOTALS.passed}건 중 {TOTALS.wrongPassed}건</strong><span>StatGuard가 통과시킨 LLM 답변 중 오답 (실험 3개, A·C 조건, 각 3회). 95% 신뢰구간 상한 {pct1(WRONG_UPPER.all)}</span></div>
-        {p && <div><strong>{p.precision?.toFixed(2)} / {p.recall?.toFixed(2)}</strong><span>일부러 틀린 숫자를 넣은 문장에서 오류 탐지 정밀도 / 재현율 (판정한 문장 기준)</span></div>}
+        {a && c && <div><strong className="sg-num">{pct(a.rate)} → {pct(c.rate)}</strong><span>365·1,460행 표에서 일반 LLM의 정답률 → 계산 도구를 쓴 LLM의 정답률</span></div>}
+        <div><strong className="sg-num">{TOTALS.passed}건 중 {TOTALS.wrongPassed}건</strong><span>StatGuard가 통과시킨 LLM 답변 중 오답 (실험 3개, A·C 조건, 각 3회). 95% 신뢰구간 상한 {pct1(WRONG_UPPER.all)}</span></div>
+        {p && <div><strong className="sg-num">{p.precision?.toFixed(2)} / {p.recall?.toFixed(2)}</strong><span>일부러 틀린 숫자를 넣은 문장에서 오류 탐지 정밀도 / 재현율 (판정한 문장 기준)</span></div>}
       </section>
 
       <CorrectionReplay/>
+
+      <ProductShot/>
 
       <section className="sg-section" aria-labelledby="how-heading">
         <h2 id="how-heading">답변 하나를 이렇게 확인합니다</h2>
