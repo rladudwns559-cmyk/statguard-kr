@@ -1,0 +1,1 @@
+{"model": "gemma3:4b", "created_at": "2026-11-25T02:52:35.9809794Z", "message": {"role": "assistant", "content": "최종값: 55.069 세 (카메룬)"}, "done": true, "done_reason": "stop", "total_duration": 381545500, "load_duration": 7484900, "prompt_eval_count": 8772, "prompt_eval_cached_count": 8734, "prompt_eval_duration": 113842000, "eval_count": 18, "eval_duration": 244852000}

@@ -1,0 +1,1 @@
+{"model": "gemma3:4b", "created_at": "2026-11-25T02:56:29.5626117Z", "message": {"role": "assistant", "content": "최종값: 43.3 mm"}, "done": true, "done_reason": "stop", "total_duration": 336322100, "load_duration": 7464000, "prompt_eval_count": 9867, "prompt_eval_cached_count": 9843, "prompt_eval_duration": 155761000, "eval_count": 11, "eval_duration": 160050000}

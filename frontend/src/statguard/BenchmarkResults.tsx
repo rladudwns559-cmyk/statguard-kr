@@ -7,7 +7,7 @@ import summaryDomain from './benchmarkSummaryDomain.json';
 import stability from './benchmarkStability.json';
 import correction from './benchmarkCorrection.json';
 import DarkBackdrop from './DarkBackdrop';
-import { ArithmeticSection, ComparisonSection, PracticalSection, CorrectionBars, CoverageRiskSection, DatasetSection, ForensicsSection, RelatedWorkSection } from './ResultsExtras';
+import { ArithmeticSection, ComparisonSection, OpenModelsSection, PracticalSection, CorrectionBars, CoverageRiskSection, DatasetSection, ForensicsSection, RelatedWorkSection } from './ResultsExtras';
 import './statguard.css';
 import './statguard-theme.css';
 import './statguard-pages.css';
@@ -149,7 +149,8 @@ export default function BenchmarkResults() {
       <CorrectionSection/>
       <StabilitySection/>
       <section className="sg-card"><h2>해석할 때 주의할 점</h2><ul className="sg-limits">
-        <li>질문 {TOTALS.questions}개·자료 {TOTALS.datasets}종의 소규모 실험. 통계적 유의성은 주장하지 않음.</li>
+        <li>질문 {TOTALS.questions}개·자료 {TOTALS.datasets}종의 소규모 실험. 통계적 유의성은 주장하지 않음. 다른 회사 공개 모델로 새 질문 212개를 추가 검증했지만, 질문은 템플릿으로 만들어 실제 질문보다 단순함.</li>
+        <li>StatGuard는 질문의 의도를 읽지 않음. 질문과 다른 대상(예: 다른 나라)의 값을 정확히 읽은 오답은 통과시킬 수 있음.</li>
         <li>일부 추출 규칙은 결과를 보고 고쳤음. 고친 뒤 새로 만든 검증 세트로 다시 확인함.</li>
         <li>실제 답변 중 판정한 비율은 42~77%. 나머지는 보류함.</li>
         <li>‘계산 일치’는 숫자 하나가 계산과 맞는다는 뜻. 답변 전체의 사실·인과관계는 보증하지 않음.</li></ul></section>
@@ -157,6 +158,7 @@ export default function BenchmarkResults() {
       <section className="sg-more-list" aria-labelledby="more-heading">
         <h2 id="more-heading">자세한 실험 기록</h2>
         <p className="sg-hint">필요한 항목만 펼쳐 보세요. 표와 수치는 모두 실험 결과 파일에서 그대로 읽습니다.</p>
+        <More title="다른 회사의 공개 모델로 재검증" desc="알리바바·메타·구글 모델, 새 질문 212개, 큰 공개 모델 심판과 비교"><OpenModelsSection/></More>
         <More title="실험 v0.2 · 큰 표와 통계" desc="365·1,460행 기상 자료, 표준편차·상관·t-검정까지">
       <LargeSection large={large} eyebrow="실험 v0.2 · 큰 표와 통계" title="행이 많아지면 LLM은 틀리기 시작한다" intro="NOAA 일별 기상 365행·1,460행. 합계·평균에 더해 표준편차·중앙값·최댓값·상관계수·Welch t-검정을 물었습니다. 규칙 추출 v0.4는 실행 전에 고정했습니다."/>
         </More>

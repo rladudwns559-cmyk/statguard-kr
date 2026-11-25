@@ -1,6 +1,6 @@
 import coverage from './benchmarkCoverage.json';
 import correction from './benchmarkCorrection.json';
-import { COMPARISON } from './comparisonData';
+import { COMPARISON, type V } from './comparisonData';
 
 /** Two charts for the results page: verify→correct accuracy bars, and coverage vs. risk of the verifier. Data from result files only. */
 
@@ -118,6 +118,26 @@ export function ComparisonSection() {
     <details className="sg-table-more"><summary>표로 자세히 보기</summary><div className="sg-table-scroll" tabIndex={0} role="region" aria-label="답변 모델별 정확도와 교정 표"><table><thead><tr><th scope="col">답변 모델</th><th scope="col">원래 정답률</th><th scope="col">“다시 확인해” 1회</th><th scope="col">StatGuard 근거 1회</th><th scope="col">불일치로 잡힌 오답 고침 (근거 / 재확인)</th><th scope="col">맞던 답이 틀려짐 (근거 1회)</th></tr></thead>
       <tbody>{models.map(([m, r]) => <tr key={m}><th scope="row">{m}</th><td>{rate(r.A, r.n)}</td><td>{rate(r.R1, r.n)}</td><td><strong>{rate(r.S1, r.n)}</strong></td><td>{r.flagged_S1}/{r.flagged} · {r.flagged_R1}/{r.flagged}</td><td>{r.S1_broken}</td></tr>)}</tbody></table></div></details>
     <p className="sg-hint">계산 불일치로 잡힌 오답은 세 모델 모두에서 재계산 근거를 받았을 때 더 많이 고쳐졌습니다. 효과는 원래 오답이 많던 gpt-4o-mini에서 가장 컸고(정답률 {rate(CMP.models['gpt-4o-mini'].A, 120)} → {rate(CMP.models['gpt-4o-mini'].S1, 120)}), 추론 모델 gpt-5-mini에서는 작았습니다. gpt-6-luna 행은 기존 교정 실험(statguard_correction_v0.1)의 결과입니다. 모델·문항이 적어 경향으로만 해석합니다.</p>
+  </section>;
+}
+
+/** statguard_benchmark_v0.4_local: does it hold outside OpenAI? Open models (Alibaba, Meta, Google) and a big open judge. */
+export function OpenModelsSection() {
+  const o = CMP.open_models;
+  if (!o) return null;
+  const ms = Object.entries(o.models), a = o.judge_a, b = o.judge_b;
+  const rows: [string, V][] = [['큰 공개 모델 심판 (qwen2.5:32b)', a.judge], ['StatGuard 최종값 규칙', a.statguard], ['결합 (StatGuard 보류분만 심판)', a.hybrid]];
+  return <section className="sg-card sg-large" aria-labelledby="open-heading"><p className="sg-eyebrow">다른 회사의 공개 모델로 재검증 · API 비용 0원</p><h2 id="open-heading">OpenAI가 아닌 모델에서도 통할까?</h2>
+    <p className="sg-hint">새로 만든 질문 {o.questions}개(표 5종)에 알리바바·메타·구글의 공개 모델이 답하고, 같은 방식으로 검증·교정했습니다. 모델은 Ollama로 노트북과 외부 GPU 서버에서 직접 돌렸고(4비트), 조건은 실행 전에 계획서로 고정했습니다(experiments/statguard_benchmark_v0.4_local).</p>
+    <h3 className="sg-subhead">근거 교정: “다시 확인해”로는 거의 못 고치고, 재계산 근거로는 고친다</h3>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="공개 모델 교정 표"><table><thead><tr><th scope="col">답변 모델</th><th scope="col">원래 정답</th><th scope="col">“다시 확인해” 2회 후</th><th scope="col">StatGuard 근거 2회 후</th><th scope="col">불일치로 잡힌 오답 고침 (근거 / 재확인)</th></tr></thead>
+      <tbody>{ms.map(([m, r]) => <tr key={m}><th scope="row">{m} <small>({r.company})</small></th><td>{r.A}/{r.n}</td><td>{r.R2}/{r.n}</td><td><strong>{r.S2}/{r.n}</strong></td><td><strong>{r.flagged_S1}/{r.flagged}</strong> · {r.flagged_R1}/{r.flagged}</td></tr>)}</tbody></table></div>
+    <h3 className="sg-subhead">채점을 큰 공개 모델에 맡기면? (답 {a.judge.n}개)</h3>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="공개 모델 심판 비교 표"><table><thead><tr><th scope="col">방식</th><th scope="col">통과시킨 답</th><th scope="col">그중 오답</th><th scope="col">오답을 틀렸다고 지적</th></tr></thead>
+      <tbody>{rows.map(([k, t]) => <tr key={k}><th scope="row">{k}</th><td>{t.pass}/{t.n}</td><td><strong>{t.passed_wrong}</strong> ({rate(t.passed_wrong, t.pass)})</td><td>{t.wrong_flagged}/{t.wrong}</td></tr>)}</tbody></table></div>
+    <p className="sg-hint">앞의 OpenAI 답 360개에 같은 심판을 쓰면 통과 {b.judge_qwen32b?.pass}개 중 오답 {b.judge_qwen32b?.passed_wrong}개였습니다(gpt-6-luna 심판 {b['judge_gpt-6-luna']?.passed_wrong}/{b['judge_gpt-6-luna']?.pass}, StatGuard 최종값 규칙 {b.statguard?.passed_wrong}/{b.statguard?.pass}). 결합 방식의 효과는 심판의 질에 크게 좌우됩니다.</p>
+    <p className="sg-hint"><strong>긴 표는 심판이 읽지 못합니다.</strong> 1,460행 표를 쓰는 답 {o.long_inputs}개는 입력이 약 4만 토큰으로 심판의 한도를 넘었고, 서버는 입력을 조용히 잘라 {o.truncated.n}개에 판정을 냈습니다(‘맞음’ {o.truncated.pass}개 중 실제 오답 {o.truncated.pass_wrong}개). 이 판정들은 결과에서 빼고 ‘심판 불가’로 처리했습니다. StatGuard는 같은 표를 끝까지 다시 계산합니다.</p>
+    <p className="sg-hint"><strong>정직하게 밝히는 점:</strong> StatGuard 최종값 규칙의 통과 중 오답은 {ms.map(([m, r]) => `${m} ${r.final_rule.passed_wrong}/${r.final_rule.pass}`).join(', ')}였고, 오답 모두 ‘가장 높은/낮은 나라’ 문항에서 질문과 다른 나라를 고르고 그 값은 정확히 읽은 경우였습니다. StatGuard는 질문의 의도를 확인하지 않으므로 이런 오답은 잡지 못합니다(다음 단계: 질문까지 읽는 검증). 적용하지 않은 추출기 v0.8은 새 문항에서도 통과 중 오답이 늘어(사전 등록 규칙 {o.v08_prereg['v0.7.1']} → {o.v08_prereg['v0.8']}) 미적용 판단을 뒷받침했습니다. 같은 설정이어도 컴퓨터가 다르면 답이 조금 달라집니다(llama 답 {o.llama_agreement.both}개 중 노트북·서버 정답 여부 일치 {o.llama_agreement.same_correctness}개).</p>
   </section>;
 }
 

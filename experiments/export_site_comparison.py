@@ -19,6 +19,9 @@ cost = json.loads((EXP / "statguard_cost_speed_v0.1/results/summary.json").read_
 rng = json.loads((EXP / "statguard_ranges_v0.7.1/results/summary.json").read_text(encoding="utf-8"))
 x08 = json.loads((EXP / "statguard_extractor_v0.8/results/summary.json").read_text(encoding="utf-8"))
 ari0 = json.loads((EXP / "statguard_arithmetic_v0.1/results/summary_v0.1_before_fix.json").read_text(encoding="utf-8"))
+v04 = json.loads((EXP / "statguard_benchmark_v0.4_local/results/summary.json").read_text(encoding="utf-8"))
+jdg = json.loads((EXP / "statguard_benchmark_v0.4_local/results/judge_analysis.json").read_text(encoding="utf-8"))
+OPEN = {"qwen2.5:7b": "알리바바", "llama3.1:8b": "메타", "gemma3:4b": "구글"}
 
 
 def pick(t: dict) -> dict:
@@ -62,6 +65,16 @@ site = {
                         and abs(float(c["stated"].replace(",", "")) - float(c["recomputed"]) * 100) > 0.01 * abs(float(c["stated"].replace(",", "")) or 1)
                         and abs(float(c["stated"].replace(",", "")) - float(c["recomputed"])) > 0.005 * abs(float(c["recomputed"]) or 1)),
                        key=lambda c: (c["statguard"] == "FLAG", len(c["expression"])))}.values())[:4]},
+    "open_models": {
+        "questions": 212,
+        "models": {m: {"company": c, "n": v04["models"][m]["answers"], "A": v04["models"][m]["correct"], "S2": v04["correction"][m]["S2"], "R2": v04["correction"][m]["R2"],
+                       "flagged": v04["correction"][m]["flagged"]["n"], "flagged_S1": v04["correction"][m]["flagged"]["S1"], "flagged_R1": v04["correction"][m]["flagged"]["R1"],
+                       "final_rule": pick(v04["verifiers"][f"v0.7.1|final_rule|{m}"])} for m, c in OPEN.items()},
+        "v08_prereg": {k: v04["verifiers"][f"{k}|prereg|all"]["passed_wrong"] for k in ("v0.7.1", "v0.8")},
+        "judge_a": {k: pick(jdg["a"][f"all|{k}"]) for k in ("judge", "statguard", "hybrid")},
+        "judge_b": {k: pick(v) for k, v in jdg["b"].items()},
+        "long_inputs": jdg["notes"]["long_inputs"], "truncated": jdg["notes"]["truncated_judged"],
+        "llama_agreement": jdg["notes"]["llama_laptop_vs_server"]},
     "forensics": {"version": fx["version"], "seed": fx["seed"], "injected": fx["injected"], "injected_by_kind": fx["injected_by_kind"],
                   "random": {"explained": fx["random"].get("explained", 0), "n": fx["random"].get("explained", 0) + fx["random"]["not_explained"],
                              "high": sum(v for k, v in fx["random"].items() if k.endswith(":high"))},

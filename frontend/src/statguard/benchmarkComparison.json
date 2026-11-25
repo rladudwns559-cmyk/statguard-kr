@@ -453,6 +453,165 @@
    }
   ]
  },
+ "open_models": {
+  "questions": 212,
+  "models": {
+   "qwen2.5:7b": {
+    "company": "알리바바",
+    "n": 212,
+    "A": 35,
+    "S2": 126,
+    "R2": 34,
+    "flagged": 105,
+    "flagged_S1": 89,
+    "flagged_R1": 0,
+    "final_rule": {
+     "n": 212,
+     "pass": 22,
+     "passed_wrong": 0,
+     "wrong": 177,
+     "wrong_flagged": 105,
+     "false_alarm": 1,
+     "upper95": 0.1544
+    }
+   },
+   "llama3.1:8b": {
+    "company": "메타",
+    "n": 212,
+    "A": 40,
+    "S2": 84,
+    "R2": 47,
+    "flagged": 93,
+    "flagged_S1": 54,
+    "flagged_R1": 3,
+    "final_rule": {
+     "n": 212,
+     "pass": 21,
+     "passed_wrong": 1,
+     "wrong": 172,
+     "wrong_flagged": 93,
+     "false_alarm": 10,
+     "upper95": 0.2382
+    }
+   },
+   "gemma3:4b": {
+    "company": "구글",
+    "n": 212,
+    "A": 13,
+    "S2": 74,
+    "R2": 9,
+    "flagged": 69,
+    "flagged_S1": 38,
+    "flagged_R1": 0,
+    "final_rule": {
+     "n": 212,
+     "pass": 11,
+     "passed_wrong": 5,
+     "wrong": 199,
+     "wrong_flagged": 69,
+     "false_alarm": 2,
+     "upper95": 0.7662
+    }
+   }
+  },
+  "v08_prereg": {
+   "v0.7.1": 20,
+   "v0.8": 34
+  },
+  "judge_a": {
+   "judge": {
+    "n": 636,
+    "pass": 275,
+    "passed_wrong": 197,
+    "wrong": 548,
+    "wrong_flagged": 348,
+    "false_alarm": 6,
+    "upper95": 0.7689
+   },
+   "statguard": {
+    "n": 636,
+    "pass": 54,
+    "passed_wrong": 6,
+    "wrong": 548,
+    "wrong_flagged": 267,
+    "false_alarm": 13,
+    "upper95": 0.2263
+   },
+   "hybrid": {
+    "n": 636,
+    "pass": 167,
+    "passed_wrong": 97,
+    "wrong": 548,
+    "wrong_flagged": 448,
+    "false_alarm": 14,
+    "upper95": 0.6566
+   }
+  },
+  "judge_b": {
+   "judge_qwen32b": {
+    "n": 360,
+    "pass": 250,
+    "passed_wrong": 71,
+    "wrong": 133,
+    "wrong_flagged": 17,
+    "false_alarm": 18,
+    "upper95": 0.3442
+   },
+   "judge_gpt-6-luna": {
+    "n": 360,
+    "pass": 235,
+    "passed_wrong": 13,
+    "wrong": 133,
+    "wrong_flagged": 109,
+    "false_alarm": 5,
+    "upper95": 0.0927
+   },
+   "statguard": {
+    "n": 360,
+    "pass": 90,
+    "passed_wrong": 0,
+    "wrong": 133,
+    "wrong_flagged": 49,
+    "false_alarm": 9,
+    "upper95": 0.0402
+   },
+   "hybrid_qwen32b": {
+    "n": 360,
+    "pass": 233,
+    "passed_wrong": 42,
+    "wrong": 133,
+    "wrong_flagged": 58,
+    "false_alarm": 17,
+    "upper95": 0.2357
+   },
+   "hybrid_gpt-6-luna": {
+    "n": 360,
+    "pass": 224,
+    "passed_wrong": 7,
+    "wrong": 133,
+    "wrong_flagged": 115,
+    "false_alarm": 10,
+    "upper95": 0.0633
+   }
+  },
+  "long_inputs": 63,
+  "truncated": {
+   "n": 59,
+   "decisions": {
+    "HOLD": 16,
+    "PASS": 32,
+    "FLAG": 11
+   },
+   "pass_wrong": 22,
+   "pass": 32
+  },
+  "llama_agreement": {
+   "both": 212,
+   "identical_text": 118,
+   "same_final_value": 154,
+   "same_correctness": 209
+  }
+ },
  "forensics": {
   "version": "statguard-forensics-v0.1",
   "seed": 20261201,

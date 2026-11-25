@@ -1,0 +1,1 @@
+{"model": "gemma3:4b", "created_at": "2026-11-25T05:23:15.7551623Z", "message": {"role": "assistant", "content": "Burundi,BDI\n최종값: 249.80 달러"}, "done": true, "done_reason": "stop", "total_duration": 520484400, "load_duration": 6144400, "prompt_eval_count": 8905, "prompt_eval_cached_count": 8732, "prompt_eval_duration": 198377000, "eval_count": 20, "eval_duration": 298339000}

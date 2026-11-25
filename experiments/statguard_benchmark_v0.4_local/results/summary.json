@@ -1,0 +1,334 @@
+{
+ "models": {
+  "qwen2.5:7b": {
+   "answers": 212,
+   "correct": 35,
+   "format_error": 4,
+   "median_seconds": 1.62,
+   "max_prompt_tokens": 12117
+  },
+  "llama3.1:8b": {
+   "answers": 212,
+   "correct": 40,
+   "format_error": 23,
+   "median_seconds": 2.46,
+   "max_prompt_tokens": 10175
+  },
+  "gemma3:4b": {
+   "answers": 212,
+   "correct": 13,
+   "format_error": 16,
+   "median_seconds": 2.53,
+   "max_prompt_tokens": 12187
+  }
+ },
+ "verifiers": {
+  "v0.7|prereg|qwen2.5:7b": {
+   "n": 212,
+   "pass": 26,
+   "passed_wrong": 4,
+   "upper95": 0.3487,
+   "false_alarm": 1,
+   "wrong": 177,
+   "wrong_flagged": 100,
+   "hold": 85
+  },
+  "v0.7|prereg|llama3.1:8b": {
+   "n": 212,
+   "pass": 31,
+   "passed_wrong": 10,
+   "upper95": 0.5137,
+   "false_alarm": 10,
+   "wrong": 172,
+   "wrong_flagged": 90,
+   "hold": 81
+  },
+  "v0.7|prereg|gemma3:4b": {
+   "n": 212,
+   "pass": 12,
+   "passed_wrong": 6,
+   "upper95": 0.7891,
+   "false_alarm": 2,
+   "wrong": 199,
+   "wrong_flagged": 65,
+   "hold": 133
+  },
+  "v0.7|prereg|all": {
+   "n": 636,
+   "pass": 69,
+   "passed_wrong": 20,
+   "upper95": 0.4116,
+   "false_alarm": 13,
+   "wrong": 548,
+   "wrong_flagged": 255,
+   "hold": 299
+  },
+  "v0.7|final_rule|qwen2.5:7b": {
+   "n": 212,
+   "pass": 22,
+   "passed_wrong": 0,
+   "upper95": 0.1544,
+   "false_alarm": 1,
+   "wrong": 177,
+   "wrong_flagged": 100,
+   "hold": 89
+  },
+  "v0.7|final_rule|llama3.1:8b": {
+   "n": 212,
+   "pass": 21,
+   "passed_wrong": 1,
+   "upper95": 0.2382,
+   "false_alarm": 10,
+   "wrong": 172,
+   "wrong_flagged": 90,
+   "hold": 91
+  },
+  "v0.7|final_rule|gemma3:4b": {
+   "n": 212,
+   "pass": 11,
+   "passed_wrong": 5,
+   "upper95": 0.7662,
+   "false_alarm": 2,
+   "wrong": 199,
+   "wrong_flagged": 65,
+   "hold": 134
+  },
+  "v0.7|final_rule|all": {
+   "n": 636,
+   "pass": 54,
+   "passed_wrong": 6,
+   "upper95": 0.2263,
+   "false_alarm": 13,
+   "wrong": 548,
+   "wrong_flagged": 255,
+   "hold": 314
+  },
+  "v0.7.1|prereg|qwen2.5:7b": {
+   "n": 212,
+   "pass": 26,
+   "passed_wrong": 4,
+   "upper95": 0.3487,
+   "false_alarm": 1,
+   "wrong": 177,
+   "wrong_flagged": 105,
+   "hold": 80
+  },
+  "v0.7.1|prereg|llama3.1:8b": {
+   "n": 212,
+   "pass": 31,
+   "passed_wrong": 10,
+   "upper95": 0.5137,
+   "false_alarm": 10,
+   "wrong": 172,
+   "wrong_flagged": 93,
+   "hold": 78
+  },
+  "v0.7.1|prereg|gemma3:4b": {
+   "n": 212,
+   "pass": 12,
+   "passed_wrong": 6,
+   "upper95": 0.7891,
+   "false_alarm": 2,
+   "wrong": 199,
+   "wrong_flagged": 69,
+   "hold": 129
+  },
+  "v0.7.1|prereg|all": {
+   "n": 636,
+   "pass": 69,
+   "passed_wrong": 20,
+   "upper95": 0.4116,
+   "false_alarm": 13,
+   "wrong": 548,
+   "wrong_flagged": 267,
+   "hold": 287
+  },
+  "v0.7.1|final_rule|qwen2.5:7b": {
+   "n": 212,
+   "pass": 22,
+   "passed_wrong": 0,
+   "upper95": 0.1544,
+   "false_alarm": 1,
+   "wrong": 177,
+   "wrong_flagged": 105,
+   "hold": 84
+  },
+  "v0.7.1|final_rule|llama3.1:8b": {
+   "n": 212,
+   "pass": 21,
+   "passed_wrong": 1,
+   "upper95": 0.2382,
+   "false_alarm": 10,
+   "wrong": 172,
+   "wrong_flagged": 93,
+   "hold": 88
+  },
+  "v0.7.1|final_rule|gemma3:4b": {
+   "n": 212,
+   "pass": 11,
+   "passed_wrong": 5,
+   "upper95": 0.7662,
+   "false_alarm": 2,
+   "wrong": 199,
+   "wrong_flagged": 69,
+   "hold": 130
+  },
+  "v0.7.1|final_rule|all": {
+   "n": 636,
+   "pass": 54,
+   "passed_wrong": 6,
+   "upper95": 0.2263,
+   "false_alarm": 13,
+   "wrong": 548,
+   "wrong_flagged": 267,
+   "hold": 302
+  },
+  "v0.8|prereg|qwen2.5:7b": {
+   "n": 212,
+   "pass": 29,
+   "passed_wrong": 7,
+   "upper95": 0.4354,
+   "false_alarm": 1,
+   "wrong": 177,
+   "wrong_flagged": 98,
+   "hold": 84
+  },
+  "v0.8|prereg|llama3.1:8b": {
+   "n": 212,
+   "pass": 38,
+   "passed_wrong": 15,
+   "upper95": 0.5661,
+   "false_alarm": 10,
+   "wrong": 172,
+   "wrong_flagged": 90,
+   "hold": 74
+  },
+  "v0.8|prereg|gemma3:4b": {
+   "n": 212,
+   "pass": 18,
+   "passed_wrong": 12,
+   "upper95": 0.8666,
+   "false_alarm": 2,
+   "wrong": 199,
+   "wrong_flagged": 66,
+   "hold": 126
+  },
+  "v0.8|prereg|all": {
+   "n": 636,
+   "pass": 85,
+   "passed_wrong": 34,
+   "upper95": 0.512,
+   "false_alarm": 13,
+   "wrong": 548,
+   "wrong_flagged": 254,
+   "hold": 284
+  },
+  "v0.8|final_rule|qwen2.5:7b": {
+   "n": 212,
+   "pass": 22,
+   "passed_wrong": 0,
+   "upper95": 0.1544,
+   "false_alarm": 1,
+   "wrong": 177,
+   "wrong_flagged": 98,
+   "hold": 91
+  },
+  "v0.8|final_rule|llama3.1:8b": {
+   "n": 212,
+   "pass": 21,
+   "passed_wrong": 1,
+   "upper95": 0.2382,
+   "false_alarm": 10,
+   "wrong": 172,
+   "wrong_flagged": 90,
+   "hold": 91
+  },
+  "v0.8|final_rule|gemma3:4b": {
+   "n": 212,
+   "pass": 11,
+   "passed_wrong": 5,
+   "upper95": 0.7662,
+   "false_alarm": 2,
+   "wrong": 199,
+   "wrong_flagged": 66,
+   "hold": 133
+  },
+  "v0.8|final_rule|all": {
+   "n": 636,
+   "pass": 54,
+   "passed_wrong": 6,
+   "upper95": 0.2263,
+   "false_alarm": 13,
+   "wrong": 548,
+   "wrong_flagged": 254,
+   "hold": 315
+  }
+ },
+ "correction": {
+  "qwen2.5:7b": {
+   "R1": 34,
+   "R2": 34,
+   "S1": 122,
+   "S2": 126,
+   "flagged": {
+    "n": 105,
+    "R1": 0,
+    "S1": 89
+   }
+  },
+  "llama3.1:8b": {
+   "R1": 43,
+   "R2": 47,
+   "S1": 82,
+   "S2": 84,
+   "flagged": {
+    "n": 93,
+    "R1": 3,
+    "S1": 54
+   }
+  },
+  "gemma3:4b": {
+   "R1": 9,
+   "R2": 9,
+   "S1": 48,
+   "S2": 74,
+   "flagged": {
+    "n": 69,
+    "R1": 0,
+    "S1": 38
+   }
+  }
+ },
+ "forensics": {
+  "qwen2.5:7b": {
+   "contradicted": 106,
+   "explained": 17,
+   "high": 7
+  },
+  "llama3.1:8b": {
+   "contradicted": 115,
+   "explained": 12,
+   "high": 7
+  },
+  "gemma3:4b": {
+   "contradicted": 73,
+   "explained": 8,
+   "high": 4
+  }
+ },
+ "arithmetic": {
+  "qwen2.5:7b": {
+   "flagged": 16,
+   "flagged_wrong": 16
+  },
+  "llama3.1:8b": {
+   "flagged": 44,
+   "flagged_wrong": 43
+  },
+  "gemma3:4b": {
+   "flagged": 20,
+   "flagged_wrong": 20
+  }
+ },
+ "pending": {}
+}

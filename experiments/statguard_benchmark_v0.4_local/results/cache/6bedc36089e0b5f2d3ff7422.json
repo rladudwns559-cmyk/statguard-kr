@@ -1,0 +1,1 @@
+{"model": "gemma3:4b", "created_at": "2026-11-25T02:55:56.0167413Z", "message": {"role": "assistant", "content": "최종값: 60.7 유닛"}, "done": true, "done_reason": "stop", "total_duration": 308282800, "load_duration": 7188400, "prompt_eval_count": 9869, "prompt_eval_cached_count": 9845, "prompt_eval_duration": 125788000, "eval_count": 12, "eval_duration": 164824000}

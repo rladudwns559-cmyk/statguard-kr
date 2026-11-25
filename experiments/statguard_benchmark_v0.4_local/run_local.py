@@ -27,6 +27,8 @@ MODELS = ["qwen2.5:7b", "llama3.1:8b", "gemma3:4b"]
 OPTIONS = {"num_ctx": 16384, "temperature": 0, "seed": 7, "num_predict": 1024}
 CACHE = HERE / "results" / "cache"
 LOG = HERE / "results" / "calls.jsonl"
+# llama3.1:8b ran on the external GPU server (PROTOCOL 변경 기록); its responses stay in their own folder and are read here, never mixed.
+SERVER = HERE / "results_server_llama"
 
 
 def _load(name: str, path: Path):
@@ -69,8 +71,9 @@ def chat(model: str, messages: list[dict], offline: bool = False) -> dict | None
     body = {"model": model, "messages": messages, "stream": False, "options": OPTIONS}
     digest = hashlib.sha256(json.dumps(body, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:24]
     path = CACHE / f"{digest}.json"
-    if path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
+    for p in (path, SERVER / "cache" / f"{digest}.json"):
+        if p.exists():
+            return json.loads(p.read_text(encoding="utf-8"))
     if offline:
         return None
     started = time.monotonic()
@@ -197,7 +200,7 @@ def cmd_report():
     its = items()
     out = {"models": {}, "verifiers": {}, "correction": {}, "forensics": {}, "arithmetic": {}, "pending": Counter()}
     rows = {(ver, rule, m): [] for ver in VERIFIERS for rule in ("prereg", "final_rule") for m in MODELS + ["all"]}
-    calls = [json.loads(l) for l in LOG.open(encoding="utf-8")] if LOG.exists() else []
+    calls = [json.loads(l) for f in (LOG, SERVER / "calls.jsonl") if f.exists() for l in f.open(encoding="utf-8") if l.strip()]
     for m in MODELS:
         acc, fmt, cases = 0, 0, 0
         corr = {f"{c}{r}": [] for c in ("R", "S") for r in (1, 2)}
@@ -250,7 +253,7 @@ def cmd_report():
     out["pending"] = dict(out["pending"])
     (HERE / "results").mkdir(exist_ok=True)
     (HERE / "results" / "summary.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    L = ["# 로컬 공개 모델 벤치마크 v0.4 결과", "", "조건은 PROTOCOL.md. 답변은 이 PC의 Ollama(공개 모델), API 비용 없음.", "", f"미완료: {out['pending'] or '없음'}", "",
+    L = ["# 로컬 공개 모델 벤치마크 v0.4 결과", "", "조건은 PROTOCOL.md. 답변은 Ollama 0.40.18(공개 모델, API 비용 없음): qwen2.5:7b·gemma3:4b는 노트북, llama3.1:8b는 외부 GPU 서버(results_server_llama/).", "", f"미완료: {out['pending'] or '없음'}", "",
          "| 모델 | 답변 | 정답률 | 형식 오류 | 응답 시간 중앙값 | 최대 입력 토큰 |", "|---|---|---|---|---|---|"]
     for m, x in out["models"].items():
         L.append(f"| {m} | {x['answers']} | {x['correct']}/{x['answers']} ({x['correct'] / max(1, x['answers']) * 100:.1f}%) | {x['format_error']} | {x['median_seconds']}초 | {x['max_prompt_tokens']:,} |")

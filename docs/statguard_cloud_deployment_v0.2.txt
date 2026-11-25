@@ -73,3 +73,17 @@ StatGuard-KR 공개 재배포 기록 v0.2
 - 소개 페이지가 실험 결과 페이지 코드를 불러오지 않도록 공유 데이터 모듈(comparisonData) 분리.
 - 재현성: 교정 실험의 보류 사유 문구를 실험 폴더에 고정(frozen/reasons_ko.json), 교정·비교 실험 결과가 이전과 바이트 단위로 같음을 확인.
 - 검사: StatGuard Python 217/217, frontend 277/277, 타입 검사·빌드 통과. 배포 후 3개 페이지 200, 공개 서버에서 기간 범위 판정(계산 일치)·검산 응답 확인.
+
+[추가 배포] 팀원 UI 정리(GitHub main fc5e8f4) 반영 — Production when2warn-public-beta-hy1wvgto3
+- 팀원이 GitHub main에 올린 소개·검증하기·AI 오답 체험·실험 결과 페이지 UI 정리(CSS 3개 추가, 페이지 9개·테스트 2개 수정)와
+  README 한계·통계 검정 보완, 학술대회 발표 수치 정리(docs/statguard_conference_numbers_v0.1.md)를 이 작업 폴더에 옮김(제 변경과 겹치는 파일 없음).
+- Vercel은 GitHub과 자동 연결되어 있지 않아 이 PC에서 직접 배포함.
+- 검사: frontend 277/277, 타입 검사·빌드 통과, 작업 폴더 frontend/src가 GitHub main과 같음. 배포 후 소개·실험 결과 페이지 표시·글꼴 로드 확인, 콘솔 오류 없음.
+
+[설정 변경] Vercel ↔ GitHub 자동 배포 연결 — Production when2warn-public-beta-6n8mnaecq
+- Vercel 프로젝트 when2warn-public-beta의 Git 연결을 예전 저장소(rladudwns559-cmyk/when2warn-public-beta, 10월 20일 이후 사용 안 함)에서
+  rladudwns559-cmyk/statguard-kr로 바꿈. 운영 브랜치 main. Root Directory를 when2warn/frontend → frontend(저장소 구조)로 변경.
+- 이제 statguard-kr의 main에 push하면 자동으로 운영 배포됨. 다른 브랜치 push는 미리보기 배포.
+- 서버 환경 변수(데모 비밀번호·API 키)는 프로젝트 설정에 그대로 있음(값은 저장소에 없음).
+- 이 PC에서 직접 배포할 때의 준비 폴더도 deploy/frontend 구조로 바꿈(Root Directory와 맞춤).
+- 확인: GitHub main(fc5e8f4)에서 Vercel이 직접 빌드 → READY, 운영 주소 연결. 공개 사이트에서 ‘답변 속 계산 검산’(350/7=60 → 다시 계산하면 50) 정상.

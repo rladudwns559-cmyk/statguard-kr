@@ -1,0 +1,2 @@
+gemma3:4b done 15:10
+qwen2.5:7b done 15:34

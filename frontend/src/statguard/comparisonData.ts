@@ -13,6 +13,12 @@ export const COMPARISON = comparison as unknown as { verifiers: Record<'prereg' 
   arithmetic: { version: string; groups: Record<string, Ar>; total: Ar; before_fix_total: Ar; right_flagged: ArCase[]; examples: ArCase[] };
   cost_speed?: { machine: string; statguard: { answers: number; median_ms: number; p95_ms: number; usd_per_1000: number; passed: number; passed_wrong: number };
     llm_judge: { calls: number; median_s: number; p95_s: number; usd_per_1000: number; mean_input_tokens: number; passed: number; passed_wrong: number }; speedup_median: number };
+  open_models?: OpenModels;
   ranges?: { holds_before: number; holds_after: number; computed: number; passed_before: number; passed_after: number; passed_wrong_after: number; false_alarm_after: number; passed_wrong_before: number; false_alarm_before: number } };
+/** statguard_benchmark_v0.4_local: open models from three other companies on 212 new questions, plus the qwen2.5:32b judge. */
+export type OpenModels = { questions: number;
+  models: Record<string, { company: string; n: number; A: number; S2: number; R2: number; flagged: number; flagged_S1: number; flagged_R1: number; final_rule: V }>;
+  v08_prereg: Record<string, number>; judge_a: Record<'judge' | 'statguard' | 'hybrid', V>; judge_b: Record<string, V>;
+  long_inputs: number; truncated: { n: number; pass: number; pass_wrong: number }; llama_agreement: { both: number; identical_text: number; same_final_value: number; same_correctness: number } };
 export type Ar = { answers: number; wrong: number; with_checks: number; flagged: number; flagged_wrong: number; flagged_right: number; added: number };
 export type ArCase = { source: string; question: string; expression: string; stated: string; recomputed: string; correct: boolean; statguard: string };

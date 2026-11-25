@@ -1,0 +1,11 @@
+gemma3:4b 20/212 163s
+gemma3:4b 40/212 357s
+gemma3:4b 60/212 413s
+gemma3:4b 80/212 459s
+gemma3:4b 100/212 490s
+gemma3:4b 120/212 566s
+gemma3:4b 140/212 651s
+gemma3:4b 160/212 710s
+gemma3:4b 180/212 733s
+gemma3:4b 200/212 771s
+gemma3:4b 212/212 806s

@@ -1,0 +1,1 @@
+{"model": "gemma3:4b", "created_at": "2026-11-25T02:51:33.4992817Z", "message": {"role": "assistant", "content": "Burundi,BDI\n최종값: 63.651 세"}, "done": true, "done_reason": "stop", "total_duration": 439409400, "load_duration": 5344500, "prompt_eval_count": 8771, "prompt_eval_cached_count": 8734, "prompt_eval_duration": 158303000, "eval_count": 19, "eval_duration": 261242000}

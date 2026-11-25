@@ -1,0 +1,1 @@
+{"model": "gemma3:4b", "created_at": "2026-11-25T02:52:51.952704Z", "message": {"role": "assistant", "content": "카보베르데, 522331\n최종값: 522331 <단위>"}, "done": true, "done_reason": "stop", "total_duration": 571062700, "load_duration": 8118000, "prompt_eval_count": 8773, "prompt_eval_cached_count": 8734, "prompt_eval_duration": 132026000, "eval_count": 30, "eval_duration": 414888000}
