@@ -43,8 +43,11 @@ describe('AI 오답 체험', () => {
 
   it('lists every wrong answer in the gallery with filters', async () => {
     window.history.replaceState(null, '', '/statguard/challenge'); render(<AnswerChallenge/>);
+    expect(screen.getAllByRole('article')).toHaveLength(6);
+    await userEvent.click(screen.getByRole('button', { name: '오답 21개 더 보기' }));
     expect(screen.getAllByRole('article')).toHaveLength(27);
     await userEvent.click(screen.getByRole('button', { name: /StatGuard가 잡은 것 \(8\)/ }));
+    await userEvent.click(screen.getByRole('button', { name: '오답 2개 더 보기' }));
     expect(screen.getAllByRole('article')).toHaveLength(8);
     await userEvent.click(screen.getByRole('button', { name: /근거로 고쳐진 것/ }));
     expect(screen.getAllByRole('article').every(a => /번째 수정에서 고쳐짐/.test(a.textContent ?? ''))).toBe(true);

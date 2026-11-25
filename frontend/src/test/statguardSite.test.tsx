@@ -5,6 +5,7 @@ import { webcrypto } from 'node:crypto';
 import App from '../App';
 import StatGuardWorkspace from '../statguard/StatGuardWorkspace';
 import BenchmarkResults from '../statguard/BenchmarkResults';
+import RecountScene from '../statguard/RecountScene';
 import StatGuardHome from '../statguard/StatGuardHome';
 import { STATGUARD_VERSION } from '../statguard/StatGuardChrome';
 import { REAL_A, TOTALS, upperLimit, WRONG_UPPER } from '../statguard/benchmarkTotals';
@@ -35,7 +36,6 @@ describe('StatGuard site consistency', () => {
     const rows = Object.values(stability as unknown as Record<string, { total_passed: number; total_wrong_among_passed: number }>);
     const passed = rows.reduce((a, r) => a + r.total_passed, 0), wrong = rows.reduce((a, r) => a + r.total_wrong_among_passed, 0);
     expect(within(screen.getByLabelText('핵심 실험 결과')).getByText(`${passed}건 중 ${wrong}건`)).toBeVisible();
-    expect(screen.getByText(new RegExp(`질문 ${TOTALS.questions}개·자료 ${TOTALS.datasets}종`))).toBeVisible();
     expect(screen.queryByRole('link', { name: /WHEN2WARN/ })).toBeNull();
     expect(document.querySelector('a[href="/when2warn"]')).toBeNull();
     expect(within(screen.getByLabelText('핵심 실험 결과')).getByText(/95% 신뢰구간 상한 1\.3%/)).toBeVisible();
@@ -45,8 +45,9 @@ describe('StatGuard site consistency', () => {
     render(<StatGuardHome/>);
     const scene = screen.getByRole('figure');
     expect(scene).toHaveAccessibleName(/AI는 연간 합계를 888\.4mm라고 했지만 다시 계산하면 888\.9mm/);
-    expect(within(scene).getByText('888.4mm')).toBeVisible();
     expect(scene.querySelectorAll('.sg-bar')).toHaveLength(12);
+    // The home hero keeps only the drawing; the overlay cards are hidden there for a calmer first screen.
+    expect(scene.querySelector('.sg-quote, .sg-stamp, .sg-hud')).toBeNull();
   });
 
   it('draws the results overview chart with readable values for every experiment', () => {
@@ -87,7 +88,7 @@ describe('StatGuard site consistency', () => {
     const scale = screen.getByLabelText('전체 실험 규모');
     expect(scale).toHaveTextContent(`${TOTALS.questions}개 · 자료 ${TOTALS.datasets}종`);
     expect(scale).toHaveTextContent(`${TOTALS.wrongPassed}/${TOTALS.passed}건`);
-    expect(screen.getByText(new RegExp(`전체 질문 ${TOTALS.questions}개`))).toBeVisible();
+    expect(screen.getByText(new RegExp(`질문 ${TOTALS.questions}개·자료 ${TOTALS.datasets}종의 소규모 실험`))).toBeVisible();
     expect(screen.queryByText(/^질문 36개·자료 5종의 소규모 실험/)).toBeNull();
   });
 
@@ -120,7 +121,7 @@ describe('StatGuard site consistency', () => {
   });
 
   it('reads out the month under the pointer in the hero scene and the recount total otherwise', () => {
-    render(<StatGuardHome/>);
+    render(<RecountScene/>);
     const hud = document.querySelector('.sg-hud')!;
     expect(hud).toHaveTextContent('12개월 다시 합산888.9mm');
     const bars = document.querySelectorAll('.sg-bar');
@@ -161,7 +162,7 @@ describe('StatGuard site consistency', () => {
 
   it('shows the recorded verify-then-correct case on the home page, from the experiment file', () => {
     render(<StatGuardHome/>);
-    const replay = screen.getByRole('region', { name: '틀린 숫자를 잡고, 근거를 주면 AI가 스스로 고칩니다' });
+    const replay = screen.getByRole('region', { name: '근거를 주면 AI가 스스로 고친다' });
     expect(replay).toHaveTextContent('7.9℃');
     expect(replay).toHaveTextContent('7.6333℃');
     expect(replay).toHaveTextContent('계산 불일치');
@@ -195,7 +196,7 @@ describe('StatGuard site consistency', () => {
   it('shows the tilted verification preview built from the recorded case, and the gradient headline keeps its accessible name', () => {
     render(<StatGuardHome/>);
     expect(screen.getByRole('heading', { level: 1 })).toHaveAccessibleName('AI가 말한 숫자, 다시 계산해서 확인합니다.');
-    const shot = screen.getByRole('region', { name: '숫자 하나하나에 도장을 찍습니다.' });
+    const shot = screen.getByRole('region', { name: '숫자 하나하나에 판정을 붙인다' });
     expect(shot).toHaveTextContent('7.6333℃');
     expect(within(shot).getByRole('link', { name: '직접 검증해 보기' })).toHaveAttribute('href', '/statguard');
   });

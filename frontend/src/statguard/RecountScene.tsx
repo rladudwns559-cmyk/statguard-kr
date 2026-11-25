@@ -27,7 +27,7 @@ const initialMode = (): Mode => {
  * Without WebGL (and in tests) the CSS isometric block of monthly bars is shown. `?compare` shows a switcher between
  * the candidate models; `?scene=` picks one.
  */
-export default function RecountScene() {
+export default function RecountScene({ bare = false }: { bare?: boolean } = {}) {
   const scene = useRef<HTMLElement>(null), [month, setMonth] = useState<number | null>(null);
   const [mode, setMode] = useState<Mode>(initialMode);
   const compare = typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('compare');
@@ -52,7 +52,7 @@ export default function RecountScene() {
     : (month === null || tower)
       ? <><small>{tower ? '12개월을 쌓아 다시 합산' : '12개월 다시 합산'}</small><b>{TOTAL.toFixed(1)}mm</b></>
       : <><small>2023년 {month + 1}월</small><b>{RAIN[month].toFixed(1)}mm</b></>;
-  return <figure ref={scene} className={'sg-scene' + (gl === 'on' ? ' is-3d' : '') + (glow ? ' is-tower' : '') + ' sg-scene-' + shown} onPointerMove={lean} onPointerLeave={settle} aria-label={`시애틀 2023년 강수량을 3D로 그린 그림. AI는 연간 합계를 888.4mm라고 했지만 다시 계산하면 ${TOTAL.toFixed(1)}mm입니다.`}>
+  return <figure ref={scene} className={'sg-scene' + (bare ? ' is-bare' : '') + (gl === 'on' ? ' is-3d' : '') + (glow ? ' is-tower' : '') + ' sg-scene-' + shown} onPointerMove={lean} onPointerLeave={settle} aria-label={`시애틀 2023년 강수량을 3D로 그린 그림. AI는 연간 합계를 888.4mm라고 했지만 다시 계산하면 ${TOTAL.toFixed(1)}mm입니다.`}>
     {data ? <DataScene3D key={mode} mode={mode as DataMode} onProgress={progress} onReady={ready}/>
       : <Scene3D values={RAIN} hot={tower ? null : month} onHover={hover} onTower={towerChange} onReady={ready}/>}
     {gl !== 'on' && <div className="sg-iso" aria-hidden="true" style={gl === 'pending' ? { visibility: 'hidden' } : undefined}>
@@ -64,9 +64,11 @@ export default function RecountScene() {
       })}
     </div>}
     {compare && <div className="sg-scene-switch" role="group" aria-label="3D 모형 비교">{MODES.map(m => <button key={m.id} type="button" aria-pressed={mode === m.id} onClick={() => pick(m.id)}>{m.label}</button>)}</div>}
+    {!bare && <>
     <div className="sg-hud" aria-hidden="true">{hud}</div>
     <div className="sg-quote"><small>gpt-6-luna의 실제 답변</small><p>2023년 시애틀의 일별 강수량을 모두 합한 연간 강수량은 <mark>888.4mm</mark>입니다.</p></div>
     <div className="sg-stamp" aria-hidden="true"><strong>계산 불일치</strong><span>다시 계산하면 <b>{TOTAL.toFixed(1)}mm</b></span><span>답변과 차이 {(TOTAL - 888.4).toFixed(1)}mm</span></div>
     <figcaption className="sg-scene-label" style={{ left: 0, bottom: 0 }}>{MODES.find(m => m.id === shown)!.caption}</figcaption>
+    </>}
   </figure>;
 }

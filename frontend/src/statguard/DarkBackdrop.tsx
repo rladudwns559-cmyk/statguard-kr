@@ -3,8 +3,8 @@ import { reducedMotion } from './navigation';
 
 /**
  * Full-screen live background for the dark pages, written as one raw WebGL fragment shader (no library, no download):
- * a slow domain-warped light field, a perspective grid floor that scrolls toward the viewer, blinking data points,
- * and a glow that follows the pointer. Renders at reduced resolution, stops while the tab is hidden, draws a single
+ * a slow domain-warped light field and a glow that follows the pointer (the grid floor and blinking cells were removed
+ * to keep the pages calm and readable). Renders at reduced resolution, stops while the tab is hidden, draws a single
  * still frame for reduced motion, and leaves only the CSS gradient behind if WebGL is unavailable.
  */
 const VERT = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
@@ -23,18 +23,6 @@ void main(){
   col=mix(col,vec3(.02,.36,.42),smoothstep(.42,.92,f)*.9);
   col=mix(col,vec3(.16,.24,.68),smoothstep(.55,1.,q.y)*.45);
   col=mix(col,vec3(.08,.52,.36),smoothstep(.62,1.,q.x*f*1.4)*.45);
-  float horizon=-.08;
-  if(p.y<horizon){
-    float z=1./(horizon-p.y+.0015);
-    vec2 g=vec2(p.x*z,z+u_time*.55);
-    vec2 d=abs(fract(g*.55)-.5);
-    float line=smoothstep(.455,.5,max(d.x,d.y));
-    float fade=(1.-smoothstep(1.2,18.,z));
-    col+=vec3(.22,.85,.9)*line*fade*.42;
-    col+=vec3(.05,.25,.3)*(1.-smoothstep(0.,.02,horizon-p.y))*.8;
-  }
-  vec2 cell=floor(gl_FragCoord.xy/26.);float h=hash(cell);
-  col+=vec3(.55,.95,1.)*step(.988,h)*(.5+.5*sin(u_time*1.6+h*50.))*.28;
   vec2 mm=(u_mouse-.5*u_res)/u_res.y;
   col+=vec3(.16,.62,.66)*exp(-6.5*length(p-mm))*.55;
   col*=1.-.6*length(uv-vec2(.5,.45));

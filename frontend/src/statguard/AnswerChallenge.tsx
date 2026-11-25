@@ -1,9 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import data from './aiAnswers.json';
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle } from './StatGuardChrome';
 import DarkBackdrop from './DarkBackdrop';
 import './statguard.css';
 import './statguard-theme.css';
+import './statguard-pages.css';
+import './statguard-clean.css';
 
 /**
  * 'AI 오답 체험' page: a guess-the-mistake challenge and a gallery of every wrong answer,
@@ -18,6 +20,7 @@ export type Item = {
 const D = data as unknown as { model: string; items: Item[] };
 const ROUND = 5;
 const clip = (t: string, n = 260) => (t.length > n ? t.slice(0, n) + '…' : t);
+const GALLERY_VERDICT = { FLAG: 'StatGuard: 불일치', PASS: 'StatGuard: 통과', HOLD: 'StatGuard: 보류' } as const;
 const SG_LABEL = { FLAG: '계산 불일치로 잡음', PASS: '계산 일치 확인', HOLD: '보류 (확정하지 않음)' } as const;
 
 /** Mix of right and wrong recorded answers that end in a single number (the kind a reader would trust at a glance). */
@@ -80,43 +83,56 @@ export function Challenge({ seed }: { seed?: () => number } = {}) {
 type Filter = 'all' | 'FLAG' | 'HOLD' | 'fixed' | 'why';
 export function Gallery() {
   const wrong = useMemo(() => D.items.filter(i => !i.correct), []);
-  const [filter, setFilter] = useState<Filter>('all');
+  const [filter, setFilter] = useState<Filter>('all'), [all, setAll] = useState(false);
+  const PAGE = 6, [openKey, setOpenKey] = useState<string | null>(null);
+  useEffect(() => {
+    if (!openKey) return;
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpenKey(null); };
+    document.addEventListener('keydown', esc); return () => document.removeEventListener('keydown', esc);
+  }, [openKey]);
   const keep = (f: Filter, i: Item) => f === 'all' || (f === 'fixed' ? i.corrected_round !== null : f === 'why' ? !!i.why : i.statguard === f);
-  const shown = wrong.filter(i => keep(filter, i));
+  const matched = wrong.filter(i => keep(filter, i)), shown = all ? matched : matched.slice(0, PAGE);
   const count = (f: Filter) => wrong.filter(i => keep(f, i)).length;
   const tabs: [Filter, string][] = [['all', '전체'], ['FLAG', 'StatGuard가 잡은 것'], ['HOLD', '보류한 것'], ['fixed', '근거로 고쳐진 것'], ['why', '틀린 이유를 찾은 것']];
   return <>
-    <div className="sg-result-tabs" aria-label="오답 갤러리 거르기">{tabs.map(([f, l]) => <button key={f} type="button" aria-pressed={filter === f} onClick={() => setFilter(f)}>{l} ({count(f)})</button>)}</div>
+    <div className="sg-result-tabs" aria-label="오답 갤러리 거르기">{tabs.map(([f, l]) => <button key={f} type="button" aria-pressed={filter === f} onClick={() => { setFilter(f); setAll(false); }}>{l} ({count(f)})</button>)}</div>
     <div className="sg-gallery">{shown.map(i => <article key={i.key} className={'sg-gallery-card sg-gallery-' + i.statguard.toLowerCase()} aria-label={`${i.key} 오답`}>
-      <header><span className="sg-gallery-kind">{i.error_kind}</span><small>{i.dataset} · 실험 {i.key}</small></header>
+      <header><span className="sg-gallery-kind">{i.error_kind}</span><span className={'sg-gallery-verdict v-' + i.statguard.toLowerCase()}>{GALLERY_VERDICT[i.statguard]}</span></header>
       <h3>{i.question}</h3>
-      <dl><div><dt>AI의 최종값</dt><dd className="sg-gallery-bad">{i.final}</dd></div><div><dt>실제 값</dt><dd>{i.expected}</dd></div></dl>
-      <p className="sg-gallery-sg"><b>StatGuard</b> {SG_LABEL[i.statguard]}{i.flag ? ` (재계산 ${i.flag.recomputed})` : ''}</p>
-      {i.why && <p className="sg-why"><b>왜 틀렸을까 · {i.why.title}</b> {i.why.explanation}</p>}
-      <p className="sg-gallery-fix"><b>근거 교정</b> {i.corrected_round !== null ? `${i.corrected_round}번째 수정에서 고쳐짐` : '고쳐지지 않음'} · <b>단순 재확인</b> {i.recheck_fixed ? '고쳐짐' : '고쳐지지 않음'}</p>
-      <details><summary>AI 답변 원문</summary><p>{i.answer}</p></details>
+      <dl><div><dt>AI 답</dt><dd className="sg-gallery-bad">{i.final}</dd></div><div><dt>실제 값</dt><dd>{i.expected}</dd></div></dl>
+      <p className="sg-gallery-src">{i.dataset}</p>
+      <button type="button" className="sg-gallery-open" aria-haspopup="dialog" onClick={() => setOpenKey(i.key)}>자세히 보기</button>
+      <div className="sg-gallery-modal" hidden={openKey !== i.key} onClick={e => { if (e.target === e.currentTarget) setOpenKey(null); }}>
+        <div className="sg-gallery-detail" role="dialog" aria-modal="true" aria-label={`${i.question} 자세히 보기`}>
+          <div className="sg-gallery-detail-head"><h4>{i.question}</h4><button type="button" className="sg-gallery-close" aria-label="닫기" onClick={() => setOpenKey(null)}>×</button></div>
+          {i.why && <p className="sg-why"><b>왜 틀렸을까 · {i.why.title}</b><br/>{i.why.explanation}</p>}
+          <p className="sg-gallery-fix"><b>근거 교정</b> {i.corrected_round !== null ? `${i.corrected_round}번째 수정에서 고쳐짐` : '고쳐지지 않음'}<br/><b>단순 재확인</b> {i.recheck_fixed ? '고쳐짐' : '고쳐지지 않음'}</p>
+          <p className="sg-gallery-answer"><b>AI 답변 원문</b><br/>{i.answer}</p>
+        </div>
+      </div>
     </article>)}</div>
+    {!all && matched.length > PAGE && <div className="sg-more-row"><button type="button" className="sg-secondary" onClick={() => setAll(true)}>오답 {matched.length - PAGE}개 더 보기</button></div>}
   </>;
 }
 
 export default function AnswerChallenge() {
   usePageTitle(`AI 오답 체험 · ${SITE_NAME}`);
   const wrong = D.items.filter(i => !i.correct);
-  return <div className="sg-shell sg-dark">
+  return <div className="sg-shell sg-dark sg-page">
     <DarkBackdrop/>
     <StatGuardHeader current="challenge"/>
     <main className="sg-main sg-challenge">
       <section className="sg-section" aria-labelledby="chal-heading">
         <h1 id="chal-heading">AI가 말한 숫자, 맞을까 틀릴까?</h1>
-        <p className="sg-hero-lead">실험에서 {D.model}가 실제로 쓴 답변 {D.items.length}개 중 {ROUND}개를 골랐습니다. 숫자만 보고 맞는지 맞혀 보세요. 답을 고르면 실제 값과 StatGuard의 판정이 공개됩니다.</p>
+        <p className="sg-hero-lead">{D.model}가 실험에서 실제로 쓴 답변 {ROUND}개. 숫자만 보고 맞는지 맞혀 보세요.</p>
         <Challenge/>
       </section>
       <section className="sg-section" aria-labelledby="gallery-heading">
         <h2 id="gallery-heading">AI 오답 갤러리</h2>
-        <p>일반 LLM이 실험에서 실제로 틀린 답 {wrong.length}개 전부입니다. StatGuard는 {wrong.filter(i => i.statguard === 'FLAG').length}개를 ‘계산 불일치’로 잡고 {wrong.filter(i => i.statguard === 'HOLD').length}개는 확정하지 않고 보류했으며, 틀린 답을 ‘계산 일치’로 통과시킨 경우는 {wrong.filter(i => i.statguard === 'PASS').length}개입니다. 재계산 근거를 돌려주자 {wrong.filter(i => i.corrected_round !== null).length}개가 고쳐졌습니다(단순 재확인 {wrong.filter(i => i.recheck_fixed).length}개).</p>
+        <p>일반 LLM이 실험에서 실제로 틀린 답 {wrong.length}개. StatGuard는 {wrong.filter(i => i.statguard === 'FLAG').length}개를 ‘계산 불일치’로 잡고 {wrong.filter(i => i.statguard === 'HOLD').length}개를 보류함. 틀린 답을 ‘계산 일치’로 통과시킨 경우는 {wrong.filter(i => i.statguard === 'PASS').length}개.</p>
         <Gallery/>
       </section>
-      <footer className="sg-footer">{SITE_NAME} {STATGUARD_VERSION} · 답변·정답·판정은 모두 실험 기록에서 그대로 가져왔습니다(experiments/statguard_correction_v0.1). ‘형식 오류’는 답을 끝내지 못해 최종값이 없는 경우입니다.</footer>
+      <footer className="sg-footer">{SITE_NAME} {STATGUARD_VERSION} · 답변과 판정은 실험 기록 그대로임</footer>
     </main>
   </div>;
 }

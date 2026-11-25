@@ -1,0 +1,106 @@
+/* ============ Home layout pass (scoped to .sg-home2) ============
+   Colors stay the site's teal palette; only the composition below the hero changes:
+   centered headings with an English line, header-strip cards joined by connectors, a horizon arc,
+   icon cards and a closing band. The hero and the helix scene are untouched. */
+.sg-home2{--acc:#7FE3E8;--acc-2:#5CC6CE;--acc-deep:#1A929C;--strip:linear-gradient(180deg,rgba(92,198,206,.38),rgba(59,111,216,.22));--card:rgba(16,26,42,.78);--edge:rgba(127,227,232,.16)}
+
+/* headings */
+.sg-home2 .sg-h2-block{text-align:center;max-width:860px;margin:0 auto 40px}
+.sg-home2 .sg-h2-eyebrow{color:var(--acc)!important;font-weight:800;font-size:clamp(20px,2vw,26px);letter-spacing:-.01em;margin:0 0 10px}
+.sg-home2 .sg-h2-block h2{font-size:clamp(28px,3.2vw,44px)!important;line-height:1.22;margin:0 0 12px}
+.sg-home2 .sg-accent{color:var(--acc);background:linear-gradient(100deg,#9AF0F2,#5CC6CE 55%,#9BB8FF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sg-home2 .sg-h2-en{font-size:13px;color:var(--ink-3)!important;margin:0;letter-spacing:.01em}
+.sg-home2 .sg-center-lead{text-align:center;max-width:720px;margin:-18px auto 34px}
+
+/* stats band */
+.sg-home2 .sg-receipt{grid-template-columns:repeat(4,minmax(0,1fr));padding:30px 6px}
+.sg-home2 .sg-receipt div{text-align:center}
+.sg-home2 .sg-receipt strong{font-size:clamp(22px,2.3vw,34px);white-space:nowrap}
+.sg-home2 .sg-receipt span{font-size:13px}
+
+/* bands with header-strip cards */
+.sg-home2 .sg-band{position:relative;padding:110px 0 40px;text-align:center}
+.sg-home2 .sg-strip-cards{display:grid;gap:22px;margin:0 auto}
+.sg-home2 .sg-strip-cards.sg-two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px}
+.sg-home2 .sg-strip-cards.sg-three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1080px}
+.sg-home2 .sg-strip-card{background:var(--card);border:1px solid var(--edge);border-radius:20px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(0,0,0,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);text-align:center}
+.sg-home2 .sg-strip-card h3{margin:0;padding:16px 20px;background:var(--strip);font-size:17px;color:#fff;border-bottom:1px solid var(--edge)}
+.sg-home2 .sg-strip-card p{margin:0;padding:22px 26px 26px;font-size:15px;line-height:1.7}
+.sg-home2 .sg-strip-card.sg-left{text-align:left}
+.sg-home2 .sg-strip-card ul{margin:0;padding:22px 26px 6px 44px;line-height:1.75}
+.sg-home2 .sg-strip-card li::marker{color:var(--acc)}
+.sg-home2 .sg-strip-card .sg-hint{padding:4px 26px 24px;font-size:13px}
+
+/* connectors, horizon arc, statement */
+.sg-home2 .sg-connector{width:2px;height:96px;margin:0 auto;background:repeating-linear-gradient(180deg,rgba(255,255,255,.55) 0 3px,transparent 3px 7px);position:relative;z-index:2}
+.sg-home2 .sg-connector::after{content:"";position:absolute;left:50%;bottom:-6px;width:11px;height:11px;border-radius:50%;background:#fff;transform:translateX(-50%);box-shadow:0 0 14px rgba(127,227,232,.9)}
+.sg-home2 .sg-connector.short{height:46px}
+.sg-home2 .sg-horizon{position:relative;height:150px;margin:-58px calc(50% - 50vw) 0;overflow:hidden;pointer-events:none}
+.sg-home2 .sg-horizon::before{content:"";position:absolute;left:-10%;right:-10%;top:40px;height:900px;border-radius:50%;border-top:2px solid rgba(92,198,206,.75);background:radial-gradient(60% 30% at 50% 0,rgba(59,111,216,.22),transparent 70%);box-shadow:0 -10px 40px -10px rgba(92,198,206,.5)}
+.sg-home2 .sg-statement{font-size:clamp(17px,1.7vw,22px);font-weight:700;line-height:1.75;color:#EEF4FA!important;margin:0 auto;max-width:900px}
+.sg-home2 .sg-solution{margin-top:40px;padding:90px 0 120px}
+.sg-home2 .sg-solution::before{content:"";position:absolute;inset:0 calc(50% - 50vw);z-index:-1;background:linear-gradient(180deg,transparent,rgba(26,146,156,.16) 35%,rgba(59,111,216,.34) 100%)}
+.sg-home2 .sg-solution::after{content:"";position:absolute;right:-6vw;top:60px;width:160px;height:160px;border-radius:50%;z-index:-1;background:radial-gradient(circle at 35% 30%,rgba(155,184,255,.55),rgba(59,111,216,.15) 60%,transparent 70%)}
+.sg-home2 .sg-wide-bar{max-width:1080px;margin:0 auto;padding:18px 24px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#EEF4FA!important;font-weight:700;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+/* icon cards (how it works) */
+.sg-home2 .sg-how,.sg-home2 .sg-verdicts{padding-top:40px}
+.sg-home2 .sg-icon-cards{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.sg-home2 .sg-icon-cards li{background:var(--card);border:1px solid var(--edge);border-radius:18px;padding:22px 20px 24px;transition:border-color .25s,transform .25s,box-shadow .25s}
+.sg-home2 .sg-icon-cards li:hover{border-color:rgba(127,227,232,.55);transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(92,198,206,.55)}
+.sg-home2 .sg-icon-box{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;border:1px solid rgba(127,227,232,.45);background:rgba(127,227,232,.08);box-shadow:0 0 18px -4px rgba(92,198,206,.6) inset;margin-bottom:18px}
+.sg-home2 .sg-icon-box svg{width:24px;height:24px;fill:none;stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sg-home2 .sg-icon-cards small{display:block;font-size:11.5px;color:var(--acc);letter-spacing:.02em;margin-bottom:4px}
+.sg-home2 .sg-icon-cards h3{font-size:18px;margin:0 0 8px}
+.sg-home2 .sg-icon-cards p{font-size:14px;line-height:1.65;margin:0}
+
+/* verdicts, scope, closing */
+.sg-home2 .sg-verdicts .sg-stamps div{border-radius:18px!important}
+.sg-home2 .sg-scope{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding-top:40px}
+.sg-home2 .sg-closing{margin:60px 0 40px;padding:48px clamp(22px,5vw,64px);text-align:center;border-radius:28px;border:1px solid var(--edge);background:radial-gradient(70% 120% at 50% 0,rgba(92,198,206,.2),transparent 70%),var(--card)}
+.sg-home2 .sg-closing h2{font-size:clamp(24px,2.6vw,34px)!important;margin-bottom:14px}
+.sg-home2 .sg-closing p{max-width:760px;margin:0 auto 26px}
+.sg-home2 .sg-closing .sg-hero-actions{justify-content:center}
+
+@media(max-width:1100px){
+  .sg-home2 .sg-receipt{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}
+  .sg-home2 .sg-receipt div:nth-child(3){border-left:0}
+  .sg-home2 .sg-icon-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .sg-home2 .sg-receipt,.sg-home2 .sg-strip-cards.sg-two,.sg-home2 .sg-strip-cards.sg-three,.sg-home2 .sg-scope{grid-template-columns:minmax(0,1fr)}
+  .sg-home2 .sg-receipt div+div{border-left:0}
+  .sg-home2 .sg-icon-cards{grid-template-columns:minmax(0,1fr)}
+  .sg-home2 .sg-band{padding-top:70px}
+  .sg-home2 .sg-statement br{display:none}
+}
+@media(prefers-reduced-motion:reduce){.sg-home2 .sg-icon-cards li{transition:none}}
+.sg-home2 .sg-scope{align-items:start}
+.sg-home2 .sg-strip-card{display:flex;flex-direction:column}
+.sg-home2 .sg-strip-card h3{flex:none}
+@media(max-width:760px){.sg-home2 .sg-horizon,.sg-home2 .sg-solution::after{display:none}.sg-home2 .sg-connector{height:56px;margin-bottom:24px}}
+
+/* ---- simplified hero: headline, one line, two buttons, the helix alone ---- */
+.sg-home2 .sg-hero-grid{min-height:calc(100vh - 68px);padding:24px 0 56px;align-items:center}
+.sg-home2 .sg-hero-grid::before{display:none}
+.sg-home2 .sg-rise-h1{font-size:clamp(40px,5.2vw,76px)!important;line-height:1.08!important;letter-spacing:-.045em!important;margin-bottom:24px}
+.sg-home2 .sg-hero-lead{font-size:clamp(17px,1.4vw,20px);line-height:1.7;color:var(--ink-2)!important;max-width:28em;margin-bottom:34px}
+.sg-home2 .sg-hero-actions .sg-link-button{min-height:50px;padding:12px 26px;border-radius:14px}
+.sg-home2 .sg-hero-actions .sg-secondary{box-shadow:none}
+.sg-home2 .sg-scene.is-bare{min-height:560px}
+
+/* ---- calmer rhythm for the rest of the page ---- */
+.sg-home2 .sg-main>section{margin-left:auto;margin-right:auto}
+.sg-home2 .sg-section{padding-top:110px}
+.sg-home2 p{line-height:1.75}
+.sg-home2 .sg-receipt{margin-top:8px}
+.sg-home2 .sg-receipt span{line-height:1.55;color:var(--ink-3)!important}
+.sg-home2 .sg-fx>h2,.sg-home2 .sg-fx>p{text-align:center;margin-left:auto;margin-right:auto;max-width:820px}
+.sg-home2 .sg-fx>h2{font-size:clamp(26px,2.8vw,38px)!important}
+.sg-home2 .sg-shot-copy h2{font-size:clamp(28px,3vw,42px)!important}
+@media(max-width:760px){.sg-home2 .sg-hero-grid{min-height:0}.sg-home2 .sg-scene.is-bare{min-height:420px}}
+.sg-home2 .sg-scene.is-bare.is-3d{height:600px}
+.sg-home2 .sg-scene.is-bare .sg-scene3d{inset:-20px -40px -70px -40px;height:calc(100% + 90px)}
+@media(max-width:640px){.sg-home2 .sg-scene.is-bare.is-3d{height:420px}.sg-home2 .sg-scene.is-bare .sg-scene3d{top:0;height:440px}}
+.sg-home2 .sg-solution::before{background:linear-gradient(180deg,transparent 0%,rgba(26,146,156,.14) 30%,rgba(59,111,216,.28) 65%,transparent 100%)}
+.sg-home2 .sg-solution::after{display:none}

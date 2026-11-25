@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { SITE_NAME, STATGUARD_VERSION, StatGuardHeader, usePageTitle, useRevealOnScroll } from './StatGuardChrome';
 import { pct1, REAL_A, TOTALS, WRONG_UPPER } from './benchmarkTotals';
 import summary from './benchmarkSummary.json';
@@ -9,6 +10,8 @@ import DarkBackdrop from './DarkBackdrop';
 import { ArithmeticSection, ComparisonSection, PracticalSection, CorrectionBars, CoverageRiskSection, DatasetSection, ForensicsSection, RelatedWorkSection } from './ResultsExtras';
 import './statguard.css';
 import './statguard-theme.css';
+import './statguard-pages.css';
+import './statguard-clean.css';
 
 type Metric = { n: number; decided: number; coverage: number | null; precision: number | null; recall: number | null; f1: number | null;
   raw_error_rate: number | null; passed: number; error_rate_among_passed: number | null; errors_total: number; tp: number; fp: number; fn: number;
@@ -72,16 +75,17 @@ function OverviewChart() {
   };
   const reveal = useRevealOnScroll<HTMLDivElement>();
   return <section className="sg-card" aria-labelledby="overview-heading"><h2 id="overview-heading">한눈에 보기: 정답률</h2>
-    <p className="sg-hint">일반 LLM과 계산 도구를 쓴 LLM은 1회차 전체 질문 기준, StatGuard는 반복 3회에서 ‘통과’시킨 답변 기준입니다.</p>
+
     <div ref={reveal.ref} className={'sg-chart' + reveal.className} style={{ ['--groups' as string]: groups.length }} role="img" aria-label={groups.map(g => `${g.label}: 일반 LLM ${pct(g.s.conditions.A.accuracy.all.rate)}, 계산 도구 ${pct(g.s.conditions.C.accuracy.all.rate)}, StatGuard 통과 답변 ${pct(passRate(g.key))}`).join('. ')}>
       {groups.map((g, gi) => { const a = g.s.conditions.A.accuracy.all.rate, c = g.s.conditions.C.accuracy.all.rate, sg = passRate(g.key) ?? 0;
-        return <div className="sg-chart-group" data-tilt key={g.key}><div className="sg-chart-bars">
+        return <div className="sg-chart-group" key={g.key}><div className="sg-chart-bars">
           <div className="sg-col sg-col-a" style={{ ['--k' as string]: gi * 3 + 0, ['--v' as string]: a * 100 }}><b>{pct(a)}</b></div>
           <div className="sg-col sg-col-c" style={{ ['--k' as string]: gi * 3 + 1, ['--v' as string]: c * 100 }}><b>{pct(c)}</b></div>
           <div className="sg-col sg-col-s" style={{ ['--k' as string]: gi * 3 + 2, ['--v' as string]: sg * 100 }}><b>{pct(sg)}</b></div>
         </div><h3>{g.label}</h3></div>; })}
     </div>
-    <div className="sg-chart-legend" aria-hidden="true"><span><i style={{ background: '#7D90A1' }}/>일반 LLM (A)</span><span><i style={{ background: '#0F7C86' }}/>LLM + 계산 도구 (C)</span><span><i style={{ background: '#1C9467' }}/>StatGuard가 통과시킨 답변</span></div>
+    <div className="sg-chart-legend" aria-hidden="true"><span><i className="a"/>일반 LLM</span><span><i className="c"/>계산 도구를 쓴 LLM</span><span><i className="s"/>StatGuard가 통과시킨 답</span></div>
+    <p className="sg-chart-foot">막대 값은 정답 비율. StatGuard는 통과시킨 답(3회 반복) 중 정답 비율이라 앞의 두 막대와 기준이 다름.</p>
   </section>;
 }
 function StabilitySection() {
@@ -91,8 +95,8 @@ function StabilitySection() {
     <p className="sg-hint">A·C 조건을 같은 요청으로 3회 실행했습니다. StatGuard는 고정 사본(규칙 v0.6)으로 판정했습니다. <strong>통과시킨 답변 {passed}건 중 오답 {wrong}건.</strong></p>
     <p className="sg-hint" aria-label="오답률 신뢰구간">오답 0건이 ‘오답률 0%’를 뜻하지는 않습니다. 정확(Clopper–Pearson) 95% 신뢰구간으로 보면 통과 답변의 오답률은 <strong>최대 {pct1(WRONG_UPPER.all)}</strong>까지 가능합니다. 다만 같은 질문을 3번 반복한 답변은 서로 독립이 아니므로, 반복을 빼고 1회차 통과 답변 {TOTALS.firstRunPassed}건({TOTALS.firstRunWrong}건 오답)만 쓰면 상한은 <strong>{pct1(WRONG_UPPER.firstRun)}</strong>로 더 넓어집니다. 실제 오답률은 0%에서 이 상한 사이 어딘가로 보는 것이 정직한 해석입니다.</p>
     <p className="sg-hint" aria-label="일반 LLM 실제 오답 처리">통과 답변 {passed}건 중 {REAL_A.passedA}건은 오답이 많은 일반 LLM(A) 답변이며, 이 답변들도 오답은 0건이었습니다. 다만 1회차 본 세트에서 일반 LLM의 실제 오답 {REAL_A.errors}건을 보면, 실행 전 고정한 규칙은 {REAL_A.flagged}건만 ‘계산 불일치’로 잡고 {REAL_A.held}건은 보류했으며 통과시킨 오답은 {REAL_A.passedWrong}건이었습니다. 즉 오답을 막는 주된 방식은 틀렸다고 잡아내기보다 확정하지 않고 보류하는 것이었습니다(보류에는 답을 끝내지 못한 형식 오류도 포함).</p>
-    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="반복 실행 표"><table><thead><tr><th scope="col">벤치마크 · 조건</th><th scope="col">회차별 정답률</th><th scope="col">정답 여부가 3회 모두 같은 문항</th><th scope="col">한 번이라도 틀린 문항</th><th scope="col">통과 답변 중 오답</th><th scope="col">회차별 판정 비율</th></tr></thead>
-      <tbody>{rows.map(r => <tr key={r.benchmark + r.condition}><th scope="row">{r.benchmark} · {r.condition}</th><td>{r.per_run.map(p => pct(p.accuracy)).join(' / ')}</td><td>{pct(r.questions_same_correctness_all_runs)}</td><td>{r.questions_wrong_in_some_run}</td><td>{r.total_wrong_among_passed}/{r.total_passed}</td><td>{r.per_run.map(p => pct(p.coverage)).join(' / ')}</td></tr>)}</tbody></table></div>
+    <details className="sg-table-more"><summary>표로 자세히 보기</summary><div className="sg-table-scroll" tabIndex={0} role="region" aria-label="반복 실행 표"><table><thead><tr><th scope="col">벤치마크 · 조건</th><th scope="col">회차별 정답률</th><th scope="col">정답 여부가 3회 모두 같은 문항</th><th scope="col">한 번이라도 틀린 문항</th><th scope="col">통과 답변 중 오답</th><th scope="col">회차별 판정 비율</th></tr></thead>
+      <tbody>{rows.map(r => <tr key={r.benchmark + r.condition}><th scope="row">{r.benchmark} · {r.condition}</th><td>{r.per_run.map(p => pct(p.accuracy)).join(' / ')}</td><td>{pct(r.questions_same_correctness_all_runs)}</td><td>{r.questions_wrong_in_some_run}</td><td>{r.total_wrong_among_passed}/{r.total_passed}</td><td>{r.per_run.map(p => pct(p.coverage)).join(' / ')}</td></tr>)}</tbody></table></div></details>
     <p className="sg-hint">일반 LLM(A)은 같은 질문에도 회차마다 정답이 바뀌었습니다(큰 표에서 문항의 약 20%). 계산 도구(C)는 거의 일정했습니다.</p>
   </section>;
 }
@@ -114,8 +118,8 @@ function CorrectionSection() {
       <div><dt>맞던 답이 틀려짐 (S 1회 / 2회)</dt><dd>{all.S1.broken}건 / {all.S2.broken}건</dd></div>
     </dl>
     <CorrectionBars/>
-    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="자동 교정 정답률 표"><table><thead><tr><th scope="col">묶음</th><th scope="col">A 원래</th><th scope="col">R 단순 재확인 1회</th><th scope="col">S StatGuard 근거 1회</th><th scope="col">S 2회</th><th scope="col">교정 대상</th></tr></thead>
-      <tbody>{rows.map(k => { const g = corr.groups[k]; return <tr key={k}><th scope="row">{label[k] ?? k}</th><td>{rate(g.A, g.n)}</td><td>{rate(g.R1.correct, g.n)}</td><td>{rate(g.S1.correct, g.n)}</td><td>{rate(g.S2.correct, g.n)}</td><td>{g.targeted}</td></tr>; })}</tbody></table></div>
+    <details className="sg-table-more"><summary>표로 자세히 보기</summary><div className="sg-table-scroll" tabIndex={0} role="region" aria-label="자동 교정 정답률 표"><table><thead><tr><th scope="col">묶음</th><th scope="col">A 원래</th><th scope="col">R 단순 재확인 1회</th><th scope="col">S StatGuard 근거 1회</th><th scope="col">S 2회</th><th scope="col">교정 대상</th></tr></thead>
+      <tbody>{rows.map(k => { const g = corr.groups[k]; return <tr key={k}><th scope="row">{label[k] ?? k}</th><td>{rate(g.A, g.n)}</td><td>{rate(g.R1.correct, g.n)}</td><td>{rate(g.S1.correct, g.n)}</td><td>{rate(g.S2.correct, g.n)}</td><td>{g.targeted}</td></tr>; })}</tbody></table></div></details>
     <p className="sg-hint">효과는 ‘계산 불일치’로 잡힌 답변에서 뚜렷했습니다(S {flag.S1}/{flag.n}건 고침, R {flag.R1}건). 반면 보류된 답변 {hold.n}건에서는 근거 피드백(정답 {hold.S1}건)이 단순 재확인(정답 {hold.R1}건)보다 낫지 않았고, 별도 검증 세트에서는 변화가 없었습니다. 교정 후에도 통과 답변 중 오답은 0건이었지만, 계산 도구를 처음부터 쓴 조건(C)의 정답률에는 미치지 못합니다. 소규모·1회 실행이므로 경향으로만 해석합니다.</p>
   </section>;
 }
@@ -125,28 +129,41 @@ function DetectionTable({ rows, label }: { rows: Record<string, Metric>; label: 
 }
 const KIND: Record<string, string> = { correct: '정답 문장', scaled_10pct: '수치 10% 왜곡', swapped_base: '증감률 기준 뒤바뀜' };
 
+/** One collapsed record row; details stay one click away so the page reads short. */
+function More({ title, desc, children }: { title: string; desc: string; children: ReactNode }) {
+  return <details className="sg-more"><summary><span><b>{title}</b><small>{desc}</small></span></summary><div className="sg-more-body">{children}</div></details>;
+}
+
 export default function BenchmarkResults() {
   const m = data.meta;
   usePageTitle(`실험 결과 · ${SITE_NAME}`);
-  return <div className="sg-shell sg-dark">
+  return <div className="sg-shell sg-dark sg-page">
     <DarkBackdrop/>
     <StatGuardHeader current="results"/>
     <main className="sg-main sg-results">
       <div className="sg-intro"><div><h1>LLM의 숫자, 다시 계산하면 맞을까?</h1>
-        <p>공개 표 자료 {TOTALS.datasets}종(작은 표·큰 표·국가별)에 대한 질문 {TOTALS.questions}개로 일반 LLM(A), 자료 설명을 더한 LLM(B), 계산 도구를 쓴 LLM(C)과 StatGuard를 비교했습니다. 기대값은 계산 엔진과 별도로 계산해 실행 전에 고정했고, 조건은 각 실험의 PROTOCOL.md에 실행 전에 기록했습니다.</p></div></div>
-      <dl className="sg-data-meta sg-results-meta" aria-label="전체 실험 규모"><div><dt>모델</dt><dd>{TOTALS.model}</dd></div><div><dt>질문</dt><dd>{TOTALS.questions}개 · 자료 {TOTALS.datasets}종</dd></div><div><dt>API 호출(반복 포함)</dt><dd>{TOTALS.calls.toLocaleString('ko-KR')}회</dd></div><div><dt>추정 비용</dt><dd>${TOTALS.usd.toFixed(2)}</dd></div><div><dt>통과 답변 중 오답</dt><dd>{TOTALS.wrongPassed}/{TOTALS.passed}건</dd></div><div><dt>오답률 95% 상한</dt><dd>{pct1(WRONG_UPPER.all)}</dd></div></dl>
+        <p>공개 표 자료 {TOTALS.datasets}종, 질문 {TOTALS.questions}개로 일반 LLM과 StatGuard를 비교했습니다. 실험 조건은 실행 전에 고정했습니다.</p></div></div>
+      <dl className="sg-data-meta sg-results-meta sg-meta-4" aria-label="전체 실험 규모"><div><dt>질문</dt><dd>{TOTALS.questions}개 · 자료 {TOTALS.datasets}종</dd></div><div><dt>주 실험 모델</dt><dd>{TOTALS.model}</dd></div><div><dt>통과 답변 중 오답</dt><dd>{TOTALS.wrongPassed}/{TOTALS.passed}건</dd></div><div><dt>오답률 95% 상한</dt><dd>{pct1(WRONG_UPPER.all)}</dd></div></dl>
       <OverviewChart/>
-      <StabilitySection/>
-      <CorrectionSection/>
       <ComparisonSection/>
-      <PracticalSection/>
-      <ForensicsSection/>
-      <ArithmeticSection/>
-      <CoverageRiskSection/>
-      <RelatedWorkSection/>
-      <DatasetSection questions={TOTALS.questions} wrong={(correction as unknown as { groups: Record<string, { n: number; A: number }> }).groups['전체'].n - (correction as unknown as { groups: Record<string, { n: number; A: number }> }).groups['전체'].A}/>
+      <CorrectionSection/>
+      <StabilitySection/>
+      <section className="sg-card"><h2>해석할 때 주의할 점</h2><ul className="sg-limits">
+        <li>질문 {TOTALS.questions}개·자료 {TOTALS.datasets}종의 소규모 실험. 통계적 유의성은 주장하지 않음.</li>
+        <li>일부 추출 규칙은 결과를 보고 고쳤음. 고친 뒤 새로 만든 검증 세트로 다시 확인함.</li>
+        <li>실제 답변 중 판정한 비율은 42~77%. 나머지는 보류함.</li>
+        <li>‘계산 일치’는 숫자 하나가 계산과 맞는다는 뜻. 답변 전체의 사실·인과관계는 보증하지 않음.</li></ul></section>
+
+      <section className="sg-more-list" aria-labelledby="more-heading">
+        <h2 id="more-heading">자세한 실험 기록</h2>
+        <p className="sg-hint">필요한 항목만 펼쳐 보세요. 표와 수치는 모두 실험 결과 파일에서 그대로 읽습니다.</p>
+        <More title="실험 v0.2 · 큰 표와 통계" desc="365·1,460행 기상 자료, 표준편차·상관·t-검정까지">
       <LargeSection large={large} eyebrow="실험 v0.2 · 큰 표와 통계" title="행이 많아지면 LLM은 틀리기 시작한다" intro="NOAA 일별 기상 365행·1,460행. 합계·평균에 더해 표준편차·중앙값·최댓값·상관계수·Welch t-검정을 물었습니다. 규칙 추출 v0.4는 실행 전에 고정했습니다."/>
+        </More>
+        <More title="실험 v0.3 · 다른 분야" desc="176개국 인구·경제·보건 지표">
       <LargeSection large={domain} eyebrow="실험 v0.3 · 다른 분야" title="다른 분야에서도 그럴까? — 176개국 인구·경제·보건" intro="World Bank WDI 2023, 176개국의 총인구·실업률·1인당GDP·기대수명. 규칙 추출 v0.6은 실행 전에 고정했습니다."/>
+        </More>
+        <More title="실험 v0.1 · 작은 표" desc="2~12행 자료 5종, 조건별 정답률과 오류 탐지">
       <h2 className="sg-results-divider">실험 v0.1 · 작은 표 (2~12행)</h2>
       <p className="sg-hint">NOAA·World Bank 공개 자료 4종과 합성 1종(2~12행), 본 세트 {m.questions}개 + 별도 검증 세트 {data.holdout.meta.questions}개.</p>
       <dl className="sg-data-meta sg-results-meta"><div><dt>모델</dt><dd>{data.usage.model}</dd></div><div><dt>이 실험 API 호출(반복 포함)</dt><dd>{data.usage.calls}회</dd></div><div><dt>토큰(입력/출력)</dt><dd>{data.usage.input_tokens.toLocaleString('ko-KR')} / {data.usage.output_tokens.toLocaleString('ko-KR')}</dd></div><div><dt>추정 비용</dt><dd>${data.usage.estimated_usd.toFixed(4)}</dd></div></dl>
@@ -175,15 +192,16 @@ export default function BenchmarkResults() {
           <tbody>{Object.entries(data.perturbation).map(([k, v]) => <tr key={k}><th scope="row">{EXTRACTOR[k] ?? k}</th><td>{pct(v.coverage)} ({v.decided}/{v.n})</td><td>{num(v.precision)}</td><td>{num(v.recall)}</td><td>{num(v.f1)}</td>
             <td>{Object.entries(v.by_kind).map(([kind, d]) => `${KIND[kind] ?? kind}: ${d.FLAG ?? 0}/${d.PASS ?? 0}/${d.HOLD ?? 0}`).join(' · ')}</td></tr>)}</tbody></table></div></section>}
 
-      <section className="sg-card"><h2>해석할 때 주의할 점</h2><ul className="sg-limits">
-        <li>전체 질문 {TOTALS.questions}개·자료 {TOTALS.datasets}종·모델 1종({TOTALS.model})의 소규모 실험입니다. A·C 조건은 3회, 나머지는 1회 실행했으며 통계적 유의성을 주장하지 않습니다. 도메인별 차이(RQ4)는 경향으로만 봅니다.</li>
-        <li>규칙 추출기는 결과를 보고 고친 버전(v0.2·v0.3·v0.5·v0.7)이 있습니다. 실행 전에 고정한 버전과 나란히 보고하고, v0.3·v0.5는 수정 후 새로 만든 별도 검증 세트로 다시 확인했습니다. v0.7은 별도 검증 세트로 확인하지 않았습니다.</li>
-        <li>실제 LLM 답변에 대한 판정 비율은 규칙 추출 42~77%, LLM 추출 36~83%입니다(실험·조건별). 열·기간이 문장에 드러나지 않거나 해석이 필요한 문장, 끝까지 쓰이지 않은 답변은 보류되므로, 실제 답변에서 놓친 오답도 있습니다(각 표의 ‘보류 중 오답’).</li>
-        <li>LLM 추출기는 판정 범위가 넓은 경우도 있지만 별도 검증 세트에서 오탐이 있었고, 국가별 자료에서는 없는 ‘연도’ 열을 지어내 보류가 많았습니다.</li>
-        <li>출력 한도(2,500토큰)에 걸려 끝나지 않은 답변은 사전 규칙대로 재시도 없이 형식 오류로 채점했습니다.</li>
-        <li>‘계산 일치’는 연결된 계산 하나가 맞다는 뜻이며, 답변 전체의 사실·인과관계·자료의 진실성을 보증하지 않습니다.</li>
-        <li>비용은 사전 고정 단가(입력 $0.10/1M, 출력 $0.50/1M)로 추정한 값이며 실제 청구액이 아닙니다.</li>
-        <li>재현: 저장소 experiments/ 폴더의 각 벤치마크(build_expected.py → evaluate.py → make_report.py)와 stability.py. 각 실험에 쓴 추출기 사본은 frozen/ 폴더에 있습니다.</li></ul></section>
+        </More>
+        <More title="속도와 비용" desc="StatGuard와 LLM 심판의 검증 속도·비용 비교"><PracticalSection/></More>
+        <More title="틀린 이유 역추적" desc="불일치한 숫자가 어떤 계산 실수에서 나왔는지 재현"><ForensicsSection/></More>
+        <More title="CSV 없이 계산식 검산" desc="답변에 적힌 계산식만 다시 계산"><ArithmeticSection/></More>
+        <More title="판정 범위와 위험" desc="얼마나 판정하고, 통과시킨 답은 얼마나 믿을 만한지"><CoverageRiskSection/></More>
+        <More title="기존 연구와의 차이" desc="PAL·CRITIC·Chain-of-Verification 등과 비교"><RelatedWorkSection/></More>
+        <More title="데이터 공개" desc="질문·답변·판정·표 자료 내려받기">
+      <DatasetSection questions={TOTALS.questions} wrong={(correction as unknown as { groups: Record<string, { n: number; A: number }> }).groups['전체'].n - (correction as unknown as { groups: Record<string, { n: number; A: number }> }).groups['전체'].A}/>
+        </More>
+      </section>
       <footer className="sg-footer">{SITE_NAME} {STATGUARD_VERSION} · 실험 조건은 각 벤치마크의 PROTOCOL.md에 실행 전 기록했습니다.</footer>
     </main></div>;
 }
