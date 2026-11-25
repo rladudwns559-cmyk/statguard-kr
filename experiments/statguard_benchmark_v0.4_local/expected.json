@@ -1,0 +1,1274 @@
+{
+ "N001": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "25865807",
+  "unit": "명"
+ },
+ "N002": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "78.633",
+  "unit": "세"
+ },
+ "N003": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.130",
+  "unit": "%"
+ },
+ "N004": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "81.648",
+  "unit": "세"
+ },
+ "N005": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "54.462",
+  "unit": "세"
+ },
+ "N006": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "10.437",
+  "unit": "%"
+ },
+ "N007": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "5.094",
+  "unit": "%"
+ },
+ "N008": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "73.844",
+  "unit": "세"
+ },
+ "N009": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "227882945",
+  "unit": "명"
+ },
+ "N010": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "200740915.9148509578459473579656774",
+  "unit": "명"
+ },
+ "N011": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "77.734",
+  "unit": "세"
+ },
+ "N012": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.346511111111111111111111111111111",
+  "unit": "%"
+ },
+ "N013": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.256",
+  "unit": "%"
+ },
+ "N014": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "30869.42349657737895045758023540895",
+  "unit": "달러"
+ },
+ "N015": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "758.33",
+  "unit": "달러"
+ },
+ "N016": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4.983649940991384914813208106770059",
+  "unit": "세"
+ },
+ "N017": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "216550319.8088701687754846026482397",
+  "unit": "명"
+ },
+ "N018": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4100.814708096022553898995420766690",
+  "unit": "달러"
+ },
+ "N019": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "18.960",
+  "unit": "%"
+ },
+ "N020": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "249.80",
+  "unit": "달러"
+ },
+ "N021": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "78.62685416666666666666666666666667",
+  "unit": "세"
+ },
+ "N022": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "63.02263157894736842105263157894737",
+  "unit": "세"
+ },
+ "N023": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4433.701666666666666666666666666667",
+  "unit": "달러"
+ },
+ "N024": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4.939",
+  "unit": "%"
+ },
+ "N025": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "748.6215789473684210526315789473684",
+  "unit": "달러"
+ },
+ "N026": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "13.174",
+  "unit": "%"
+ },
+ "N027": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "55.069",
+  "unit": "세"
+ },
+ "N028": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.210864642755648872221549677512549",
+  "unit": "세"
+ },
+ "N029": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "41086574.31394985903722723594655904",
+  "unit": "명"
+ },
+ "N030": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "74.402",
+  "unit": "세"
+ },
+ "N031": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2334067423",
+  "unit": "명"
+ },
+ "N032": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "76.059",
+  "unit": "세"
+ },
+ "N033": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "5.6145",
+  "unit": "%"
+ },
+ "N034": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "8.84245",
+  "unit": "%"
+ },
+ "N035": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7305659",
+  "unit": "명"
+ },
+ "N036": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "70.073",
+  "unit": "세"
+ },
+ "N037": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.733",
+  "unit": "%"
+ },
+ "N038": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.344",
+  "unit": "%"
+ },
+ "N039": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "12558.74310344827586206896551724138",
+  "unit": "달러"
+ },
+ "N040": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "167691",
+  "unit": "명"
+ },
+ "N041": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "128691692",
+  "unit": "명"
+ },
+ "N042": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "8.302764705882352941176470588235294",
+  "unit": "%"
+ },
+ "N043": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "1438069596",
+  "unit": "명"
+ },
+ "N044": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3007147114",
+  "unit": "명"
+ },
+ "N045": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "63.707",
+  "unit": "세"
+ },
+ "N046": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.407",
+  "unit": "%"
+ },
+ "N047": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.441",
+  "unit": "%"
+ },
+ "N048": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "74.67886206896551724137931034482759",
+  "unit": "세"
+ },
+ "N049": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "22546.73349306076660387598678051037",
+  "unit": "달러"
+ },
+ "N050": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "11.613",
+  "unit": "%"
+ },
+ "N051": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.008760439058055232731529692397420",
+  "unit": "%"
+ },
+ "N052": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "74.588",
+  "unit": "세"
+ },
+ "N053": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "64.33565909090909090909090909090909",
+  "unit": "세"
+ },
+ "N054": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "36482512.85",
+  "unit": "명"
+ },
+ "N055": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.623806872008224873154778679534943",
+  "unit": "세"
+ },
+ "N056": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "8.184988320812640198524440892688544",
+  "unit": "%"
+ },
+ "N057": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2153339",
+  "unit": "명"
+ },
+ "N058": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4.827980151075735993710578367955469",
+  "unit": "%"
+ },
+ "N059": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3183.22",
+  "unit": "달러"
+ },
+ "N060": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.375",
+  "unit": "%"
+ },
+ "N061": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "133230.62",
+  "unit": "달러"
+ },
+ "N062": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "65.987",
+  "unit": "세"
+ },
+ "N063": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.926152654529197832661070075724760",
+  "unit": "세"
+ },
+ "N064": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.061139901609442697659891656660862",
+  "unit": "%"
+ },
+ "N065": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "237.5933760127714478669772486513414",
+  "unit": "달러"
+ },
+ "N066": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "44471.14163934426229508196721311475",
+  "unit": "달러"
+ },
+ "N067": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "81.690",
+  "unit": "세"
+ },
+ "N068": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "14261.85",
+  "unit": "달러"
+ },
+ "N069": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "230871",
+  "unit": "명"
+ },
+ "N070": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "77.817",
+  "unit": "세"
+ },
+ "N071": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "34.610",
+  "unit": "%"
+ },
+ "N072": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "33445546.16423449300564813338824983",
+  "unit": "명"
+ },
+ "N073": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "80195.87",
+  "unit": "달러"
+ },
+ "N074": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "74.02531372549019607843137254901961",
+  "unit": "세"
+ },
+ "N075": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4.0955",
+  "unit": "%"
+ },
+ "N076": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3804.08",
+  "unit": "달러"
+ },
+ "N077": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3004.304859761751680439612036881386",
+  "unit": "달러"
+ },
+ "N078": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "572761877",
+  "unit": "명"
+ },
+ "N079": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "133230.62",
+  "unit": "달러"
+ },
+ "N080": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.634684434847002929602804019995463",
+  "unit": "%"
+ },
+ "N081": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "18436711.4375",
+  "unit": "명"
+ },
+ "N082": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "18.348",
+  "unit": "%"
+ },
+ "N083": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "6.244458333333333333333333333333333",
+  "unit": "%"
+ },
+ "N084": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "67.689",
+  "unit": "세"
+ },
+ "N085": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.407",
+  "unit": "%"
+ },
+ "N086": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2290.779545454545454545454545454545",
+  "unit": "달러"
+ },
+ "N087": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "38231.77",
+  "unit": "달러"
+ },
+ "N088": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.743616299703732260212957880874501",
+  "unit": "%"
+ },
+ "N089": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "85.247",
+  "unit": "세"
+ },
+ "N090": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "211140729",
+  "unit": "명"
+ },
+ "N091": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "70.180",
+  "unit": "세"
+ },
+ "N092": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4274.71",
+  "unit": "달러"
+ },
+ "N093": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "19542.2415",
+  "unit": "달러"
+ },
+ "N094": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "30145361.94736842105263157894736842",
+  "unit": "명"
+ },
+ "N095": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "249.80",
+  "unit": "달러"
+ },
+ "N096": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "101323",
+  "unit": "명"
+ },
+ "N097": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "10377.59",
+  "unit": "달러"
+ },
+ "N098": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.002068965517241379310344827586207",
+  "unit": "%"
+ },
+ "N099": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "1178.48",
+  "unit": "달러"
+ },
+ "N100": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "12.179",
+  "unit": "%"
+ },
+ "NR01": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "21.24042596992690530354055182724477",
+  "unit": "%"
+ },
+ "NR02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.317363381047217101203214048964596",
+  "unit": "%"
+ },
+ "NR03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "29.81905775470360968302873973329093",
+  "unit": "%"
+ },
+ "NR04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4.813890251049283678515792759293619",
+  "unit": "%"
+ },
+ "NR05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "9.321702937892095229354310081033951",
+  "unit": "%"
+ },
+ "NR06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "8.248902629050190029040419267859286",
+  "unit": "%"
+ },
+ "NR07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "38.41803907875213071070840675883206",
+  "unit": "%"
+ },
+ "NR08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "15.25011850625093644978370437356032",
+  "unit": "%"
+ },
+ "D001": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "10.7",
+  "unit": "mm"
+ },
+ "D002": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.3",
+  "unit": "mm"
+ },
+ "D003": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "11.09354838709677419354838709677419",
+  "unit": "℃"
+ },
+ "D004": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "78.5",
+  "unit": "mm"
+ },
+ "D005": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "73.3",
+  "unit": "mm"
+ },
+ "D006": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "31.0",
+  "unit": "mm"
+ },
+ "D007": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "22.21",
+  "unit": "℃"
+ },
+ "D008": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "23.8",
+  "unit": "mm"
+ },
+ "D009": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "60.1",
+  "unit": "mm"
+ },
+ "D010": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "5.37",
+  "unit": "℃"
+ },
+ "D011": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.3",
+  "unit": "mm"
+ },
+ "D012": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "15.0",
+  "unit": "℃"
+ },
+ "D013": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "13.85806451612903225806451612903226",
+  "unit": "℃"
+ },
+ "D014": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.667741935483870967741935483870968",
+  "unit": "℃"
+ },
+ "D015": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "9.106451612903225806451612903225806",
+  "unit": "℃"
+ },
+ "D016": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "4.667741935483870967741935483870968",
+  "unit": "℃"
+ },
+ "D017": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "10.56333333333333333333333333333333",
+  "unit": "℃"
+ },
+ "D018": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "215.4",
+  "unit": "mm"
+ },
+ "D019": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "29.0",
+  "unit": "mm"
+ },
+ "D020": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "60.7",
+  "unit": "mm"
+ },
+ "D021": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "17.2",
+  "unit": "℃"
+ },
+ "D022": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.0",
+  "unit": "℃"
+ },
+ "D023": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-1.0",
+  "unit": "℃"
+ },
+ "D024": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "11.91333333333333333333333333333333",
+  "unit": "℃"
+ },
+ "D025": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "12.2",
+  "unit": "℃"
+ },
+ "D026": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "12.96666666666666666666666666666667",
+  "unit": "℃"
+ },
+ "D027": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "65.3",
+  "unit": "mm"
+ },
+ "D028": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "10.4",
+  "unit": "mm"
+ },
+ "D029": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "15.2",
+  "unit": "mm"
+ },
+ "D030": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "1.7",
+  "unit": "℃"
+ },
+ "D031": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "16.33225806451612903225806451612903",
+  "unit": "℃"
+ },
+ "D032": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "17.0",
+  "unit": "mm"
+ },
+ "D033": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "26.7",
+  "unit": "℃"
+ },
+ "D034": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "30.6",
+  "unit": "℃"
+ },
+ "D035": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "87.3",
+  "unit": "mm"
+ },
+ "D036": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "35.0",
+  "unit": "℃"
+ },
+ "D037": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "17.8",
+  "unit": "mm"
+ },
+ "D038": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-2.1",
+  "unit": "℃"
+ },
+ "D039": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-5.5",
+  "unit": "℃"
+ },
+ "D040": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "17.2",
+  "unit": "℃"
+ },
+ "D041": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.73",
+  "unit": "℃"
+ },
+ "D042": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.0",
+  "unit": "mm"
+ },
+ "D043": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "11.10666666666666666666666666666667",
+  "unit": "℃"
+ },
+ "D044": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "15.52258064516129032258064516129032",
+  "unit": "℃"
+ },
+ "D045": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "10.64193548387096774193548387096774",
+  "unit": "℃"
+ },
+ "D046": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "32.8",
+  "unit": "℃"
+ },
+ "D047": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "21.45",
+  "unit": "℃"
+ },
+ "D048": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "20.8",
+  "unit": "mm"
+ },
+ "D049": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.8",
+  "unit": "℃"
+ },
+ "D050": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "18.3",
+  "unit": "℃"
+ },
+ "DR01": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "14.19723756906077348066298342541436",
+  "unit": "℃"
+ },
+ "DR02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "532.1",
+  "unit": "mm"
+ },
+ "DR03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "9.434444444444444444444444444444444",
+  "unit": "℃"
+ },
+ "DR04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "152.9",
+  "unit": "mm"
+ },
+ "DR05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "24.95434782608695652173913043478261",
+  "unit": "℃"
+ },
+ "DR06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "435.7",
+  "unit": "mm"
+ },
+ "DR07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "15.19782608695652173913043478260870",
+  "unit": "℃"
+ },
+ "DR08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "40.1",
+  "unit": "mm"
+ },
+ "DR09": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "16.11758241758241758241758241758242",
+  "unit": "℃"
+ },
+ "DR10": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "223.5",
+  "unit": "mm"
+ },
+ "DR11": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "23.70849673202614379084967320261438",
+  "unit": "℃"
+ },
+ "DR12": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "435.7",
+  "unit": "mm"
+ },
+ "DY1": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "7.633338216387142068259075446280247",
+  "unit": "℃"
+ },
+ "DY2": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "8.3",
+  "unit": "℃"
+ },
+ "DY3": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.0",
+  "unit": "mm"
+ },
+ "DY4": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "15.0",
+  "unit": "℃"
+ },
+ "K01": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.4869258846234116863840688131047560",
+  "unit": "%"
+ },
+ "K02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.9235014639544856498816798307991305",
+  "unit": "%"
+ },
+ "K03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.6828172729009245781372893232107349",
+  "unit": "%"
+ },
+ "K04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "1.207462959705632043607961864354080",
+  "unit": "%"
+ },
+ "K05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.009112365922942804671481339199814113",
+  "unit": "%"
+ },
+ "K06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.5286811098243925772532138519700381",
+  "unit": "%"
+ },
+ "K07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-0.1008464783284679313685266801458334",
+  "unit": "%"
+ },
+ "K08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "1.824573318215884911753500856085915",
+  "unit": "%"
+ },
+ "K09": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "0.9661015721427957384271246464827865",
+  "unit": "%"
+ },
+ "K10": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "-0.1782156229572275936735569186348212",
+  "unit": "%"
+ },
+ "KR01": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.48275",
+  "unit": "%"
+ },
+ "KR02": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.7885",
+  "unit": "%"
+ },
+ "KR03": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.5835",
+  "unit": "%"
+ },
+ "KR04": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.475",
+  "unit": "%"
+ },
+ "KR05": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.5994",
+  "unit": "%"
+ },
+ "KR06": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.54325",
+  "unit": "%"
+ },
+ "KR07": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.7608",
+  "unit": "%"
+ },
+ "KR08": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.633875",
+  "unit": "%"
+ },
+ "KL1": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.931",
+  "unit": "%"
+ },
+ "KL2": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.65",
+  "unit": "%"
+ },
+ "KL3": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "2.675",
+  "unit": "%"
+ },
+ "KL4": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "3.824",
+  "unit": "%"
+ },
+ "S1": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "356.8",
+  "unit": "mm"
+ },
+ "S2": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "532.1",
+  "unit": "mm"
+ },
+ "S3": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "152.9",
+  "unit": "mm"
+ },
+ "S4": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "435.7",
+  "unit": "mm"
+ },
+ "C1": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "425.5083333333333333333333333333333",
+  "unit": "ppm"
+ },
+ "C2": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "423.70",
+  "unit": "ppm"
+ },
+ "C3": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "424.2433333333333333333333333333333",
+  "unit": "ppm"
+ },
+ "C4": {
+  "answerable": true,
+  "statguard_supported": true,
+  "value": "423.5233333333333333333333333333333",
+  "unit": "ppm"
+ },
+ "U1": {
+  "answerable": false,
+  "statguard_supported": false,
+  "value": null,
+  "unit": null
+ },
+ "U2": {
+  "answerable": false,
+  "statguard_supported": false,
+  "value": null,
+  "unit": null
+ },
+ "U3": {
+  "answerable": false,
+  "statguard_supported": false,
+  "value": null,
+  "unit": null
+ },
+ "U4": {
+  "answerable": false,
+  "statguard_supported": false,
+  "value": null,
+  "unit": null
+ },
+ "U5": {
+  "answerable": false,
+  "statguard_supported": false,
+  "value": null,
+  "unit": null
+ },
+ "U6": {
+  "answerable": false,
+  "statguard_supported": false,
+  "value": null,
+  "unit": null
+ },
+ "U7": {
+  "answerable": false,
+  "statguard_supported": false,
+  "value": null,
+  "unit": null
+ },
+ "U8": {
+  "answerable": false,
+  "statguard_supported": false,
+  "value": null,
+  "unit": null
+ }
+}

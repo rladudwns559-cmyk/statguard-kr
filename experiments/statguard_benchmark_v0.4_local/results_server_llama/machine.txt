@@ -1,0 +1,7 @@
+name, memory.total [MiB]
+NVIDIA RTX PRO 4500 Blackwell, 32623 MiB
+NVIDIA RTX PRO 4500 Blackwell, 32623 MiB
+NVIDIA RTX PRO 4500 Blackwell, 32623 MiB
+NVIDIA RTX PRO 4500 Blackwell, 32623 MiB
+ollama version is 0.40.18
+Python 3.14.4

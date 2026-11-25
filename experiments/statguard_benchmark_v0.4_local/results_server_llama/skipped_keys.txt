@@ -1,0 +1,4 @@
+cmp|gpt-6-luna|v0.2:F09	HTTP 500
+cmp|gpt-6-luna|v0.2:F10	HTTP 500
+cmp|gpt-6-luna|v0.2_holdout:LH11	HTTP 500
+cmp|gpt-6-luna|v0.2_holdout:LH12	HTTP 500

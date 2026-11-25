@@ -1,0 +1,48 @@
+{
+ "countries": {
+  "file": "08_세계_국가별_2023_지표.csv",
+  "units": {
+   "총인구": "명",
+   "실업률": "%",
+   "1인당GDP": "달러",
+   "기대수명": "세"
+  },
+  "description": "World Bank WDI 2023, 176개 국가(지역 묶음 제외, 네 지표가 모두 있는 국가). 총인구(SP.POP.TOTL, 명), 실업률(SL.UEM.TOTL.ZS, ILO 추정, %), 1인당GDP(NY.GDP.PCAP.CD, 현재 미국 달러, 소수 2자리 반올림), 기대수명(SP.DYN.LE00.IN, 세, 소수 3자리 반올림). 지역 7개·소득그룹 4개는 World Bank 분류.",
+  "source": "statguard_benchmark_v0.3/datasets/08_세계_국가별_2023_지표.csv"
+ },
+ "seattle_daily": {
+  "file": "06_시애틀_2023_일별기상.csv",
+  "units": {
+   "강수량": "mm",
+   "최고기온": "℃",
+   "최저기온": "℃"
+  },
+  "description": "NOAA NCEI GHCN-Daily, 시애틀-타코마 공항(USW00024233) 2023년 일별 강수량(mm)·최고기온(℃)·최저기온(℃). 원자료의 0.1 단위를 10으로 나눔. 월은 1~12.",
+  "source": "statguard_benchmark_v0.2/datasets/06_시애틀_2023_일별기상.csv"
+ },
+ "korea10": {
+  "file": "04_대한민국_2014_2023_인구_실업률.csv",
+  "units": {
+   "총인구": "명",
+   "실업률": "%"
+  },
+  "description": "World Bank WDI, 대한민국 2014~2023년 총인구(SP.POP.TOTL, 명)와 실업률(SL.UEM.TOTL.ZS, ILO 모형 추정, 경제활동인구 대비 %).",
+  "source": "statguard_benchmark_v0.1/datasets/04_대한민국_2014_2023_인구_실업률.csv"
+ },
+ "seattle": {
+  "file": "01_시애틀_2023_월별강수량.csv",
+  "units": {
+   "강수량": "mm"
+  },
+  "description": "NOAA NCEI GSOM, 시애틀-타코마 공항 관측소(USW00024233)의 2023년 월별 총 강수량(mm). 연월은 YYYY-MM.",
+  "source": "statguard_benchmark_v0.1/datasets/01_시애틀_2023_월별강수량.csv"
+ },
+ "co2": {
+  "file": "02_마우나로아_2024_월별CO2.csv",
+  "units": {
+   "이산화탄소농도": "ppm"
+  },
+  "description": "NOAA GML 마우나로아 관측소 2024년 월평균 대기 CO2 농도(ppm). 월은 1~12.",
+  "source": "statguard_benchmark_v0.1/datasets/02_마우나로아_2024_월별CO2.csv"
+ }
+}

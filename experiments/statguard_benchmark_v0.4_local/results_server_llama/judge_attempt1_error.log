@@ -1,0 +1,48 @@
+judge 25/996 71s
+judge 50/996 148s
+judge 75/996 234s
+judge 100/996 313s
+judge 125/996 399s
+judge 150/996 484s
+judge 175/996 563s
+judge 200/996 635s
+judge 225/996 727s
+judge 250/996 794s
+judge 275/996 861s
+judge 300/996 921s
+judge 325/996 992s
+judge 350/996 1082s
+judge 375/996 1171s
+judge 400/996 1235s
+judge 425/996 1310s
+judge 450/996 1373s
+judge 475/996 1443s
+judge 500/996 1509s
+judge 525/996 1575s
+judge 550/996 1637s
+judge 575/996 1716s
+Traceback (most recent call last):
+  File "/data1/workspaces/goeun_dl/goeun/statguard/statguard_run/experiments/statguard_benchmark_v0.4_local/judge_local.py", line 92, in <module>
+    main()
+    ~~~~^^
+  File "/data1/workspaces/goeun_dl/goeun/statguard/statguard_run/experiments/statguard_benchmark_v0.4_local/judge_local.py", line 81, in main
+    r = judge(row)
+  File "/data1/workspaces/goeun_dl/goeun/statguard/statguard_run/experiments/statguard_benchmark_v0.4_local/judge_local.py", line 56, in judge
+    response = json.load(urllib.request.urlopen(request, timeout=1800))
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: Internal Server Error
