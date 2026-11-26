@@ -1,0 +1,6772 @@
+[
+ {
+  "id": "N001",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "남아시아 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N002",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "남아시아 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N003",
+  "dataset": "countries",
+  "category": "median",
+  "question": "남아시아 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N004",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "남아시아 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N005",
+  "dataset": "countries",
+  "category": "max",
+  "question": "남아시아 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N006",
+  "dataset": "countries",
+  "category": "min",
+  "question": "남아시아 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N007",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "남아시아 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N008",
+  "dataset": "countries",
+  "category": "median",
+  "question": "남아시아 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N009",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "남아시아 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N010",
+  "dataset": "countries",
+  "category": "max",
+  "question": "남아시아 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N011",
+  "dataset": "countries",
+  "category": "min",
+  "question": "남아시아 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N012",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "남아시아 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N013",
+  "dataset": "countries",
+  "category": "median",
+  "question": "남아시아 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N014",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "남아시아 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N015",
+  "dataset": "countries",
+  "category": "max",
+  "question": "남아시아 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N016",
+  "dataset": "countries",
+  "category": "min",
+  "question": "남아시아 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N017",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "남아시아 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N018",
+  "dataset": "countries",
+  "category": "median",
+  "question": "남아시아 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N019",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "남아시아 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N020",
+  "dataset": "countries",
+  "category": "max",
+  "question": "남아시아 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N021",
+  "dataset": "countries",
+  "category": "min",
+  "question": "남아시아 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "지역": "남아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N022",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "동아시아·태평양 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N023",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "동아시아·태평양 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N024",
+  "dataset": "countries",
+  "category": "median",
+  "question": "동아시아·태평양 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N025",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "동아시아·태평양 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N026",
+  "dataset": "countries",
+  "category": "max",
+  "question": "동아시아·태평양 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N027",
+  "dataset": "countries",
+  "category": "min",
+  "question": "동아시아·태평양 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N028",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "동아시아·태평양 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N029",
+  "dataset": "countries",
+  "category": "median",
+  "question": "동아시아·태평양 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N030",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "동아시아·태평양 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N031",
+  "dataset": "countries",
+  "category": "max",
+  "question": "동아시아·태평양 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N032",
+  "dataset": "countries",
+  "category": "min",
+  "question": "동아시아·태평양 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N033",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "동아시아·태평양 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N034",
+  "dataset": "countries",
+  "category": "median",
+  "question": "동아시아·태평양 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N035",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "동아시아·태평양 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N036",
+  "dataset": "countries",
+  "category": "max",
+  "question": "동아시아·태평양 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N037",
+  "dataset": "countries",
+  "category": "min",
+  "question": "동아시아·태평양 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N038",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "동아시아·태평양 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N039",
+  "dataset": "countries",
+  "category": "median",
+  "question": "동아시아·태평양 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N040",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "동아시아·태평양 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N041",
+  "dataset": "countries",
+  "category": "max",
+  "question": "동아시아·태평양 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N042",
+  "dataset": "countries",
+  "category": "min",
+  "question": "동아시아·태평양 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "지역": "동아시아·태평양"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N043",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "사하라이남아프리카 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N044",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "사하라이남아프리카 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N045",
+  "dataset": "countries",
+  "category": "median",
+  "question": "사하라이남아프리카 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N046",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "사하라이남아프리카 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N047",
+  "dataset": "countries",
+  "category": "max",
+  "question": "사하라이남아프리카 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N048",
+  "dataset": "countries",
+  "category": "min",
+  "question": "사하라이남아프리카 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N049",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "사하라이남아프리카 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N050",
+  "dataset": "countries",
+  "category": "median",
+  "question": "사하라이남아프리카 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N051",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "사하라이남아프리카 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N052",
+  "dataset": "countries",
+  "category": "max",
+  "question": "사하라이남아프리카 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N053",
+  "dataset": "countries",
+  "category": "min",
+  "question": "사하라이남아프리카 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N054",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "사하라이남아프리카 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N055",
+  "dataset": "countries",
+  "category": "median",
+  "question": "사하라이남아프리카 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N056",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "사하라이남아프리카 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N057",
+  "dataset": "countries",
+  "category": "max",
+  "question": "사하라이남아프리카 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N058",
+  "dataset": "countries",
+  "category": "min",
+  "question": "사하라이남아프리카 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N059",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "사하라이남아프리카 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N060",
+  "dataset": "countries",
+  "category": "median",
+  "question": "사하라이남아프리카 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N061",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "사하라이남아프리카 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N062",
+  "dataset": "countries",
+  "category": "max",
+  "question": "사하라이남아프리카 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N063",
+  "dataset": "countries",
+  "category": "min",
+  "question": "사하라이남아프리카 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N064",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "유럽·중앙아시아 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N065",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "유럽·중앙아시아 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N066",
+  "dataset": "countries",
+  "category": "median",
+  "question": "유럽·중앙아시아 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N067",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "유럽·중앙아시아 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N068",
+  "dataset": "countries",
+  "category": "max",
+  "question": "유럽·중앙아시아 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N069",
+  "dataset": "countries",
+  "category": "min",
+  "question": "유럽·중앙아시아 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N070",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "유럽·중앙아시아 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N071",
+  "dataset": "countries",
+  "category": "median",
+  "question": "유럽·중앙아시아 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N072",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "유럽·중앙아시아 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N073",
+  "dataset": "countries",
+  "category": "max",
+  "question": "유럽·중앙아시아 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N074",
+  "dataset": "countries",
+  "category": "min",
+  "question": "유럽·중앙아시아 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N075",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "유럽·중앙아시아 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N076",
+  "dataset": "countries",
+  "category": "median",
+  "question": "유럽·중앙아시아 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N077",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "유럽·중앙아시아 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N078",
+  "dataset": "countries",
+  "category": "max",
+  "question": "유럽·중앙아시아 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N079",
+  "dataset": "countries",
+  "category": "min",
+  "question": "유럽·중앙아시아 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N080",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "유럽·중앙아시아 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N081",
+  "dataset": "countries",
+  "category": "median",
+  "question": "유럽·중앙아시아 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N082",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "유럽·중앙아시아 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N083",
+  "dataset": "countries",
+  "category": "max",
+  "question": "유럽·중앙아시아 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N084",
+  "dataset": "countries",
+  "category": "min",
+  "question": "유럽·중앙아시아 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N085",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "중남미·카리브 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N086",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중남미·카리브 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N087",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중남미·카리브 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N088",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중남미·카리브 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N089",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중남미·카리브 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N090",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중남미·카리브 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N091",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중남미·카리브 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N092",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중남미·카리브 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N093",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중남미·카리브 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N094",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중남미·카리브 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N095",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중남미·카리브 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N096",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중남미·카리브 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N097",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중남미·카리브 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N098",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중남미·카리브 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N099",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중남미·카리브 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N100",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중남미·카리브 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N101",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중남미·카리브 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N102",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중남미·카리브 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N103",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중남미·카리브 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N104",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중남미·카리브 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N105",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중남미·카리브 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중남미·카리브"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N106",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "중동·북아프리카 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N107",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중동·북아프리카 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N108",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중동·북아프리카 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N109",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중동·북아프리카 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N110",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중동·북아프리카 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N111",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중동·북아프리카 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N112",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중동·북아프리카 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N113",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중동·북아프리카 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N114",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중동·북아프리카 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N115",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중동·북아프리카 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N116",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중동·북아프리카 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N117",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중동·북아프리카 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N118",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중동·북아프리카 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N119",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중동·북아프리카 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N120",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중동·북아프리카 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N121",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중동·북아프리카 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N122",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중동·북아프리카 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N123",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중동·북아프리카 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N124",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중동·북아프리카 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N125",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중동·북아프리카 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N126",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중동·북아프리카 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "지역": "중동·북아프리카"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N127",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "고소득 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N128",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "고소득 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N129",
+  "dataset": "countries",
+  "category": "median",
+  "question": "고소득 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N130",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "고소득 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N131",
+  "dataset": "countries",
+  "category": "max",
+  "question": "고소득 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N132",
+  "dataset": "countries",
+  "category": "min",
+  "question": "고소득 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N133",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "고소득 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N134",
+  "dataset": "countries",
+  "category": "median",
+  "question": "고소득 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N135",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "고소득 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N136",
+  "dataset": "countries",
+  "category": "max",
+  "question": "고소득 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N137",
+  "dataset": "countries",
+  "category": "min",
+  "question": "고소득 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N138",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "고소득 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N139",
+  "dataset": "countries",
+  "category": "median",
+  "question": "고소득 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N140",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "고소득 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N141",
+  "dataset": "countries",
+  "category": "max",
+  "question": "고소득 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N142",
+  "dataset": "countries",
+  "category": "min",
+  "question": "고소득 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N143",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "고소득 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N144",
+  "dataset": "countries",
+  "category": "median",
+  "question": "고소득 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N145",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "고소득 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N146",
+  "dataset": "countries",
+  "category": "max",
+  "question": "고소득 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N147",
+  "dataset": "countries",
+  "category": "min",
+  "question": "고소득 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "고소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N148",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "저소득 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N149",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "저소득 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N150",
+  "dataset": "countries",
+  "category": "median",
+  "question": "저소득 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N151",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "저소득 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N152",
+  "dataset": "countries",
+  "category": "max",
+  "question": "저소득 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N153",
+  "dataset": "countries",
+  "category": "min",
+  "question": "저소득 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N154",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "저소득 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N155",
+  "dataset": "countries",
+  "category": "median",
+  "question": "저소득 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N156",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "저소득 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N157",
+  "dataset": "countries",
+  "category": "max",
+  "question": "저소득 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N158",
+  "dataset": "countries",
+  "category": "min",
+  "question": "저소득 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N159",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "저소득 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N160",
+  "dataset": "countries",
+  "category": "median",
+  "question": "저소득 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N161",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "저소득 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N162",
+  "dataset": "countries",
+  "category": "max",
+  "question": "저소득 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N163",
+  "dataset": "countries",
+  "category": "min",
+  "question": "저소득 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N164",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "저소득 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N165",
+  "dataset": "countries",
+  "category": "median",
+  "question": "저소득 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N166",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "저소득 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N167",
+  "dataset": "countries",
+  "category": "max",
+  "question": "저소득 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N168",
+  "dataset": "countries",
+  "category": "min",
+  "question": "저소득 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "저소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N169",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "중상위소득 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N170",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중상위소득 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N171",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중상위소득 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N172",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중상위소득 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N173",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중상위소득 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N174",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중상위소득 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N175",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중상위소득 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N176",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중상위소득 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N177",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중상위소득 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N178",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중상위소득 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N179",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중상위소득 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N180",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중상위소득 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N181",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중상위소득 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N182",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중상위소득 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N183",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중상위소득 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N184",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중상위소득 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N185",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중상위소득 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N186",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중상위소득 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N187",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중상위소득 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N188",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중상위소득 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N189",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중상위소득 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중상위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N190",
+  "dataset": "countries",
+  "category": "sum",
+  "question": "중하위소득 국가들의 2023년 총인구 합계는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N191",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중하위소득 국가들의 2023년 총인구 단순 평균은 몇 명인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N192",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중하위소득 국가들의 2023년 총인구 중앙값은 몇 명인가요?",
+  "calc": {
+   "op": "median",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N193",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중하위소득 국가들의 2023년 총인구 표본표준편차(n−1)는 몇 명인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N194",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중하위소득 국가들 중 2023년 총인구가 가장 많은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "max",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N195",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중하위소득 국가들 중 2023년 총인구가 가장 적은 나라의 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "min",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N196",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중하위소득 국가들의 2023년 실업률 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N197",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중하위소득 국가들의 2023년 실업률 중앙값은 몇 %인가요?",
+  "calc": {
+   "op": "median",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N198",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중하위소득 국가들의 2023년 실업률 표본표준편차(n−1)는 몇 %인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N199",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중하위소득 국가들 중 2023년 실업률이 가장 높은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "max",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N200",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중하위소득 국가들 중 2023년 실업률이 가장 낮은 나라의 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "min",
+   "column": "실업률",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N201",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중하위소득 국가들의 2023년 1인당GDP 단순 평균은 몇 달러인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N202",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중하위소득 국가들의 2023년 1인당GDP 중앙값은 몇 달러인가요?",
+  "calc": {
+   "op": "median",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N203",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중하위소득 국가들의 2023년 1인당GDP 표본표준편차(n−1)는 몇 달러인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N204",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중하위소득 국가들 중 2023년 1인당GDP가 가장 높은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "max",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N205",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중하위소득 국가들 중 2023년 1인당GDP가 가장 낮은 나라의 1인당GDP는 몇 달러인가요?",
+  "calc": {
+   "op": "min",
+   "column": "1인당GDP",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N206",
+  "dataset": "countries",
+  "category": "mean",
+  "question": "중하위소득 국가들의 2023년 기대수명 단순 평균은 몇 세인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "N207",
+  "dataset": "countries",
+  "category": "median",
+  "question": "중하위소득 국가들의 2023년 기대수명 중앙값은 몇 세인가요?",
+  "calc": {
+   "op": "median",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N208",
+  "dataset": "countries",
+  "category": "stdev",
+  "question": "중하위소득 국가들의 2023년 기대수명 표본표준편차(n−1)는 몇 세인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N209",
+  "dataset": "countries",
+  "category": "max",
+  "question": "중하위소득 국가들 중 2023년 기대수명이 가장 높은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "max",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "N210",
+  "dataset": "countries",
+  "category": "min",
+  "question": "중하위소득 국가들 중 2023년 기대수명이 가장 낮은 나라의 기대수명은 몇 세인가요?",
+  "calc": {
+   "op": "min",
+   "column": "기대수명",
+   "filters": {
+    "소득그룹": "중하위소득"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "NR01",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 남아시아 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "지역": "남아시아"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "NR02",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 동아시아·태평양 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "지역": "동아시아·태평양"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "NR03",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 북미 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "지역": "북미"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "NR04",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 사하라이남아프리카 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "지역": "사하라이남아프리카"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "NR05",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 유럽·중앙아시아 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "지역": "유럽·중앙아시아"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "NR06",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 중남미·카리브 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "지역": "중남미·카리브"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "NR07",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 중동·북아프리카 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "지역": "중동·북아프리카"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "NR08",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 고소득 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "고소득"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "NR09",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 저소득 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "저소득"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "NR10",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 중상위소득 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중상위소득"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "NR11",
+  "dataset": "countries",
+  "category": "ratio",
+  "question": "176개 국가의 2023년 총인구 합계 중 중하위소득 국가들의 총인구 비율은 몇 %인가요?",
+  "calc": {
+   "op": "ratio_percent",
+   "column": "총인구",
+   "filters": {
+    "소득그룹": "중하위소득"
+   },
+   "reference_filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D001",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 1월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D002",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 1월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D003",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 1월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D004",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 1월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D005",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 1월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D006",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 1월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D007",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 1월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D008",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 1월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D009",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 1월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "1"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D010",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 2월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D011",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 2월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D012",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 2월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D013",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 2월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D014",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 2월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D015",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 2월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D016",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 2월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D017",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 2월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D018",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 2월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "2"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D019",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 3월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D020",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 3월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D021",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 3월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D022",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 3월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D023",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 3월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D024",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 3월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D025",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 3월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D026",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 3월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D027",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 3월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "3"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D028",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 4월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D029",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 4월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D030",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 4월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D031",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 4월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D032",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 4월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D033",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 4월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D034",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 4월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D035",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 4월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D036",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 4월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "4"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D037",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 5월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D038",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 5월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D039",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 5월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D040",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 5월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D041",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 5월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D042",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 5월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D043",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 5월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D044",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 5월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D045",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 5월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "5"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D046",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 6월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D047",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 6월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D048",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 6월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D049",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 6월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D050",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 6월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D051",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 6월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D052",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 6월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D053",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 6월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D054",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 6월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "6"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D055",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 7월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D056",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 7월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D057",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 7월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D058",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 7월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D059",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 7월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D060",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 7월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D061",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 7월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D062",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 7월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D063",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 7월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "7"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D064",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 8월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D065",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 8월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D066",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 8월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D067",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 8월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D068",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 8월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D069",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 8월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D070",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 8월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D071",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 8월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D072",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 8월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "8"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D073",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 9월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D074",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 9월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D075",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 9월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D076",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 9월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D077",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 9월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D078",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 9월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D079",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 9월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D080",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 9월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D081",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 9월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "9"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D082",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 10월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D083",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 10월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D084",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 10월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D085",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 10월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D086",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 10월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D087",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 10월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D088",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 10월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D089",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 10월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D090",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 10월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "10"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D091",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 11월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D092",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 11월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D093",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 11월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D094",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 11월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D095",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 11월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D096",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 11월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D097",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 11월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D098",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 11월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D099",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 11월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "11"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D100",
+  "dataset": "seattle_daily",
+  "category": "sum",
+  "question": "2023년 12월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D101",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 12월 시애틀의 강수량 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D102",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 12월 시애틀의 강수량 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D103",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 12월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D104",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 12월 시애틀의 일 최고기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D105",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 12월 시애틀의 일 최고기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최고기온",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D106",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 12월 시애틀의 일 최저기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "D107",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 12월 시애틀의 일 최저기온 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "D108",
+  "dataset": "seattle_daily",
+  "category": "min",
+  "question": "2023년 12월 시애틀의 일 최저기온 최솟값은 몇 ℃인가요?",
+  "calc": {
+   "op": "min",
+   "column": "최저기온",
+   "filters": {
+    "월": "12"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR01",
+  "dataset": "seattle_daily",
+  "category": "range_mean",
+  "question": "2023년 상반기(1~6월) 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "range": [
+    1,
+    6
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR02",
+  "dataset": "seattle_daily",
+  "category": "range_sum",
+  "question": "2023년 하반기(7~12월) 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    7,
+    12
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR03",
+  "dataset": "seattle_daily",
+  "category": "range_mean",
+  "question": "2023년 1분기 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "range": [
+    1,
+    3
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR04",
+  "dataset": "seattle_daily",
+  "category": "range_sum",
+  "question": "2023년 2분기 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    4,
+    6
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR05",
+  "dataset": "seattle_daily",
+  "category": "range_mean",
+  "question": "2023년 3분기 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "range": [
+    7,
+    9
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR06",
+  "dataset": "seattle_daily",
+  "category": "range_sum",
+  "question": "2023년 4분기 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    10,
+    12
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR07",
+  "dataset": "seattle_daily",
+  "category": "range_mean",
+  "question": "2023년 3~5월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "range": [
+    3,
+    5
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR08",
+  "dataset": "seattle_daily",
+  "category": "range_sum",
+  "question": "2023년 6~8월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    6,
+    8
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR09",
+  "dataset": "seattle_daily",
+  "category": "range_mean",
+  "question": "2023년 9~11월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "range": [
+    9,
+    11
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR10",
+  "dataset": "seattle_daily",
+  "category": "range_sum",
+  "question": "2023년 2~4월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    2,
+    4
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR11",
+  "dataset": "seattle_daily",
+  "category": "range_mean",
+  "question": "2023년 5~9월 시애틀의 일 최고기온 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "range": [
+    5,
+    9
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DR12",
+  "dataset": "seattle_daily",
+  "category": "range_sum",
+  "question": "2023년 10~12월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    10,
+    12
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DY01",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 시애틀 일별 강수량의 단순 평균은 몇 mm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "강수량",
+   "filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "DY02",
+  "dataset": "seattle_daily",
+  "category": "median",
+  "question": "2023년 시애틀 일별 강수량의 중앙값은 몇 mm인가요?",
+  "calc": {
+   "op": "median",
+   "column": "강수량",
+   "filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DY03",
+  "dataset": "seattle_daily",
+  "category": "stdev",
+  "question": "2023년 시애틀 일별 강수량의 표본표준편차(n−1)는 몇 mm인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "강수량",
+   "filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "DY04",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 시애틀 일별 강수량의 최댓값은 몇 mm인가요?",
+  "calc": {
+   "op": "max",
+   "column": "강수량",
+   "filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "DY05",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 시애틀 일 최고기온의 단순 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최고기온",
+   "filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "DY06",
+  "dataset": "seattle_daily",
+  "category": "median",
+  "question": "2023년 시애틀 일 최고기온의 중앙값은 몇 ℃인가요?",
+  "calc": {
+   "op": "median",
+   "column": "최고기온",
+   "filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DY07",
+  "dataset": "seattle_daily",
+  "category": "stdev",
+  "question": "2023년 시애틀 일 최고기온의 표본표준편차(n−1)는 몇 ℃인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "최고기온",
+   "filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DY08",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 시애틀 일 최고기온의 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최고기온",
+   "filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "DY09",
+  "dataset": "seattle_daily",
+  "category": "mean",
+  "question": "2023년 시애틀 일 최저기온의 단순 평균은 몇 ℃인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "최저기온",
+   "filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "DY10",
+  "dataset": "seattle_daily",
+  "category": "median",
+  "question": "2023년 시애틀 일 최저기온의 중앙값은 몇 ℃인가요?",
+  "calc": {
+   "op": "median",
+   "column": "최저기온",
+   "filters": {}
+  },
+  "in_v04": true
+ },
+ {
+  "id": "DY11",
+  "dataset": "seattle_daily",
+  "category": "stdev",
+  "question": "2023년 시애틀 일 최저기온의 표본표준편차(n−1)는 몇 ℃인가요?",
+  "calc": {
+   "op": "stdev",
+   "column": "최저기온",
+   "filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "DY12",
+  "dataset": "seattle_daily",
+  "category": "max",
+  "question": "2023년 시애틀 일 최저기온의 최댓값은 몇 ℃인가요?",
+  "calc": {
+   "op": "max",
+   "column": "최저기온",
+   "filters": {}
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K01",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2015년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2015"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K02",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2016년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2016"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K03",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2017년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2017"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K04",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2018년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2018"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K05",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2019년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2019"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K06",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2020년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2020"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K07",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2021년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2021"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K08",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2022년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K09",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2014년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K10",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2015년 대비 2016년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2016"
+   },
+   "reference_filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K11",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2015년 대비 2017년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2017"
+   },
+   "reference_filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K12",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2015년 대비 2018년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2018"
+   },
+   "reference_filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K13",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2015년 대비 2019년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2019"
+   },
+   "reference_filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K14",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2015년 대비 2020년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2020"
+   },
+   "reference_filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K15",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2015년 대비 2021년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2021"
+   },
+   "reference_filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K16",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2015년 대비 2022년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   },
+   "reference_filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K17",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2015년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K18",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2016년 대비 2017년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2017"
+   },
+   "reference_filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K19",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2016년 대비 2018년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2018"
+   },
+   "reference_filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K20",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2016년 대비 2019년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2019"
+   },
+   "reference_filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K21",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2016년 대비 2020년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2020"
+   },
+   "reference_filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K22",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2016년 대비 2021년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2021"
+   },
+   "reference_filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K23",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2016년 대비 2022년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   },
+   "reference_filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K24",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2016년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K25",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2017년 대비 2018년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2018"
+   },
+   "reference_filters": {
+    "연도": "2017"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K26",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2017년 대비 2019년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2019"
+   },
+   "reference_filters": {
+    "연도": "2017"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K27",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2017년 대비 2020년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2020"
+   },
+   "reference_filters": {
+    "연도": "2017"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K28",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2017년 대비 2021년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2021"
+   },
+   "reference_filters": {
+    "연도": "2017"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K29",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2017년 대비 2022년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   },
+   "reference_filters": {
+    "연도": "2017"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K30",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2017년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2017"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K31",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2018년 대비 2019년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2019"
+   },
+   "reference_filters": {
+    "연도": "2018"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K32",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2018년 대비 2020년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2020"
+   },
+   "reference_filters": {
+    "연도": "2018"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K33",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2018년 대비 2021년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2021"
+   },
+   "reference_filters": {
+    "연도": "2018"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K34",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2018년 대비 2022년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   },
+   "reference_filters": {
+    "연도": "2018"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K35",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2018년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2018"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K36",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2019년 대비 2020년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2020"
+   },
+   "reference_filters": {
+    "연도": "2019"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K37",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2019년 대비 2021년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2021"
+   },
+   "reference_filters": {
+    "연도": "2019"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K38",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2019년 대비 2022년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   },
+   "reference_filters": {
+    "연도": "2019"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K39",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2019년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2019"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "K40",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2020년 대비 2021년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2021"
+   },
+   "reference_filters": {
+    "연도": "2020"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K41",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2020년 대비 2022년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   },
+   "reference_filters": {
+    "연도": "2020"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K42",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2020년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2020"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K43",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2021년 대비 2022년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   },
+   "reference_filters": {
+    "연도": "2021"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K44",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2021년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2021"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "K45",
+  "dataset": "korea10",
+  "category": "percent_change",
+  "question": "2022년 대비 2023년 대한민국 총인구는 몇 % 변했나요? 감소면 음수로 답하세요.",
+  "calc": {
+   "op": "percent_change",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   },
+   "reference_filters": {
+    "연도": "2022"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR01",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2014~2016년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2014,
+    2016
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR02",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2014~2017년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2014,
+    2017
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KR03",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2014~2018년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2014,
+    2018
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR04",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2014~2019년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2014,
+    2019
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KR05",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2014~2020년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2014,
+    2020
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR06",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2014~2021년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2014,
+    2021
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KR07",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2014~2022년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2014,
+    2022
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR08",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2014~2023년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2014,
+    2023
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR09",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2015~2017년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2015,
+    2017
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR10",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2015~2018년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2015,
+    2018
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR11",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2015~2019년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2015,
+    2019
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR12",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2015~2020년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2015,
+    2020
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR13",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2015~2021년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2015,
+    2021
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR14",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2015~2022년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2015,
+    2022
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR15",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2015~2023년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2015,
+    2023
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR16",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2016~2018년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2016,
+    2018
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR17",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2016~2019년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2016,
+    2019
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR18",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2016~2020년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2016,
+    2020
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KR19",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2016~2021년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2016,
+    2021
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR20",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2016~2022년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2016,
+    2022
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR21",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2016~2023년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2016,
+    2023
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR22",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2017~2019년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2017,
+    2019
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR23",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2017~2020년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2017,
+    2020
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KR24",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2017~2021년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2017,
+    2021
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR25",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2017~2022년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2017,
+    2022
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR26",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2017~2023년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2017,
+    2023
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KR27",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2018~2020년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2018,
+    2020
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR28",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2018~2021년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2018,
+    2021
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR29",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2018~2022년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2018,
+    2022
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KR30",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2018~2023년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2018,
+    2023
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR31",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2019~2021년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2019,
+    2021
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR32",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2019~2022년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2019,
+    2022
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KR33",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2019~2023년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2019,
+    2023
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR34",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2020~2022년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2020,
+    2022
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR35",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2020~2023년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2020,
+    2023
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KR36",
+  "dataset": "korea10",
+  "category": "range_mean",
+  "question": "2021~2023년 대한민국 실업률의 단순 평균은 몇 %인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "실업률",
+   "range_years": [
+    2021,
+    2023
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL01",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2014년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL02",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2014년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2014"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL03",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2015년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL04",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2015년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2015"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL05",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2016년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KL06",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2016년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2016"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL07",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2017년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2017"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL08",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2017년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2017"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL09",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2018년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2018"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KL10",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2018년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2018"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL11",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2019년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2019"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL12",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2019년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2019"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL13",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2020년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2020"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KL14",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2020년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2020"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL15",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2021년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2021"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL16",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2021년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2021"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL17",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2022년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2022"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL18",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2022년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2022"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "KL19",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2023년 대한민국 실업률은 몇 %인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "실업률",
+   "filters": {
+    "연도": "2023"
+   }
+  },
+  "in_v04": true
+ },
+ {
+  "id": "KL20",
+  "dataset": "korea10",
+  "category": "lookup",
+  "question": "2023년 대한민국 총인구는 몇 명인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "총인구",
+   "filters": {
+    "연도": "2023"
+   }
+  },
+  "in_v04": false
+ },
+ {
+  "id": "S1",
+  "dataset": "seattle",
+  "category": "range_sum",
+  "question": "2023년 상반기 시애틀의 월별 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    1,
+    6
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "S2",
+  "dataset": "seattle",
+  "category": "range_sum",
+  "question": "2023년 하반기 시애틀의 월별 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    7,
+    12
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "S3",
+  "dataset": "seattle",
+  "category": "range_sum",
+  "question": "2023년 1분기 시애틀의 월별 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    1,
+    3
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "S4",
+  "dataset": "seattle",
+  "category": "range_sum",
+  "question": "2023년 2분기 시애틀의 월별 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    4,
+    6
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "S5",
+  "dataset": "seattle",
+  "category": "range_sum",
+  "question": "2023년 3분기 시애틀의 월별 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    7,
+    9
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "S6",
+  "dataset": "seattle",
+  "category": "range_sum",
+  "question": "2023년 4분기 시애틀의 월별 강수량 합계는 몇 mm인가요?",
+  "calc": {
+   "op": "sum",
+   "column": "강수량",
+   "range": [
+    10,
+    12
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "C1",
+  "dataset": "co2",
+  "category": "range_mean",
+  "question": "2024년 상반기 마우나로아의 월평균 이산화탄소농도의 평균은 몇 ppm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "이산화탄소농도",
+   "range": [
+    1,
+    6
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "C2",
+  "dataset": "co2",
+  "category": "range_mean",
+  "question": "2024년 하반기 마우나로아의 월평균 이산화탄소농도의 평균은 몇 ppm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "이산화탄소농도",
+   "range": [
+    7,
+    12
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "C3",
+  "dataset": "co2",
+  "category": "range_mean",
+  "question": "2024년 1분기 마우나로아의 월평균 이산화탄소농도의 평균은 몇 ppm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "이산화탄소농도",
+   "range": [
+    1,
+    3
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "C4",
+  "dataset": "co2",
+  "category": "range_mean",
+  "question": "2024년 2분기 마우나로아의 월평균 이산화탄소농도의 평균은 몇 ppm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "이산화탄소농도",
+   "range": [
+    4,
+    6
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "C5",
+  "dataset": "co2",
+  "category": "range_mean",
+  "question": "2024년 3분기 마우나로아의 월평균 이산화탄소농도의 평균은 몇 ppm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "이산화탄소농도",
+   "range": [
+    7,
+    9
+   ]
+  },
+  "in_v04": true
+ },
+ {
+  "id": "C6",
+  "dataset": "co2",
+  "category": "range_mean",
+  "question": "2024년 4분기 마우나로아의 월평균 이산화탄소농도의 평균은 몇 ppm인가요?",
+  "calc": {
+   "op": "mean",
+   "column": "이산화탄소농도",
+   "range": [
+    10,
+    12
+   ]
+  },
+  "in_v04": false
+ },
+ {
+  "id": "U1",
+  "dataset": "countries",
+  "category": "unanswerable",
+  "question": "2024년 남아시아 국가들의 총인구 합계는 몇 명인가요?",
+  "calc": null,
+  "in_v04": true
+ },
+ {
+  "id": "U2",
+  "dataset": "countries",
+  "category": "unanswerable",
+  "question": "고소득 국가의 기대수명이 높은 원인은 무엇이며 그 효과는 몇 세인가요?",
+  "calc": null,
+  "in_v04": true
+ },
+ {
+  "id": "U3",
+  "dataset": "countries",
+  "category": "unanswerable",
+  "question": "2030년 사하라이남아프리카의 평균 실업률은 몇 %로 예상되나요?",
+  "calc": null,
+  "in_v04": true
+ },
+ {
+  "id": "U4",
+  "dataset": "seattle_daily",
+  "category": "unanswerable",
+  "question": "2024년 1월 시애틀의 강수량 합계는 몇 mm인가요?",
+  "calc": null,
+  "in_v04": true
+ },
+ {
+  "id": "U5",
+  "dataset": "seattle_daily",
+  "category": "unanswerable",
+  "question": "2023년 시애틀 강수량이 많았던 원인은 엘니뇨 때문인가요? 그 영향은 몇 mm인가요?",
+  "calc": null,
+  "in_v04": true
+ },
+ {
+  "id": "U6",
+  "dataset": "korea10",
+  "category": "unanswerable",
+  "question": "2025년 대한민국 실업률은 몇 %인가요?",
+  "calc": null,
+  "in_v04": true
+ },
+ {
+  "id": "U7",
+  "dataset": "korea10",
+  "category": "unanswerable",
+  "question": "대한민국 실업률 변화의 원인이 된 정책 효과는 몇 %p인가요?",
+  "calc": null,
+  "in_v04": true
+ },
+ {
+  "id": "U8",
+  "dataset": "co2",
+  "category": "unanswerable",
+  "question": "2025년 12월 마우나로아 이산화탄소농도는 몇 ppm인가요?",
+  "calc": null,
+  "in_v04": true
+ }
+]

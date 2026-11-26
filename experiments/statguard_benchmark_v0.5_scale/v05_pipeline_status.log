@@ -1,0 +1,17 @@
+2026-11-25 14:06:56 pipeline start
+2026-11-25 14:12:26 models ready
+2026-11-25 14:12:26 mode=parallel CUDA_VISIBLE_DEVICES=0,1,2,3
+2026-11-25 14:12:39 ollama serve up: {"version":"0.40.18"}
+2026-11-25 14:12:39 pilot qwen2.5:32b rc=0
+2026-11-25 14:12:40 pilot gemma3:27b rc=0
+2026-11-25 14:14:03 pilot llama3.3:70b rc=0
+2026-11-25 14:37:52 OK   (try 1): run.py answers --model qwen2.5:32b
+2026-11-25 15:31:33 OK   (try 1): run.py answers --model gemma3:27b
+2026-11-25 15:55:01 OK   (try 1): run.py answers --model llama3.3:70b
+2026-11-25 15:55:01 stage1 (answers) finished
+2026-11-25 17:25:28 OK   (try 1): judge.py run
+2026-11-25 17:25:28 judge finished
+2026-11-25 18:45:56 OK   (try 1): run.py correct --model qwen2.5:32b
+2026-11-25 21:15:25 OK   (try 1): run.py correct --model gemma3:27b
+2026-11-25 22:32:26 OK   (try 1): run.py correct --model llama3.3:70b
+2026-11-25 22:32:26 stage2 (judge+correct) finished

@@ -1,0 +1,1 @@
+{"model": "llama3.3:70b", "created_at": "2026-11-25T15:55:00.427557184Z", "message": {"role": "assistant", "content": "최종값: 판단불가"}, "done": true, "done_reason": "stop", "total_duration": 512430922, "load_duration": 1396501, "prompt_eval_count": 279, "prompt_eval_cached_count": 256, "prompt_eval_duration": 66857000, "eval_count": 9, "eval_duration": 437924000}
