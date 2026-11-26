@@ -204,11 +204,14 @@ def extract_claims(dataset: TableDataset, answer: str) -> list[dict]:
     unit_words = [u for u in ctx.units.values()]
     claims: list[dict] = []
     seen_context: dict[str, set[str]] = {}  # v0.5: category values mentioned in earlier sentences
+    seen_partial_period = False  # an earlier sentence named a period that covers only part of the rows
     for sentence in split_sentences(answer):
         if len(claims) >= MAX_CLAIMS:
             break
         mentions, _ = _value_mentions(ctx, sentence)
         range_problem, range_spans = _ranges(ctx, sentence)
+        earlier_partial_period = seen_partial_period
+        seen_partial_period |= bool(range_spans and range_problem)
         value_sets = None
         if range_problem == ("UNCERTAIN", "RANGE_FILTER_UNSUPPORTED") and operation_hint(sentence) in _SET_OPS:
             value_sets = _range_sets(ctx, sentence)  # v0.7.1: a period range the data can express as a set of values
@@ -316,7 +319,13 @@ def extract_claims(dataset: TableDataset, answer: str) -> list[dict]:
         refers_back = bool(_REFERS_BACK.match(sentence)) or not {m[2] for m in mentions}
         inherited = [c for c, vs in previous_context.items() if refers_back and len(vs) == 1 and c not in {m[2] for m in mentions}
                      and len(ctx.categorical.get(c, ())) > 1 and not any(a in sentence for a in _aliases(c))]
-        if inherited:
+        # The same holds when earlier sentences named several (not all) values of a column ("2014년 …,
+        # 2015년 …입니다. 이를 평균하면") or a partial period, unless the sentence says it covers everything.
+        partial_scope = refers_back and not range_spans and not re.search(r"전체|모든", sentence) and (
+            (earlier_partial_period and not mentions)
+            or any(1 < len(vs) < len(ctx.categorical.get(c, ())) and c not in {m[2] for m in mentions}
+                   and not any(a in sentence for a in _aliases(c)) for c, vs in previous_context.items()))
+        if inherited or partial_scope:
             # v0.5: "시카고의 ... 입니다. 따라서 1월 대비 7월 강수량은 ..." — the scope comes from an earlier
             # sentence; computing over all rows would be a different claim, so abstain instead of guessing.
             claims.append(_abstain(dict(base, claimed=_claimed(primary)), "UNCERTAIN", "SCOPE_FROM_PREVIOUS_SENTENCE"))

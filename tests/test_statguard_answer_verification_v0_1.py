@@ -163,5 +163,37 @@ class Bridge(unittest.TestCase):
             self.assertEqual(value["error"]["code"], code)
 
 
+class ScopeSetByEarlierSentence(unittest.TestCase):
+    """A sentence that points back to a part of the data must not be recomputed over every row."""
+
+    YEARS = "연도,실업률\n2014,3.0\n2015,3.5\n2016,4.0\n2017,5.0\n".encode()
+    MONTHS = ("월,강수량\n" + "".join(f"{m},{m * 10}\n" for m in range(1, 13))).encode()
+
+    def last(self, raw, units, answer):
+        claim = run(raw, units, answer)["claims"][-1]
+        return claim["status"], claim["reason_code"]
+
+    def test_several_years_listed_earlier_then_averaged(self):
+        answer = "2014년 실업률은 3.0%, 2015년 실업률은 3.5%, 2016년 실업률은 4.0%입니다. 이를 단순 평균하면 3.5%입니다."
+        self.assertEqual(self.last(self.YEARS, {"실업률": "%"}, answer), ("UNCERTAIN", "SCOPE_FROM_PREVIOUS_SENTENCE"))
+
+    def test_partial_period_named_earlier_then_summed(self):
+        answer = "상반기 강수량을 살펴보겠습니다. 이 기간 동안의 강수량 합계는 210mm입니다."
+        self.assertEqual(self.last(self.MONTHS, {"강수량": "mm"}, answer), ("UNCERTAIN", "SCOPE_FROM_PREVIOUS_SENTENCE"))
+
+    def test_every_year_listed_earlier_is_still_computed(self):
+        answer = ("2014년 실업률은 3.0%, 2015년 실업률은 3.5%, 2016년 실업률은 4.0%, 2017년 실업률은 5.0%입니다. "
+                  "이를 단순 평균하면 3.875%입니다.")
+        self.assertEqual(self.last(self.YEARS, {"실업률": "%"}, answer)[0], "VERIFIED")
+
+    def test_sentence_that_names_its_own_period_is_still_computed(self):
+        answer = "2014년 실업률은 3.0%, 2015년 실업률은 3.5%입니다. 이를 포함한 2014~2016년 실업률의 평균은 3.5%입니다."
+        self.assertEqual(self.last(self.YEARS, {"실업률": "%"}, answer)[0], "VERIFIED")
+
+    def test_sentence_that_says_whole_data_is_still_computed(self):
+        answer = "2014년 실업률은 3.0%, 2015년 실업률은 3.5%입니다. 전체 실업률의 평균은 3.875%입니다."
+        self.assertEqual(self.last(self.YEARS, {"실업률": "%"}, answer)[0], "VERIFIED")
+
+
 if __name__ == "__main__":
     unittest.main()
