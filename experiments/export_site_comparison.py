@@ -40,6 +40,36 @@ for m, g in cmp["q2"].items():
     models[m] = {"n": g["n"], "A": g["A"], "R1": g["R1"]["correct"], "S1": g["S1"]["correct"], "S2": g["S2"]["correct"],
                  "flagged": g["flagged"]["n"], "flagged_R1": g["flagged"]["R1_fixed"], "flagged_S1": g["flagged"]["S1_fixed"],
                  "S1_broken": g["S1"]["broken"], "source": "statguard_comparison_v0.1"}
+
+
+def _flagged_wrong_only():
+    """summary.json q2.flagged counts every answer StatGuard flagged, including ones that were already correct
+    (R1_fixed/S1_fixed then count 'correct after one round'). The site reports flagged WRONG answers only, so
+    recount from the cached responses (no API calls)."""
+    import importlib.util, sys
+    argv = sys.argv; sys.argv = [argv[0]]
+    try:
+        spec = importlib.util.spec_from_file_location("run_comparison_x", EXP / "statguard_comparison_v0.1" / "run_comparison.py")
+        rcmp = importlib.util.module_from_spec(spec); spec.loader.exec_module(rcmp)
+    finally:
+        sys.argv = argv
+    out = {}
+    for m in rcmp.NEW_MODELS:
+        n = s1 = r1 = 0
+        for it in rcmp.items():
+            a = rcmp.answer_of(m, it, True)
+            if rcmp.rc.decide(rcmp.rc.verify_answer(it["dataset"], a)["summary"]) != "FLAG" or rcmp.rc.grade(it, a):
+                continue
+            tr = {c: rcmp.correct(m, it, a, c, True) for c in "RS"}
+            n += 1
+            s1 += tr["S"][min(1, len(tr["S"]) - 1)]["correct"]
+            r1 += tr["R"][min(1, len(tr["R"]) - 1)]["correct"]
+        out[m] = {"flagged": n, "flagged_S1": s1, "flagged_R1": r1}
+    return out
+
+
+for m, fx_m in _flagged_wrong_only().items():
+    models[m].update(fx_m)
 for m, d in exp["by_model"].items():
     models[m]["passed_wrong"] = {k: [v["passed_wrong"], v["pass"]] for k, v in d.items()}
 

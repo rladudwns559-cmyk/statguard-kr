@@ -183,7 +183,7 @@ export function ArithmeticSection() {
 export function PracticalSection() {
   const c = CMP.cost_speed, r = CMP.ranges;
   if (!c || !r) return null;
-  return <section className="sg-card sg-large" aria-labelledby="practical-heading"><p className="sg-eyebrow">실제로 쓰기</p><h2 id="practical-heading">더 정확하고, 천 배 빠르고, 무료입니다</h2>
+  return <section className="sg-card sg-large" aria-labelledby="practical-heading"><p className="sg-eyebrow">실제로 쓰기</p><h2 id="practical-heading">통과 중 오답은 적고, 천 배 넘게 빠르고, 무료입니다</h2>
     <p className="sg-hint">같은 답 {c.statguard.answers}개를 검증하는 데 든 시간과 비용입니다. StatGuard는 이 PC에서 CSV 읽기부터 판정·역추적·검산까지 한 번에 잰 계산 시간(네트워크 왕복 제외), LLM 심판은 OpenAI API 왕복 전체 시간입니다. LLM 비용은 실험의 사전 고정 단가로 낸 추정치입니다(experiments/statguard_cost_speed_v0.1).</p>
     <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="비용·속도 비교 표"><table><thead><tr><th scope="col"></th><th scope="col">StatGuard (LLM 없음)</th><th scope="col">LLM 심판 (gpt-6-luna)</th></tr></thead>
       <tbody>
