@@ -22,6 +22,8 @@ ari0 = json.loads((EXP / "statguard_arithmetic_v0.1/results/summary_v0.1_before_
 v04 = json.loads((EXP / "statguard_benchmark_v0.4_local/results/summary.json").read_text(encoding="utf-8"))
 jdg = json.loads((EXP / "statguard_benchmark_v0.4_local/results/judge_analysis.json").read_text(encoding="utf-8"))
 OPEN = {"qwen2.5:7b": "알리바바", "llama3.1:8b": "메타", "gemma3:4b": "구글"}
+v05 = json.loads((EXP / "statguard_benchmark_v0.5_scale/results/analysis.json").read_text(encoding="utf-8"))
+BIG = {"qwen2.5:32b": "알리바바", "gemma3:27b": "구글", "llama3.3:70b": "메타"}
 
 
 def pick(t: dict) -> dict:
@@ -75,6 +77,14 @@ site = {
         "judge_b": {k: pick(v) for k, v in jdg["b"].items()},
         "long_inputs": jdg["notes"]["long_inputs"], "truncated": jdg["notes"]["truncated_judged"],
         "llama_agreement": jdg["notes"]["llama_laptop_vs_server"]},
+    "scale": {
+        "questions": 474, "new_questions": 262, "models": BIG,
+        "answers": v05["tables"]["all|statguard"]["n"], "correct": v05["tables"]["all|statguard"]["n"] - v05["tables"]["all|statguard"]["wrong"],
+        "tables": {g: {k: pick(v05["tables"][f"{g}|{k}"]) for k in ("statguard", "judge", "hybrid")} for g in ("all", "new_only", "not_self_judged", *BIG)},
+        "correction": v05["correction"],
+        "tests": {"fisher_p": v05["tests"]["fisher_passed_wrong_statguard_vs_judge"]["p_two_sided"],
+                  "mcnemar_p": v05["tests"]["mcnemar_S1_vs_R1"]["p_two_sided"],
+                  "only_S": v05["tests"]["mcnemar_S1_vs_R1"]["only_S"], "only_R": v05["tests"]["mcnemar_S1_vs_R1"]["only_R"]}},
     "forensics": {"version": fx["version"], "seed": fx["seed"], "injected": fx["injected"], "injected_by_kind": fx["injected_by_kind"],
                   "random": {"explained": fx["random"].get("explained", 0), "n": fx["random"].get("explained", 0) + fx["random"]["not_explained"],
                              "high": sum(v for k, v in fx["random"].items() if k.endswith(":high"))},

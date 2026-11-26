@@ -141,6 +141,28 @@ export function OpenModelsSection() {
   </section>;
 }
 
+const pExp = (p: number) => { const e = Math.floor(Math.log10(p)); return <>{(p / 10 ** e).toFixed(0)} × 10<sup>−{-e}</sup></>; };
+
+/** statguard_benchmark_v0.5_scale: big open models, 474 questions, two tests fixed before the run. */
+export function ScaleSection() {
+  const s = CMP.scale;
+  if (!s) return null;
+  const t = s.tables, c = s.correction.all;
+  const groups: [string, string][] = [['all', `전체 답 ${t.all.statguard.n.toLocaleString('ko-KR')}개`], ['new_only', `새 문항 답 ${t.new_only.statguard.n}개`], ['not_self_judged', `심판 자신의 답 제외 ${t.not_self_judged.statguard.n}개`]];
+  return <section className="sg-card sg-large" aria-labelledby="scale-heading"><p className="sg-eyebrow">큰 공개 모델 · 문항 {s.questions}개 · 미리 정한 검정</p><h2 id="scale-heading">큰 모델, 더 많은 문항에서도 같을까?</h2>
+    <p className="sg-hint">{Object.entries(s.models).map(([m, co]) => `${m}(${co})`).join(', ')}이 문항 {s.questions}개(새 문항 {s.new_questions}개 포함)에 답했습니다. 계획서와 분석 코드, 검정 두 개를 실행 전에 고정했고, 외부 GPU 서버에서 돌렸습니다(API 비용 0원). 모델 정답률은 {s.correct}/{s.answers.toLocaleString('ko-KR')}입니다(experiments/statguard_benchmark_v0.5_scale).</p>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="큰 모델 통과 중 오답 표"><table><thead><tr><th scope="col">통과시킨 답 중 오답</th>{groups.map(([g, l]) => <th scope="col" key={g}>{l}</th>)}</tr></thead>
+      <tbody>{([['statguard', 'StatGuard 최종값 규칙'], ['judge', '심판 qwen2.5:32b 단독'], ['hybrid', '결합 (StatGuard 보류분만 심판)']] as const).map(([k, label]) => <tr key={k}><th scope="row">{label}</th>
+        {groups.map(([g]) => <td key={g}>{k === 'statguard' ? <strong>{t[g][k].passed_wrong}/{t[g][k].pass}</strong> : `${t[g][k].passed_wrong}/${t[g][k].pass}`}</td>)}</tr>)}</tbody></table></div>
+    <div className="sg-table-scroll" tabIndex={0} role="region" aria-label="미리 정한 검정 표"><table><thead><tr><th scope="col">미리 정한 검정</th><th scope="col">결과</th><th scope="col">p (양측)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">통과 중 오답 비율: StatGuard vs 심판 (Fisher 정확 검정)</th><td>{t.all.statguard.passed_wrong}/{t.all.statguard.pass} vs {t.all.judge.passed_wrong}/{t.all.judge.pass}</td><td><strong>{pExp(s.tests.fisher_p)}</strong></td></tr>
+        <tr><th scope="row">불일치로 잡힌 오답 {c.n}개의 1회 교정: 근거 vs “다시 확인해” (McNemar 정확 검정)</th><td>근거로만 고침 {s.tests.only_S} vs 재확인으로만 고침 {s.tests.only_R} (고친 수 {c.S1} vs {c.R1})</td><td><strong>{pExp(s.tests.mcnemar_p)}</strong></td></tr>
+      </tbody></table></div>
+    <p className="sg-hint">OpenAI 모델 360개 비교에서는 유의하지 않았던 차이(p = 0.072)가, 문항과 모델을 늘리자 미리 정한 검정에서 뚜렷하게 나타났습니다. StatGuard가 통과시킨 오답 {t.all.statguard.passed_wrong}개는 모두 값은 정확히 읽었지만 질문과 다른 대상(중앙값 대신 한 나라의 값, 연간 최댓값 대신 12월 값)을 고른 경우로, 앞에서 밝힌 한계와 같은 유형입니다. 결과를 받은 뒤 분석 코드의 버그 하나(새 문항 표)를 고쳤고 계획서에 기록했습니다. 검정 두 개에는 영향이 없습니다.</p>
+  </section>;
+}
+
 export function ArithmeticSection() {
   const a = CMP.arithmetic, t = a.total, b = a.before_fix_total, g1 = a.groups.G1, g2 = a.groups.G2;
   return <section className="sg-card sg-large" aria-labelledby="arith-results-heading"><p className="sg-eyebrow">CSV 없이 검산</p><h2 id="arith-results-heading">자료가 없어도, 답변이 쓴 계산은 다시 계산할 수 있다</h2>

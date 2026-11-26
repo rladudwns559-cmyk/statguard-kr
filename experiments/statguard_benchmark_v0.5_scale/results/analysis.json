@@ -1,0 +1,362 @@
+{
+ "missing": {
+  "answers": 0,
+  "judge": 0,
+  "correction": 0
+ },
+ "cut_at_num_predict": {
+  "llama3.3:70b": {
+   "n": 11,
+   "correct": 0,
+   "statguard_pass": 0,
+   "statguard_pass_wrong": 0,
+   "format_error": 11
+  },
+  "gemma3:27b": {
+   "n": 5,
+   "correct": 0,
+   "statguard_pass": 0,
+   "statguard_pass_wrong": 0,
+   "format_error": 5
+  }
+ },
+ "tables": {
+  "all|statguard": {
+   "n": 1422,
+   "pass": 235,
+   "passed_wrong": 2,
+   "upper95": 0.0304,
+   "wrong": 986,
+   "wrong_flagged": 485,
+   "false_alarm": 81,
+   "hold": 621
+  },
+  "all|prereg": {
+   "n": 1422,
+   "pass": 255,
+   "passed_wrong": 12,
+   "upper95": 0.0808,
+   "wrong": 986,
+   "wrong_flagged": 485,
+   "false_alarm": 81,
+   "hold": 601
+  },
+  "all|judge": {
+   "n": 1422,
+   "pass": 986,
+   "passed_wrong": 599,
+   "upper95": 0.6381,
+   "wrong": 986,
+   "wrong_flagged": 387,
+   "false_alarm": 45,
+   "hold": 4
+  },
+  "all|hybrid": {
+   "n": 1422,
+   "pass": 619,
+   "passed_wrong": 280,
+   "upper95": 0.4925,
+   "wrong": 986,
+   "wrong_flagged": 706,
+   "false_alarm": 94,
+   "hold": 3
+  },
+  "qwen2.5:32b|statguard": {
+   "n": 474,
+   "pass": 77,
+   "passed_wrong": 0,
+   "upper95": 0.0468,
+   "wrong": 331,
+   "wrong_flagged": 158,
+   "false_alarm": 25,
+   "hold": 214
+  },
+  "qwen2.5:32b|prereg": {
+   "n": 474,
+   "pass": 86,
+   "passed_wrong": 2,
+   "upper95": 0.0815,
+   "wrong": 331,
+   "wrong_flagged": 158,
+   "false_alarm": 25,
+   "hold": 205
+  },
+  "qwen2.5:32b|judge": {
+   "n": 474,
+   "pass": 323,
+   "passed_wrong": 196,
+   "upper95": 0.6604,
+   "wrong": 331,
+   "wrong_flagged": 135,
+   "false_alarm": 14,
+   "hold": 2
+  },
+  "qwen2.5:32b|hybrid": {
+   "n": 474,
+   "pass": 202,
+   "passed_wrong": 90,
+   "upper95": 0.5169,
+   "wrong": 331,
+   "wrong_flagged": 241,
+   "false_alarm": 30,
+   "hold": 1
+  },
+  "new_only|statguard": {
+   "n": 786,
+   "pass": 140,
+   "passed_wrong": 1,
+   "upper95": 0.0392,
+   "wrong": 526,
+   "wrong_flagged": 243,
+   "false_alarm": 53,
+   "hold": 350
+  },
+  "new_only|prereg": {
+   "n": 786,
+   "pass": 151,
+   "passed_wrong": 4,
+   "upper95": 0.0664,
+   "wrong": 526,
+   "wrong_flagged": 243,
+   "false_alarm": 53,
+   "hold": 339
+  },
+  "new_only|judge": {
+   "n": 786,
+   "pass": 553,
+   "passed_wrong": 322,
+   "upper95": 0.6238,
+   "wrong": 526,
+   "wrong_flagged": 204,
+   "false_alarm": 28,
+   "hold": 1
+  },
+  "new_only|hybrid": {
+   "n": 786,
+   "pass": 357,
+   "passed_wrong": 158,
+   "upper95": 0.4958,
+   "wrong": 526,
+   "wrong_flagged": 368,
+   "false_alarm": 61,
+   "hold": 0
+  },
+  "self_judged|statguard": {
+   "n": 474,
+   "pass": 77,
+   "passed_wrong": 0,
+   "upper95": 0.0468,
+   "wrong": 331,
+   "wrong_flagged": 158,
+   "false_alarm": 25,
+   "hold": 214
+  },
+  "self_judged|prereg": {
+   "n": 474,
+   "pass": 86,
+   "passed_wrong": 2,
+   "upper95": 0.0815,
+   "wrong": 331,
+   "wrong_flagged": 158,
+   "false_alarm": 25,
+   "hold": 205
+  },
+  "self_judged|judge": {
+   "n": 474,
+   "pass": 323,
+   "passed_wrong": 196,
+   "upper95": 0.6604,
+   "wrong": 331,
+   "wrong_flagged": 135,
+   "false_alarm": 14,
+   "hold": 2
+  },
+  "self_judged|hybrid": {
+   "n": 474,
+   "pass": 202,
+   "passed_wrong": 90,
+   "upper95": 0.5169,
+   "wrong": 331,
+   "wrong_flagged": 241,
+   "false_alarm": 30,
+   "hold": 1
+  },
+  "gemma3:27b|statguard": {
+   "n": 474,
+   "pass": 81,
+   "passed_wrong": 0,
+   "upper95": 0.0445,
+   "wrong": 339,
+   "wrong_flagged": 174,
+   "false_alarm": 24,
+   "hold": 195
+  },
+  "gemma3:27b|prereg": {
+   "n": 474,
+   "pass": 85,
+   "passed_wrong": 2,
+   "upper95": 0.0824,
+   "wrong": 339,
+   "wrong_flagged": 174,
+   "false_alarm": 24,
+   "hold": 191
+  },
+  "gemma3:27b|judge": {
+   "n": 474,
+   "pass": 343,
+   "passed_wrong": 224,
+   "upper95": 0.7034,
+   "wrong": 339,
+   "wrong_flagged": 115,
+   "false_alarm": 15,
+   "hold": 1
+  },
+  "gemma3:27b|hybrid": {
+   "n": 474,
+   "pass": 201,
+   "passed_wrong": 96,
+   "upper95": 0.549,
+   "wrong": 339,
+   "wrong_flagged": 243,
+   "false_alarm": 29,
+   "hold": 1
+  },
+  "not_self_judged|statguard": {
+   "n": 948,
+   "pass": 158,
+   "passed_wrong": 2,
+   "upper95": 0.045,
+   "wrong": 655,
+   "wrong_flagged": 327,
+   "false_alarm": 56,
+   "hold": 407
+  },
+  "not_self_judged|prereg": {
+   "n": 948,
+   "pass": 169,
+   "passed_wrong": 10,
+   "upper95": 0.1061,
+   "wrong": 655,
+   "wrong_flagged": 327,
+   "false_alarm": 56,
+   "hold": 396
+  },
+  "not_self_judged|judge": {
+   "n": 948,
+   "pass": 663,
+   "passed_wrong": 403,
+   "upper95": 0.6452,
+   "wrong": 655,
+   "wrong_flagged": 252,
+   "false_alarm": 31,
+   "hold": 2
+  },
+  "not_self_judged|hybrid": {
+   "n": 948,
+   "pass": 417,
+   "passed_wrong": 190,
+   "upper95": 0.5048,
+   "wrong": 655,
+   "wrong_flagged": 465,
+   "false_alarm": 64,
+   "hold": 2
+  },
+  "llama3.3:70b|statguard": {
+   "n": 474,
+   "pass": 77,
+   "passed_wrong": 2,
+   "upper95": 0.0907,
+   "wrong": 316,
+   "wrong_flagged": 153,
+   "false_alarm": 32,
+   "hold": 212
+  },
+  "llama3.3:70b|prereg": {
+   "n": 474,
+   "pass": 84,
+   "passed_wrong": 8,
+   "upper95": 0.1791,
+   "wrong": 316,
+   "wrong_flagged": 153,
+   "false_alarm": 32,
+   "hold": 205
+  },
+  "llama3.3:70b|judge": {
+   "n": 474,
+   "pass": 320,
+   "passed_wrong": 179,
+   "upper95": 0.6146,
+   "wrong": 316,
+   "wrong_flagged": 137,
+   "false_alarm": 16,
+   "hold": 1
+  },
+  "llama3.3:70b|hybrid": {
+   "n": 474,
+   "pass": 216,
+   "passed_wrong": 94,
+   "upper95": 0.5041,
+   "wrong": 316,
+   "wrong_flagged": 222,
+   "false_alarm": 35,
+   "hold": 1
+  }
+ },
+ "passed_wrong_by_category": {
+  "llama3.3:70b": {
+   "median": 1,
+   "max": 1
+  }
+ },
+ "correction": {
+  "all": {
+   "n": 485,
+   "S1": 380,
+   "R1": 21,
+   "only_S": 364,
+   "only_R": 5
+  },
+  "qwen2.5:32b": {
+   "n": 158,
+   "S1": 117,
+   "R1": 3,
+   "only_S": 114,
+   "only_R": 0
+  },
+  "llama3.3:70b": {
+   "n": 153,
+   "S1": 125,
+   "R1": 11,
+   "only_S": 116,
+   "only_R": 2
+  },
+  "gemma3:27b": {
+   "n": 174,
+   "S1": 138,
+   "R1": 7,
+   "only_S": 134,
+   "only_R": 3
+  }
+ },
+ "tests": {
+  "fisher_passed_wrong_statguard_vs_judge": {
+   "table": [
+    [
+     2,
+     233
+    ],
+    [
+     599,
+     387
+    ]
+   ],
+   "p_two_sided": 7.098792646204125e-77
+  },
+  "mcnemar_S1_vs_R1": {
+   "only_S": 364,
+   "only_R": 5,
+   "n": 485,
+   "p_two_sided": 9.355523001825068e-101
+  }
+ }
+}

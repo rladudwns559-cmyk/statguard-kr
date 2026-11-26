@@ -62,15 +62,25 @@ def main():
             if line.strip():
                 x = json.loads(line); J[x["key"]] = x
     rows, pairs, wrong_kinds, missing = {}, {}, {}, {"answers": 0, "judge": 0, "correction": 0}
+    # 변경 기록(2026-11-26): run.items()는 questions.json의 in_v04를 넘기지 않아 new_only가 전체와 같아지던 분석 버그 수정.
+    in_v04 = {x["id"]: x.get("in_v04", False) for x in json.loads((HERE / "questions.json").read_text(encoding="utf-8"))}
+    cut = {}  # first answers that stopped at num_predict (done_reason == "length"), reported separately
     for it in rl.items():
+        it["in_v04"] = in_v04[it["id"]]
         for m in rl.MODELS:
             a = rl.answer(m, it, offline=True)
             if a is None:
                 missing["answers"] += 1
                 continue
             ok = rl.grade(it, a)
+            r = rl.chat(m, [{"role": "system", "content": rl.rc.INSTRUCTIONS}, rl.user_msg(it)], offline=True)
+            if r and r.get("done_reason") == "length":
+                c = cut.setdefault(m, {"n": 0, "correct": 0, "statguard_pass": 0, "statguard_pass_wrong": 0, "format_error": 0})
+                c["n"] += 1; c["correct"] += ok; c["format_error"] += rl.ev.final_value(a)["kind"] == "FORMAT_ERROR"
             v = rl.verify_v071(it["dataset"], a)
             fr = rl.final_rule(it, a, v)
+            if r and r.get("done_reason") == "length":
+                cut[m]["statguard_pass"] += fr == "PASS"; cut[m]["statguard_pass_wrong"] += fr == "PASS" and not ok
             jx = J.get(f"v05|{m}|{it['id']}")
             if jx is None:
                 missing["judge"] += 1
@@ -94,7 +104,7 @@ def main():
                 for g in ("all", m):
                     p = pairs.setdefault(g, {"n": 0, "S1": 0, "R1": 0, "only_S": 0, "only_R": 0})
                     p["n"] += 1; p["S1"] += s1; p["R1"] += r1; p["only_S"] += s1 and not r1; p["only_R"] += r1 and not s1
-    out = {"missing": missing, "tables": {f"{g}|{k}": tally(r) for (g, k), r in rows.items()}, "passed_wrong_by_category": wrong_kinds, "correction": pairs, "tests": {}}
+    out = {"missing": missing, "cut_at_num_predict": cut, "tables": {f"{g}|{k}": tally(r) for (g, k), r in rows.items()}, "passed_wrong_by_category": wrong_kinds, "correction": pairs, "tests": {}}
     sg, jg = out["tables"].get("all|statguard"), out["tables"].get("all|judge")
     if sg and jg and sg["pass"] and jg["pass"]:
         a, b = sg["passed_wrong"], sg["pass"] - sg["passed_wrong"]
@@ -113,6 +123,7 @@ def main():
     for g, p in pairs.items():
         L.append(f"| {g} | {p['n']} | {p['S1']} | {p['R1']} | {p['only_S']} | {p['only_R']} |")
     L += ["", "## 검정 (미리 정한 두 개)", ""] + [f"- {k}: {json.dumps(v, ensure_ascii=False)}" for k, v in out["tests"].items()]
+    L += ["", "## 출력 한도(1,024토큰)에서 끊긴 첫 답변", ""] + [f"- {m}: {d}" for m, d in cut.items()]
     L += ["", "## 통과 중 오답의 문항 범주", ""] + [f"- {m}: {d}" for m, d in wrong_kinds.items()]
     (HERE / "results" / "ANALYSIS.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     print("\n".join(L))

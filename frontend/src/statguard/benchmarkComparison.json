@@ -612,6 +612,229 @@
    "same_correctness": 209
   }
  },
+ "scale": {
+  "questions": 474,
+  "new_questions": 262,
+  "models": {
+   "qwen2.5:32b": "알리바바",
+   "gemma3:27b": "구글",
+   "llama3.3:70b": "메타"
+  },
+  "answers": 1422,
+  "correct": 436,
+  "tables": {
+   "all": {
+    "statguard": {
+     "n": 1422,
+     "pass": 235,
+     "passed_wrong": 2,
+     "wrong": 986,
+     "wrong_flagged": 485,
+     "false_alarm": 81,
+     "upper95": 0.0304
+    },
+    "judge": {
+     "n": 1422,
+     "pass": 986,
+     "passed_wrong": 599,
+     "wrong": 986,
+     "wrong_flagged": 387,
+     "false_alarm": 45,
+     "upper95": 0.6381
+    },
+    "hybrid": {
+     "n": 1422,
+     "pass": 619,
+     "passed_wrong": 280,
+     "wrong": 986,
+     "wrong_flagged": 706,
+     "false_alarm": 94,
+     "upper95": 0.4925
+    }
+   },
+   "new_only": {
+    "statguard": {
+     "n": 786,
+     "pass": 140,
+     "passed_wrong": 1,
+     "wrong": 526,
+     "wrong_flagged": 243,
+     "false_alarm": 53,
+     "upper95": 0.0392
+    },
+    "judge": {
+     "n": 786,
+     "pass": 553,
+     "passed_wrong": 322,
+     "wrong": 526,
+     "wrong_flagged": 204,
+     "false_alarm": 28,
+     "upper95": 0.6238
+    },
+    "hybrid": {
+     "n": 786,
+     "pass": 357,
+     "passed_wrong": 158,
+     "wrong": 526,
+     "wrong_flagged": 368,
+     "false_alarm": 61,
+     "upper95": 0.4958
+    }
+   },
+   "not_self_judged": {
+    "statguard": {
+     "n": 948,
+     "pass": 158,
+     "passed_wrong": 2,
+     "wrong": 655,
+     "wrong_flagged": 327,
+     "false_alarm": 56,
+     "upper95": 0.045
+    },
+    "judge": {
+     "n": 948,
+     "pass": 663,
+     "passed_wrong": 403,
+     "wrong": 655,
+     "wrong_flagged": 252,
+     "false_alarm": 31,
+     "upper95": 0.6452
+    },
+    "hybrid": {
+     "n": 948,
+     "pass": 417,
+     "passed_wrong": 190,
+     "wrong": 655,
+     "wrong_flagged": 465,
+     "false_alarm": 64,
+     "upper95": 0.5048
+    }
+   },
+   "qwen2.5:32b": {
+    "statguard": {
+     "n": 474,
+     "pass": 77,
+     "passed_wrong": 0,
+     "wrong": 331,
+     "wrong_flagged": 158,
+     "false_alarm": 25,
+     "upper95": 0.0468
+    },
+    "judge": {
+     "n": 474,
+     "pass": 323,
+     "passed_wrong": 196,
+     "wrong": 331,
+     "wrong_flagged": 135,
+     "false_alarm": 14,
+     "upper95": 0.6604
+    },
+    "hybrid": {
+     "n": 474,
+     "pass": 202,
+     "passed_wrong": 90,
+     "wrong": 331,
+     "wrong_flagged": 241,
+     "false_alarm": 30,
+     "upper95": 0.5169
+    }
+   },
+   "gemma3:27b": {
+    "statguard": {
+     "n": 474,
+     "pass": 81,
+     "passed_wrong": 0,
+     "wrong": 339,
+     "wrong_flagged": 174,
+     "false_alarm": 24,
+     "upper95": 0.0445
+    },
+    "judge": {
+     "n": 474,
+     "pass": 343,
+     "passed_wrong": 224,
+     "wrong": 339,
+     "wrong_flagged": 115,
+     "false_alarm": 15,
+     "upper95": 0.7034
+    },
+    "hybrid": {
+     "n": 474,
+     "pass": 201,
+     "passed_wrong": 96,
+     "wrong": 339,
+     "wrong_flagged": 243,
+     "false_alarm": 29,
+     "upper95": 0.549
+    }
+   },
+   "llama3.3:70b": {
+    "statguard": {
+     "n": 474,
+     "pass": 77,
+     "passed_wrong": 2,
+     "wrong": 316,
+     "wrong_flagged": 153,
+     "false_alarm": 32,
+     "upper95": 0.0907
+    },
+    "judge": {
+     "n": 474,
+     "pass": 320,
+     "passed_wrong": 179,
+     "wrong": 316,
+     "wrong_flagged": 137,
+     "false_alarm": 16,
+     "upper95": 0.6146
+    },
+    "hybrid": {
+     "n": 474,
+     "pass": 216,
+     "passed_wrong": 94,
+     "wrong": 316,
+     "wrong_flagged": 222,
+     "false_alarm": 35,
+     "upper95": 0.5041
+    }
+   }
+  },
+  "correction": {
+   "all": {
+    "n": 485,
+    "S1": 380,
+    "R1": 21,
+    "only_S": 364,
+    "only_R": 5
+   },
+   "qwen2.5:32b": {
+    "n": 158,
+    "S1": 117,
+    "R1": 3,
+    "only_S": 114,
+    "only_R": 0
+   },
+   "llama3.3:70b": {
+    "n": 153,
+    "S1": 125,
+    "R1": 11,
+    "only_S": 116,
+    "only_R": 2
+   },
+   "gemma3:27b": {
+    "n": 174,
+    "S1": 138,
+    "R1": 7,
+    "only_S": 134,
+    "only_R": 3
+   }
+  },
+  "tests": {
+   "fisher_p": 7.098792646204125e-77,
+   "mcnemar_p": 9.355523001825068e-101,
+   "only_S": 364,
+   "only_R": 5
+  }
+ },
  "forensics": {
   "version": "statguard-forensics-v0.1",
   "seed": 20261201,

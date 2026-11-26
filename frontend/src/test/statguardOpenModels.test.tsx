@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { OpenModelsSection } from '../statguard/ResultsExtras';
+import { OpenModelsSection, ScaleSection } from '../statguard/ResultsExtras';
 import { COMPARISON } from '../statguard/comparisonData';
 
 describe('open-model re-check section (statguard_benchmark_v0.4_local)', () => {
@@ -14,5 +14,17 @@ describe('open-model re-check section (statguard_benchmark_v0.4_local)', () => {
     expect(screen.getByRole('region', { name: '공개 모델 심판 비교 표' })).toHaveTextContent(String(o.judge_a.judge.passed_wrong));
     expect(screen.getByText(/긴 표는 심판이 읽지 못합니다/)).toBeInTheDocument();
     expect(screen.getByText(/질문과 다른 나라를 고르고/)).toBeInTheDocument();
+  });
+
+  it('shows the v0.5 big-model results and the two pre-registered tests from the results file', () => {
+    const s = COMPARISON.scale!;
+    render(<ScaleSection/>);
+    expect(screen.getByRole('heading', { name: '큰 모델, 더 많은 문항에서도 같을까?' })).toBeInTheDocument();
+    const t = s.tables.all;
+    expect(screen.getByRole('region', { name: '큰 모델 통과 중 오답 표' })).toHaveTextContent(`${t.statguard.passed_wrong}/${t.statguard.pass}`);
+    const tests = screen.getByRole('region', { name: '미리 정한 검정 표' });
+    expect(tests).toHaveTextContent('Fisher');
+    expect(tests).toHaveTextContent(`근거로만 고침 ${s.tests.only_S} vs 재확인으로만 고침 ${s.tests.only_R}`);
+    expect(tests).toHaveTextContent(/× 10−\d+/);
   });
 });
